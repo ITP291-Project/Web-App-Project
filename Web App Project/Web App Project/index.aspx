@@ -30,6 +30,9 @@
         rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    
 </head>
 <body id="hme">
     <form id="form1" runat="server">
@@ -825,6 +828,7 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
 </footer>
     <!-- Footer section -->
     
+       
     </form>
 </body>
 </html>
