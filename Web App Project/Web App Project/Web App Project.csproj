@@ -95,6 +95,69 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Ads.xml" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\flexslider.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\font-icon.css" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\the-big-picture.css" />
+    <Content Include="fonts\elegant-theme-line.svg" />
+    <Content Include="fonts\flexslider-icon.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\banner.jpg" />
+    <Content Include="img\bg-overlay.png" />
+    <Content Include="img\blank.gif" />
+    <Content Include="img\down-arrow.png" />
+    <Content Include="img\fancybox_loading%402x.gif" />
+    <Content Include="img\fancybox_loading.gif" />
+    <Content Include="img\fancybox_overlay.png" />
+    <Content Include="img\fancybox_sprite%402x.png" />
+    <Content Include="img\fancybox_sprite.png" />
+    <Content Include="img\imac.png" />
+    <Content Include="img\inspiration-geometry.png" />
+    <Content Include="img\intro-img1.jpg" />
+    <Content Include="img\intro-img2.jpg" />
+    <Content Include="img\intro-img3.jpg" />
+    <Content Include="img\intro-img4.jpg" />
+    <Content Include="img\intro-img6.jpg" />
+    <Content Include="img\logo%402x.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\polygon.png" />
+    <Content Include="img\project_12_big.jpg" />
+    <Content Include="img\project_1_big.jpg" />
+    <Content Include="img\project_2_big.jpg" />
+    <Content Include="img\project_3_big.jpg" />
+    <Content Include="img\project_8_big.jpg" />
+    <Content Include="img\project_9_big.jpg" />
+    <Content Include="img\slider\banner3.jpg" />
+    <Content Include="img\slider\banner4.jpg" />
+    <Content Include="img\slider\banner5.jpg" />
+    <Content Include="img\slider\bg1.jpg" />
+    <Content Include="img\slider\bg2.jpg" />
+    <Content Include="img\slider\bg3.jpg" />
+    <Content Include="img\slider\one.jpg" />
+    <Content Include="img\slider\slide1-1.png" />
+    <Content Include="img\slide_bg.png" />
+    <Content Include="img\team-1.png" />
+    <Content Include="img\team-2.png" />
+    <Content Include="img\team-3.png" />
+    <Content Include="img\work-1.jpg" />
+    <Content Include="img\work-10.jpg" />
+    <Content Include="img\work-11.jpg" />
+    <Content Include="img\work-12.jpg" />
+    <Content Include="img\work-2.jpg" />
+    <Content Include="img\work-3.jpg" />
+    <Content Include="img\work-4.jpg" />
+    <Content Include="img\work-5.jpg" />
+    <Content Include="img\work-6.jpg" />
+    <Content Include="img\work-7.jpg" />
+    <Content Include="img\work-8.jpg" />
+    <Content Include="img\work-9.jpg" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -103,6 +166,21 @@
     <Content Include="bin\WebApplication3.dll.config" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache" />
+    <Content Include="fonts\elegant-theme-line.eot" />
+    <Content Include="fonts\elegant-theme-line.ttf" />
+    <Content Include="fonts\elegant-theme-line.woff" />
+    <Content Include="fonts\flexslider-icon.eot" />
+    <Content Include="fonts\flexslider-icon.ttf" />
+    <Content Include="fonts\flexslider-icon.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\Home Server.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -152,9 +230,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\roslyn\" />
-    <Folder Include="css\" />
-    <Folder Include="fonts\" />
-    <Folder Include="img\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
