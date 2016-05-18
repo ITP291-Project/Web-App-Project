@@ -131,8 +131,6 @@
     <Content Include="obj\Debug\WebApplication3.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\WebApplication3.dll" />
     <Content Include="obj\Debug\WebApplication3.pdb" />
-    <Content Include="scripts\ai.0.22.9-build00167.js" />
-    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
     <Content Include="WebApplication3.csproj" />
     <Content Include="WebApplication3.csproj.user" />
@@ -157,7 +155,6 @@
     <Folder Include="css\" />
     <Folder Include="fonts\" />
     <Folder Include="img\" />
-    <Folder Include="js\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
