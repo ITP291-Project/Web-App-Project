@@ -138,6 +138,7 @@
     <Content Include="WebApplication3.csproj.user" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="csharp\bootstrap.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

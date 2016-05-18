@@ -10,8 +10,10 @@
     <meta name="description" content="">
     <meta name="author" content="Srikanth">
     <title>Voices of Singapore</title>
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="css/the-big-picture.css" rel="stylesheet">
     <link href="css/font-icon.css" rel="stylesheet" type="text/css" />
@@ -20,25 +22,21 @@
     <link href="css/main.css" rel="stylesheet" type="text/css" />
     <link href="css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+
     <!-- ============ Google fonts ============ -->
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'
         type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800'
         rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 <body id="hme">
     <form id="form1" runat="server">
     <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="#">Akshara</a>
+                <a class="navbar-brand" href="#">Voices of Singapore</a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
                     <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
                         class="icon-bar"></span><span class="icon-bar"></span>
@@ -826,23 +824,7 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
   
 </footer>
     <!-- Footer section -->
-    <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/jquery.easing.min.js" type="text/javascript"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/wow.js" type="text/javascript"></script>
-    <script src="js/retina.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/main.js"></script>
-    <script type="text/javascript">
-        //WOW Scroll Spy
-        var wow = new WOW({
-            //disabled for mobile
-            mobile: false
-        });
-        wow.init();
-    </script>
+    
     </form>
 </body>
 </html>
