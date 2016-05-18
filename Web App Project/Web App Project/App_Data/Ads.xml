@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>img/slider/slide1-1.png</ImageUrl>
+    <NavigateUrl>http://demonius.dlinkddns.com/alphabuild0.4/about.aspx</NavigateUrl>
+    <AlternateText>About Us</AlternateText>
+    <Impressions>20</Impressions>
+    <Keyword>small</Keyword>
+    <Height>100</Height>
+    <Width>100</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>img/slider/slide1-1.jpg</ImageUrl>
+    <NavigateUrl>http://demonius.dlinkddns.com/alphabuild0.4/index.aspx/#</NavigateUrl>
+    <AlternateText>Something should be here</AlternateText>
+    <Impressions>20</Impressions>
+    <Keyword>small</Keyword>
+    <Height>100</Height>
+    <Width>100</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>img/slider/slide1-1.jpg</ImageUrl>
+    <NavigateUrl>http://demonius.dlinkddns.com/alphabuild0.4/index.aspx/#</NavigateUrl>
+    <AlternateText>Something should be here</AlternateText>
+    <Impressions>20</Impressions>
+    <Keyword>small</Keyword>
+    <Height>100</Height>
+    <Width>100</Width>
+  </Ad>
+</Advertisements>

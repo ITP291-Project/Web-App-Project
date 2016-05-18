@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Ads.xml" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -151,7 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\roslyn\" />
-    <Folder Include="csharp\" />
     <Folder Include="css\" />
     <Folder Include="fonts\" />
     <Folder Include="img\" />

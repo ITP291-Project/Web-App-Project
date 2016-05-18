@@ -24,14 +24,9 @@
     <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
 
     <!-- ============ Google fonts ============ -->
-    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'
-        type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800'
-        rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-
     
 </head>
 <body id="hme">
@@ -58,15 +53,8 @@
     </div>
     <!-- Login -->
     <!-- Start Carousel Main Slider -->
-    <section class="carousel carousel-fade slide home-slider" id="fullslider" data-ride="carousel"
-        data-interval="4500" data-pause="false"> 
-    <!-- Carousel-Indicators -->
-	<ol class="carousel-indicators"> 
-		<li data-target="#fullslider" data-slide-to="0" class="active"></li>
-		<li data-target="#fullslider" data-slide-to="1" class=""></li>		
-        <li data-target="#fullslider" data-slide-to="2" class=""></li>		
-        <li data-target="#fullslider" data-slide-to="3" class=""></li>	    	
-	</ol>
+    <section class="carousel carousel-fade slide home-slider" id="fullslider" data-ride="carousel" data-interval="4500" data-pause="false"> 
+    
     <!-- Carousel-Inner -->
 	<div class="carousel-inner"> 
 		<div class="item active bg1">
@@ -76,14 +64,13 @@
 				<div class="row">			
 					<div class="col-md-6 col-sm-8 col-xs-12 animated notranstion">						
 						<br class="hidden-sm hidden-xs"/>
-						<div class="wow" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <h1 class="carouselText1 text-left wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="150ms">Voices Of Singapore</h1>
-						  <p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="200ms">
-                              Speaking up for the elderly of Singapore - One block at a time</p>
-                            <br/>
-                           <div class="text-left buttonleft hidden-xs">
-                           <a href="#" class="btn btn-lg btn-borderwhite wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="1200ms">Get Started</a> 
-                           </div>
+						<div class="wow">
+                        <h1 class="carouselText1 text-left wow fadeInUp" >Voices Of Singapore</h1>
+						  <p class="wow fadeInUp" style="font-size:145%;"> Speaking up for the elderly of Singapore - One block at a time</p>
+                          <br />
+                          <br />
+                          <p class="wow fadeInUp" style="font-size:145%;">Volunteers are not paid - Not because they are worthless, but because they are priceless</p>
+
                       </div>						
 					</div>
                     <div class="col-md-6 col-sm-4 hidden-xs animated">                                      
@@ -92,99 +79,10 @@
 				</div>
 			</div>
             </div>
-		</div> <!-- End Slide - 1 -->
-		<div class="item bg2">
-          <div class="banner-overlay">
-         <!-- Slide - 2 -->
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-sm-4 hidden-xs animated">                                      
-						<img src="img/slider/slide1-1.png" alt="" class="slide1-2 wow fadeInLeft img-responsive"/>
-					</div>
-					<div class="col-md-6 col-sm-8 col-xs-12 animated text-right">	
-                         <br class="hidden-sm hidden-xs" />					
-					    <h3 class="carouselText2 wow fadeInDown" data-wow-duration="600ms" data-wow-delay="100ms">
-                         Html5 & Css3
-                        </h3>
-                    	<br />
-						<div class="car-highlight1 wow fadeInUp text-left" data-wow-duration="300ms" data-wow-delay="0ms">
-						 Bootstrap is completely free to download!
-						</div>
-						<br/>
-						<div class="car-highlight2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="150ms">
-						 Bootstrap Text/Typography, Bootstrap Tables
-						</div>
-						<br/>
-						<div class="car-highlight3 wow fadeInUp" data-wow-duration="1800ms" data-wow-delay="300ms">
-						 Bootstrap Button Groups Total Control Bootstrap allows you to group a series of buttons.
-						</div>                       
-					</div>
-				</div>
-			</div>
-            </div>
-		</div> <!-- End Slide - 2 -->
-		<div class="item bg3">
-          <div class="banner-overlay">
-         <!-- Slide - 3 -->
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center animated">      
-                    <h1 class="carouselText1 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="150ms">Our CleanDesign Gives you More Flexibility For You</h1>
-                       <ul class="list-unstyled car-mediumtext2">                        
-                        <li>
-                        <h3 class="car-highlight1 wow fadeInDown" data-wow-duration="1200ms" data-wow-delay="300ms">
-                        Clean Code + Design
-                        </h3>
-                        </li>
-                        <li>
-                        <h3 class="car-highlight2 hidden-xs wow fadeInDown" data-wow-duration="1800ms" data-wow-delay="600ms">
-                        Simple One Page Template
-                        </h3>
-                        </li>                       
-                        <li>
-                        <h3 class="car-highlight3 wow fadeInDown" data-wow-duration="2400ms" data-wow-delay="900ms">
-                        CleanDesign Comes with 2 Models
-                        </h3>
-                        </li>
-                       </ul>
-					</div>					
-				</div>
-			</div>
-            </div>
-		</div> <!-- End Slide - 3 -->
-       <div class="item bg4"> <!-- Slide - 4 -->
-         <div class="banner-overlay">
-          <div class="container">
-				<div class="row">
-                    <div class="col-md-6 col-sm-4  hidden-xs animated">                                      
-						<img src="img/slider/slide1-1.png" alt="" class="slide1-2 wow fadeInLeft img-responsive"/>
-					</div>
-                    <div class="col-md-6 col-sm-8 col-xs-12 animated">					
-						<div class="wow" data-wow-duration="1500ms" data-wow-delay="100ms">
-                         <br />
-							<h1 class="carouselText1 col-gapall wow zoomIn" data-wow-duration="1500ms" data-wow-delay="500ms">This Is a Great Place to Introduce </h1>
-							<br />
-                            <ul class="list-unstyled car-mediumtext">
-                            <li class="wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="100ms"><i class="fa fa-check-square wow fadeInDown" data-wow-duration="1500ms" data-wow-delay="100ms"></i> Bootstrap is completely free to download!..</li>
-                            <li class="wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="500ms"><i class="fa fa-check-square wow fadeInDown" data-wow-duration="1500ms" data-wow-delay="100ms"></i>
-                             Bootstrap Text/Typography, Bootstrap Tables....
-                            </li>
-                            <li class="wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="1000ms"><i class="fa fa-check-square wow fadeInDown" data-wow-duration="1500ms" data-wow-delay="100ms"></i>
-                             Bootstrap Button Groups Total Control bootstrap allows you to group a series of buttons.
-                            </li>
-                            </ul>
-                            <br />                         
-						</div>						
-					</div>		
-                </div>
-           </div>
-           </div>
-        </div> <!-- End Slide - 4 -->		 
+		</div> <!-- End Slide - 1 -->		 
 	</div>
 	<!-- End Carousel-Inner -->
-    <!-- Carousel - Control -->
-	<a class="left carousel-control animated fadeInLeft" href="#fullslider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-	<a class="right carousel-control animated fadeInRight" href="#fullslider" data-slide="next"><i class="fa fa-chevron-right"></i></a>	
+    <!-- Carousel - Control -->	
     </section>
     <!--  End Carousel Main Slider  -->
     <!-- services section -->
