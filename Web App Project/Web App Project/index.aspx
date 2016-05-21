@@ -717,7 +717,7 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
 					<div class="wow bounceInDown" data-wow-delay="0.4s">
 					<h2>Email or phone are welcome</h2>
 					</div>
-					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Gentleman, introduce your self and get in touch with me privately</p>
+					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Interested to volunteer yet? Sign up with us to brighten up someone else's day!</p>
 					</div>
 					
 				</div>
