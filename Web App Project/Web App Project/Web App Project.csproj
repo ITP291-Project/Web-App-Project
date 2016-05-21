@@ -158,6 +158,16 @@
     <Content Include="img\work-7.jpg" />
     <Content Include="img\work-8.jpg" />
     <Content Include="img\work-9.jpg" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.easing.min.js" />
+    <Content Include="js\jquery.fancybox.pack.js" />
+    <Content Include="js\jquery.flexslider-min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\modernizr.js" />
+    <Content Include="js\retina.min.js" />
+    <Content Include="js\wow.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
