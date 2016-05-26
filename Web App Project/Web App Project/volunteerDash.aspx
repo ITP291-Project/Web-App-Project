@@ -1,14 +1,23 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="volunteerDash.aspx.cs" Inherits="Web_App_Project._default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="volunteerDash.aspx.cs" Inherits="Web_App_Project.volunteerDash" %>
 
-<asp:Content ID="body" ContentPlaceholderID="body" runat="server">
-    <div id="main">
-       <div id="content">SCHEDULE TO BE PLACED HERE</div>
-       <div id="right">
-           <asp:Button ID="Button1" runat="server" Height="105px" Text="Rewards" Width="265px" />
-           <br />
-           <br />
-           <asp:Button ID="Button2" runat="server" Height="105px" Text="Write New Report" Width="265px" />
+<asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
+    <div class="container">
+        <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
+            <div id="content">
+                SCHEDULE
+            </div>
+
+            <div id="right">
+
+                <asp:Button ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" />
+                <br />
+                <br />
+                <asp:Button ID="Button2" runat="server" ForeColor="Black" Text="Choose Organization" Width="225px" />
+                <br />
+                <br />
+                <asp:Button ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" />
+
+            </div>
         </div>
-       <div style="clear:both"></div>
-    </div> 
+    </div>
 </asp:Content>
