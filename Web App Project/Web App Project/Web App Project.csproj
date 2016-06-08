@@ -17,7 +17,7 @@
     <AssemblyName>Web App Project</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44302</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -94,7 +94,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\accounts.mdf" />
+    <Content Include="App_Data\accounts_log.ldf">
+      <DependentUpon>accounts.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Ads.xml" />
+    <Content Include="App_Data\timetable.mdf" />
+    <Content Include="App_Data\timetable_log.ldf">
+      <DependentUpon>timetable.mdf</DependentUpon>
+    </Content>
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -191,6 +199,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\Home Server.pubxml" />
+    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -220,7 +229,11 @@
     <Content Include="obj\Debug\WebApplication3.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\WebApplication3.dll" />
     <Content Include="obj\Debug\WebApplication3.pdb" />
-    <Content Include="Web.config" />
+    <Content Include="test.aspx" />
+    <Content Include="volunteerDash.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="WebApplication3.csproj" />
     <Content Include="WebApplication3.csproj.user" />
   </ItemGroup>
@@ -237,6 +250,24 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="volunteerDash.aspx.cs">
+      <DependentUpon>volunteerDash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="volunteerDash.aspx.designer.cs">
+      <DependentUpon>volunteerDash.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\roslyn\" />
