@@ -94,14 +94,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\accounts.mdf" />
-    <Content Include="App_Data\accounts_log.ldf">
-      <DependentUpon>accounts.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\Ads.xml" />
-    <Content Include="App_Data\timetable.mdf" />
-    <Content Include="App_Data\timetable_log.ldf">
-      <DependentUpon>timetable.mdf</DependentUpon>
+    <Content Include="App_Data\localdb.mdf" />
+    <Content Include="App_Data\localdb_log.ldf">
+      <DependentUpon>localdb.mdf</DependentUpon>
     </Content>
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
