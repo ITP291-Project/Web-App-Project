@@ -297,21 +297,21 @@
                             <span><i class="icon-bargraph"></i></span>
                         </div>
                         <h3>
-                            Pioneer Generation Office
+                            Pioneer Generation Ambassadors
                         </h3>
-                        <p>
-                            Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
-                            tables, navigation, modals, image carousels and many other, as well as optional
-                            JavaScript plugins</p>
+                        <p>Join us, as a Pioneer Generation Ambassador to help the Pioneers 
+                           understand the Pioneer Generation Package!
+                        </p>
+
                     </div>
                     <div class="box ">
                         <div class="icon colored-4">
                             <span><i class="icon-heart"></i></span>
                         </div>
                         <h3>SPCA</h3>
-                        <p>
-                            Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
-                            tables, navigation, modals.</p>
+                        <p>We rely on a community of passionate volunteers, committed to helping us advocate the animal welfare cause.
+                           If you have a passion for animals and would like to help in a tangible way, we want you! 
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
