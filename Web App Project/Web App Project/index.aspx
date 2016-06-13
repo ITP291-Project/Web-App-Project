@@ -279,13 +279,13 @@
             <div class="row">
                 <div class="col-md-12 section-heading text-center padding-bottom70">
                     <h2>
-                        Our Services</h2>
+                        Our Partners</h2>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <h3>
-                                Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
-                                tables, navigation, modals, image carousels and many other, as well as optional
-                                JavaScript plugins</h3>
+                               Our partners are non-profit organisations and they require
+                                helping hands from us to make the world a better place. 
+                            </h3>
                         </div>
                     </div>
                 </div>
