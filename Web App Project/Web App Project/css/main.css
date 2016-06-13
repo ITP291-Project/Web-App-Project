@@ -1169,3 +1169,12 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
     width: 100%;
     
 }
+
+#form1 {
+    height: 250px;
+    min-height: 650px;
+}
+
+#content {
+    height: 250px;
+}
