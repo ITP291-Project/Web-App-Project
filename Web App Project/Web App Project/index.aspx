@@ -714,9 +714,10 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
 					
 					<div class="section-heading">
 					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<h2>Email or phone are welcome</h2>
+					<h2>Interested to volunteer yet?</h2>
 					</div>
-					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Interested to volunteer yet? Sign up with us to brighten up someone else's day!</p>
+					<p class="wow lightSpeedIn" data-wow-delay="0.3s">There's no age limit for volunteering, the only thing you need is an empathetic heart. Join us today
+                    a difference in someone's life. Let us know more about you, because we care for you as a big volunteering family. </p>
 					</div>
 					
 				</div>
@@ -733,22 +734,31 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
     
                         <div class="form-group">
                             <label for="name">
-                                Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                                First Name</label>
+                            <input type="text" class="form-control" id="fName" placeholder="First Name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="name">
+                                Last Name</label>
+                            <input type="text" class="form-control" id="lName" placeholder="Last Name" required="required" />
                         </div>
                         <div class="form-group">
                             <label for="email">
                                 Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
+                                <input type="email" class="form-control" id="email" placeholder="Email" required="required" />
                         </div>
                         <div class="form-group">
                             <label for="subject">
                                 Subject</label>
                             <select id="subject" name="subject" class="form-control" required="required">
-                                <option value="na" selected="">Choose One:</option>
-                                <option value="service">Friendship request</option>
-                                <option value="suggestions">Wanna marry you</option>
-                                <option value="product">Prom night invitation</option>
+                                <option value="na" selected="">Salutation</option>
+                                <option value="service">Mr.</option>
+                                <option value="suggestions">Ms.</option>
+                                <option value="product">Miss.</option>
+                                <option value="product">Mdm.</option>
+                                <option value="product">Mrs.</option>
+                                <option value="product">Dr.</option>
+                                <option value="product">Miss.</option>
                             </select>
                         </div>
           
