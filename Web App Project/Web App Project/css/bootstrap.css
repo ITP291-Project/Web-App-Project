@@ -1583,15 +1583,15 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-    min-height: calc(100vh - 90px);
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.containerhome {
-    padding-right: 15px;
+.containerOther {
+    min-height: calc(100vh - 120px);
+   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;

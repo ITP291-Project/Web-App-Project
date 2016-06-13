@@ -1,15 +1,19 @@
 /* ------------------------------------------------------------------------------
+	Template Name: akshara
+	Author: aspxtemplates
+	Author URI: http://www.aspxtemplates.com
+	
+	
+	
+/* ------------------------------------------------------------------------------
 	Typography
 -------------------------------------------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Source%20Sans%20Pro:300,400,500,600,700);
 @import url(http://fonts.googleapis.com/css?family=Source%20Sans%20Pro:300,400,500,600,700);
 
-html, body, form {
-    height: 100%;
-}
-
 * {
-    margin: 0;
+    margin:0;
+    padding:0;
 }
 
 p
@@ -392,7 +396,7 @@ ul li {
     font-weight: 800;
     margin-top: 0px;
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 25px;
     color: #FFCC00;
     padding: 5px 20px 5px 0px;
     display: inline-block;
@@ -902,10 +906,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0051de', end
 /* ------------------------------------------------------------------------------
 	 Footer
 -------------------------------------------------------------------------------*/
-
 .footer {
 	text-align: left;
 }
+
+.footerOther {
+    text-align: left;
+}
+
 .footer-top {
 	background-color: #181818;
 	padding-top: 50px;
@@ -1122,7 +1130,7 @@ form#contact-form .form-group label
     display: block;
     letter-spacing: 1px;
     font-size: 16px;
-    color: #000;
+    color: #FFFFFF;
 }
 form#contact-form input,form#contact-form select,form#contact-form textarea {
 	border-radius: 4px;
@@ -1161,28 +1169,3 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
     width: 100%;
     
 }
-
-     
- #left
- {
-    float:left;
-
-    width:20%;
-  }
- #right
- {
-    float:right;
-    width:20%;
-  }
-#content
- {
-    float:left;
-    width:97%;
-    border-left:1px solid black;
-    border-right:1px solid black;
-  }
-#footer
-{
- padding:5px;
- background:black;
- color:white;

@@ -12,10 +12,11 @@
         </div>
     </div>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
 <footer class="footer">
   <div class="footer-top section-tb">
-    <div class="container">
+
       <div class="row">
         <div class="footer-col col-md-4">
           <h5>Our Office Location</h5>
@@ -54,7 +55,6 @@
           </ul>
         </div>
       </div>
-    </div>
   </div>
 </footer>
 </asp:Content>
