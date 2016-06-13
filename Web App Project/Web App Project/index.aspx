@@ -320,19 +320,19 @@
                             <span><i class="icon-alarmclock"></i></span>
                         </div>
                         <h3>The Salvation Army</h3>
-                        <p>
-                            Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
-                            tables, navigation, modals.</p>
+                        <p>At The Salvation Army, volunteers play an active role in caring and enriching the lives of the children, 
+                            youths, elderly and families we serve. You can support an existing programme, or initiate a project to bless our beneficiaries!
+                        </p>
                     </div>
                     <div class="box ">
                         <div class="icon colored-5">
                             <span><i class="icon-anchor"></i></span>
                         </div>
-                        <h3>ROUCH Home Care</h3>
-                        <p>
-                            Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
-                            tables, navigation, modals, image carousels and many other, as well as optional
-                            JavaScript plugins</p>
+                        <h3>TOUCH Home Care</h3>
+                        <p>TOUCH Home Care (THC) is the first home care agency in Singapore to provide integrated and 
+                           holistic home-based services that support the frail and homebound elderly and their caregivers. 
+                           At THC, our goal is to help the frail elderly enjoy greater independence and better quality of life at home.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
