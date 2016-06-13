@@ -99,6 +99,7 @@
     <Content Include="App_Data\localdb_log.ldf">
       <DependentUpon>localdb.mdf</DependentUpon>
     </Content>
+    <Content Include="bossDash.aspx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -234,6 +235,13 @@
     <Content Include="WebApplication3.csproj.user" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bossDash.aspx.cs">
+      <DependentUpon>bossDash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bossDash.aspx.designer.cs">
+      <DependentUpon>bossDash.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

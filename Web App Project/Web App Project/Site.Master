@@ -21,6 +21,7 @@
     <script src="js/retina.min.js"></script>
     <script src="js/modernizr.js"></script>
     <script src="js/main.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

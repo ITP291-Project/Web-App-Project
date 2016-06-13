@@ -3,6 +3,15 @@
 -------------------------------------------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Source%20Sans%20Pro:300,400,500,600,700);
 @import url(http://fonts.googleapis.com/css?family=Source%20Sans%20Pro:300,400,500,600,700);
+
+html, body, form {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+}
+
 p
 {
     font-size: 14px;
@@ -893,6 +902,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0051de', end
 /* ------------------------------------------------------------------------------
 	 Footer
 -------------------------------------------------------------------------------*/
+
 .footer {
 	text-align: left;
 }
@@ -1167,7 +1177,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 #content
  {
     float:left;
-    width:59%;
+    width:97%;
     border-left:1px solid black;
     border-right:1px solid black;
   }
@@ -1175,4 +1185,4 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 {
  padding:5px;
  background:black;
- color:whit
+ color:white;

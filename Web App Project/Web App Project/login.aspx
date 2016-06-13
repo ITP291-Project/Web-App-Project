@@ -11,6 +11,8 @@
     <meta name="author" content="aspxtemplates">
     <title>Voices of Singapore - Login</title>
 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -73,6 +75,7 @@
                     </label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="password"
                         required>
+                    <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
                     <span class="icon fa fa-unlock fa-lg"></span>
                 </div>
                 <div class="form-group text-left">

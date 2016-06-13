@@ -5,6 +5,19 @@
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
             <div id="content">
                 SCHEDULE
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
+                    <Columns>
+                        <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Timetable] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Timetable] ([Id]) VALUES (@Id)" ProviderName="<%$ ConnectionStrings:localdbConnectionString1.ProviderName %>" SelectCommand="SELECT [Id] FROM [Timetable]">
+                    <DeleteParameters>
+                        <asp:Parameter Name="Id" Type="Int32" />
+                    </DeleteParameters>
+                    <InsertParameters>
+                        <asp:Parameter Name="Id" Type="Int32" />
+                    </InsertParameters>
+                </asp:SqlDataSource>
             </div>
 
             <div id="right">
@@ -29,10 +42,9 @@
       <div class="row">
         <div class="footer-col col-md-4">
           <h5>Our Office Location</h5>
-          <p>Metro Railway Delhi 10042 India.<br>
-            4512 0123 145689 / 9986523471<br>
-            123@aspxtemplates.com</p>
-          <p>Copyright © 2015 Delhi Inc. All Rights Reserved.<a href="http://www.aspxtemplates.com"> aspxtemplates.com</a></p>
+          <p>Upper Serangoon Avenue 3</p>
+            <p>Singapore 123456</p>
+          <p>Copyright © 2015 Joanne Volunteering Inc. All Rights Reserved.</p>
         </div>
         <div class="footer-col col-md-3">
           <h5>Services We Offer</h5>
