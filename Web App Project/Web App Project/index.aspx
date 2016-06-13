@@ -239,15 +239,11 @@
             <div class="col-sm-5 wowload fadeInLeft">
                 <div class="spacer1">
                     <h2>
-                        What is Bootstrap ?</h2>
+                        Who are we?</h2>
                     <ul>
-                        <li><i class="fa fa-check"></i>Bootstrap is a free front-end framework for faster and
-                            easier web development </li>
-                        <li><i class="fa fa-check"></i>Bootstrap includes HTML and CSS based design templates
-                            for typography, forms, buttons, tables, navigation, modals, image carousels and
-                            many other, as well as optional JavaScript plugins</li>
-                        <li><i class="fa fa-check"></i>Bootstrap also gives you the ability to easily create
-                            responsive designs </li>
+                        <li><i class="fa fa-check"></i>We are the Voices of Singapore organisation, working with a few volunteer organisations.</li>
+                        <li><i class="fa fa-check"></i>Make volunteering a happier thing to do</li>
+                        <li><i class="fa fa-check"></i>A platform for convinient report submission</li>
                     </ul>
                 </div>
             </div>
@@ -258,7 +254,7 @@
                             <img src="img/intro-img3.jpg" class="img-responsive"><a href="#" class="view"><i
                                 class="fa fa-external-link"></i> View</a></div>
                         <div class="item">
-                            <img src="img/intro-img4.jpg" class="img-responsive"><a href="#" class="view"><i
+                            <img src="C:/Users/Joanne/Desktop/Project Pictures/23102037.jpg" class="img-responsive"><a href="#" class="view"><i
                                 class="fa fa-external-link"></i> View</a></div>
                         <div class="item">
                             <img src="img/intro-img6.jpg" class="img-responsive"><a href="#" class="view"><i
@@ -278,12 +274,13 @@
             <div class="row">
                 <div class="col-md-12 section-heading text-center padding-bottom70">
                     <h2>
-                        Our Partners</h2>
+                        Our Partners
+                    </h2>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <h3>
                                Our partners are non-profit organisations and they require
-                                helping hands from us to make the world a better place. 
+                               helping hands from us to make the world a better place. 
                             </h3>
                         </div>
                     </div>
@@ -298,7 +295,8 @@
                         <h3>
                             Pioneer Generation Ambassadors
                         </h3>
-                        <p>Join us, as a Pioneer Generation Ambassador to help the Pioneers 
+                        <p>
+                           Join us, as a Pioneer Generation Ambassador to help the Pioneers 
                            understand the Pioneer Generation Package!
                         </p>
 
@@ -307,8 +305,11 @@
                         <div class="icon colored-4">
                             <span><i class="icon-heart"></i></span>
                         </div>
-                        <h3>SPCA</h3>
-                        <p>We rely on a community of passionate volunteers, committed to helping us advocate the animal welfare cause.
+                        <h3>
+                            SPCA
+                        </h3>
+                        <p>
+                           We rely on a community of passionate volunteers, committed to helping us advocate the animal welfare cause.
                            If you have a passion for animals and would like to help in a tangible way, we want you! 
                         </p>
                     </div>
@@ -318,17 +319,23 @@
                         <div class="icon colored-2">
                             <span><i class="icon-alarmclock"></i></span>
                         </div>
-                        <h3>The Salvation Army</h3>
-                        <p>At The Salvation Army, volunteers play an active role in caring and enriching the lives of the children, 
-                            youths, elderly and families we serve. You can support an existing programme, or initiate a project to bless our beneficiaries!
+                        <h3>
+                            The Salvation Army
+                        </h3>
+                        <p>
+                           At The Salvation Army, volunteers play an active role in caring and enriching the lives of the children, 
+                           youths, elderly and families we serve. You can support an existing programme, or initiate a project to bless our beneficiaries!
                         </p>
                     </div>
                     <div class="box ">
                         <div class="icon colored-5">
                             <span><i class="icon-anchor"></i></span>
                         </div>
-                        <h3>TOUCH Home Care</h3>
-                        <p>TOUCH Home Care (THC) is the first home care agency in Singapore to provide integrated and 
+                        <h3>
+                            TOUCH Home Care
+                       </h3>
+                        <p>
+                           TOUCH Home Care (THC) is the first home care agency in Singapore to provide integrated and 
                            holistic home-based services that support the frail and homebound elderly and their caregivers. 
                            At THC, our goal is to help the frail elderly enjoy greater independence and better quality of life at home.
                         </p>
@@ -339,8 +346,11 @@
                         <div class="icon colored-3">
                             <span><i class="icon-basket"></i></span>
                         </div>
-                        <h3>Ren Ci</h3>
-                        <p>If you are looking for a volunteer opportunity to serve and care for the elderly, Ren Ci offers 
+                        <h3>
+                            Ren Ci
+                        </h3>
+                        <p>
+                           If you are looking for a volunteer opportunity to serve and care for the elderly, Ren Ci offers 
                            you the platform to complement our delivery of holistic care and experience the feeling of 
                            touching the lives of the seniors through a warm smile, a listening ear or simply ever-ready hands to help.
                         </p>
@@ -350,7 +360,8 @@
                             <span><i class="icon-briefcase"></i></span>
                         </div>
                         <h3>Singapore Red Cross</h3>
-                        <p>Volunteering is more than helping to improve and impact the lives of the needy. 
+                        <p>
+                           Volunteering is more than helping to improve and impact the lives of the needy. 
                            It is also about bringing some much needed cheer and relief to them. 
                            It is through the time and care of ordinary and altruistic people like you that we can do extraordinary things!
                         </p>

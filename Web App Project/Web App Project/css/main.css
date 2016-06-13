@@ -1117,7 +1117,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', end
 }
 .form-wrapper
 {
-    background: rgba(0,0,0,0.3);
+    background: #2d3033;
     padding: 40px;
     border-radius: 6px;
     color: #FFFFFF;
