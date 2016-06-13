@@ -240,15 +240,11 @@
             <div class="col-sm-5 wowload fadeInLeft">
                 <div class="spacer1">
                     <h2>
-                        What is Bootstrap ?</h2>
+                        Who are we?</h2>
                     <ul>
-                        <li><i class="fa fa-check"></i>Bootstrap is a free front-end framework for faster and
-                            easier web development </li>
-                        <li><i class="fa fa-check"></i>Bootstrap includes HTML and CSS based design templates
-                            for typography, forms, buttons, tables, navigation, modals, image carousels and
-                            many other, as well as optional JavaScript plugins</li>
-                        <li><i class="fa fa-check"></i>Bootstrap also gives you the ability to easily create
-                            responsive designs </li>
+                        <li><i class="fa fa-check"></i>We are the Voices of Singapore organisation, working with a few volunteer organisations.</li>
+                        <li><i class="fa fa-check"></i>Make volunteering a happier thing to do</li>
+                        <li><i class="fa fa-check"></i>A platform for convinient report submission</li>
                     </ul>
                 </div>
             </div>
@@ -259,7 +255,7 @@
                             <img src="img/intro-img3.jpg" class="img-responsive"><a href="#" class="view"><i
                                 class="fa fa-external-link"></i> View</a></div>
                         <div class="item">
-                            <img src="img/intro-img4.jpg" class="img-responsive"><a href="#" class="view"><i
+                            <img src="C:/Users/Joanne/Desktop/Project Pictures/23102037.jpg" class="img-responsive"><a href="#" class="view"><i
                                 class="fa fa-external-link"></i> View</a></div>
                         <div class="item">
                             <img src="img/intro-img6.jpg" class="img-responsive"><a href="#" class="view"><i
