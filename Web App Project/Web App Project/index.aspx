@@ -297,7 +297,8 @@
                             <span><i class="icon-bargraph"></i></span>
                         </div>
                         <h3>
-                            100% free</h3>
+                            Pioneer Generation Office
+                        </h3>
                         <p>
                             Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
                             tables, navigation, modals, image carousels and many other, as well as optional
@@ -307,8 +308,7 @@
                         <div class="icon colored-4">
                             <span><i class="icon-heart"></i></span>
                         </div>
-                        <h3>
-                            Made with love</h3>
+                        <h3>SPCA</h3>
                         <p>
                             Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
                             tables, navigation, modals.</p>
@@ -319,8 +319,7 @@
                         <div class="icon colored-2">
                             <span><i class="icon-alarmclock"></i></span>
                         </div>
-                        <h3>
-                            Fully responsive</h3>
+                        <h3>The Salvation Army</h3>
                         <p>
                             Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
                             tables, navigation, modals.</p>
@@ -329,8 +328,7 @@
                         <div class="icon colored-5">
                             <span><i class="icon-anchor"></i></span>
                         </div>
-                        <h3>
-                            Fast &amp; light</h3>
+                        <h3>ROUCH Home Care</h3>
                         <p>
                             Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
                             tables, navigation, modals, image carousels and many other, as well as optional
@@ -342,8 +340,7 @@
                         <div class="icon colored-3">
                             <span><i class="icon-basket"></i></span>
                         </div>
-                        <h3>
-                            Retina-ready</h3>
+                        <h3>Ren Ci</h3>
                         <p>
                             Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
                             tables, navigation, modals, image carousels and many other, as well as optional
@@ -353,8 +350,7 @@
                         <div class="icon colored-6">
                             <span><i class="icon-briefcase"></i></span>
                         </div>
-                        <h3>
-                            For creative like you!</h3>
+                        <h3>Singapore Red Cross</h3>
                         <p>
                             Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
                             tables, navigation, modals</p>
