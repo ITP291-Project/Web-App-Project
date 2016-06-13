@@ -1122,7 +1122,7 @@ form#contact-form .form-group label
     display: block;
     letter-spacing: 1px;
     font-size: 16px;
-    color: #FFFFFF;
+    color: #000;
 }
 form#contact-form input,form#contact-form select,form#contact-form textarea {
 	border-radius: 4px;
