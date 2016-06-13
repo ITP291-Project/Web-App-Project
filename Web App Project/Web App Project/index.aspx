@@ -341,19 +341,20 @@
                             <span><i class="icon-basket"></i></span>
                         </div>
                         <h3>Ren Ci</h3>
-                        <p>
-                            Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
-                            tables, navigation, modals, image carousels and many other, as well as optional
-                            JavaScript plugins</p>
+                        <p>If you are looking for a volunteer opportunity to serve and care for the elderly, Ren Ci offers 
+                           you the platform to complement our delivery of holistic care and experience the feeling of 
+                           touching the lives of the seniors through a warm smile, a listening ear or simply ever-ready hands to help.
+                        </p>
                     </div>
                     <div class="box ">
                         <div class="icon colored-6">
                             <span><i class="icon-briefcase"></i></span>
                         </div>
                         <h3>Singapore Red Cross</h3>
-                        <p>
-                            Bootstrap includes HTML and CSS based design templates for typography, forms, buttons,
-                            tables, navigation, modals</p>
+                        <p>Volunteering is more than helping to improve and impact the lives of the needy. 
+                           It is also about bringing some much needed cheer and relief to them. 
+                           It is through the time and care of ordinary and altruistic people like you that we can do extraordinary things!
+                        </p>
                     </div>
                 </div>
             </div>
