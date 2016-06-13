@@ -11,7 +11,6 @@
     <meta name="author" content="Srikanth">
     <title>Voices of Singapore - Making our voices heard</title>
 
-    <!-- Testing comment from joanne laptop -->
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
