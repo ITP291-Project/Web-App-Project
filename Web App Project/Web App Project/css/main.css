@@ -1178,3 +1178,11 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 #content {
     height: 250px;
 }
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
