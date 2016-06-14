@@ -149,6 +149,7 @@
     <Content Include="img\slider\bg1.jpg" />
     <Content Include="img\slider\bg2.jpg" />
     <Content Include="img\slider\bg3.jpg" />
+    <Content Include="img\slider\hands.png" />
     <Content Include="img\slider\Icon_BlueHand_RedHeart.png" />
     <Content Include="img\slider\old-home.jpg" />
     <Content Include="img\slider\one.jpg" />
@@ -157,7 +158,6 @@
     <Content Include="img\slider\slide1-2.png" />
     <Content Include="img\slider\voices_logo1.jpg" />
     <Content Include="img\slider\voices_logo2.png" />
-    <Content Include="img\slider\volunteerhands.jpg" />
     <Content Include="img\slider\Volunteer_.png" />
     <Content Include="img\slide_bg.png" />
     <Content Include="img\team-1.png" />

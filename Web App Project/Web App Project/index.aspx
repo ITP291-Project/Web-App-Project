@@ -69,6 +69,8 @@
     <!-- Carousel-Inner -->
 	<div class="carousel-inner"> 
 		<div class="item active bg1">
+
+<!-- IMAGE SLIDER - FIRST SLIDE -->
          <div class="banner-overlay">
          <!-- Slide - 1 -->
 			<div class="container">
@@ -92,14 +94,16 @@
 				</div>
 			</div>
             </div>
-		</div> <!-- End Slide - 1 -->
+            </div><!-- End Slide - 1 -->
+
+<!-- IMAGE SLIDER - SECOND SLIDE -->
 		<div class="item bg2">
           <div class="banner-overlay">
          <!-- Slide - 2 -->
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-sm-4 hidden-xs animated">                                      
-						<img src="img/slider/slide1-1.png" alt="" class="slide1-2 wow fadeInLeft img-responsive"/>
+						<img src="img/slider/hands.png" alt="" class="slide1-2 wow fadeInLeft img-responsive"/>
 					</div>
 					<div class="col-md-6 col-sm-8 col-xs-12 animated text-right">	
                          <br class="hidden-sm hidden-xs" />					
