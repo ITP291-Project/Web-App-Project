@@ -62,8 +62,7 @@
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50">
             <div class="registrationform">
                 <form role="form " action="" method="">
-                <h1 class="text-left">
-                    Log in to your app</h1>
+                <h1 class="text-left">Log in to your Dashboard!</h1>
                 <div class="form-group">
                     <label for="name">
                     </label>
