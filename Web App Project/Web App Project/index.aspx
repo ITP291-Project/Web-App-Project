@@ -749,11 +749,37 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                                 Last Name</label>
                             <input type="text" class="form-control" id="lName" placeholder="Last Name" required="required" />
                         </div>
+
+                         <div class="form-group">
+                            <label for="nric">
+                                NRIC</label>
+                            <input type="text" class="form-control" id="nric" placeholder="NRIC" required="required" />
+                        </div>
+
                         <div class="form-group">
                             <label for="email">
                                 Email Address</label>
                                 <input type="email" class="form-control" id="email" placeholder="Email" required="required" />
                         </div>
+
+                        <div class="form-group">
+                            <label for="occupation">
+                                Occupation</label>
+                            <input type="text" class="form-control" id="occupation" placeholder="Occupation" required="required" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="addr1">
+                                Mailing Address 1</label>
+                            <input type="text" class="form-control" id="mailAddr1" placeholder="Mailing Address 1" required="required" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="addr2">
+                                Mailing Address 2</label>
+                            <input type="text" class="form-control" id="mailAddr2" placeholder="Mailing Address 2" required="required" />
+                        </div>
+
                         <div class="form-group">
                             <label for="subject">
                                 Subject</label>
@@ -786,7 +812,7 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
 				
             </div><br /><br />
 			<div class="text-center">
-					<p class="lead"><i class="fa fa-phone"></i> Call me +9 4578 1254 1452</p>
+					<p class="lead"><i class="fa fa-phone"></i> Call me maybe</p>
 			</div>
         </div>
 
@@ -802,10 +828,9 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
       <div class="row">
         <div class="footer-col col-md-4">
           <h5>Our Office Location</h5>
-          <p>Metro Railway Delhi 10042 India.<br>
-            4512 0123 145689 / 9986523471<br>
-            123@aspxtemplates.com</p>
-          <p>Copyright © 2015 Delhi Inc. All Rights Reserved.<a href="http://www.aspxtemplates.com"> aspxtemplates.com</a></p>
+          <p>Upper Serangoon Avenue 3</p>
+            <p>Singapore 123456</p>
+          <p>Copyright © 2015 Joanne Volunteering Inc. All Rights Reserved.</p>
         </div>
         <div class="footer-col col-md-3">
           <h5>Services We Offer</h5>
@@ -840,9 +865,9 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
       </div>
     </div>
   </div>
+</footer>
   <!-- footer top --> 
   
-</footer>
     <!-- Footer section -->
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>

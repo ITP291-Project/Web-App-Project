@@ -18,7 +18,7 @@
                         <asp:Parameter Name="Id" Type="Int32" />
                     </InsertParameters>
                 </asp:SqlDataSource>
-            </div>
+            
 
             <div id="right">
 
@@ -31,6 +31,7 @@
                 <asp:Button ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" />
 
             </div>
+                </div>
         </div>
     </div>
 </asp:Content>

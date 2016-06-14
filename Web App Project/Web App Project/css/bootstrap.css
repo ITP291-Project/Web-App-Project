@@ -25,6 +25,7 @@ menu,
 nav,
 section,
 summary {
+    height: 50px;
   display: block;
 }
 audio,
@@ -1583,15 +1584,15 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-    min-height: calc(100vh - 90px);
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.containerhome {
-    padding-right: 15px;
+.containerDash {
+  height: 250px;
+   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;

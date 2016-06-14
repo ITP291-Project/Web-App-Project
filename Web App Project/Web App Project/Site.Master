@@ -42,6 +42,7 @@
 </div>
 
 
+
 <body id="hme">
     <form id="form1" runat="server">
     <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
@@ -66,13 +67,12 @@
             </div>
         </div>
     </div>
-    
         <!-- Body -->
-
+        <div style="min-height: 500px">
         <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
-
+        </div>
         </form>
     </body>
-    
-    <asp:ContentPlaceHolder ID="footer" runat="server"></asp:ContentPlaceHolder>   
+  
+    <asp:ContentPlaceHolder ID="footer" runat="server"></asp:ContentPlaceHolder>  
 </html>
