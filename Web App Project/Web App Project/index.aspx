@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Srikanth">
+
     <title>Voices of Singapore - Making our voices heard</title>
 
     <!-- Bootstrap Core CSS -->
@@ -48,7 +49,7 @@
                     <li><a class="page-scroll" href="#hme">Home</a> </li>
                     <li><a class="page-scroll" href="#services">Services</a> </li>
                     <li><a class="page-scroll" href="#intro">About Us</a> </li>
-                    <li><a class="page-scroll" href="#contact">Contact Us</a> </li>
+                    <li><a class="page-scroll" href="#contact">Join Us</a> </li>
                     <li><a class="page-scroll" href="login.aspx">Login</a> </li>
                 </ul>
             </div>
@@ -81,12 +82,12 @@
                           </p>
                             <br/>
                            <div class="text-left buttonleft hidden-xs">
-                           <a href="#" class="btn btn-lg btn-borderwhite wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="1200ms">Get Started</a> 
+                           <a href="#contact" class="btn btn-lg btn-borderwhite wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="1200ms">Get Started</a> 
                            </div>
                       </div>						
 					</div>
                     <div class="col-md-6 col-sm-4 hidden-xs animated">                                      
-							<img src="img/slider/slide1-1.png" alt="" class="slide1-1 wow  fadeInRight"/>
+							<img src="img/slider/Icon_BlueHand_RedHeart.png" alt="" class="slide1-1 wow  fadeInRight"/>
 					</div>
 				</div>
 			</div>
@@ -186,6 +187,7 @@
 	<a class="right carousel-control animated fadeInRight" href="#fullslider" data-slide="next"><i class="fa fa-chevron-right"></i></a>	
     </section>
     <!--  End Carousel Main Slider  -->
+
     <!-- services section -->
     <section id="services" class="services service-section">
   <div class="container">
@@ -224,6 +226,7 @@
   </div>
 </section>
     <!-- services section -->
+
     <!-- about section -->
     <section id="intro" class="section intro no-padding">
   <div class="container-fluid">
@@ -739,11 +742,12 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                 <form id="contact-form">
                 <div class="row">
     
-                        <div class="form-group">
+                       <div class="form-group">
                             <label for="name">
                                 First Name</label>
                             <input type="text" class="form-control" id="fName" placeholder="First Name" required="required" />
                         </div>
+
                         <div class="form-group">
                             <label for="name">
                                 Last Name</label>
