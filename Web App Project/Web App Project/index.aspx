@@ -307,24 +307,23 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="icon colored-1">
-                            <span><i class="icon-bargraph"></i></span>
+                            <span><img src="img/PGA.jpg" /></span>
                         </div>
-                        <h3>
-                            Pioneer Generation Ambassadors
-                        </h3>
+                        <!--<h3> Pioneer Generation Ambassador
+                        </h3>-->
                         <p>
-                           Join us, as a Pioneer Generation Ambassador to help the Pioneers 
+                           Join us, as an Ambassador to help the Pioneers 
                            understand the Pioneer Generation Package!
                         </p>
 
                     </div>
                     <div class="box ">
                         <div class="icon colored-4">
-                            <span><i class="icon-heart"></i></span>
+                            <span><img src="img/SPCA.jpg"></img></span>
                         </div>
-                        <h3>
+                        <!--<h3>
                             SPCA
-                        </h3>
+                        </h3>-->
                         <p>
                            We rely on a community of passionate volunteers, committed to helping us advocate the animal welfare cause.
                            If you have a passion for animals and would like to help in a tangible way, we want you! 
@@ -334,11 +333,11 @@
                 <div class="col-md-4">
                     <div class="box ">
                         <div class="icon colored-2">
-                            <span><i class="icon-alarmclock"></i></span>
+                            <span><img src="img/Salvation.jpg"></img></span>
                         </div>
-                        <h3>
+                        <!--<h3>
                             The Salvation Army
-                        </h3>
+                        </h3>-->
                         <p>
                            At The Salvation Army, volunteers play an active role in caring and enriching the lives of the children, 
                            youths, elderly and families we serve. You can support an existing programme, or initiate a project to bless our beneficiaries!
@@ -346,11 +345,11 @@
                     </div>
                     <div class="box ">
                         <div class="icon colored-5">
-                            <span><i class="icon-anchor"></i></span>
+                            <span><!--<img src="img/TOUCH.png"></img>--></span>
                         </div>
-                        <h3>
+                        <!--<h3>
                             TOUCH Home Care
-                       </h3>
+                       </h3>-->
                         <p>
                            TOUCH Home Care (THC) is the first home care agency in Singapore to provide integrated and 
                            holistic home-based services that support the frail and homebound elderly and their caregivers. 
@@ -361,11 +360,11 @@
                 <div class="col-md-4">
                     <div class="box ">
                         <div class="icon colored-3">
-                            <span><i class="icon-basket"></i></span>
+                            <span><img src="img/RenCi.jpg"></img></span>
                         </div>
-                        <h3>
+                        <!--<h3>
                             Ren Ci
-                        </h3>
+                        </h3>-->
                         <p>
                            If you are looking for a volunteer opportunity to serve and care for the elderly, Ren Ci offers 
                            you the platform to complement our delivery of holistic care and experience the feeling of 
@@ -374,9 +373,9 @@
                     </div>
                     <div class="box ">
                         <div class="icon colored-6">
-                            <span><i class="icon-briefcase"></i></span>
+                            <span><img src="img/RedCross.png"></img></span>
                         </div>
-                        <h3>Singapore Red Cross</h3>
+                        <!--<h3>Singapore Red Cross</h3>-->
                         <p>
                            Volunteering is more than helping to improve and impact the lives of the needy. 
                            It is also about bringing some much needed cheer and relief to them. 

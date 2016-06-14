@@ -132,6 +132,12 @@
     <Content Include="img\intro-img6.jpg" />
     <Content Include="img\logo%402x.png" />
     <Content Include="img\logo.png" />
+    <Content Include="img\PGA.jpg" />
+    <Content Include="img\TOUCH.png" />
+    <Content Include="img\Salvation.jpg" />
+    <Content Include="img\RenCi.jpg" />
+    <Content Include="img\SPCA.jpg" />
+    <Content Include="img\RedCross.png" />
     <Content Include="img\polygon.png" />
     <Content Include="img\project_12_big.jpg" />
     <Content Include="img\project_1_big.jpg" />
