@@ -333,7 +333,7 @@
                 <div class="col-md-4">
                     <div class="box ">
                         <div class="icon colored-2">
-                            <span><img src="img/Salvation.jpg"></img></span>
+                            <span><img src="img/Salvation.jpg"></img><br /></span>
                         </div>
                         <!--<h3>
                             The Salvation Army
