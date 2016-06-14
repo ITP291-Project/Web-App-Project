@@ -11,8 +11,10 @@
     <meta name="author" content="aspxtemplates">
     <title>Voices of Singapore - Login</title>
 
+    <div>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-
+    </div>
+    
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 

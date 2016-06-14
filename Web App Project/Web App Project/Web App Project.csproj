@@ -247,7 +247,7 @@
     <Content Include="bin\WebApplication3.dll" />
     <Content Include="bin\WebApplication3.pdb" />
     <Content Include="index.aspx" />
-    <Content Include="login.aspx" />
+    <Content Include="ASPX Files\Joanne\login.aspx" />
     <Content Include="obj\Debug\WebApplication3.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\WebApplication3.dll" />
     <Content Include="obj\Debug\WebApplication3.pdb" />
@@ -270,7 +270,7 @@
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="login.aspx.cs">
+    <Compile Include="ASPX Files\Joanne\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -344,7 +344,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ASPX Files\Angie\" />
-    <Folder Include="ASPX Files\Joanne\" />
     <Folder Include="ASPX Files\Seri\" />
     <Folder Include="bin\roslyn\" />
     <Folder Include="obj\Debug\TempPE\" />
