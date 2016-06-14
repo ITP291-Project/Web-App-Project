@@ -127,6 +127,9 @@
 			</div>
             </div>
 		</div> <!-- End Slide - 2 -->
+
+<!-- IMAGE SLIDER - THIRD SLIDE -->
+
 		<div class="item bg3">
           <div class="banner-overlay">
          <!-- Slide - 3 -->
@@ -156,6 +159,9 @@
 			</div>
             </div>
 		</div> <!-- End Slide - 3 -->
+
+<!-- IMAGE SLIDER - FOURTH SLIDE -->
+
        <div class="item bg4"> <!-- Slide - 4 -->
          <div class="banner-overlay">
           <div class="container">
@@ -184,6 +190,7 @@
            </div>
            </div>
         </div> <!-- End Slide - 4 -->		 
+
 	</div>
 	<!-- End Carousel-Inner -->
     <!-- Carousel - Control -->
