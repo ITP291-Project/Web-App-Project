@@ -208,6 +208,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\Home Server.pubxml" />
+    <Content Include="NewApplicants.aspx" />
+    <Content Include="PendingReports.aspx" />
+    <Content Include="ReportsApproved.aspx" />
+    <Content Include="Roster.aspx" />
+    <Content Include="ReportDrafts.aspx" />
+    <Content Include="ReportSubmission.aspx" />
+    <Content Include="SubmittedReport.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -238,7 +245,6 @@
     <Content Include="obj\Debug\WebApplication3.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\WebApplication3.dll" />
     <Content Include="obj\Debug\WebApplication3.pdb" />
-    <Content Include="test.aspx" />
     <Content Include="volunteerDash.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -266,16 +272,61 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NewApplicants.aspx.cs">
+      <DependentUpon>NewApplicants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewApplicants.aspx.designer.cs">
+      <DependentUpon>NewApplicants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PendingReports.aspx.cs">
+      <DependentUpon>PendingReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PendingReports.aspx.designer.cs">
+      <DependentUpon>PendingReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsApproved.aspx.cs">
+      <DependentUpon>ReportsApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportsApproved.aspx.designer.cs">
+      <DependentUpon>ReportsApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roster.aspx.cs">
+      <DependentUpon>Roster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roster.aspx.designer.cs">
+      <DependentUpon>Roster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDrafts.aspx.cs">
+      <DependentUpon>ReportDrafts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportDrafts.aspx.designer.cs">
+      <DependentUpon>ReportDrafts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSubmission.aspx.cs">
+      <DependentUpon>ReportSubmission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportSubmission.aspx.designer.cs">
+      <DependentUpon>ReportSubmission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubmittedReport.aspx.cs">
+      <DependentUpon>SubmittedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubmittedReport.aspx.designer.cs">
+      <DependentUpon>SubmittedReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="volunteerDash.aspx.cs">
       <DependentUpon>volunteerDash.aspx</DependentUpon>

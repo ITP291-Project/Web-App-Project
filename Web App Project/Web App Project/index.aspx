@@ -30,6 +30,9 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800'
         rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ============ Recaptcha Script ======== -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 
@@ -806,6 +809,8 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                             <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
                                 placeholder="Message"></textarea>
                         </div>
+
+                        <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV" style="text-align: center;"></div>
        
            
                         <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
