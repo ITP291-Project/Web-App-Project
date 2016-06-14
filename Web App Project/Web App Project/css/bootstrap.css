@@ -1603,6 +1603,13 @@ pre code {
     width: 750px;
   }
 }
+
+@media (min-width: 768px) {
+  .containerDash {
+
+  }
+}
+
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -2262,6 +2269,12 @@ pre code {
 table {
   background-color: transparent;
 }
+
+.tableDash {
+    background-color: transparent;
+    width: 650px;
+}
+
 caption {
   padding-top: 8px;
   padding-bottom: 8px;
