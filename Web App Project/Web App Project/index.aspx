@@ -268,13 +268,13 @@
                 <div id="carousel-works" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="img/intro-img3.jpg" class="img-responsive"><a href="#" class="view"><i
+                            <img src="img/slider/image1.jpg" class="img-responsive"><a href="#" class="view"><i
                                 class="fa fa-external-link"></i> View</a></div>
                         <div class="item">
-                            <img src="C:/Users/Joanne/Desktop/Project Pictures/23102037.jpg" class="img-responsive"><a href="#" class="view"><i
+                            <img src="img/slider/image2.jpg" class="img-responsive"><a href="#" class="view"><i
                                 class="fa fa-external-link"></i> View</a></div>
                         <div class="item">
-                            <img src="img/intro-img6.jpg" class="img-responsive"><a href="#" class="view"><i
+                            <img src="img/slider/image3.jpg" class="img-responsive"><a href="#" class="view"><i
                                 class="fa fa-external-link"></i> View</a></div>
                     </div>
                     <!-- Controls -->
