@@ -99,6 +99,7 @@
     <Content Include="App_Data\localdb_log.ldf">
       <DependentUpon>localdb.mdf</DependentUpon>
     </Content>
+    <Content Include="ASPX Files\Joanne\resetPassword.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\bossDash.aspx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -262,6 +263,13 @@
     <Content Include="WebApplication3.csproj.user" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASPX Files\Joanne\resetPassword.aspx.cs">
+      <DependentUpon>resetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Joanne\resetPassword.aspx.designer.cs">
+      <DependentUpon>resetPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ASPX Files\Ryan\BossDash\bossDash.aspx.cs">
       <DependentUpon>bossDash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

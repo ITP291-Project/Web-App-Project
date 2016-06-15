@@ -1186,3 +1186,20 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 #right {
     float: right;
 }
+
+.align-right {
+    text-align: left;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    padding-left: 150px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.label {
+    color: black;
+    font: normal 20px arial;
+}

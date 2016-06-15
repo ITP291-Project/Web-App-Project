@@ -63,31 +63,33 @@
             <div class="registrationform">
                 <form role="form " action="" method="">
                 <h1 class="text-left">Log in to your Dashboard!</h1>
+
+                <!-- asking for email input-->
                 <div class="form-group">
-                    <label for="name">
-                    </label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="user id"
-                        required>
+                    <label for="email"></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="email" required>
                     <!--placing icon using a span element-->
                     <span class="icon fa fa-user fa-lg"></span>
                 </div>
+
                 <div class="form-group">
-                    <label for="email">
-                    </label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="password"
-                        required>
+                    <label for="password"></label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
                     <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
                     <span class="icon fa fa-unlock fa-lg"></span>
                 </div>
+
                 <div class="form-group text-left">
-                    <button type="submit" class="btn btn-default">
-                        Submit</button>
+                    <button type="submit" class="btn btn-default">Login</button>
                     <a href="#forget-password" data-target="#pwdModal" data-toggle="modal">Forget password?</a>
                 </div>
+
                 </form>
             </div>
         </div>
     </div>
+
+        <!-- double check what is this-->
     <!--modal-->
     <div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -120,8 +122,10 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="clearfix">
                 </div>
+
             </div>
         </div>
     </div>
@@ -133,5 +137,6 @@
     <script src="js/modernizr.js"></script>
     <script src="js/main.js"></script>
     </form>
+
 </body>
 </html>
