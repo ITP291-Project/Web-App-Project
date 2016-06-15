@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Web_App_Project.Ryan {
+namespace Web_App_Project.ASPX_Files.Ryan.BossDash {
     
     
-    public partial class PendingReports {
+    public partial class RejectedReports {
         
         /// <summary>
         /// Button1 control.
@@ -22,13 +22,13 @@ namespace Web_App_Project.Ryan {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Button3 control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
         /// Button4 control.

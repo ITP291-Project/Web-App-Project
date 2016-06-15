@@ -105,6 +105,7 @@
     <Content Include="ASPX Files\Joanne\updateParticulars.aspx" />
     <Content Include="ASPX Files\Joanne\viewParticulars.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\bossDash.aspx" />
+    <Content Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -224,7 +225,7 @@
     <None Include="Properties\PublishProfiles\Home Server.pubxml" />
     <Content Include="ASPX Files\Ryan\BossDash\NewApplicants.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\PendingReports.aspx" />
-    <Content Include="ASPX Files\Ryan\VolunteerDash\ReportsApproved.aspx" />
+    <Content Include="ASPX Files\Ryan\BossDash\ReportsApproved.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\Roster.aspx" />
     <Content Include="ASPX Files\Ryan\VolunteerDash\ReportDrafts.aspx" />
     <Content Include="ASPX Files\Ryan\VolunteerDash\ReportSubmission.aspx" />
@@ -308,6 +309,13 @@
     <Compile Include="ASPX Files\Ryan\BossDash\bossDash.aspx.designer.cs">
       <DependentUpon>bossDash.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx.cs">
+      <DependentUpon>RejectedReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx.designer.cs">
+      <DependentUpon>RejectedReports.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -330,11 +338,11 @@
     <Compile Include="ASPX Files\Ryan\BossDash\PendingReports.aspx.designer.cs">
       <DependentUpon>PendingReports.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\ReportsApproved.aspx.cs">
+    <Compile Include="ASPX Files\Ryan\BossDash\ReportsApproved.aspx.cs">
       <DependentUpon>ReportsApproved.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\ReportsApproved.aspx.designer.cs">
+    <Compile Include="ASPX Files\Ryan\BossDash\ReportsApproved.aspx.designer.cs">
       <DependentUpon>ReportsApproved.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPX Files\Ryan\BossDash\Roster.aspx.cs">

@@ -5,18 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Web_App_Project
+namespace Web_App_Project.ASPX_Files.Ryan.BossDash
 {
-    public partial class bossDash : System.Web.UI.Page
+    public partial class RejectedReports : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ReportsApproved.aspx");
         }
     }
 }
