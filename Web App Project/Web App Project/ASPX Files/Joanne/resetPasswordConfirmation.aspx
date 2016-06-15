@@ -5,12 +5,16 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
 
+    <div class="container">
+        <div style="text-align: center">
     <body>
         <h2>Reset Password Confirmation</h2>
         <p>
             <h5>Your password has been reset. Please click <a href="#">here</a> to login.</h5>
         </p>
     </body>
+    </div>
+     </div>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">

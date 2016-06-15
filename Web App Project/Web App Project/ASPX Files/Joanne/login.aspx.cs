@@ -5,10 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class preview_dotnet_templates_the_big_picture_login : System.Web.UI.Page
+namespace Web_App_Project.ASPX_Files.Joanne
 {
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class login : System.Web.UI.Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -99,6 +99,7 @@
     <Content Include="App_Data\localdb_log.ldf">
       <DependentUpon>localdb.mdf</DependentUpon>
     </Content>
+    <Content Include="ASPX Files\Joanne\login.aspx" />
     <Content Include="ASPX Files\Joanne\resetPassword.aspx" />
     <Content Include="ASPX Files\Joanne\resetPasswordConfirmation.aspx" />
     <Content Include="ASPX Files\Joanne\updateParticulars.aspx" />
@@ -254,7 +255,6 @@
     <Content Include="bin\WebApplication3.dll" />
     <Content Include="bin\WebApplication3.pdb" />
     <Content Include="index.aspx" />
-    <Content Include="ASPX Files\Joanne\login.aspx" />
     <Content Include="obj\Debug\WebApplication3.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\WebApplication3.dll" />
     <Content Include="obj\Debug\WebApplication3.pdb" />
@@ -266,6 +266,13 @@
     <Content Include="WebApplication3.csproj.user" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASPX Files\Joanne\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Joanne\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ASPX Files\Joanne\resetPassword.aspx.cs">
       <DependentUpon>resetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -303,10 +310,6 @@
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ASPX Files\Joanne\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />

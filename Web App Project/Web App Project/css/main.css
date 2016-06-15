@@ -1170,6 +1170,11 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 	background: #fff;
 }
 
+.content {
+    float: center;
+    align-content: center;
+}
+
 .content-last
 {
     background-color: #F9F2EC;
@@ -1202,4 +1207,9 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 .label {
     color: black;
     font: normal 20px arial;
+}
+
+.reset {
+    text-align: center;
+    width: 100%;
 }

@@ -1,64 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="preview_dotnet_templates_the_big_picture_login" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-
-<!--<asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">-->
-<html class="full" xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="aspxtemplates">
-    <title>Voices of Singapore - Login</title>
-
-    <div>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    </div>
-    
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/the-big-picture.css" rel="stylesheet">
-    <link href="css/font-icon.css" rel="stylesheet" type="text/css" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
-
-    <!-- ============ Google fonts ============ -->
-    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'
-        type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800'
-        rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-</head>
-
-
-<body>
-    <form id="form1" runat="server">
-    <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Voices of Singapore</a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
-                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
-                        class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse navbar-menubuilder">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.aspx">Home</a> </li>
-                    <li><a href="#products">Products</a> </li>
-                    <li><a href="#about-us">About Us</a> </li>
-                    <li><a href="#contact">Contact Us</a> </li>
-                    <li>
-                        <li class="active"><a class="active" href="login.aspx">Login</a> </li>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- Login -->
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Joanne.login" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <div class="container">
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50">
             <div class="registrationform">
@@ -130,24 +71,12 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/retina.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/main.js"></script>
-    </form>
+</asp:Content>
 
-</body>
-</html>
-
-<!--</asp:Content>-->
-<!--
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
-     <footer class="footerDash">
+    <footer class="footer">
   <div class="footer-top section-tb">
-
+    <div class="container">
       <div class="row">
         <div class="footer-col col-md-4">
           <h5>Our Office Location</h5>
@@ -187,6 +116,6 @@
         </div>
       </div>
     </div>
+  </div>
 </footer>
-</asp:Content>-->
-
+</asp:Content>

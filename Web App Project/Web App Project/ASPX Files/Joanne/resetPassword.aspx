@@ -8,28 +8,27 @@
 
 <body>
     <div class="align-center">
-        <h1>Reset Password.</h1>
+        <h1>Reset Password</h1>
         <h3>Reset your password</h3>
     </div>
-    <div class="align-right">
-        
+    <div class="reset">
         <p class="label">
             <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>
         </p>
         <p>
-            <asp:TextBox ID="TextBox1" runat="server" Width="250px"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" Width="500px"></asp:TextBox>
         </p>
         <p class="label">
             <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
         </p>
         <p>
-            <asp:TextBox ID="TextBox2" runat="server" Width="250px"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" Width="500px"></asp:TextBox>
         </p>
         <p class="label">
             <asp:Label ID="Label3" runat="server" Text="Confirm Password"></asp:Label>
         </p>
         <p>
-            <asp:TextBox ID="TextBox3" runat="server" Width="250px"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" Width="500px"></asp:TextBox>
         </p>
         <p class="label">
             <asp:Button ID="Button1" runat="server" Text="Reset" OnClick="Button1_Click" />

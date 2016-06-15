@@ -6,7 +6,8 @@
     </head>
 
     <body>
-        <div>
+        <div class="container">
+            <div class="content">
         <h1 style="margin-left: 400px">Update Particulars</h1>
             <p style="margin-left: 360px">
                 <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
@@ -40,6 +41,7 @@
             <p style="margin-left: 360px">
                 <asp:TextBox ID="TextBox6" runat="server" Width="433px"></asp:TextBox>
             </p>
+        </div>
         </div>
 
 

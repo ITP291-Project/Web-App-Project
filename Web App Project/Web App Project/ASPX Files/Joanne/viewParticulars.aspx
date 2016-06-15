@@ -7,7 +7,7 @@
     </head>
 
     <body>
-<div class="align-right">
+<div style="text-align: center">
         <h2>Your Particulars</h2>
         <p>&nbsp;</p>
         <p>
