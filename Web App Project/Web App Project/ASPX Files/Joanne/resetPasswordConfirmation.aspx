@@ -5,7 +5,10 @@
     </head>
 
     <body>
-
+        <h2>Reset Password Confirmation</h2>
+        <p>
+            <h5>Your password has been reset. Please click <a href="#">here</a> to login.</h5>
+        </p>
     </body>
 </asp:Content>
 
