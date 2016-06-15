@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <head>
         <title>Confirm your reset</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
 
     <body>

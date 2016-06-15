@@ -101,6 +101,7 @@
     </Content>
     <Content Include="ASPX Files\Joanne\resetPassword.aspx" />
     <Content Include="ASPX Files\Joanne\resetPasswordConfirmation.aspx" />
+    <Content Include="ASPX Files\Joanne\viewParticulars.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\bossDash.aspx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -277,6 +278,13 @@
     </Compile>
     <Compile Include="ASPX Files\Joanne\resetPasswordConfirmation.aspx.designer.cs">
       <DependentUpon>resetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX Files\Joanne\viewParticulars.aspx.cs">
+      <DependentUpon>viewParticulars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Joanne\viewParticulars.aspx.designer.cs">
+      <DependentUpon>viewParticulars.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPX Files\Ryan\BossDash\bossDash.aspx.cs">
       <DependentUpon>bossDash.aspx</DependentUpon>

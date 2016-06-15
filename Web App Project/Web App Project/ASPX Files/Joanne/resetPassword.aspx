@@ -17,19 +17,22 @@
             <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>
         </p>
         <p>
-            <input id="Text1" style="width: 250px" type="text" /></p>
+            <asp:TextBox ID="TextBox1" runat="server" Width="250px"></asp:TextBox>
+        </p>
         <p class="label">
             <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
         </p>
         <p>
-            <input id="Password1" style="width: 250px" type="password" /></p>
+            <asp:TextBox ID="TextBox2" runat="server" Width="250px"></asp:TextBox>
+        </p>
         <p class="label">
             <asp:Label ID="Label3" runat="server" Text="Confirm Password"></asp:Label>
         </p>
         <p>
-            <input id="Password2" style="width: 250px" type="password" /></p>
+            <asp:TextBox ID="TextBox3" runat="server" Width="250px"></asp:TextBox>
+        </p>
         <p class="label">
-            <asp:Button ID="Button1" runat="server" Text="Reset" />
+            <asp:Button ID="Button1" runat="server" Text="Reset" OnClick="Button1_Click" />
         </p>
     </div>
 </body>

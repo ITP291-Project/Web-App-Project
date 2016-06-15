@@ -1,7 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="preview_dotnet_templates_the_big_picture_login" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
+<!--<asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">-->
 <html class="full" xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8">
@@ -140,3 +141,52 @@
 
 </body>
 </html>
+
+<!--</asp:Content>-->
+<!--
+<asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
+     <footer class="footerDash">
+  <div class="footer-top section-tb">
+
+      <div class="row">
+        <div class="footer-col col-md-4">
+          <h5>Our Office Location</h5>
+          <p>Upper Serangoon Avenue 3</p>
+            <p>Singapore 123456</p>
+          <p>Copyright © 2015 Joanne Volunteering Inc. All Rights Reserved.</p>
+        </div>
+        <div class="footer-col col-md-3">
+          <h5>Services We Offer</h5>
+          <p>
+          <ul>
+            <li><a href="#">Digital Strategy</a></li>
+            <li><a href="#">Websites</a></li>
+            <li><a href="#">Videography</a></li>
+            <li><a href="#">Social Media</a></li>
+            <li><a href="#">User Experience</a></li>
+          </ul>
+          </p>
+        </div>
+        <div class="footer-col col-md-3">
+          <h5>Like us Share us</h5>
+          <ul class="footer-share">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          </ul>
+        </div>
+         <div class="footer-col col-md-2">
+          <h5>Follow</h5>
+          <ul class="footer-share">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+</asp:Content>-->
+
