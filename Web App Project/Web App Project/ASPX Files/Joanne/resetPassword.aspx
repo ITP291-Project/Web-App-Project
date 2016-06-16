@@ -16,19 +16,19 @@
             <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>
         </p>
         <p>
-            <asp:TextBox ID="TextBox1" runat="server" Width="500px" type="email" required="required"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" Width="500px" style="color: black" type="email" required="required"></asp:TextBox>
         </p>
         <p class="label">
             <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
         </p>
         <p>
-            <asp:TextBox ID="TextBox2" runat="server" Width="500px" type="password" required="required"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" Width="500px" style="color: black" type="password" required="required"></asp:TextBox>
         </p>
         <p class="label">
             <asp:Label ID="Label3" runat="server" Text="Confirm Password"></asp:Label>
         </p>
         <p>
-            <asp:TextBox ID="TextBox3" runat="server" Width="500px" type="password" required="required"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" Width="500px" style="color: black" type="password" required="required"></asp:TextBox>
         </p>
         <p class="label">
             <asp:Button ID="Button1" runat="server" style="color:black" Text="Reset" OnClick="Button1_Click" />

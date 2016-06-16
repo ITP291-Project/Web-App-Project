@@ -13,7 +13,7 @@
         <p>
             <asp:Label ID="Label1" runat="server" style="font-size: 20px; color: white" Text="Enter email: "></asp:Label>
 &nbsp;
-            <asp:TextBox ID="TextBox1" runat="server" Width="250px" type="email" required="required"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" Width="250px" style="color: black" type="email" required="required"></asp:TextBox>
 &nbsp;</p>
          
         </div>
