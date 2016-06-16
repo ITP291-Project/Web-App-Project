@@ -11,14 +11,14 @@
                     <label for="email"></label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="email" required>
                     <!--placing icon using a span element-->
-                    <span class="icon fa fa-user fa-lg"></span>
+                    <span class="icon fa fa-envelope-o fa-fw"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="password"></label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
                     <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
-                    <span class="icon fa fa-unlock fa-lg"></span>
+                    <span class="icon fa fa-key fa-fw"></span>
                 </div>
 
                 <div class="form-group text-left">
