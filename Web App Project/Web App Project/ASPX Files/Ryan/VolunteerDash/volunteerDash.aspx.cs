@@ -13,5 +13,10 @@ namespace Web_App_Project
         {
 
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ReportSubmission.aspx");
+        }
     }
 }
