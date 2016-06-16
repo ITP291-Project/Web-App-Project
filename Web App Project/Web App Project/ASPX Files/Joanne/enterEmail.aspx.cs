@@ -13,5 +13,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
         {
 
         }
+
+        protected void Button1_On(object sender, EventArgs e)
+        {
+            Response.Redirect("emailSent.aspx");
+        }
     }
 }

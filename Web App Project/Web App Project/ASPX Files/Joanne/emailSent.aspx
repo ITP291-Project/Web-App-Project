@@ -1,27 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="enterEmail.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Joanne.enterEmail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="emailSent.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Joanne.confirmEmailaspx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <head>
-        <title>
-            Enter your email
-        </title>
+        <title>Email Link Sent</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
-
     <body>
-        <div class="align-center">
-        <h2>Sent a link to your email to reset your password.</h2>
-        <p>
-            <asp:Label ID="Label1" runat="server" style="font-size: 20px; color: white" Text="Enter email: "></asp:Label>
-&nbsp;
-            <asp:TextBox ID="TextBox1" runat="server" Width="250px" type="email" required="required"></asp:TextBox>
-&nbsp;</p>
-         
-        </div>
-        <p>
-            <asp:Button ID="Button1" runat="server" style="color: black; margin-left: 690px" Text="Email Link!" Width="85px" OnClick="Button1_On" />
-         </p>
+        <h2 style="margin-left: 200px">Email Link Sent.</h2>
+        <h4 style="margin-left: 200px; color: white">Please check your email. </h4>
     </body>
 </asp:Content>
+
 
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
     <footer class="footerDash">

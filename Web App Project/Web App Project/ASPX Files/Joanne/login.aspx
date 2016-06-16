@@ -25,7 +25,7 @@
 
                 <div class="form-group text-left">
                     <button type="submit" class="btn btn-default">Login</button>
-                    <a href="#forget-password" data-target="#pwdModal" data-toggle="modal">Forget password?</a>
+                    <a href="enterEmail.aspx" data-target="#pwdModal" data-toggle="modal">Forget password?</a>
                 </div>
 
                 </form>

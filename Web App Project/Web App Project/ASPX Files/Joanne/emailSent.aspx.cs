@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Web_App_Project.ASPX_Files.Joanne
 {
-    public partial class forgotPassword : System.Web.UI.Page
+    public partial class confirmEmailaspx : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("resetPasswordConfirmation.aspx");
         }
     }
 }
