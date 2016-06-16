@@ -17,8 +17,10 @@
                 <div class="form-group">
                     <label for="password"></label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
-                    <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
                     <span class="icon fa fa-key fa-fw"></span>
+                    <br />
+                    <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
+                    
                 </div>
 
                 <div class="form-group text-left">
