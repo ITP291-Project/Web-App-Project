@@ -99,6 +99,7 @@
     <Content Include="App_Data\localdb_log.ldf">
       <DependentUpon>localdb.mdf</DependentUpon>
     </Content>
+    <Content Include="ASPX Files\Joanne\enterEmail.aspx" />
     <Content Include="ASPX Files\Joanne\login.aspx" />
     <Content Include="ASPX Files\Joanne\resetPassword.aspx" />
     <Content Include="ASPX Files\Joanne\resetPasswordConfirmation.aspx" />
@@ -267,6 +268,13 @@
     <Content Include="WebApplication3.csproj.user" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASPX Files\Joanne\enterEmail.aspx.cs">
+      <DependentUpon>enterEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Joanne\enterEmail.aspx.designer.cs">
+      <DependentUpon>enterEmail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ASPX Files\Joanne\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
