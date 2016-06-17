@@ -47,7 +47,7 @@
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button2" runat="server" ForeColor="Black" Text="Choose Organization" Width="225px" />
                 <br />
                 <br />
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" OnClick="Button3_Click" />
 
             </div>
                 </div>
@@ -56,7 +56,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
-<footer class="footer">
+    <footer class="footer">
   <div class="footer-top section-tb">
     <div class="container">
       <div class="row">
