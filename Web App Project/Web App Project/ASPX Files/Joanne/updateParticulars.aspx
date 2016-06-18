@@ -41,6 +41,9 @@
             <p style="margin-left: 360px">
                 <asp:TextBox ID="TextBox6" runat="server" Width="433px"></asp:TextBox>
             </p>
+                <p style="margin-left: 360px">
+                    <asp:Button ID="Button1" runat="server" style="color: black" Text="Save" OnClick="Button1_Click" />
+            </p>
         </div>
         </div>
 
@@ -50,7 +53,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
-<footer class="footerDash">
+    <footer class="footerDash">
   <div class="footer-top section-tb">
 
       <div class="row">

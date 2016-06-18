@@ -45,6 +45,13 @@
             &nbsp;&nbsp;&nbsp; 
             <asp:Label ID="Label12" font-size="20px" runat="server" Text="Label"></asp:Label>
         </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:Button ID="Button1" runat="server" style="color: black" Text="Edit Particulars" Width="131px" OnClick="Button1_Click" />
+        </p>
 </div>
 
     </body>
