@@ -95,9 +95,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Ads.xml" />
-    <Content Include="App_Data\localdb.mdf" />
+    <Content Include="App_Data\localdb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\localdb_log.ldf">
       <DependentUpon>localdb.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ASPX Files\Joanne\emailSent.aspx" />
     <Content Include="ASPX Files\Joanne\enterEmail.aspx" />
