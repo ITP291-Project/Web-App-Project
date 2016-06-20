@@ -18,5 +18,11 @@ namespace Web_App_Project
         {
             Response.Redirect("ReportSubmission.aspx");
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            String display = "Hello World!";
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + display + "');", true);
+        }
     }
 }
