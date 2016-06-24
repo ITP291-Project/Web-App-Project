@@ -283,6 +283,7 @@
     <Content Include="WebApplication3.csproj.user" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASPX Files\Joanne\Account.cs" />
     <Compile Include="ASPX Files\Joanne\emailSent.aspx.cs">
       <DependentUpon>emailSent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,6 +305,7 @@
     <Compile Include="ASPX Files\Joanne\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ASPX Files\Joanne\Points.cs" />
     <Compile Include="ASPX Files\Joanne\resetPassword.aspx.cs">
       <DependentUpon>resetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
