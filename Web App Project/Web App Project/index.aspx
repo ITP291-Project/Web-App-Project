@@ -260,7 +260,9 @@
                     <ul>
                         <li><i class="fa fa-check"></i>We are the Voices of Singapore organisation, working with a few volunteer organisations.</li>
                         <li><i class="fa fa-check"></i>Make volunteering a happier thing to do</li>
-                        <li><i class="fa fa-check"></i>A platform for convinient report submission</li>
+                        <li><i class="fa fa-check"></i>Changing people's lives for the better</li>
+                        <li><i class="fa fa-check"></i>One-stop place for all-round volunteering services</li>
+                        <li><i class="fa fa-check"></i>A platform for convenient report submission</li>
                     </ul>
                 </div>
             </div>
@@ -756,36 +758,51 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                 <div class="row">
     
                        <div class="form-group">
+                           <p align="left">First Name</p>
                             <label for="name">
                                 First Name</label>
                             <input type="text" class="form-control" id="fName" placeholder="First Name" required="required" />
                         </div>
 
                         <div class="form-group">
+                            <p align="left">Last Name</p>
                             <label for="name">
                                 Last Name</label>
                             <input type="text" class="form-control" id="lName" placeholder="Last Name" required="required" />
                         </div>
 
                          <div class="form-group">
+                             <p align="left">NRIC</p>
                             <label for="nric">
                                 NRIC</label>
                             <input type="text" class="form-control" id="nric" placeholder="NRIC" required="required" />
                         </div>
+                        
+                        <div class="form-group">
+                            <p align="left">Gender</p>
+                            <label for="gender">Gender</label>
+                            <asp:RadioButtonList ID="rblMeasurementSystem" runat="server">
+                                <asp:ListItem Text="Female" Value="Female" />
+                                <asp:ListItem Text="Male" Value="Male" />
+                            </asp:RadioButtonList>
+                        </div>
 
                         <div class="form-group">
+                            <p align="left">E-Mail Address</p>
                             <label for="email">
                                 Email Address</label>
                                 <input type="email" class="form-control" id="email" placeholder="Email" required="required" />
                         </div>
 
                         <div class="form-group">
+                            <p align="left">Occupation</p>
                             <label for="occupation">
                                 Occupation</label>
                             <input type="text" class="form-control" id="occupation" placeholder="Occupation" required="required" />
                         </div>
                         
                         <div class="form-group">
+                            <p align="left">Mailing Address</p>
                             <label for="addr1">
                                 Mailing Address 1</label>
                             <input type="text" class="form-control" id="mailAddr1" placeholder="Mailing Address 1" required="required" />
@@ -798,6 +815,7 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                         </div>
 
                         <div class="form-group">
+                            <p align="left">Salutation</p>
                             <label for="subject">
                                 Subject</label>
                             <select id="subject" name="subject" class="form-control" required="required">
@@ -811,27 +829,21 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                                 <option value="product">Miss.</option>
                             </select>
                         </div>
-          
-             
-                        <div class="form-group">
-                            <label for="name">
-                                Message</label>
-                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                placeholder="Message"></textarea>
-                        </div>
+         
 
                         <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV" style="text-align: center;"></div>
        
            
                         <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
-                            Send Message</button>
+                            Sign Up!</button>
        
                 </div>
                 </form>
 				
             </div><br /><br />
 			<div class="text-center">
-					<p class="lead"><i class="fa fa-phone"></i> Call me maybe</p>
+					<p class="lead"><i class="fa fa-phone"></i> Contact Us</p>
+                    <p><a href="#">Write a message to us</a></p>
 			</div>
         </div>
 
@@ -852,14 +864,15 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
           <p>Copyright © 2015 Joanne Volunteering Inc. All Rights Reserved.</p>
         </div>
         <div class="footer-col col-md-3">
-          <h5>Services We Offer</h5>
+          <h5>Partner Websites</h5>
           <p>
           <ul>
-            <li><a href="#">Digital Strategy</a></li>
-            <li><a href="#">Websites</a></li>
-            <li><a href="#">Videography</a></li>
-            <li><a href="#">Social Media</a></li>
-            <li><a href="#">User Experience</a></li>
+            <li><a href="https://www.pioneers.sg/en-sg/Pages/Home.aspx">Pioneer Generation</a></li>
+            <li><a href="http://www.salvationarmy.org/singapore">Salvation Army Singapore</a></li>
+            <li><a href="http://www.renci.org.sg/volunteers/">Ren Ci</a></li>
+            <li><a href="http://www.spca.org.sg/">Society for the Prevention of Cruelty to Animals, Singapore (SPCA)</a></li>
+            <li><a href="http://www.touch.org.sg/our-services/elderly-services/touch-home-care">TOUCH Home Care</a></li>
+            <li><a href="https://www.redcross.sg/">Singapore Red Cross</a></li>
           </ul>
           </p>
         </div>
