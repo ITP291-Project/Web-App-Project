@@ -772,13 +772,6 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                         </div>
 
                          <div class="form-group">
-                             <p align="left">NRIC</p>
-                            <label for="nric">
-                                NRIC</label>
-                            <input type="text" class="form-control" id="nric" placeholder="NRIC" required="required" />
-                        </div>
-                        
-                        <div class="form-group">
                             <p align="left">Gender</p>
                             <label for="gender">Gender</label>
                             <asp:RadioButtonList ID="rblMeasurementSystem" runat="server">
@@ -786,6 +779,30 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                                 <asp:ListItem Text="Male" Value="Male" />
                             </asp:RadioButtonList>
                         </div>
+
+                         <div class="form-group">
+                             <p align="left">NRIC</p>
+                            <label for="nric">
+                                NRIC</label>
+                            <input type="text" class="form-control" id="nric" placeholder="NRIC" required="required" />
+                        </div>
+                    
+                         <div class="form-group">
+                             <p align="left">Birthdate (DD-MM-YYYY)</p>
+                            <label for="bDay">
+                                DD</label>
+                            <input type="text" class="form-control" id="bday" placeholder="DD" required="required" />
+
+                             <label for="bMonth">
+                                MM</label>
+                            <input type="text" class="form-control" id="bmonth" placeholder="MM" required="required" />
+
+                             <label for="bYear">
+                                YYYY</label>
+                            <input type="text" class="form-control" id="byear" placeholder="YYYY" required="required" />
+                        </div>
+                            
+                       
 
                         <div class="form-group">
                             <p align="left">E-Mail Address</p>
