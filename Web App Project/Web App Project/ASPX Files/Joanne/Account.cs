@@ -12,9 +12,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
         int age, points;
 
         //constructor
-        public Account()
+        public Account(String email, String password)
         {
-
+            this.email = email;
+            this.password = password;
         }
 
         public static void main (String[]args)
