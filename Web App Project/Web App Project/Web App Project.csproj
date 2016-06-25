@@ -112,6 +112,16 @@
     <Content Include="ASPX Files\Joanne\viewParticulars.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\bossDash.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx" />
+    <Content Include="ASPX Files\Seri\ChoiceOfVouchers.aspx" />
+    <Content Include="ASPX Files\Seri\CourtsGetVoucher.aspx" />
+    <Content Include="ASPX Files\Seri\Images\courts.jpg" />
+    <Content Include="ASPX Files\Seri\Images\famousAmos.jpg" />
+    <Content Include="ASPX Files\Seri\Images\ISetan.jpg" />
+    <Content Include="ASPX Files\Seri\Images\Kinouniya Book Stores.jpg" />
+    <Content Include="ASPX Files\Seri\Images\mall.jpg" />
+    <Content Include="ASPX Files\Seri\Images\metro.jpg" />
+    <Content Include="ASPX Files\Seri\Images\robinson.png" />
+    <Content Include="ASPX Files\Seri\Rewards.aspx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -273,6 +283,7 @@
     <Content Include="WebApplication3.csproj.user" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASPX Files\Joanne\Account.cs" />
     <Compile Include="ASPX Files\Joanne\emailSent.aspx.cs">
       <DependentUpon>emailSent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -294,6 +305,7 @@
     <Compile Include="ASPX Files\Joanne\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ASPX Files\Joanne\Points.cs" />
     <Compile Include="ASPX Files\Joanne\resetPassword.aspx.cs">
       <DependentUpon>resetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -342,6 +354,27 @@
     </Compile>
     <Compile Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx.designer.cs">
       <DependentUpon>RejectedReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX Files\Seri\ChoiceOfVouchers.aspx.cs">
+      <DependentUpon>ChoiceOfVouchers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Seri\ChoiceOfVouchers.aspx.designer.cs">
+      <DependentUpon>ChoiceOfVouchers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX Files\Seri\CourtsGetVoucher.aspx.cs">
+      <DependentUpon>CourtsGetVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Seri\CourtsGetVoucher.aspx.designer.cs">
+      <DependentUpon>CourtsGetVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX Files\Seri\Rewards.aspx.cs">
+      <DependentUpon>Rewards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Seri\Rewards.aspx.designer.cs">
+      <DependentUpon>Rewards.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -417,7 +450,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ASPX Files\Angie\" />
-    <Folder Include="ASPX Files\Seri\" />
     <Folder Include="bin\roslyn\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
