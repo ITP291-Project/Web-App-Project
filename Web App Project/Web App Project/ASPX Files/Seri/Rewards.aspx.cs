@@ -31,6 +31,11 @@ namespace Web_App_Project.ASPX_Files.Seri
 
         protected void Button3_Click(object sender, EventArgs e)
         {
+            Response.Redirect("HowToRedeemYourRewards.aspx");
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
             Response.Redirect("RedemptionCategories.aspx");
         }
     }

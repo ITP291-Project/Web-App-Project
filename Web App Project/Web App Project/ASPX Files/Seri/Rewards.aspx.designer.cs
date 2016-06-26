@@ -22,13 +22,13 @@ namespace Web_App_Project.ASPX_Files.Seri {
         protected global::System.Web.UI.WebControls.Panel Panel3;
         
         /// <summary>
-        /// Button3 control.
+        /// Button5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button Button5;
         
         /// <summary>
         /// Button4 control.
