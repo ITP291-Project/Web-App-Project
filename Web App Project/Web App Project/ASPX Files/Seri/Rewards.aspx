@@ -9,24 +9,30 @@
     <p>
         &nbsp;</p>
     <p align="center">
-        &nbsp;</p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Panel ID="Panel1" runat="server" BackColor="#660033" BorderColor="#660066" BorderStyle="Dashed" Font-Bold="True" Font-Italic="False" Font-Names="Britannic Bold" Font-Size="XX-Large" ForeColor="White" Height="179px" HorizontalAlign="Center" style="margin-left: 0px" Width="726px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1000 Points
+        </p>
+    <asp:Panel ID="Panel3" runat="server" BackColor="Black" BorderColor="#66FF33" BorderStyle="Ridge" BorderWidth="10px" Height="82px" Width="1273px">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        <asp:Button ID="Button3" runat="server" BackColor="#006666" Height="60px" OnClick="Button3_Click" Text="Redemption Categories" Width="232px" />
+        &nbsp;&nbsp;
+        <asp:Button ID="Button4" runat="server" BackColor="#006666" Height="60px" OnClick="Button3_Click" Text="Redemption Categories" Width="232px" />
     </asp:Panel>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <p>
     </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
+    <asp:Panel ID="Panel1" runat="server" BackColor="Black" BorderColor="#CC0000" Height="183px">
+        <asp:Panel ID="Panel2" runat="server" BackColor="#660033" BorderColor="#FF66FF" BorderStyle="Dotted" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="183px" HorizontalAlign="Center" style="margin-left: 309px" Width="724px">
+            You Have<br />
+            <br />
+            1000 POINTS</asp:Panel>
+    </asp:Panel>
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>
     </p>
     <p align="center">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" BackColor="#660033" BorderColor="#660033" BorderStyle="Dotted" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="White" Height="160px" OnClick="Button1_Click" Text="ChoiceOfVouchers" Width="327px" />
-        <asp:Button ID="Button2" runat="server" BackColor="#660033" BorderColor="#660033" BorderStyle="Dotted" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="White" Height="160px" OnClick="Button1_Click" Text="CashOut" Width="327px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" BackColor="#006666" BorderColor="#FF66FF" BorderStyle="Dotted" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="White" Height="160px" OnClick="Button1_Click" Text="ChoiceOfVouchers" Width="327px" BorderWidth="15px" />
+        <asp:Button ID="Button2" runat="server" BackColor="#006666" BorderColor="#FF66FF" BorderStyle="Dotted" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="White" Height="160px" OnClick="Button1_Click" Text="CashOut" Width="327px" BorderWidth="15px" />
     </p>
     <p>
         &nbsp;</p>

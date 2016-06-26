@@ -23,5 +23,15 @@ namespace Web_App_Project.ASPX_Files.Seri
         {
             Response.Redirect("ChoiceOfVouchers.aspx");
         }
+
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RedemptionCategories.aspx");
+        }
     }
 }

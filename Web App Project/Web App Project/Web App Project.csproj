@@ -114,6 +114,7 @@
     <Content Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx" />
     <Content Include="ASPX Files\Seri\ChoiceOfVouchers.aspx" />
     <Content Include="ASPX Files\Seri\CourtsGetVoucher.aspx" />
+    <Content Include="ASPX Files\Seri\Images\BookstoresBackPic.jpg" />
     <Content Include="ASPX Files\Seri\Images\courts.jpg" />
     <Content Include="ASPX Files\Seri\Images\famousAmos.jpg" />
     <Content Include="ASPX Files\Seri\Images\ISetan.jpg" />
@@ -121,6 +122,7 @@
     <Content Include="ASPX Files\Seri\Images\mall.jpg" />
     <Content Include="ASPX Files\Seri\Images\metro.jpg" />
     <Content Include="ASPX Files\Seri\Images\robinson.png" />
+    <Content Include="ASPX Files\Seri\RedemptionCategories.aspx" />
     <Content Include="ASPX Files\Seri\Rewards.aspx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -368,6 +370,13 @@
     </Compile>
     <Compile Include="ASPX Files\Seri\CourtsGetVoucher.aspx.designer.cs">
       <DependentUpon>CourtsGetVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX Files\Seri\RedemptionCategories.aspx.cs">
+      <DependentUpon>RedemptionCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Seri\RedemptionCategories.aspx.designer.cs">
+      <DependentUpon>RedemptionCategories.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPX Files\Seri\Rewards.aspx.cs">
       <DependentUpon>Rewards.aspx</DependentUpon>

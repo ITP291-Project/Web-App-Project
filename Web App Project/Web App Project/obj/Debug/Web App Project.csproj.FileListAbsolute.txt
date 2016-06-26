@@ -102,3 +102,30 @@ C:\Users\btobf_000\Source\Repos\Web-App-Project\Web App Project\Web App Project\
 C:\Users\btobf_000\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\App_Data\localdb_log.ldf
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\App_Data\localdb.mdf
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\App_Data\localdb_log.ldf
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\ApplicationInsights.config
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\csc.exe
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\vbc.exe
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\VBCSCompiler.exe
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\App_Data\localdb.mdf
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\App_Data\localdb_log.ldf
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Web App Project.dll.config
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Web App Project.dll
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Web App Project.pdb
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.Web.xml
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csprojResolveAssemblyReference.cache
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.dll
+C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.pdb

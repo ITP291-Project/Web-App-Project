@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Web_App_Project.ASPX_Files.Seri
 {
-    public partial class CourtsGetVoucher : System.Web.UI.Page
+    public partial class RedemptionCategories : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,7 +16,7 @@ namespace Web_App_Project.ASPX_Files.Seri
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ChoiceOfVouchers.aspx");
+            Response.Redirect("Rewards.aspx");
         }
     }
 }
