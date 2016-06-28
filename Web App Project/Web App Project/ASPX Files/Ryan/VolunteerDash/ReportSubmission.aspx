@@ -30,6 +30,7 @@
                     <br />
                     Photo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:FileUpload ID="FileUpload1" runat="server" ForeColor="Black" />
+                    &nbsp;<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                     <br />
                     <br />
                     Additional Feedback<br />
@@ -37,6 +38,7 @@
                     <br />
                     <br />
                     <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Submit" Width="223px" />
+                    <asp:Button ID="Button7" runat="server" OnClick="Button7_Click" Text="Save" Width="223px" />
                     <br />
                 </div>
             <div id="right">
