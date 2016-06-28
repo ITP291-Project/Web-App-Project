@@ -44,5 +44,15 @@ namespace Web_App_Project.Ryan.Volunteer
                 //Test
             }
         }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ReportDrafts.aspx");
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SubmittedReport.aspx");
+        }
     }
 }

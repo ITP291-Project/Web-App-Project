@@ -4,8 +4,8 @@
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
             <div id="content">
                 <div id="left">
-                    <asp:Button ID="Button4" CssClass="Dashbtn btn-skin btn-block" runat="server" Text="Drafts" Width="225px" />
-                    <asp:Button ID="Button5" CssClass="Dashbtn btn-skin btn-block" runat="server" Text="Submitted" Width="225px" />
+                    <asp:Button ID="Button4" CssClass="Dashbtn btn-skin btn-block" runat="server" Text="Drafts" Width="225px" OnClick="Button4_Click" />
+                    <asp:Button ID="Button5" CssClass="Dashbtn btn-skin btn-block" runat="server" Text="Submitted" Width="225px" OnClick="Button5_Click" />
                     <br />
                     <br />
                     Case Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
