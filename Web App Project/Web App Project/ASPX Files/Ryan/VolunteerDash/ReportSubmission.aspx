@@ -9,15 +9,15 @@
                     <br />
                     <br />
                     Case Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black"></asp:TextBox>
                     <br />
                     <br />
                     Date of visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black"></asp:TextBox>
                     <br />
                     <br />
                     Duration of visit&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server" ForeColor="Black"></asp:TextBox>
                     <br />
                     <br />
                     Type of volunteer&nbsp;
@@ -29,11 +29,14 @@
                     <br />
                     <br />
                     Photo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                    <asp:FileUpload ID="FileUpload1" runat="server" ForeColor="Black" />
                     <br />
                     <br />
                     Additional Feedback<br />
-                    <asp:TextBox ID="TextBox5" runat="server" Height="72px" Width="231px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox5" runat="server" Height="72px" Width="231px" ForeColor="Black"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Submit" Width="223px" />
                     <br />
                 </div>
             <div id="right">

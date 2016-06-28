@@ -112,6 +112,8 @@
     <Content Include="ASPX Files\Joanne\viewParticulars.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\bossDash.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx" />
+    <Content Include="ASPX Files\Ryan\VolunteerDash\Drafts.aspx" />
+    <Content Include="ASPX Files\Ryan\VolunteerDash\SubmittedReports.aspx" />
     <Content Include="ASPX Files\Seri\ChoiceOfVouchers.aspx" />
     <Content Include="ASPX Files\Seri\CourtsGetVoucher.aspx" />
     <Content Include="ASPX Files\Seri\HowToRedeemYourRewards.aspx" />
@@ -357,6 +359,20 @@
     </Compile>
     <Compile Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx.designer.cs">
       <DependentUpon>RejectedReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX Files\Ryan\VolunteerDash\Drafts.aspx.cs">
+      <DependentUpon>Drafts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Ryan\VolunteerDash\Drafts.aspx.designer.cs">
+      <DependentUpon>Drafts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX Files\Ryan\VolunteerDash\SubmittedReports.aspx.cs">
+      <DependentUpon>SubmittedReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Ryan\VolunteerDash\SubmittedReports.aspx.designer.cs">
+      <DependentUpon>SubmittedReports.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPX Files\Seri\ChoiceOfVouchers.aspx.cs">
       <DependentUpon>ChoiceOfVouchers.aspx</DependentUpon>
