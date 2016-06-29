@@ -9,14 +9,17 @@
                 <!-- asking for email input-->
                 <div class="form-group">
                     <label for="email"></label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="email" required>
+                    <!-- <input type="email" class="form-control" id="email" name="email" placeholder="email" required> -->
+                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="350px"></asp:TextBox>
                     <!--placing icon using a span element-->
                     <span class="icon fa fa-envelope-o fa-fw"></span>
+                    
                 </div>
 
                 <div class="form-group">
                     <label for="password"></label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
+                    <!-- <input type="password" class="form-control" id="password" name="password" placeholder="password" required> -->
+                    <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Width="350px"></asp:TextBox>
                     <span class="icon fa fa-key fa-fw"></span>
                     <br />
                     <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
@@ -24,7 +27,7 @@
                 </div>
 
                 <div class="form-group text-left">
-                    <button type="submit" class="btn btn-default">Login</button>
+                    <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
                     <a href="enterEmail.aspx" data-target="#pwdModal" data-toggle="modal">Forget password?</a>
                 </div>
 

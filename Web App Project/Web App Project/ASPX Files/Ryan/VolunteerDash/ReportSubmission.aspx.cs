@@ -40,8 +40,8 @@ namespace Web_App_Project.Ryan.Volunteer
 
                     FileUpload1.PostedFile.InputStream.Read(pic, 0, length);
 
-                    string query = "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, Photo, AdditionalFeedback, IsDraft)";
-                    query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @Photo, @AdditionalFeedback, @IsDraft)";
+                    string query = "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, Photo, AdditionalFeedback, IsDraft, Status)";
+                    query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @Photo, @AdditionalFeedback, @IsDraft, @Status)";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
 
@@ -52,6 +52,7 @@ namespace Web_App_Project.Ryan.Volunteer
                     myCommand.Parameters.AddWithValue("@Photo", pic);
                     myCommand.Parameters.AddWithValue("@AdditionalFeedBack", feedback);
                     myCommand.Parameters.AddWithValue("@IsDraft", "false");
+                    myCommand.Parameters.AddWithValue("@Status", "pending");
                     myConnection.Open();
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
