@@ -850,8 +850,8 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                         <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV" style="text-align: center;"></div>
        
            
-                        <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
-                            Sign Up!</button>
+                        <!-- <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">Sign Up!</button> -->
+                        <asp:Button ID="Button1" runat="server" Text="Sign Up!" Width="100%" OnClick="Button1_Click" /> 
        
                 </div>
                 </form>

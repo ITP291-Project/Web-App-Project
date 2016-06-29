@@ -301,6 +301,7 @@
     <Compile Include="ASPX Files\Joanne\enterEmail.aspx.designer.cs">
       <DependentUpon>enterEmail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ASPX Files\Joanne\Hash.cs" />
     <Compile Include="ASPX Files\Joanne\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

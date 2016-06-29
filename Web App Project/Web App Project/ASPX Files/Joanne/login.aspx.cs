@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Security;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Web_App_Project.ASPX_Files.Joanne
 {
@@ -24,7 +26,13 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 String inputemail = TextBox1.Text;
                 String inputpassword = TextBox2.Text;
 
-                string query = "SELECT [Email], [Password], [Privilege] FROM  [Accounts] WHERE [Email]='" + inputemail + "', [Password]='" + inputpassword + "'";
+                //Hash
+                var hash = Hasher.Hash(inputpassword);
+
+                //Verify
+                //var result = SecurePasswordHasher.Verify("mypassword", hash);
+
+                string query = "SELECT [Email], [Password], [Privilege] FROM  [Accounts] WHERE [Email]='" + inputemail + "', [Password]='" + hash + "'";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
                 SqlDataReader reader = myCommand.ExecuteReader();
