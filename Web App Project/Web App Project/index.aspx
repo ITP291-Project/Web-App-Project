@@ -755,13 +755,21 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
             <div class="form-wrapper marginbot-50">
                 <form id="contact-form">
                 <div class="row">
-    
+                      
+                        
                        <div class="form-group">
                            <p align="left">First Name</p>
                             <label for="name">
                                 First Name</label>
                             <input type="text" class="form-control" id="fName" placeholder="First Name" required="required" />
                         </div>
+
+                        <div class="form-group">
+                           <p align="left">First Name</p>
+                            <p align="left">&nbsp;</p>
+&nbsp;<input type="text" class="form-control" id="fName" placeholder="First Name" required="required" />
+                        </div>
+                        
 
                         <div class="form-group">
                             <p align="left">Last Name</p>
@@ -773,10 +781,8 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                          <div class="form-group">
                             <p align="left">Gender</p>
                             <label for="gender">Gender</label>
-                            <asp:RadioButtonList ID="rblMeasurementSystem" runat="server">
-                                <asp:ListItem Text="Female" Value="Female" />
-                                <asp:ListItem Text="Male" Value="Male" />
-                            </asp:RadioButtonList>
+                                 <input type="radio" name="gender" value="female" required="required"/> Female 
+                                 <input type="radio" name="gender" value="male" required="required"/> Male
                         </div>
 
                          <div class="form-group">
@@ -810,6 +816,21 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                                 <input type="email" class="form-control" id="email" placeholder="Email" required="required" />
                         </div>
 
+                         <div class="form-group">
+                           <p align="left">Password</p>
+                            <label for="name">
+                                Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required="required" />
+                        </div>
+                        <p algin="left">(Passwords must contain 8-30 characters)</p>
+
+                         <div class="form-group">
+                           <p align="left">Re-Enter Password</p>
+                            <label for="name">
+                                Re-Enter Password</label>
+                            <input type="password" class="form-control" id="repassword" placeholder="Password" required="required" />
+                        </div>
+
                         <div class="form-group">
                             <p align="left">Occupation</p>
                             <label for="occupation">
@@ -836,13 +857,12 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                                 Subject</label>
                             <select id="subject" name="subject" class="form-control" required="required">
                                 <option value="na" selected="">Salutation</option>
-                                <option value="service">Mr.</option>
-                                <option value="suggestions">Ms.</option>
-                                <option value="product">Miss.</option>
-                                <option value="product">Mdm.</option>
-                                <option value="product">Mrs.</option>
-                                <option value="product">Dr.</option>
-                                <option value="product">Miss.</option>
+                                <option value="Mr">Mr.</option>
+                                <option value="Ms">Ms.</option>
+                                <option value="Miss">Miss.</option>
+                                <option value="Mdm">Mdm.</option>
+                                <option value="Mrs">Mrs.</option>
+                                <option value="Dr">Dr.</option>
                             </select>
                         </div>
          
