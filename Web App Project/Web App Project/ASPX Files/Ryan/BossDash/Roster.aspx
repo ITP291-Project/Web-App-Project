@@ -7,26 +7,44 @@
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
                         <Columns>
                             <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
-                            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                            <asp:BoundField DataField="NRIC" HeaderText="NRIC" SortExpression="NRIC" />
                             <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
+                            <asp:BoundField DataField="a.FName" HeaderText="First Name" SortExpression="a.FName" />
+                            <asp:BoundField DataField="a.LName" HeaderText="Last Name" SortExpression="a.LName" />
+                            <asp:BoundField DataField="a.TelNo" HeaderText="Contact Number" SortExpression="a.TelNo" />
+                            <asp:BoundField DataField="a.NRIC" HeaderText="NRIC" SortExpression="a.NRIC" />
+                            <asp:BoundField DataField="a.Address" HeaderText="Address" SortExpression="a.Address" />
+                            <asp:BoundField DataField="a.Occupation" HeaderText="Occupation" SortExpression="a.Occupation" />
+                            <asp:BoundField DataField="a.Language" HeaderText="Language" SortExpression="a.Language" />
+                            <asp:BoundField DataField="a.Gender" HeaderText="Gender" SortExpression="a.Gender" />
                         </Columns>
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Roster] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Roster] ([Id], [Name], [NRIC], [Status]) VALUES (@Id, @Name, @NRIC, @Status)" ProviderName="<%$ ConnectionStrings:localdbConnectionString1.ProviderName %>" SelectCommand="SELECT [Id], [Name], [NRIC], [Status] FROM [Roster]" UpdateCommand="UPDATE [Roster] SET [Name] = @Name, [NRIC] = @NRIC, [Status] = @Status WHERE [Id] = @Id">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Roster] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Roster] ([Id], [Status]) VALUES (@Id, @Status)" ProviderName="<%$ ConnectionStrings:localdbConnectionString1.ProviderName %>" SelectCommand="SELECT r.Id, r.Status, a.FName, a.LName, a.NRIC, a.TelNo, a.Address, a.Occupation, a.Language, a.Gender FROM Roster r INNER JOIN Accounts a ON r.Id=a.Id" UpdateCommand="UPDATE [Roster] SET [Status] = @Status WHERE [Id] = @Id">
                         <DeleteParameters>
                             <asp:Parameter Name="Id" Type="Int32" />
                         </DeleteParameters>
                         <InsertParameters>
                             <asp:Parameter Name="Id" Type="Int32" />
-                            <asp:Parameter Name="Name" Type="String" />
-                            <asp:Parameter Name="NRIC" Type="String" />
                             <asp:Parameter Name="Status" Type="String" />
+                            <asp:Parameter Name="a.FName" Type="String" />
+                            <asp:Parameter Name="a.LName" Type="String" />
+                            <asp:Parameter Name="a.TelNo" Type="String" />
+                            <asp:Parameter Name="a.NRIC" Type="String" />
+                            <asp:Parameter Name="a.Address" Type="String" />
+                            <asp:Parameter Name="a.Occupation" Type="String" />
+                            <asp:Parameter Name="a.Language" Type="String" />
+                            <asp:Parameter Name="a.Gender" Type="String" />
                         </InsertParameters>
                         <UpdateParameters>
-                            <asp:Parameter Name="Name" Type="String" />
-                            <asp:Parameter Name="NRIC" Type="String" />
                             <asp:Parameter Name="Status" Type="String" />
                             <asp:Parameter Name="Id" Type="Int32" />
+                            <asp:Parameter Name="a.FName" Type="String" />
+                            <asp:Parameter Name="a.LName" Type="String" />
+                            <asp:Parameter Name="a.TelNo" Type="String" />
+                            <asp:Parameter Name="a.NRIC" Type="String" />
+                            <asp:Parameter Name="a.Address" Type="String" />
+                            <asp:Parameter Name="a.Occupation" Type="String" />
+                            <asp:Parameter Name="a.Language" Type="String" />
+                            <asp:Parameter Name="a.Gender" Type="String" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
                 </div>

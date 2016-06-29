@@ -4,6 +4,38 @@
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
             <div id="content">
                 <div id="left">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CaseNo" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." Width="650px">
+                        <Columns>
+                            <asp:BoundField DataField="CaseNo" HeaderText="CaseNo" ReadOnly="True" SortExpression="CaseNo" />
+                            <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+                            <asp:BoundField DataField="Duration" HeaderText="Duration" SortExpression="Duration" />
+                            <asp:BoundField DataField="TypeofVolunteer" HeaderText="TypeofVolunteer" SortExpression="TypeofVolunteer" />
+                            <asp:BoundField DataField="AdditionalFeedback" HeaderText="AdditionalFeedback" SortExpression="AdditionalFeedback" />
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Report] WHERE [CaseNo] = @CaseNo" InsertCommand="INSERT INTO [Report] ([CaseNo], [Date], [Duration], [TypeofVolunteer], [AdditionalFeedback], [IsDraft], [Status]) VALUES (@CaseNo, @Date, @Duration, @TypeofVolunteer, @AdditionalFeedback, @IsDraft, @Status)" ProviderName="<%$ ConnectionStrings:localdbConnectionString1.ProviderName %>" SelectCommand="SELECT [CaseNo], [Date], [Duration], [TypeofVolunteer], [Photo], [AdditionalFeedback], [IsDraft], [Status] FROM [Report] WHERE [Status]='pending'" UpdateCommand="UPDATE [Report] SET [Date] = @Date, [Duration] = @Duration, [TypeofVolunteer] = @TypeofVolunteer, [AdditionalFeedback] = @AdditionalFeedback, [IsDraft] = @IsDraft, [Status] = @Status WHERE [CaseNo] = @CaseNo">
+                        <DeleteParameters>
+                            <asp:Parameter Name="CaseNo" Type="String" />
+                        </DeleteParameters>
+                        <InsertParameters>
+                            <asp:Parameter Name="CaseNo" Type="String" />
+                            <asp:Parameter Name="Date" Type="String" />
+                            <asp:Parameter Name="Duration" Type="String" />
+                            <asp:Parameter Name="TypeofVolunteer" Type="String" />
+                            <asp:Parameter Name="AdditionalFeedback" Type="String" />
+                            <asp:Parameter Name="IsDraft" Type="String" />
+                            <asp:Parameter Name="Status" Type="String" />
+                        </InsertParameters>
+                        <UpdateParameters>
+                            <asp:Parameter Name="Date" Type="String" />
+                            <asp:Parameter Name="Duration" Type="String" />
+                            <asp:Parameter Name="TypeofVolunteer" Type="String" />
+                            <asp:Parameter Name="AdditionalFeedback" Type="String" />
+                            <asp:Parameter Name="IsDraft" Type="String" />
+                            <asp:Parameter Name="Status" Type="String" />
+                            <asp:Parameter Name="CaseNo" Type="String" />
+                        </UpdateParameters>
+                    </asp:SqlDataSource>
                 </div>
             <div id="right">
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" Text="Approved Reports" ForeColor="Black" Height="109px" OnClick="Button1_Click" />

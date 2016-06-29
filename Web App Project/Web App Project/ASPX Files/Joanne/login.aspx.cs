@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Web.Security;
 
 namespace Web_App_Project.ASPX_Files.Joanne
 {
@@ -12,6 +15,44 @@ namespace Web_App_Project.ASPX_Files.Joanne
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            {
+                String inputemail = TextBox1.Text;
+                String inputpassword = TextBox2.Text;
+
+                string query = "SELECT [Email], [Password], [Privilege] FROM  [Accounts] WHERE [Email]='" + inputemail + "', [Password]='" + inputpassword + "'";
+
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlDataReader reader = myCommand.ExecuteReader();
+                myConnection.Open();
+                myCommand.ExecuteNonQuery();
+
+                    string dbEmail = reader["Email"].ToString();
+                    string dbPassword = reader["Password"].ToString();
+                string dbPrivilege = reader["Privilege"].ToString();
+
+                if (dbEmail == inputemail && dbPassword == inputpassword)
+                {
+                    if (dbPrivilege.Equals("boss"))
+                    {
+                        Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+                    }
+                    else if (dbPrivilege.Equals("volunteer"))
+                    {
+                        Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                    }
+                }
+                else
+                {
+                    //Popup box for error
+                }
+
+                myConnection.Close();
+            }
         }
     }
 }
