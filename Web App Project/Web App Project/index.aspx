@@ -757,27 +757,19 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                 <div class="row">
                       
                         
-                       <div class="form-group">
+                        <div class="form-group">
                            <p align="left">First Name</p>
                             <label for="name">
                                 First Name</label>
                             <input type="text" class="form-control" id="fName" placeholder="First Name" required="required" />
-                        </div>
-
-                        <div class="form-group">
-                           <p align="left">First Name</p>
-                            <p align="left">&nbsp;</p>
-&nbsp;<input type="text" class="form-control" id="fName" placeholder="First Name" required="required" />
-                        </div>
-                        
-
-                        <div class="form-group">
-                            <p align="left">Last Name</p>
+                            <p align="left">
+                                &nbsp;Last Name</p>
                             <label for="name">
                                 Last Name</label>
                             <input type="text" class="form-control" id="lName" placeholder="Last Name" required="required" />
                         </div>
-
+                         
+                        
                          <div class="form-group">
                             <p align="left">Gender</p>
                             <label for="gender">Gender</label>
