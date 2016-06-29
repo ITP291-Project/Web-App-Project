@@ -18,5 +18,15 @@ namespace Web_App_Project.ASPX_Files.Seri
         {
             Response.Redirect("CourtsGetVoucher.aspx");
         }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Rewards.aspx");
+        }
+
+        protected void Button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

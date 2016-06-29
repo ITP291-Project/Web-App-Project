@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ChoiceOfVouchers.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Seri.ChoiceOfVouchers" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
+   
     <p>
+        <asp:Button ID="Button6" runat="server" Height="50px" OnClick="Button6_Click" Text="BACK" Width="115px" BackColor="#333333" BorderColor="Black" BorderStyle="Ridge" Font-Bold="True" Font-Size="X-Large" />
         <br />
     </p>
     <br />
@@ -21,42 +23,14 @@
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" BackColor="#CCCC00" BorderColor="#999999" BorderStyle="Dashed" Font-Bold="True" ForeColor="Black" Height="43px" OnClick="Button1_Click" style="margin-bottom: 11px" Text="GetThisVoucher" Width="239px" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </asp:Panel>
-            <p>
-                <p align="left">
-                    &nbsp;</p>
-    &nbsp;</p>
-        </p>
-    </p>
-    <asp:Panel ID="Panel9" runat="server" BackColor="Black" BorderColor="#990033" BorderStyle="Ridge" BorderWidth="20px" Height="266px" style="margin-right: 0px" Width="417px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Image ID="Image13" runat="server" Height="64px" ImageAlign="Middle" ImageUrl="~/ASPX Files/Seri/Images/ISetan.jpg" Width="227px" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        &nbsp;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" BackColor="#CC0000" BorderColor="#999999" BorderStyle="Dashed" Font-Bold="True" ForeColor="Black" Height="43px" OnClick="Button1_Click" style="margin-bottom: 11px" Text="GetThisVoucher" Width="239px" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </asp:Panel>
-    <p>
-        <p>
-            <p>
-                <p align="left">
-                </p>
-            </p>
-        </p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
+        </asp:Panel>
     <asp:Panel ID="Panel10" runat="server" BackColor="Black" BorderColor="#CC6699" BorderStyle="Ridge" BorderWidth="20px" Height="266px" style="margin-right: 0px" Width="417px">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Image ID="Image14" runat="server" Height="64px" ImageAlign="Middle" ImageUrl="~/ASPX Files/Seri/Images/mall.jpg" Width="227px" />
@@ -71,26 +45,6 @@
         <asp:Button ID="Button3" runat="server" BackColor="#CC3399" BorderColor="#999999" BorderStyle="Dashed" Font-Bold="True" ForeColor="Black" Height="43px" OnClick="Button1_Click" style="margin-bottom: 11px" Text="GetThisVoucher" Width="239px" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </asp:Panel>
-    <p>
-        <p>
-            <p>
-                <p>
-                    <p>
-                        <p align="left">
-                        </p>
-                    </p>
-                </p>
-            </p>
-            <p align="left">
-            </p>
-            <p align="left">
-            </p>
-            <p align="left">
-            </p>
-            <p align="left">
-            </p>
-        </p>
-    </p>
     <asp:Panel ID="Panel11" runat="server" BackColor="Black" BorderColor="#0000CC" BorderStyle="Ridge" BorderWidth="20px" Height="266px" style="margin-right: 0px" Width="417px">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Image ID="Image15" runat="server" Height="64px" ImageAlign="Middle" ImageUrl="~/ASPX Files/Seri/Images/metro.jpg" Width="227px" />
@@ -105,14 +59,6 @@
         <asp:Button ID="Button4" runat="server" BackColor="#3366FF" BorderColor="#999999" BorderStyle="Dashed" Font-Bold="True" ForeColor="Black" Height="43px" OnClick="Button1_Click" style="margin-bottom: 11px" Text="GetThisVoucher" Width="239px" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </asp:Panel>
-    <p>
-        <p>
-            <p>
-                <p align="left">
-                </p>
-            </p>
-        </p>
-    </p>
     <asp:Panel ID="Panel12" runat="server" BackColor="Black" BorderColor="#993300" BorderStyle="Ridge" BorderWidth="20px" Height="266px" style="margin-right: 0px" Width="417px">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Image ID="Image12" runat="server" Height="64px" ImageAlign="Middle" ImageUrl="~/ASPX Files/Seri/Images/robinson.png" Width="227px" />
@@ -130,6 +76,13 @@
     <p>
         <hr />
         <p>
+        <asp:Panel ID="Panel14" runat="server" BackColor="Black" BorderColor="#FF33CC" BorderStyle="Dashed" BorderWidth="15px" Height="444px">
+            <asp:Button ID="Button7" runat="server" Text="Button" OnClick="Button7_Click" />
+    </asp:Panel>
+    <p>
+        <p>
+        <p>
+        <p>
             <p>
                 <p align="left">
                 </p>
@@ -143,6 +96,13 @@
     <p>
     </p>
 </asp:Content>
+
+
+
+
+
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
 
 <footer class="footerDash">
