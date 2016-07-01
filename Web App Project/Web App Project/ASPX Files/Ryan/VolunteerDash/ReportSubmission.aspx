@@ -14,7 +14,7 @@
                     <br />
                     Date of visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Enabled="False" Width="135px"></asp:TextBox>
-                    <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="Show Calendar" />
+                    <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="Show Calendar" ForeColor="Black" />
                     <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" OnSelectionChanged="Calendar1_SelectionChanged" Width="330px">
                         <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
                         <DayStyle BackColor="#CCCCCC" />

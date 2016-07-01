@@ -40,7 +40,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 myConnection.Close();
             }
 
-            Response.Redirect("updateParticulars.aspx");
+                Response.Redirect("updateParticulars.aspx");
+            }
         }
     }
-}
