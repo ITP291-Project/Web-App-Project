@@ -9,19 +9,34 @@
                     <br />
                     <br />
                     Case Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="135px"></asp:TextBox>
                     <br />
                     <br />
                     Date of visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Enabled="False" Width="135px"></asp:TextBox>
+                    <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="Show Calendar" />
+                    <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" OnSelectionChanged="Calendar1_SelectionChanged" Width="330px">
+                        <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
+                        <DayStyle BackColor="#CCCCCC" />
+                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
+                        <OtherMonthDayStyle ForeColor="#999999" />
+                        <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+                        <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
+                        <TodayDayStyle BackColor="#999999" ForeColor="White" />
+                    </asp:Calendar>
                     <br />
                     <br />
                     Duration of visit&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox3" runat="server" ForeColor="Black"></asp:TextBox>
+                    <!-- <asp:TextBox ID="TextBox3" runat="server" ForeColor="Black"></asp:TextBox> -->
+                    <asp:DropDownList ID="DropDownList2" runat="server" Width="135px">
+                        <asp:ListItem>1 Hour</asp:ListItem>
+                        <asp:ListItem>2 Hours</asp:ListItem>
+                        <asp:ListItem>3 Hours</asp:ListItem>
+                    </asp:DropDownList>
                     <br />
                     <br />
                     Type of volunteer&nbsp;
-                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="135px">
                         <asp:ListItem>PG House Visit</asp:ListItem>
                         <asp:ListItem>SPCA</asp:ListItem>
                         <asp:ListItem>Sun Love Home</asp:ListItem>
@@ -29,16 +44,16 @@
                     <br />
                     <br />
                     Photo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:FileUpload ID="FileUpload1" runat="server" ForeColor="Black" />
+                    <asp:FileUpload ID="FileUpload1" runat="server" ForeColor="Black" Width="223px" />
                     &nbsp;<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                     <br />
                     <br />
                     Additional Feedback<br />
-                    <asp:TextBox ID="TextBox5" runat="server" Height="72px" Width="231px" ForeColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="TextBox5" runat="server" Height="72px" Width="369px" ForeColor="Black" TextMode="MultiLine"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Submit" Width="223px" />
-                    <asp:Button ID="Button7" runat="server" OnClick="Button7_Click" Text="Save" Width="223px" />
+                    <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Submit" Width="223px" ForeColor="Black" />
+                    <asp:Button ID="Button7" runat="server" OnClick="Button7_Click" Text="Save" Width="223px" ForeColor="Black" />
                     <br />
                 </div>
             <div id="right">

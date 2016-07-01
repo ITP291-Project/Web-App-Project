@@ -13,6 +13,7 @@ namespace Web_App_Project.Ryan.Volunteer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Calendar1.Visible = false;
             Label1.Visible = false;
         }
 
@@ -110,6 +111,24 @@ namespace Web_App_Project.Ryan.Volunteer
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
                 }
+            }
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            string selecteddate = Calendar1.SelectedDate.ToString();
+            TextBox2.Text = selecteddate;
+        }
+
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+            if (Calendar1.Visible == false)
+            {
+                Calendar1.Visible = true;
+            }
+            else
+            {
+                Calendar1.Visible = false;
             }
         }
     }

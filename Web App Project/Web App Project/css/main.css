@@ -1185,6 +1185,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 
 #left {
     float: left;
+    color: black;
 }
 
 #right {
