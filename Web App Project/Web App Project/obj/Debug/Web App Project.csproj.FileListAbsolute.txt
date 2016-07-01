@@ -131,3 +131,6 @@ C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\D
 C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.pdb
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\App_Data\localdb.mdf
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\App_Data\localdb_log.ldf
+C:\Users\btobf_000\Source\Repos\Web-App-Project\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csprojResolveAssemblyReference.cache
+C:\Users\btobf_000\Source\Repos\Web-App-Project\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.dll
+C:\Users\btobf_000\Source\Repos\Web-App-Project\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.pdb

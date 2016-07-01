@@ -4,7 +4,7 @@
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
             <div id="content">
                 <div id="left">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" OnSelectedIndexChanged="OnSelectedIndexChanged">
                         <Columns>
                             <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
                             <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" ItemStyle-BackColor="Yellow" />
@@ -18,6 +18,7 @@
                             <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
                         </Columns>
                     </asp:GridView>
+                    <<asp:LinkButton ID="lnkDummy" runat="server"></asp:LinkButton>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT r.Id, r.Status, a.FName + ' ' + a.Lname AS Name, a.Email, a.TelNo, a.NRIC, a.Address, a.Occupation, a.Language, a.Gender FROM Roster AS r INNER JOIN Accounts AS a ON r.Id = a.Id"></asp:SqlDataSource>
                 </div>
             <div id="right">
