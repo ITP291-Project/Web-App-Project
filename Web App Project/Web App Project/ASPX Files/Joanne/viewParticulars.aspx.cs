@@ -21,7 +21,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
-                string fName = TextBox1.Text;
+                /* string fName = TextBox1.Text;
                 string lName = TextBox2.Text;
                 string email = TextBox3.Text;
                 string addr = TextBox4.Text;
@@ -37,7 +37,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                 myConnection.Open();
                 myCommand.ExecuteNonQuery();
-                myConnection.Close();
+                myConnection.Close(); */
             }
 
                 Response.Redirect("updateParticulars.aspx");

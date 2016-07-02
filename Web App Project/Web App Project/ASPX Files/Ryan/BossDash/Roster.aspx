@@ -4,7 +4,7 @@
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
             <div id="content">
                 <div id="left">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" OnSelectedIndexChanged="OnSelectedIndexChanged">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" OnSelectedIndexChanged="OnSelectedIndexChanged" OnRowDataBound="GridView1_RowDataBound">
                         <Columns>
                             <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
                             <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" ItemStyle-BackColor="Yellow" />
@@ -16,10 +16,59 @@
                             <asp:BoundField DataField="Occupation" HeaderText="Occupation" SortExpression="Occupation" />
                             <asp:BoundField DataField="Language" HeaderText="Language" SortExpression="Language" />
                             <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton Text="Select" ID="lnkSelect" runat="server" CommandName="Select" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
                     <<asp:LinkButton ID="lnkDummy" runat="server"></asp:LinkButton>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT r.Id, r.Status, a.FName + ' ' + a.Lname AS Name, a.Email, a.TelNo, a.NRIC, a.Address, a.Occupation, a.Language, a.Gender FROM Roster AS r INNER JOIN Accounts AS a ON r.Id = a.Id"></asp:SqlDataSource>
+                    <br />
+                    <asp:Label ID="Label1" runat="server" ForeColor="Black" Text="Name"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label2" runat="server" ForeColor="Black" Text="Status"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label3" runat="server" ForeColor="Black" Text="Email"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox3" runat="server" ForeColor="Black"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label8" runat="server" ForeColor="Black" Text="Contact Number"></asp:Label>
+&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox4" runat="server" ForeColor="Black"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label4" runat="server" ForeColor="Black" Text="NRIC"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox5" runat="server" ForeColor="Black"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label9" runat="server" ForeColor="Black" Text="Address"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox6" runat="server" ForeColor="Black" Height="50px" TextMode="MultiLine"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label6" runat="server" ForeColor="Black" Text="Occupation"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox7" runat="server" ForeColor="Black"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label5" runat="server" ForeColor="Black" Text="Language"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox8" runat="server" ForeColor="Black"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label7" runat="server" ForeColor="Black" Text="Gender"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox9" runat="server" ForeColor="Black"></asp:TextBox>
                 </div>
             <div id="right">
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" Text="Approved Reports" ForeColor="Black" Height="110px" OnClick="Button1_Click" Font-Size="Small" Width="150px" />

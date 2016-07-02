@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
 
 namespace Web_App_Project.Ryan
 {
@@ -14,10 +15,15 @@ namespace Web_App_Project.Ryan
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!this.IsPostBack)
-            {
-                this.BindGrid();
-            }
+            
+        }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[6].Visible = false;
+            e.Row.Cells[7].Visible = false;
+            e.Row.Cells[8].Visible = false;
+            e.Row.Cells[9].Visible = false;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -40,28 +46,6 @@ namespace Web_App_Project.Ryan
             Response.Redirect("NewApplicants.aspx");
         }
 
-        private void BindGrid()
-        {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand("SELECT r.Id, r.Status, a.FName + ' ' + a.Lname AS Name, a.Email, a.TelNo, a.NRIC, a.Address, a.Occupation, a.Language, a.Gender FROM Roster AS r INNER JOIN Accounts AS a ON r.Id = a.Id"))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            sda.Fill(dt);
-                            GridView1.DataSource = dt;
-                            GridView1.DataBind();
-                        }
-                    }
-                }
-            }
-        }
-
         protected void OnRowDataBound(object sender, System.Web.UI.WebControls.GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -73,11 +57,16 @@ namespace Web_App_Project.Ryan
 
         protected void OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = GridView1.SelectedRow.RowIndex;
-            string name = GridView1.SelectedRow.Cells[0].Text;
-            string country = GridView1.SelectedRow.Cells[1].Text;
-            string message = "Row Index: " + index + "\\nName: " + name + "\\nCountry: " + country;
-            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true);
+            GridViewRow row = GridView1.SelectedRow;
+            TextBox1.Text = row.Cells[2].Text;
+            TextBox2.Text = row.Cells[1].Text;
+            TextBox3.Text = row.Cells[3].Text;
+            TextBox4.Text = row.Cells[4].Text;
+            TextBox5.Text = row.Cells[5].Text;
+            TextBox6.Text = row.Cells[6].Text;
+            TextBox7.Text = row.Cells[7].Text;
+            TextBox8.Text = row.Cells[8].Text;
+            TextBox9.Text = row.Cells[9].Text;
         }
 
     }
