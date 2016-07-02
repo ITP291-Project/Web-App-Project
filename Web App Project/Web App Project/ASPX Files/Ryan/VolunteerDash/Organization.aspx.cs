@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
 {
@@ -26,17 +28,32 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            if (RadioButton1.Checked)
+            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
-                string organization = "PG House Visit";
-            }
-            else if (RadioButton2.Checked)
-            {
-                String organization = "SPCA";
-            }
-            else if (RadioButton3.Checked)
-            {
-                String organization = "Sun Love Home";
+                string organization;
+
+                if (RadioButton1.Checked)
+                {
+                    organization = "PG House Visit";
+                }
+                else if (RadioButton2.Checked)
+                {
+                    organization = "SPCA";
+                }
+                else if (RadioButton3.Checked)
+                {
+                    organization = "Sun Love Home";
+                }
+                else
+                {
+                    organization = null;
+                    Response.Redirect("Organization.aspx");
+                }
+
+                string query = "UPDATE Accounts SET Organization='" + organization + "'";
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+
+                myCommand.ExecuteNonQuery();
             }
         }
     }
