@@ -391,7 +391,7 @@
     <section id="works" class="works section no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-1.jpg" class="work-box"> <img src="img/work-1.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/rcvol.jpg" class="work-box"> <img src="img/rcvol.jpg" alt="Red Cross Singapore">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -399,7 +399,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-2.jpg" class="work-box"> <img src="img/work-2.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/rcvol1.jpg" class="work-box"> <img src="img/rcvol1.jpg" alt="Red Cross Singapore">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -407,7 +407,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-3.jpg" class="work-box"> <img src="img/work-3.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/volunteer.png" class="work-box"> <img src="img/volunteer.png" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -415,7 +415,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-4.jpg" class="work-box"> <img src="img/work-4.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/volunteer2.jpg" class="work-box"> <img src="img/volunteer2.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -423,7 +423,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-5.jpg" class="work-box"> <img src="img/work-5.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/volunteer1.jpg" class="work-box"> <img src="img/volunteer1.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -431,7 +431,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-6.jpg" class="work-box"> <img src="img/work-6.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/donationdrive.png" class="work-box"> <img src="img/donationdrive.png" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -439,7 +439,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-7.jpg" class="work-box"> <img src="img/work-7.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/spcavol.jpg" class="work-box"> <img src="img/spcavol.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -447,7 +447,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-8.jpg" class="work-box"> <img src="img/work-8.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/elderlyvol.jpg" class="work-box"> <img src="img/elderlyvol.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -455,7 +455,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-9.jpg" class="work-box"> <img src="img/work-9.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/volunteer3.png" class="work-box"> <img src="img/volunteer3.png" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -463,7 +463,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-10.jpg" class="work-box"> <img src="img/work-10.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/volunteer4.jpg" class="work-box"> <img src="img/volunteer4.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -471,7 +471,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-11.jpg" class="work-box"> <img src="img/work-11.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/volunteer5.jpg" class="work-box"> <img src="img/volunteer5.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -479,7 +479,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/work-12.jpg" class="work-box"> <img src="img/work-12.jpg" alt="">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/volunteer6.jpg" class="work-box"> <img src="img/volunteer6.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <p><span class="icon icon-magnifying-glass"></span></p>
