@@ -500,9 +500,7 @@
                         Our Team</h2>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h3>
-                                Bootstrap includes HTML and CSS based design templates
-                            for typography, forms, buttons, tables, navigation, modals</h3>
+                            <h3>Our company is made up of many kind hearted volunteers but these are the few people that made the company possible</h3>
                         </div>
                     </div>
                 </div>
@@ -510,10 +508,9 @@
       <div class="col-md-4 col-sm-8">
         <div class="person"> <img src="img/team-1.png" alt="" class="img-responsive">
           <div class="person-content">
-            <h4>Johnathan Doe</h4>
-            <h5 class="role">The Mastermind</h5>
-            <p>Bootstrap includes HTML and CSS based design templates
-                            for typography, forms, buttons, tables, navigation. </p>
+            <h4>Joanne Lim</h4>
+            <h5 class="role">The CEO</h5>
+            <p>She built the foundation of the company and is now helping volunteers in certain projects</p>
           </div>
           <ul class="social-icons clearfix">
             <li><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -529,10 +526,9 @@
       <div class="col-md-4 col-sm-8">
         <div class="person"> <img src="img/team-2.png" alt="" class="img-responsive">
           <div class="person-content">
-            <h4>Lisa Brown</h4>
-            <h5 class="role">Creative head</h5>
-            <p>Bootstrap includes HTML and CSS based design templates
-                            for typography, forms, buttons, tables, navigation.</p>
+            <h4>Angie Chu</h4>
+            <h5 class="role">Creative Director</h5>
+            <p>She made all the graphics that you see on this website. Pretty right? We thought so too.</p>
           </div>
           <ul class="social-icons clearfix">
             <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
@@ -548,10 +544,9 @@
       <div class="col-md-4 col-sm-8">
         <div class="person"> <img src="img/team-3.png" alt="" class="img-responsive">
           <div class="person-content">
-            <h4>Mike Collins</h4>
-            <h5 class="role">Technical lead</h5>
-            <p>Bootstrap includes HTML and CSS based design templates
-                            for typography, forms, buttons, tables, navigation.</p>
+            <h4>Ryan Chew</h4>
+            <h5 class="role">IT Support</h5>
+            <p>Supports the day to day running of the IT infrastructure of the company.</p>
           </div>
           <ul class="social-icons clearfix">
             <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
@@ -563,6 +558,22 @@
         </div>
       </div>
       <!-- team member 1 --> 
+        <div class="col-md-4 col-sm-8">
+        <div class="person"> <img src="img/team-3.png" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Seri</h4>
+            <h5 class="role">Marketing Director</h5>
+            <p>Helps put the spotlight on our company</p>
+          </div>
+          <ul class="social-icons clearfix">
+            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
+            <li><a href="#" class=""><span class="fa fa-linkedin"></span></a></li>
+            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
+            <li><a href="#" class=""><span class="fa fa-dribbble"></span></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -576,37 +587,32 @@
           <li>
             <div class="col-md-12">
               <blockquote>
-                <h1>"Many users already have downloaded Bootstrap from MaxCDN when visiting another site. As a result, it will be loaded from cache when they visit your site, which leads to faster loading time. Also, most CDN's will make sure that once a user requests a file from it, it will be served from the server closest to them, which also leads to faster loading time." </h1>
-                <p>Bootstrap includes HTML and CSS based design templates
-                            </p>
+                <h1>"The best way to not feel hopeless is to get up and do something. Don’t wait for good things to happen to you. If you go out and make some good things happen, you will fill the world with hope, you will fill yourself with hope."</h1>
+                <p>Barrack Obama</p>
               </blockquote>
             </div>
           </li>
           <li>
             <div class="col-md-12">
               <blockquote>
-                <h1>"Bootstrap 3 is designed to be responsive to mobile devices. Mobile-first styles are part of the core framework.
-
-To ensure proper rendering and touch zooming, add the following <meta> tag inside the <head> element:" </h1>
-                <p>One advantage of using the Bootstrap CDN</p>
+                <h1>"The best antidote I know for worry is work. The best cure for weariness is the challenge of helping someone who is even more tired. One of the great ironies of life is this: He or she who serves almost always benefits more than he or she who is served."</h1>
+                <p>Gordon B. Hinckley</p>
               </blockquote>
             </div>
           </li>
           <li>
             <div class="col-md-12">
               <blockquote>
-                <h1>"Bootstrap uses HTML elements and CSS properties that require the HTML5 doctype.
-
-Always include the HTML5 doctype at the beginning of the page, along with the lang attribute and the correct character" </h1>
-                <p>Add the HTML5 doctype</p>
+                <h1>"He has a right to criticize, who has a heart to help."</h1>
+                <p>Abraham Lincoln</p>
               </blockquote>
             </div>
           </li>
           <li>
             <div class="col-md-12">
               <blockquote>
-                <h1>"The following example shows the code for a basic Bootstrap page (with a responsive fixed width container):The following example shows the code for a basic Bootstrap page (with a full width container)" </h1>
-                <p>Two Basic Bootstrap Pages</p>
+                <h1>"Doing nothing for others is the undoing of ourselves."</h1>
+                <p>Horace Mann</p>
               </blockquote>
             </div>
           </li>
@@ -620,8 +626,8 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
     <section id="contacts" class="section quote">
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
-      <h3>Looking for a new brand? Let's work together!</h3>
-      <a href="#" class="btn btn-large btn-border">Get Quotation</a> </div>
+      <h3>Ready to start volunteering?</h3>
+      <a href="#contact" class="btn btn-large btn-border">Sign me up!</a> </div>
   </div>
 </section>
     <!-- Get a quote section -->
@@ -632,27 +638,21 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                     <!-- Heading and para -->
                     <div class="block-heading-two">
                         <h3>
-                            <span>Why Choose Us?</span></h3>
+                            <span>Why volunteer with us?</span></h3>
                     </div>
                     <p>
-                        Bootstrap is completely free to download! Bootstrap Text Bootstrap Tables.... Bootstrap
-                        Button Groups Total Control Bootstrap allows you to group a series of buttons together
-                        (on a single line) in a button group. group a series of buttons together (on a single
-                        line) in a button group.
+                        We provide a wide range of organizations to volunteer with in an easy to sign up portal
+                        so you won't have to spend extra time to fill up forms.
                         <br>
                         <br>
-                        Bootstrap is completely free to download! Bootstrap Text Bootstrap Tables.... Bootstrap
-                        Button Groups</p>
+                        We will submit the forms on your behalf based on the information provided to us on your profile.</p>
                     <p>
-                        Bootstrap is completely free to download! Bootstrap Text Bootstrap Tables.... Bootstrap
-                        Button Groups Total Control Bootstrap allows you to group a series of buttons together
-                        (on a single line) in a button group. group a series of buttons together (on a single
-                        line) in a button group.</p>
+                        Once your application has been approved, you can jump straight in to sign up for volunteer slots.</p>
                 </div>
                 <div class="col-md-4">
                     <div class="block-heading-two">
                         <h3>
-                            <span>Our Solution</span></h3>
+                            <span>Our Features</span></h3>
                     </div>
                     <!-- Accordion starts -->
                     <div class="panel-group" id="accordion-alt3">
@@ -661,65 +661,49 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                             <!-- Panel heading -->
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3"><i
-                                        class="fa fa-angle-right"></i>Accordion Heading Text Item # 1 </a>
+                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3"><i class="fa fa-angle-right"></i>Centralized Portal</a>
                                 </h4>
                             </div>
                             <div id="collapseOne-alt3" class="panel-collapse collapse">
                                 <!-- Panel body -->
                                 <div class="panel-body">
-                                    Bootstrap is completely free to download! Bootstrap Text Bootstrap Tables.... Bootstrap
-                                    Button Groups Total Control Bootstrap allows you to group a series of buttons together
-                                    (on a single line) in a button group. group a series of buttons together (on a single
-                                    
+                                    Everything a volunteer would need is all located within a volunteer's area from signing up for events to applying for leave!
                                 </div>
                             </div>
                         </div>
                         <div class="panel">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3"><i
-                                        class="fa fa-angle-right"></i>Accordion Heading Text Item # 2 </a>
+                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3"><i class="fa fa-angle-right"></i>Rewards</a>
                                 </h4>
                             </div>
                             <div id="collapseTwo-alt3" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Bootstrap is completely free to download! Bootstrap Text Bootstrap Tables.... Bootstrap
-                                    Button Groups Total Control Bootstrap allows you to group a series of buttons together
-                                    (on a single line) in a button group. group a series of buttons together (on a single
-                                  
+                                    Even though we believe that volunteering is through someone's heart, we also recognize the effort put in by our volunteers and we offer rewards for them.
                                 </div>
                             </div>
                         </div>
                         <div class="panel">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3"><i
-                                        class="fa fa-angle-right"></i>Accordion Heading Text Item # 3 </a>
+                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3"><i class="fa fa-angle-right"></i>User Friendly UI</a>
                                 </h4>
                             </div>
                             <div id="collapseThree-alt3" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Bootstrap is completely free to download! Bootstrap Text Bootstrap Tables.... Bootstrap
-                                    Button Groups Total Control Bootstrap allows you to group a series of buttons together
-                                    (on a single line) in a button group. group a series of buttons together (on a single
-                                    
+                                    The user interface was designed with simplicity and user friendlyness in mind.
                                 </div>
                             </div>
                         </div>
                         <div class="panel">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3"><i
-                                        class="fa fa-angle-right"></i>Accordion Heading Text Item # 4 </a>
+                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3"><i class="fa fa-angle-right"></i>System Improvements</a>
                                 </h4>
                             </div>
                             <div id="collapseFour-alt3" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                   Bootstrap is completely free to download! Bootstrap Text Bootstrap Tables.... Bootstrap
-                                    Button Groups Total Control Bootstrap allows you to group a series of buttons together
-                                    (on a single line) in a button group. group a series of buttons together (on a single
-                                    
+                                  The User Interface is being updated regularly to make the volunteer experience more friendly
                                 </div>
                             </div>
                         </div>
@@ -868,11 +852,7 @@ Always include the HTML5 doctype at the beginning of the page, along with the la
                 </div>
                 </form>
 				
-            </div><br /><br />
-			<div class="text-center">
-					<p class="lead"><i class="fa fa-phone"></i> Contact Us</p>
-                    <p><a href="#">Write a message to us</a></p>
-			</div>
+            </div>
         </div>
 
     </div>	
