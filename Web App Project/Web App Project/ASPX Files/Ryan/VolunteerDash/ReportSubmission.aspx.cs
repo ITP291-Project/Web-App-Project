@@ -13,6 +13,15 @@ namespace Web_App_Project.Ryan.Volunteer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["username"] == null)
+            {
+                Response.Redirect("/ASPX Files/Joanne/login.aspx");
+            }
+            else if (Session["Privilege"].ToString() == "boss")
+            {
+                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+            }
+
             Calendar1.Visible = false;
             Label1.Visible = false;
         }

@@ -25,6 +25,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
             {
                 String inputemail = TextBox1.Text;
                 String inputpassword = TextBox2.Text;
+                Session["username"] = TextBox1.Text;
 
                 //Hash
                 var hash = Hasher.Hash(inputpassword);
@@ -39,9 +40,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 myConnection.Open();
                 myCommand.ExecuteNonQuery();
 
-                    string dbEmail = reader["Email"].ToString();
-                    string dbPassword = reader["Password"].ToString();
-                    string dbPrivilege = reader["Privilege"].ToString();
+                string dbEmail = reader["Email"].ToString();
+                string dbPassword = reader["Password"].ToString();
+                string dbPrivilege = reader["Privilege"].ToString();
+                Session["Privilege"] = dbPrivilege;
 
                 if (dbEmail == inputemail && dbPassword == inputpassword)
                 {
