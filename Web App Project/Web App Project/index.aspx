@@ -641,8 +641,8 @@
                             <span>Why volunteer with us?</span></h3>
                     </div>
                     <p>
-                        We provide a wide range of organizations to volunteer with in an easy to sign up portal
-                        so you won't have to spend extra time to fill up forms.
+                        We provide you with a wide range of organizations to volunteer with in an easy to sign up portal
+                        so you won't have to spend extra time to fill up forms each time you want to volunteer for an organization.
                         <br>
                         <br>
                         We will submit the forms on your behalf based on the information provided to us on your profile.</p>
