@@ -41,7 +41,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                     string dbEmail = reader["Email"].ToString();
                     string dbPassword = reader["Password"].ToString();
-                string dbPrivilege = reader["Privilege"].ToString();
+                    string dbPrivilege = reader["Privilege"].ToString();
 
                 if (dbEmail == inputemail && dbPassword == inputpassword)
                 {
@@ -60,6 +60,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 }
 
                 myConnection.Close();
+
+
             }
         }
     }

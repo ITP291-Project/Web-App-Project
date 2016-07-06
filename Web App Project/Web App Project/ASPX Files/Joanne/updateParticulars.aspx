@@ -15,34 +15,34 @@
                 <asp:Label ID="Label2" runat="server" Text="Last Name"></asp:Label>
             </p>
             <p style="margin-left: 360px">
-                <asp:TextBox ID="TextBox1" runat="server" Width="170px"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="170px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="TextBox2" runat="server" Width="170px"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Width="170px"></asp:TextBox>
             </p>
             <p style="margin-left: 360px">
                 <asp:Label ID="Label3" runat="server" Text="Email Address"></asp:Label>
             </p>
             <p style="margin-left: 360px">
-                <asp:TextBox ID="TextBox3" runat="server" Width="433px"></asp:TextBox>
+                <asp:TextBox ID="TextBox3" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
             </p>
             <p style="margin-left: 360px">Mailing Address</p>
             <p style="margin-left: 360px">
-                <asp:TextBox ID="TextBox4" runat="server" Width="433px"></asp:TextBox>
+                <asp:TextBox ID="TextBox4" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
             </p>
             <p style="margin-left: 360px">
                 <asp:Label ID="Label4" runat="server" Text="Contact Number"></asp:Label>
             </p>
             <p style="margin-left: 360px">
-                <asp:TextBox ID="TextBox5" runat="server" Width="433px"></asp:TextBox>
+                <asp:TextBox ID="TextBox5" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
             </p>
             <p style="margin-left: 360px">
                 <asp:Label ID="Label5" runat="server" Text="Languages/Dialects Spoken"></asp:Label>
             </p>
             <p style="margin-left: 360px">
-                <asp:TextBox ID="TextBox6" runat="server" Width="433px"></asp:TextBox>
+                <asp:TextBox ID="TextBox6" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
             </p>
-                <p style="margin-left: 360px">
-                    <asp:Button ID="Button1" runat="server" style="color: black" Text="Save" OnClick="Button1_Click" />
+            <p style="margin-left: 360px">
+                    <asp:Button ID="Button1" runat="server" style="color: black" Text="Save" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" Width="89px" />
             </p>
         </div>
         </div>

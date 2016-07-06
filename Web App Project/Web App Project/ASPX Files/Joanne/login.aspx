@@ -10,7 +10,7 @@
                 <div class="form-group">
                     <label for="email"></label>
                     <!-- <input type="email" class="form-control" id="email" name="email" placeholder="email" required> -->
-                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="350px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="350px" TextMode="Email" required="required"></asp:TextBox>
                     <!--placing icon using a span element-->
                     <span class="icon fa fa-envelope-o fa-fw"></span>
                     
@@ -19,15 +19,16 @@
                 <div class="form-group">
                     <label for="password"></label>
                     <!-- <input type="password" class="form-control" id="password" name="password" placeholder="password" required> -->
-                    <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Width="350px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Width="350px" TextMode="Password" required="required"></asp:TextBox>
                     <span class="icon fa fa-key fa-fw"></span>
                     <br />
-                    <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
+                    <br />
+                    <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV" required="required"></div>
                     
                 </div>
 
                 <div class="form-group text-left">
-                    <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" />
                     <a href="enterEmail.aspx" data-target="#pwdModal" data-toggle="modal">Forget password?</a>
                 </div>
 

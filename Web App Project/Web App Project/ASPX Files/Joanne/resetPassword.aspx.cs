@@ -16,6 +16,16 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            //check if password and reconfirm password is the same
+            string password = TextBox2.Text;
+            string passwordretype = TextBox3.Text;
+            if (password != passwordretype)
+            {
+                // MessageBoxShow("Enter same password in both", this);
+                //MessageBox.Show("Enter same password in both");
+                //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Enter same password in both');</script>");
+            }
+
             Response.Redirect("resetPasswordConfirmation.aspx");
         }
     }

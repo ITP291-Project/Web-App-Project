@@ -21,25 +21,56 @@ namespace Web_App_Project.ASPX_Files.Joanne
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
+                //When they press SAVE
+                //Retrieve data from text box input to update the database information
                 string fName = TextBox1.Text;
                 string lName = TextBox2.Text;
                 string email = TextBox3.Text;
                 string addr = TextBox4.Text;
-
+                string phonenum = TextBox5.Text;
+                string language = TextBox6.Text;
 
                 string query = "UPDATE Accounts (fName, lName, email, telNo, addr)";
                 query += "VALUES (@FName, @LName, @Gender, @NRIC, @Birthdate, @Email, @TelNo, @Password, @Occupation, @Address, @Salutation)";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
 
+                //SqlCommand cmd = new SqlCommand("UPDATE Accounts SET FName = @FName, LName = @LName, Email = @Email, Address = @Address, Phone = @Phone, Language = @Language", myConnection);
+
                 myCommand.Parameters.AddWithValue("@FName", fName);
                 myCommand.Parameters.AddWithValue("@LName", lName);
                 myCommand.Parameters.AddWithValue("@Email", email);
                 myCommand.Parameters.AddWithValue("@Address", addr);
-                
+                myCommand.Parameters.AddWithValue("@Phone", phonenum);
+                myCommand.Parameters.AddWithValue("@Language", language);
+
                 myConnection.Open();
                 myCommand.ExecuteNonQuery();
                 myConnection.Close();
+
+                /* 
+                string fName = TextBox1.eTxt;
+                string lName = TextBox2.Text;
+                string email = TextBox3.Text;
+                string addr = TextBox4.Text;
+                string phonenum = TextBox5.Text;
+                string language = TextBox6.Text;
+
+                SqlCommand cmd = new SqlCommand("UPDATE Accounts SET FName = @FName, LName = @LName, Email = @Email, Address = @Address, Phone = @Phone, Language = @Language", myConnection);
+
+                //Sqlstring query = "UPDATE Accounts ";
+                //SqlCommand myCommand = new SqlCommand(query, myConnection);
+
+                cmd.Parameters.AddWithValue("@FName", fName);
+                cmd.Parameters.AddWithValue("@LName", lName);
+                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.Parameters.AddWithValue("@Address", addr);
+                cmd.Parameters.AddWithValue("@Phone", phonenum);
+                cmd.Parameters.AddWithValue("@Language", language);
+
+                myConnection.Open();
+                myCommand.ExecuteNonQuery();
+                myConnection.Close(); */
             }
             Response.Redirect("updatedText.aspx");
         }
