@@ -17,7 +17,7 @@ namespace Web_App_Project
             }
             else if (Session["Privilege"].ToString() == "boss")
             {
-                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
             }
         }
 

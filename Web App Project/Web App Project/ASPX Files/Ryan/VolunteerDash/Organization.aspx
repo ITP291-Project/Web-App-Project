@@ -8,11 +8,13 @@
                     <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="Black" Text="Select the organization you wish to work with!"></asp:Label>
                     <br />
                     <br />
-                    <asp:RadioButton ID="RadioButton1" runat="server" GroupName="Group1" Text="PG House Visit" />
+                    <asp:RadioButton ID="RadioButton1" runat="server" GroupName="Group1" Text="Pioneer Generation" />
                     <br />
-                    <asp:RadioButton ID="RadioButton2" runat="server" GroupName="Group1" Text="SPCA" />
+                    <asp:RadioButton ID="RadioButton2" runat="server" GroupName="Group1" Text="The Salivation Army" />
                     <br />
-                    <asp:RadioButton ID="RadioButton3" runat="server" GroupName="Group1" Text="Sun Love Home" />
+                    <asp:RadioButton ID="RadioButton3" runat="server" GroupName="Group1" Text="Ren Ci" />
+                    <br />
+                    <asp:RadioButton ID="RadioButton4" runat="server" GroupName="Group1" Text="Ren Ci" />
                     <br />
                     <br />
                     <asp:Button ID="Button4" runat="server" ForeColor="Black" Text="Update" Width="225px" OnClick="Button4_Click" />
