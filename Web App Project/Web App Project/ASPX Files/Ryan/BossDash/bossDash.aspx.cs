@@ -11,7 +11,20 @@ namespace Web_App_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            System.Diagnostics.Debug.WriteLine("Username is " + Session["username"]);
+
+            if (Session["username"] == null)
+            {
+                System.Diagnostics.Debug.WriteLine("Username is null");
+
+                Response.Redirect("/ASPX Files/Joanne/login.aspx");
+            }
+            else if (Session["Privilege"].ToString() == "volunteer")
+            {
+                System.Diagnostics.Debug.WriteLine("Privilege is volunteer");
+
+                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

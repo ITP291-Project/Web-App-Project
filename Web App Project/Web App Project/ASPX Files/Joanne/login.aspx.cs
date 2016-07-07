@@ -17,64 +17,85 @@ namespace Web_App_Project.ASPX_Files.Joanne
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!Page.IsPostBack)
+            {
+                //your code here 
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            if (!IsPostBack)
             {
-                String inputemail = TextBox1.Text;
-                String inputpassword = TextBox2.Text;
-
-                //Hash
-                //var hash = Hasher.Hash(inputpassword);
-
-                //Verify
-                //var result = SecurePasswordHasher.Verify("mypassword", hash);
-
-                string query = "SELECT [Email], [Password], [Privilege] FROM [Accounts] WHERE [Email]='" + inputemail + "' AND [Password]='" + inputpassword + "'";
-
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
-                myConnection.Open();
-                myCommand.CommandType = CommandType.Text;
-                SqlDataReader reader = myCommand.ExecuteReader();
-                
-
-                String dbEmail = null;
-                String dbPassword = null;
-                String dbPrivilege = null;
-
-                if (reader.Read())
+                using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
                 {
-                    dbEmail = reader["Email"].ToString();
-                    dbPassword = reader["Password"].ToString();
-                    dbPrivilege = reader["Privilege"].ToString();
-                }
+                    String inputemail = TextBox1.Text;
+                    String inputpassword = TextBox2.Text;
 
-                if (dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword))
-                {
-                    if (dbPrivilege.Equals("boss"))
+                    //Hash
+                    string hash = Hasher.Hash(inputpassword);
+
+                    //Verify
+                    //var result = SecurePasswordHasher.Verify("mypassword", hash);
+
+                    string query = "SELECT [Email], [Password], [Privilege] FROM [Accounts] WHERE [Email]='" + inputemail + "' AND [Password]='" + inputpassword + "'";
+
+                    SqlCommand myCommand = new SqlCommand(query, myConnection);
+                    myConnection.Open();
+                    myCommand.CommandType = CommandType.Text;
+                    SqlDataReader reader = myCommand.ExecuteReader();
+
+
+                    String dbEmail = null;
+                    String dbPassword = null;
+                    String dbPrivilege = null;
+
+                    if (reader.Read())
                     {
-                        Session["Privilege"] = dbPrivilege;
-                        Session["username"] = dbEmail;
-                        Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+                        dbEmail = reader["Email"].ToString();
+                        dbPassword = reader["Password"].ToString();
+                        dbPrivilege = reader["Privilege"].ToString();
                     }
-                    else if (dbPrivilege.Equals("volunteer"))
+
+                    //Do these print the correct values?
+                    System.Diagnostics.Debug.WriteLine("dbEmail is " + dbEmail);
+                    System.Diagnostics.Debug.WriteLine("dbPassword is " + dbPassword);
+                    System.Diagnostics.Debug.WriteLine("dbPrivilege is " + dbPrivilege);
+
+                    System.Diagnostics.Debug.WriteLine("");
+
+                    if (dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword))
                     {
-                        Session["Privilege"] = dbPrivilege;
-                        Session["username"] = dbEmail;
-                        Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                        //Is this line being executed?
+                        System.Diagnostics.Debug.WriteLine("Valid User");
+
+                        if (dbPrivilege.Equals("boss"))
+                        {
+                            //Is this line being executed?
+                            System.Diagnostics.Debug.WriteLine("User is boss");
+
+                            Session["Privilege"] = dbPrivilege;
+                            Session["username"] = dbEmail;
+                            Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+                        }
+                        else if (dbPrivilege.Equals("volunteer"))
+                        {
+                            //Is this line being executed?
+                            System.Diagnostics.Debug.WriteLine("User is volunteer");
+
+                            Session["Privilege"] = dbPrivilege;
+                            Session["username"] = dbEmail;
+                            Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                        }
                     }
+                    else
+                    {
+                        //We already know what dbPrivilege contains, but let's add this else block anyway
+                        System.Diagnostics.Debug.WriteLine("User is unknown");
+                    }
+
+                    myConnection.Close();
                 }
-                else
-                {
-                    System.Console.WriteLine("Error");
-                }
-
-                myConnection.Close();
-
-
             }
         }
     }

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50">
             <div class="registrationform">
-                <form role="form " action="" method="">
+                <form role="form " action="" method="POST">
                 <h1 class="text-left">Log in to your Dashboard!</h1>
 
                 <!-- asking for email input-->

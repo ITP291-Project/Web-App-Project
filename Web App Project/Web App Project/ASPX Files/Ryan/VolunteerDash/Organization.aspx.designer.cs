@@ -49,6 +49,15 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash {
         protected global::System.Web.UI.WebControls.RadioButton RadioButton3;
         
         /// <summary>
+        /// RadioButton4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton4;
+        
+        /// <summary>
         /// Button4 control.
         /// </summary>
         /// <remarks>
