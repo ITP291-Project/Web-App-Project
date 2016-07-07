@@ -10,13 +10,14 @@ using System.Web.Security;
 using System.Security.Cryptography;
 using System.Text;
 
+
 namespace Web_App_Project.ASPX_Files.Joanne
 {
     public partial class login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -28,12 +29,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 Session["username"] = TextBox1.Text;
 
                 //Hash
-                var hash = Hasher.Hash(inputpassword);
+                //var hash = Hasher.Hash(inputpassword);
 
                 //Verify
                 //var result = SecurePasswordHasher.Verify("mypassword", hash);
 
-                string query = "SELECT [Email], [Password], [Privilege] FROM  [Accounts] WHERE [Email]='" + inputemail + "', [Password]='" + hash + "'";
+                string query = "SELECT [Email], [Password], [Privilege] FROM  [Accounts] WHERE [Email]='" + inputemail + "', [Password]='" + inputpassword + "'";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
                 SqlDataReader reader = myCommand.ExecuteReader();
