@@ -26,7 +26,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
             {
                 String inputemail = TextBox1.Text;
                 String inputpassword = TextBox2.Text;
-                Session["username"] = TextBox1.Text;
 
                 //Hash
                 //var hash = Hasher.Hash(inputpassword);
@@ -34,32 +33,43 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 //Verify
                 //var result = SecurePasswordHasher.Verify("mypassword", hash);
 
-                string query = "SELECT [Email], [Password], [Privilege] FROM  [Accounts] WHERE [Email]='" + inputemail + "', [Password]='" + inputpassword + "'";
+                string query = "SELECT [Email], [Password], [Privilege] FROM [Accounts] WHERE [Email]='" + inputemail + "' AND [Password]='" + inputpassword + "'";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
-                SqlDataReader reader = myCommand.ExecuteReader();
                 myConnection.Open();
-                myCommand.ExecuteNonQuery();
+                myCommand.CommandType = CommandType.Text;
+                SqlDataReader reader = myCommand.ExecuteReader();
+                
 
-                string dbEmail = reader["Email"].ToString();
-                string dbPassword = reader["Password"].ToString();
-                string dbPrivilege = reader["Privilege"].ToString();
-                Session["Privilege"] = dbPrivilege;
+                String dbEmail = null;
+                String dbPassword = null;
+                String dbPrivilege = null;
 
-                if (dbEmail == inputemail && dbPassword == inputpassword)
+                if (reader.Read())
+                {
+                    dbEmail = reader["Email"].ToString();
+                    dbPassword = reader["Password"].ToString();
+                    dbPrivilege = reader["Privilege"].ToString();
+                }
+
+                if (dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword))
                 {
                     if (dbPrivilege.Equals("boss"))
                     {
+                        Session["Privilege"] = dbPrivilege;
+                        Session["username"] = dbEmail;
                         Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
                     }
                     else if (dbPrivilege.Equals("volunteer"))
                     {
+                        Session["Privilege"] = dbPrivilege;
+                        Session["username"] = dbEmail;
                         Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
                     }
                 }
                 else
                 {
-                    //Popup box for error
+                    System.Console.WriteLine("Error");
                 }
 
                 myConnection.Close();
