@@ -22,22 +22,22 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// TextBox1 control.
+        /// firstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox firstName;
         
         /// <summary>
-        /// TextBox2 control.
+        /// lastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox lastName;
         
         /// <summary>
         /// Label3 control.
@@ -67,13 +67,13 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// TextBox3 control.
+        /// nricInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox nricInput;
         
         /// <summary>
         /// Label5 control.
@@ -85,13 +85,31 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// Calendar1 control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.Button Button2;
+        
+        /// <summary>
+        /// bDateInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox bDateInput;
+        
+        /// <summary>
+        /// birthDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar birthDate;
         
         /// <summary>
         /// Label6 control.
@@ -103,13 +121,13 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// TextBox4 control.
+        /// emailInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox emailInput;
         
         /// <summary>
         /// Label7 control.
@@ -121,13 +139,13 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// TextBox5 control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox password;
         
         /// <summary>
         /// Label8 control.
@@ -139,13 +157,13 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// TextBox6 control.
+        /// cfmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox cfmPassword;
         
         /// <summary>
         /// Label9 control.
@@ -157,13 +175,13 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// TextBox7 control.
+        /// telephone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox telephone;
         
         /// <summary>
         /// Label10 control.
@@ -175,22 +193,13 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// TextBox8 control.
+        /// job control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
-        
-        /// <summary>
-        /// TextBox9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox job;
         
         /// <summary>
         /// Label11 control.
@@ -202,6 +211,33 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
+        /// addr1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox addr1;
+        
+        /// <summary>
+        /// addr2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox addr2;
+        
+        /// <summary>
+        /// Label12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label12;
+        
+        /// <summary>
         /// DropDownList1 control.
         /// </summary>
         /// <remarks>
@@ -209,5 +245,14 @@ namespace Web_App_Project.ASPX_Files.Angie {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

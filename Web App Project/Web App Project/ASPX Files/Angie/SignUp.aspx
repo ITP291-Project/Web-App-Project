@@ -16,77 +16,109 @@
 </head>
 
 <body>
-    <div class="align-center">
-        <div class="row">
-        <h2>Join us now!</h2>
+    <div class="containerSignUp">
+         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">        
+            <h3>Join us now!</h3>
+       
+       
         <p>&nbsp;There's no age limit for volunteering, the only thing you need is an empathetic heart. Join us today
                     a difference in someone's life. Let us know more about you, because we care for you as a big volunteering family.</p>
-        
+             
+       
         <p>
-            <asp:Label ID="Label1" runat="server" Text="Label">Full Name:</asp:Label>&nbsp; &nbsp<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:Label ID="Label1" runat="server" Text="Label">Full Name:</asp:Label>
+        
+        
+            <asp:TextBox ID="firstName" runat="server" ForeColor="Black"></asp:TextBox>
+        
+       
+           <asp:TextBox ID="lastName" runat="server" ForeColor="Black"></asp:TextBox>
+       
+       
+            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="firstName" runat="server" />
         </p>
   
         <p>
             <asp:Label ID="Label3" runat="server" Text="Label">Gender:</asp:Label>  
             <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-                <asp:ListItem>Female</asp:ListItem>
-                <asp:ListItem>Male</asp:ListItem>     
+                <asp:ListItem Text="Female" Value="Female">Female</asp:ListItem>
+                <asp:ListItem Text="Male" Value="Male">Male</asp:ListItem>     
             </asp:RadioButtonList>
         </p>
+     
         <p>
             <asp:Label ID="Label4" runat="server" Text="Label">NRIC:</asp:Label>
-&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        </p>
+            &nbsp;&nbsp;
+       
+            <asp:TextBox ID="nricInput" runat="server" ForeColor="Black"></asp:TextBox>
+            
+        </p>  
         <p>
             <asp:Label ID="Label5" runat="server" Text="Label">Birthdate:</asp:Label>
-&nbsp;&nbsp;&nbsp;
-            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+            &nbsp;&nbsp;&nbsp;<asp:Button ID="Button2" runat="server" Text="Select Date" OnClick="Button2_Click"/>
+            <asp:TextBox ID="bDateInput" runat="server" ForeColor="Black"></asp:TextBox>
+&nbsp;<asp:Calendar ID="birthDate" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" OnSelectionChanged="birthDate_SelectionChanged" Width="330px">
+                        <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
+                        <DayStyle BackColor="#CCCCCC" />
+                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
+                        <OtherMonthDayStyle ForeColor="#999999" />
+                        <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+                        <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
+                        <TodayDayStyle BackColor="#999999" ForeColor="White" />
+                    </asp:Calendar>
         </p>
+
         <p>
             <asp:Label ID="Label6" runat="server" Text="Label">Email:</asp:Label>
-&nbsp;
-            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+            &nbsp;
+            <asp:TextBox ID="emailInput" runat="server" ForeColor="Black"></asp:TextBox>
         </p>
         <p>
             <asp:Label ID="Label7" runat="server" Text="Label">Password:</asp:Label>
-&nbsp;
-            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+            &nbsp;
+            <asp:TextBox ID="password" runat="server" ForeColor="Black"></asp:TextBox>
         </p>
         <p>
             <asp:Label ID="Label8" runat="server" Text="Label">Re-type Password:</asp:Label>
-&nbsp;
-            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+            &nbsp;
+            <asp:TextBox ID="cfmPassword" runat="server" ForeColor="Black"></asp:TextBox>
         </p>
         <p>
-            <asp:Label ID="Label9" runat="server" Text="Label">Occupation:</asp:Label>
-&nbsp;
-            <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+             <asp:Label ID="Label9" runat="server" Text="Label">Mobile number:</asp:Label>
+             &nbsp;
+            <asp:TextBox ID="telephone" runat="server" ForeColor="Black"></asp:TextBox>
         </p>
         <p>
-            <asp:Label ID="Label10" runat="server" Text="Label">Mailing Address:</asp:Label>
-&nbsp;
-            <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+            <asp:Label ID="Label10" runat="server" Text="Label">Occupation:</asp:Label>
+            &nbsp;
+            <asp:TextBox ID="job" runat="server" ForeColor="Black"></asp:TextBox>
         </p>
         <p>
-            <asp:Label ID="Label11" runat="server" Text="Label">Salutation:</asp:Label>
-&nbsp;
+            <asp:Label ID="Label11" runat="server" Text="Label">Mailing Address:</asp:Label>
+            &nbsp;
+            <asp:TextBox ID="addr1" runat="server" ForeColor="Black"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="addr2" runat="server" ForeColor="Black"></asp:TextBox>
+        </p>
+        <p>
+            <asp:Label ID="Label12" runat="server" Text="Label">Salutation:</asp:Label>
+            &nbsp;
             <asp:DropDownList ID="DropDownList1" runat="server">
                 <asp:ListItem Selected="True">Select Salutation</asp:ListItem>
-                <asp:ListItem>Mr.</asp:ListItem>
-                <asp:ListItem>Ms.</asp:ListItem>
-                <asp:ListItem>Miss</asp:ListItem>
-                <asp:ListItem>Mdm.</asp:ListItem>
-                <asp:ListItem>Mrs.</asp:ListItem>
-                <asp:ListItem>Dr.</asp:ListItem>
+                <asp:ListItem Value="Mr">Mr.</asp:ListItem>
+                <asp:ListItem Value="Ms">Ms.</asp:ListItem>
+                <asp:ListItem Value="Miss">Miss</asp:ListItem>
+                <asp:ListItem Value="Mdm">Mdm.</asp:ListItem>
+                <asp:ListItem Value="Mrs">Mrs.</asp:ListItem>
+                <asp:ListItem Value="Dr">Dr.</asp:ListItem>
             </asp:DropDownList>
         </p>
-
-        
-</div>
+             <p>
+                 <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click"/>
+        </p>
+             <p>
+                 &nbsp;</p>
+        </div>
     </div>
 
 

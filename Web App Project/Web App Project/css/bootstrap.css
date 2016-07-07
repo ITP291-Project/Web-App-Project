@@ -1592,7 +1592,15 @@ pre code {
 
 .containerDash {
   height: 250px;
-   padding-right: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.containerSignUp {
+  height: 250px;
+  padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
