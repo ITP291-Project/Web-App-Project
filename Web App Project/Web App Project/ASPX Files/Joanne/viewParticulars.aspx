@@ -7,53 +7,76 @@
     </head>
 
     <body>
-<div style="text-align: center">
-        <h2>Your Particulars</h2>
-        <p>&nbsp;</p>
-        <p>
-            <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT FName + ' ' + Lname AS Name, Email, Address, TelNo, Occupation, Language FROM Accounts"></asp:SqlDataSource>
-            <asp:Label ID="Label1" font-size="20px" runat="server" Text="Name" style=""></asp:Label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label2" font-size="20px" runat="server" Text="Label"></asp:Label>
-        </p>
-        <p align="center">
-            &nbsp;<asp:Label ID="Label3" font-size="20px" runat="server" Text="Date of Birth"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label4" font-size="20px" runat="server" Text="Label"></asp:Label>
-        </p>
-        <p>
-            <asp:Label ID="Label5" font-size="20px" runat="server" Text="Email Address"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label6" font-size="20px" runat="server" Text="Label"></asp:Label>
-        </p>
-        <p>
-            <asp:Label ID="Label7" font-size="20px" runat="server" Text="Mailing Address"></asp:Label>
-&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label8" font-size="20px" runat="server" Text="Label"></asp:Label>
-        </p>
-        <p>
-            <asp:Label ID="Label9" font-size="20px" runat="server" Text="Contact Number"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label10" font-size="20px" runat="server" Text="Label"></asp:Label>
-        </p>
-        <p>
-            <asp:Label ID="Label13" font-size="20px" runat="server" Text="Occupation"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label11" font-size="20px" runat="server" Text="Label"></asp:Label>
-        </p>
-        <p>
-            <asp:Label ID="Label14" font-size="20px" runat="server" Text="Dialects Spoken"></asp:Label>
-            &nbsp;&nbsp;&nbsp; 
-            <asp:Label ID="Label12" font-size="20px" runat="server" Text="Label"></asp:Label>
-        </p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            <asp:Button ID="Button1" runat="server" style="color: black" Text="Edit Particulars" Width="131px" OnClick="Button1_Click" />
-        </p>
-</div>
+        <div style="text-align: center; margin-left: 200px">
+            <h2>Your Particulars</h2>
+            <p>&nbsp;</p>
+            <p>
+                <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT FName + ' ' + Lname AS Name, Email, Address, TelNo, Occupation, Language FROM Accounts"></asp:SqlDataSource>
+                <div style="text-align: left">
+                <asp:Label ID="Label1" Font-Size="20px" runat="server" Text="Name"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                <asp:Label ID="Label2" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            </p>
+
+            <p>
+                <div style="text-align: left">
+                &nbsp;<asp:Label ID="Label3" Font-Size="20px" runat="server" Text="Date of Birth"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            <asp:Label ID="Label4" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            </p>
+
+            <p>
+                <div style="text-align: left">
+                <asp:Label ID="Label5" Font-Size="20px" runat="server" Text="Email Address"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            <asp:Label ID="Label6" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            </p>
+
+            <p>
+                <div style="text-align: left">
+                <asp:Label ID="Label7" Font-Size="20px" runat="server" Text="Mailing Address"></asp:Label>
+                &nbsp;&nbsp;&nbsp;
+                </div>
+            <asp:Label ID="Label8" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            </p>
+
+            <p>
+                <div style="text-align: left">
+                <asp:Label ID="Label9" Font-Size="20px" runat="server" Text="Contact Number"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            <asp:Label ID="Label10" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            </p>
+
+            <p>
+                <div style="text-align: left">
+                <asp:Label ID="Label13" Font-Size="20px" runat="server" Text="Occupation"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            <asp:Label ID="Label11" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            </p>
+
+            <p>
+                <div style="text-align: left">
+                <asp:Label ID="Label14" Font-Size="20px" runat="server" Text="Dialects Spoken"></asp:Label>
+                &nbsp;&nbsp;&nbsp; 
+                </div>
+            <asp:Label ID="Label12" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <asp:Button ID="Button1" runat="server" Style="color: black" Text="Edit Particulars" Width="131px" OnClick="Button1_Click" />
+            </p>
+        </div>
 
     </body>
 </asp:Content>
