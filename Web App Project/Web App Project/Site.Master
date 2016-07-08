@@ -68,7 +68,7 @@
         </div>
     </div>
         <!-- Body -->
-        <div style="min-height: 800px">
+        <div style="min-height: 1000px">
         <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
         </div>
         </form>

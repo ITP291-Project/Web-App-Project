@@ -61,8 +61,14 @@ namespace Web_App_Project.ASPX_Files.Angie
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            if (birthDate.Visible == false)
+            {
                 birthDate.Visible = true;
-            
+            }
+            else
+            {
+                birthDate.Visible = false;
+            }
         }
 
         protected void birthDate_SelectionChanged(object sender, EventArgs e)
