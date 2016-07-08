@@ -17,14 +17,23 @@
         <p class="label">
             <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
         </p>
+  
         <p>
-            <asp:TextBox ID="TextBox2" runat="server" Width="500px" style="color: black" type="password" required="required"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" Width="500px" style="color: black; margin-left: 13px" type="password" required="required"></asp:TextBox>
         </p>
+        <p>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2"
+                ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}"
+                ErrorMessage="Password must contain: Minimum 8 characters atleast 1 UpperCase Alphabet, 1 LowerCase Alphabet, 1 Number and 1 Special Character" ForeColor="Red" />
+        </p>
+
         <p class="label">
             <asp:Label ID="Label3" runat="server" Text="Confirm Password"></asp:Label>
         </p>
         <p>
             <asp:TextBox ID="TextBox3" runat="server" Width="500px" style="color: black" type="password" required="required"></asp:TextBox>
+        </p>
+        <p>
             <asp:CompareValidator runat="server" id="cmpPassword" controltovalidate="TextBox2" controltocompare="TextBox3" operator="Equal" type="String" errormessage="Both Passwords must be the same" />
             <br />
         </p>
