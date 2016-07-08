@@ -26,17 +26,19 @@
              
        
         <p>
-            <asp:Label ID="Label1" runat="server" Text="Label">Full Name:</asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Label">First Name:</asp:Label>
         
         
             <asp:TextBox ID="firstName" runat="server" ForeColor="Black"></asp:TextBox>
-        
-       
-           <asp:TextBox ID="lastName" runat="server" ForeColor="Black"></asp:TextBox>
        
        
             <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="firstName" runat="server" />
-            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="lastName" runat="server" />
+        </p>
+
+        <p>
+            <asp:Label ID="Label2" runat="server" Text="Label">Last Name:</asp:Label>
+            <asp:TextBox ID="lastName" runat="server" ForeColor="Black"></asp:TextBox>
+            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="firstName" runat="server" />
         </p>
   
         <p>
@@ -45,6 +47,10 @@
                 <asp:ListItem Text="Female" Value="Female">Female</asp:ListItem>
                 <asp:ListItem Text="Male" Value="Male">Male</asp:ListItem>     
             </asp:RadioButtonList>
+
+            <asp:RequiredFieldValidator runat="server" ID="genderRequired" Display="Dynamic"
+            ControlToValidate="RadioButtonList1" ErrorMessage="Please select a gender"
+            ValidationGroup="signUp">*</asp:RequiredFieldValidator>
         </p>
      
         <p>
@@ -52,6 +58,9 @@
             &nbsp;&nbsp;
        
             <asp:TextBox ID="nricInput" runat="server" ForeColor="Black"></asp:TextBox>
+             <asp:RegularExpressionValidator runat="server" ValidationExpression="^(S\d{7}[a-zA-Z])$" ControlToValidate="nricInput" ErrorMessage="Invalid NRIC Format"></asp:RegularExpressionValidator>
+
+            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="nricInput" runat="server" />
             
         </p>  
         <p>
@@ -73,21 +82,45 @@
             <asp:Label ID="Label6" runat="server" Text="Label">Email:</asp:Label>
             &nbsp;
             <asp:TextBox ID="emailInput" runat="server" ForeColor="Black"></asp:TextBox>
+            <asp:RegularExpressionValidator runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="emailInput" ErrorMessage="Invalid Email Format"></asp:RegularExpressionValidator>
         </p>
         <p>
             <asp:Label ID="Label7" runat="server" Text="Label">Password:</asp:Label>
             &nbsp;
-            <asp:TextBox ID="password" runat="server" ForeColor="Black"></asp:TextBox>
+            
+            <asp:TextBox ID="password" runat="server" ForeColor="Black" TextMode="Password"></asp:TextBox>
+            <asp:RequiredFieldValidator id="passwordReq"
+              runat="server"
+              ControlToValidate="password"
+              ErrorMessage="Password is required!"
+              SetFocusOnError="True" Display="Dynamic" />
         </p>
         <p>
             <asp:Label ID="Label8" runat="server" Text="Label">Re-type Password:</asp:Label>
             &nbsp;
-            <asp:TextBox ID="cfmPassword" runat="server" ForeColor="Black"></asp:TextBox>
+            <asp:TextBox ID="cfmPassword" runat="server" ForeColor="Black" TextMode="Password"></asp:TextBox>
+             <asp:RequiredFieldValidator id="confirmPasswordReq"
+              runat="server" 
+              ControlToValidate="cfmPassword"
+              ErrorMessage="Password confirmation is required!"
+              SetFocusOnError="True" 
+              Display="Dynamic" />
+
+             <asp:CompareValidator id="comparePasswords" 
+              runat="server"
+              ControlToCompare="password"
+              ControlToValidate="cfmPassword"
+              ErrorMessage="Your passwords do not match up!"
+              Display="Dynamic" />
         </p>
         <p>
              <asp:Label ID="Label9" runat="server" Text="Label">Mobile number:</asp:Label>
              &nbsp;
             <asp:TextBox ID="telephone" runat="server" ForeColor="Black"></asp:TextBox>
+            <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "telephone" ID="RegularExpressionValidator2" ValidationExpression = "^[0-9]{8,8}$" runat="server" ErrorMessage="Please enter a valid phone number (e.g. 91234567)."></asp:RegularExpressionValidator>
+
+
+
         </p>
         <p>
             <asp:Label ID="Label10" runat="server" Text="Label">Occupation:</asp:Label>

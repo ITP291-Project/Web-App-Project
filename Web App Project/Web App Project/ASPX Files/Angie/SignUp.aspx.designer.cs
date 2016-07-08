@@ -31,6 +31,15 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.TextBox firstName;
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// lastName control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace Web_App_Project.ASPX_Files.Angie {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        
+        /// <summary>
+        /// genderRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator genderRequired;
         
         /// <summary>
         /// Label4 control.
@@ -148,6 +166,15 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.TextBox password;
         
         /// <summary>
+        /// passwordReq control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator passwordReq;
+        
+        /// <summary>
         /// Label8 control.
         /// </summary>
         /// <remarks>
@@ -166,6 +193,24 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.TextBox cfmPassword;
         
         /// <summary>
+        /// confirmPasswordReq control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator confirmPasswordReq;
+        
+        /// <summary>
+        /// comparePasswords control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator comparePasswords;
+        
+        /// <summary>
         /// Label9 control.
         /// </summary>
         /// <remarks>
@@ -182,6 +227,15 @@ namespace Web_App_Project.ASPX_Files.Angie {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox telephone;
+        
+        /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
         
         /// <summary>
         /// Label10 control.
