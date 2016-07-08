@@ -26,6 +26,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
             {
 
             }
+
             else
             {
                 Response.Redirect("resetPasswordConfirmation.aspx");
