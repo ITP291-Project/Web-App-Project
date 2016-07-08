@@ -34,6 +34,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     Label6.Text = reader["Email"].ToString();
                     Label8.Text = reader["Address"].ToString();
                     Label10.Text = reader["TelNo"].ToString();
+                    Label11.Text = reader["Occupation"].ToString();
                     Label12.Text = reader["Language"].ToString();
 
                     reader.Close();
