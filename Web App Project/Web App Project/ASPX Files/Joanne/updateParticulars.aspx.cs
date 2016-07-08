@@ -21,6 +21,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
+                string userid = Session["username"].ToString();
                 //When they press SAVE
                 //Retrieve data from text box input to update the database information
                 string fName = TextBox1.Text;
@@ -30,7 +31,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 string phonenum = TextBox5.Text;
                 string language = TextBox6.Text;
 
-                string query = "UPDATE Accounts (fName, lName, email, telNo, addr)";
+                string query = "UPDATE Accounts (fName, lName, email, telNo, addr) WHERE email='" + userid + "'";
                 query += "VALUES (@FName, @LName, @Gender, @NRIC, @Birthdate, @Email, @TelNo, @Password, @Occupation, @Address, @Salutation)";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
@@ -76,3 +77,4 @@ namespace Web_App_Project.ASPX_Files.Joanne
         }
     }
 }
+

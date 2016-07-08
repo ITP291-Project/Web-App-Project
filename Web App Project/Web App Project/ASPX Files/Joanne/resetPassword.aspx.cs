@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,33 +22,32 @@ namespace Web_App_Project.ASPX_Files.Joanne
             string password = TextBox2.Text;
             string passwordretype = TextBox3.Text;
 
-            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
-            {
-                String pwd = TextBox3.Text;
-
-                string query = "UPDATE Accounts (pwd)";
-                query += "VALUES (@Password)";
-
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
-                SqlDataReader reader = myCommand.ExecuteReader();
-                myConnection.Open();
-                myCommand.ExecuteNonQuery();
-                myConnection.Close();
-
-
-            }
-
-
             if (password != passwordretype)
             {
-                // MessageBoxShow("Enter same password in both", this);
-                //MessageBox.Show("Enter same password in both");
-                //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Enter same password in both');</script>");
+
             }
             else
             {
                 Response.Redirect("resetPasswordConfirmation.aspx");
             }
+            /* using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+             {
+                 String pwd = TextBox3.Text;
+
+                 string query = "UPDATE Accounts (pwd) WHERE email='" + userid + "'";
+                 query += "VALUES (@Password)";
+
+                 SqlCommand myCommand = new SqlCommand(query, myConnection);
+                 SqlDataReader reader = myCommand.ExecuteReader();
+                 myConnection.Open();
+                 myCommand.ExecuteNonQuery();
+                 myConnection.Close();
+
+
+             }*/
+
+
+
 
         }
     }

@@ -1,12 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="resetPassword.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Joanne.forgotPassword" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">   
-
-    <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender1" runat="server"></ajaxToolkit:ModalPopupExtender>
-    <asp:Panel runat="server" ID="panel">
-        <asp:Label runat="server" ID="label" Text="Password must be the same">
-            
-        </asp:Label>
-    </asp:Panel>
+    
 
 <head>
     <title>Forgot Password?</title>
@@ -14,6 +8,7 @@
 </head>
 
 <body>
+    <asp:Button ID="fake" Visible="false" runat="server" />
     <div class="align-center">
         <h1>Reset Password</h1>
         <h3>Reset your password</h3>
@@ -85,5 +80,3 @@
     </div>
 </footer>
 </asp:Content>
-
- 
