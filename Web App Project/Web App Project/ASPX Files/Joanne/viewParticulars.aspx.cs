@@ -14,7 +14,33 @@ namespace Web_App_Project.ASPX_Files.Joanne
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            {
+                //string userid = Session["username"].ToString();
+                string userid = "someone@gmail.com";
 
+                string query = "SELECT * FROM [Accounts] WHERE [Email] = 'someone@gmail.com'";
+                //string query = "SELECT [FName] FROM [Accounts] WHERE [Email] = 'someone@gmail.com'";
+
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                myConnection.Open();
+                myCommand.CommandType = CommandType.Text;
+                SqlDataReader reader = myCommand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Label2.Text = reader["FName"].ToString() + " " + reader["LName"].ToString();
+                    Label4.Text = reader["Birthdate"].ToString();
+                    Label6.Text = reader["Email"].ToString();
+                    Label8.Text = reader["Address"].ToString();
+                    Label10.Text = reader["TelNo"].ToString();
+                    Label12.Text = reader["Language"].ToString();
+
+                    reader.Close();
+                    myConnection.Close();
+                }
+
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

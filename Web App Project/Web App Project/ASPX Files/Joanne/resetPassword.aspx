@@ -26,6 +26,7 @@
         <p>
             <asp:TextBox ID="TextBox3" runat="server" Width="500px" style="color: black" type="password" required="required"></asp:TextBox>
             <asp:CompareValidator runat="server" id="cmpPassword" controltovalidate="TextBox2" controltocompare="TextBox3" operator="Equal" type="String" errormessage="Both Passwords must be the same" />
+            <br />
         </p>
         <p class="label">
             <asp:Button ID="Button1" runat="server" style="color:black" Text="Reset" OnClick="Button1_Click" />
