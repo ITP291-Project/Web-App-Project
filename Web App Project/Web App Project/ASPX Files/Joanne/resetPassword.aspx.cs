@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -30,24 +29,26 @@ namespace Web_App_Project.ASPX_Files.Joanne
             //if password matches : 1) go to resetPasswordConfirmation page and 2) update the password in accounts where email is - username (of session)
             else
             {
-                Response.Redirect("resetPasswordConfirmation.aspx");
-
                 using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
-                {
-                    string userid = Session["username"].ToString();
+                {   
+                    //please undo this (below - session) as now it is hardcoded. 
+                    //string userid = Session["username"].ToString();
+                    string userid = "kplim96@yahoo.com.sg";
 
                     String pwd = TextBox3.Text;
 
-                    string query = "UPDATE Accounts (pwd) WHERE email='" + userid + "'";
-                    query += "VALUES (@Password)";
-
-                    SqlCommand myCommand = new SqlCommand(query, myConnection);
-                    SqlDataReader reader = myCommand.ExecuteReader();
                     myConnection.Open();
+
+                    string query = "UPDATE Accounts SET Password=@Password WHERE email='" + userid + "'";
+                    SqlCommand myCommand = new SqlCommand(query, myConnection);
+
+                    myCommand.Parameters.AddWithValue("@Password", pwd);
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
 
                 }
+
+                Response.Redirect("resetPasswordConfirmation.aspx");
 
             }
 
