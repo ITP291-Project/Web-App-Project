@@ -36,6 +36,7 @@
        
        
             <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="firstName" runat="server" />
+            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="lastName" runat="server" />
         </p>
   
         <p>
