@@ -49,6 +49,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String dbEmail = null;
                     String dbPassword = null;
                     String dbPrivilege = null;
+                    String dbOrganization = null;
 
                     //read data from the db
                     if (reader.Read())
@@ -56,12 +57,14 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         dbEmail = reader["Email"].ToString(); //read db email
                         dbPassword = reader["Password"].ToString(); //read db password
                         dbPrivilege = reader["Privilege"].ToString(); //read db privilege
+                        dbOrganization = reader["Organization"].ToString();
                     }
 
                     //Do these print the correct values?
                     System.Diagnostics.Debug.WriteLine("dbEmail is " + dbEmail);
                     System.Diagnostics.Debug.WriteLine("dbPassword is " + dbPassword);
                     System.Diagnostics.Debug.WriteLine("dbPrivilege is " + dbPrivilege);
+                    System.Diagnostics.Debug.WriteLine("dbOrganization is " + dbOrganization);
 
                     System.Diagnostics.Debug.WriteLine("");
 
@@ -76,6 +79,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
                         Session["Privilege"] = dbPrivilege;
                         Session["username"] = dbEmail;
+                        Session["Organization"] = dbOrganization;
 
                         //if privilege is boss, redirect to boss page 
                         if (dbPrivilege.Equals("boss"))

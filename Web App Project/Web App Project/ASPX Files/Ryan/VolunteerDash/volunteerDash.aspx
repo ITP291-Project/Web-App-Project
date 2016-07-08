@@ -11,13 +11,13 @@
                     <Columns>
                         <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
                         <asp:BoundField DataField="Monday" HeaderText="Monday" SortExpression="Monday" />
-                        <asp:BoundField DataField="Tuesdau" HeaderText="Tuesday" SortExpression="Tuesdau" />
+                        <asp:BoundField DataField="Tuesdau" HeaderText="Tuesdau" SortExpression="Tuesdau" />
                         <asp:BoundField DataField="Wednesday" HeaderText="Wednesday" SortExpression="Wednesday" />
                         <asp:BoundField DataField="Thursday" HeaderText="Thursday" SortExpression="Thursday" />
                         <asp:BoundField DataField="Friday" HeaderText="Friday" SortExpression="Friday" />
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Timetable] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Timetable] ([Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday]) VALUES (@Id, @Time, @Monday, @Tuesdau, @Wednesday, @Thursday, @Friday)" ProviderName="<%$ ConnectionStrings:localdbConnectionString1.ProviderName %>" SelectCommand="SELECT [Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday] FROM [Timetable]" UpdateCommand="UPDATE [Timetable] SET [Time] = @Time, [Monday] = @Monday, [Tuesdau] = @Tuesdau, [Wednesday] = @Wednesday, [Thursday] = @Thursday, [Friday] = @Friday WHERE [Id] = @Id">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Timetable] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Timetable] ([Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday]) VALUES (@Id, @Time, @Monday, @Tuesdau, @Wednesday, @Thursday, @Friday)" SelectCommand="SELECT [Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday] FROM [Timetable]" UpdateCommand="UPDATE [Timetable] SET [Time] = @Time, [Monday] = @Monday, [Tuesdau] = @Tuesdau, [Wednesday] = @Wednesday, [Thursday] = @Thursday, [Friday] = @Friday WHERE [Id] = @Id">
                     <DeleteParameters>
                         <asp:Parameter Name="Id" Type="Int32" />
                     </DeleteParameters>
