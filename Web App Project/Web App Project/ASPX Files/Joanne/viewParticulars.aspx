@@ -12,12 +12,12 @@
         <p>&nbsp;</p>
         <p>
             <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT FName + ' ' + Lname AS Name, Email, Address, TelNo, Occupation, Language FROM Accounts"></asp:SqlDataSource>
-            <asp:Label ID="Label1" font-size="20px" runat="server" Text="Name"></asp:Label>
+            <asp:Label ID="Label1" font-size="20px" runat="server" Text="Name" style=""></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label2" font-size="20px" runat="server" Text="Label"></asp:Label>
         </p>
-        <p>
-            <asp:Label ID="Label3" font-size="20px" runat="server" Text="Date of Birth"></asp:Label>
+        <p align="center">
+            &nbsp;<asp:Label ID="Label3" font-size="20px" runat="server" Text="Date of Birth"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label4" font-size="20px" runat="server" Text="Label"></asp:Label>
         </p>
