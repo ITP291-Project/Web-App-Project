@@ -21,6 +21,8 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
             {
                 Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
             }
+
+            Label2.Visible = false;
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -42,15 +44,27 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
 
                 if (RadioButton1.Checked)
                 {
-                    organization = "PG House Visit";
+                    organization = "Pioneer Generation";
                 }
                 else if (RadioButton2.Checked)
                 {
-                    organization = "SPCA";
+                    organization = "Salvation Army";
                 }
                 else if (RadioButton3.Checked)
                 {
-                    organization = "Sun Love Home";
+                    organization = "Ren Ci";
+                }
+                else if (RadioButton4.Checked)
+                {
+                    organization = "SPCA";
+                }
+                else if (RadioButton5.Checked)
+                {
+                    organization = "Touch Home Care";
+                }
+                else if (RadioButton6.Checked)
+                {
+                    organization = "Red Cross Society";
                 }
                 else
                 {
@@ -63,7 +77,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
 
                 myCommand.ExecuteNonQuery();
 
-                Response.Redirect("volunteerDash.aspx");
+                Label1.Visible = true;
             }
         }
     }

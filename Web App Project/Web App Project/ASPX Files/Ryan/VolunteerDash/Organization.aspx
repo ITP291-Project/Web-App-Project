@@ -5,6 +5,10 @@
             <div id="content">
                 <div id="left">
             
+                    <asp:Label ID="Label2" runat="server" Text="Changes updated!"></asp:Label>
+                    <br />
+                    <br />
+            
                     <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="Black" Text="Select the organization you wish to work with!"></asp:Label>
                     <br />
                     <br />
@@ -14,7 +18,11 @@
                     <br />
                     <asp:RadioButton ID="RadioButton3" runat="server" GroupName="Group1" Text="Ren Ci" />
                     <br />
-                    <asp:RadioButton ID="RadioButton4" runat="server" GroupName="Group1" Text="Ren Ci" />
+                    <asp:RadioButton ID="RadioButton4" runat="server" GroupName="Group1" Text="SPCA" />
+                    <br />
+                    <asp:RadioButton ID="RadioButton5" runat="server" GroupName="Group1" Text="Touch Home Care" />
+                    <br />
+                    <asp:RadioButton ID="RadioButton6" runat="server" GroupName="Group1" Text="Red Cross Society" />
                     <br />
                     <br />
                     <asp:Button ID="Button4" runat="server" ForeColor="Black" Text="Update" Width="225px" OnClick="Button4_Click" />

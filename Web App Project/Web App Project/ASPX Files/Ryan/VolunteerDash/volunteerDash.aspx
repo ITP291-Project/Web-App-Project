@@ -5,12 +5,13 @@
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
             <div id="content">
                 <div id="left">
+                    <asp:Button ID="Button4" runat="server" Text="Sign Up for Events" />
+&nbsp;<br />
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" Width="650px">
                     <Columns>
-                        <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
                         <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
                         <asp:BoundField DataField="Monday" HeaderText="Monday" SortExpression="Monday" />
-                        <asp:BoundField DataField="Tuesdau" HeaderText="Tuesdau" SortExpression="Tuesdau" />
+                        <asp:BoundField DataField="Tuesdau" HeaderText="Tuesday" SortExpression="Tuesdau" />
                         <asp:BoundField DataField="Wednesday" HeaderText="Wednesday" SortExpression="Wednesday" />
                         <asp:BoundField DataField="Thursday" HeaderText="Thursday" SortExpression="Thursday" />
                         <asp:BoundField DataField="Friday" HeaderText="Friday" SortExpression="Friday" />
@@ -41,6 +42,9 @@
                 </asp:SqlDataSource>
                 </div>
             <div id="right">
+                <asp:Button ID="Button5" runat="server" Text="Update Particulars" Width="225px" />
+                <br />
+                <br />
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" />
                 <br />
                 <br />

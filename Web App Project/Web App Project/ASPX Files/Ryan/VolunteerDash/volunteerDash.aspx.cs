@@ -11,14 +11,14 @@ namespace Web_App_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
+            /*(if (Session["username"] == null)
             {
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
             }
             else if (Session["Privilege"].ToString() == "boss")
             {
                 Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
-            }
+            }*/
         }
 
         protected void Button3_Click(object sender, EventArgs e)
