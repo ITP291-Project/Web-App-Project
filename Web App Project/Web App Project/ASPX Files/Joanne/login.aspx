@@ -18,7 +18,6 @@
                         <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="350px" TextMode="Email" required="required"></asp:TextBox>
                         <!--placing icon using a span element-->
                         <span class="icon fa fa-envelope-o fa-fw"></span>
-
                     </div>
 
                     <div class="form-group">
@@ -37,7 +36,10 @@
 
                     <div class="form-group text-left">
                         <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" />
-                        <a href="enterEmail.aspx" data-target="#pwdModal" data-toggle="modal">Forget password?</a>
+                        <a href="enterEmail.aspx" data-target="#pwdModal" data-toggle="modal" style="color: white">Forget password?</a>
+                        <br />
+                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        <br />
                     </div>
 
                 </form>
