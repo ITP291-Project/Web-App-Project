@@ -14,13 +14,22 @@ namespace Web_App_Project.ASPX_Files.Joanne
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("Username is " + Session["username"]);
+
+            if (Session["username"] == null)
+            {
+                System.Diagnostics.Debug.WriteLine("Username is null");
+
+                Response.Redirect("/ASPX Files/Joanne/login.aspx");
+            }
+
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 //string userid = Session["username"].ToString();
                 string userid = "someone@gmail.com";
 
-                string query = "SELECT * FROM [Accounts] WHERE [Email] = 'someone@gmail.com'";
-                //string query = "SELECT [FName] FROM [Accounts] WHERE [Email] = 'someone@gmail.com'";
+                //string query = "SELECT * FROM [Accounts] WHERE [Email] = '" + userid + "'";
+                string query = "SELECT [FName] FROM [Accounts] WHERE [Email] = 'someone@gmail.com'";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
                 myConnection.Open();
