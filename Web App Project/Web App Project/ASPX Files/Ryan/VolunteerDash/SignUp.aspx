@@ -4,12 +4,13 @@
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
             <div id="content">
                 <div id="left">
-                    Organization&nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox1" runat="server" Enabled="False" Width="255px"></asp:TextBox>
+                    <asp:Label ID="Label4" runat="server" ForeColor="Black" Text="Your Prefered Organization"></asp:Label>
+                    &nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox1" runat="server" Enabled="False" Width="255px" ForeColor="Black"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Label ID="Label2" runat="server" Text="Day"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label2" runat="server" Text="Day" ForeColor="Black"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                     <asp:DropDownList ID="DropDownList2" runat="server" Width="255px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
                         <asp:ListItem>Monday</asp:ListItem>
                         <asp:ListItem>Tuesday</asp:ListItem>
@@ -19,26 +20,34 @@
                     </asp:DropDownList>
                     <br />
                     <br />
-                    <asp:Label ID="Label1" runat="server" Text="Select Time"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" Width="255px">
+                    <asp:Label ID="Label1" runat="server" Text="Select Time" ForeColor="Black"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="255px">
+                        <asp:ListItem Value="08:00:00">8:00am</asp:ListItem>
+                        <asp:ListItem Value="09:00:00">9:00am</asp:ListItem>
+                        <asp:ListItem Value="10:00:00">10:00am</asp:ListItem>
+                        <asp:ListItem Value="11:00:00">11:00am</asp:ListItem>
+                        <asp:ListItem Value="12:00:00">12:00pm</asp:ListItem>
+                        <asp:ListItem Value="13:00:00">1:00pm</asp:ListItem>
+                        <asp:ListItem Value="14:00:00">2:00pm</asp:ListItem>
+                        <asp:ListItem Value="15:00:00">3:00pm</asp:ListItem>
+                        <asp:ListItem Value="16:00:00">4:00pm</asp:ListItem>
+                        <asp:ListItem Value="17:00:00">5:00pm</asp:ListItem>
+                        <asp:ListItem Value="18:00:00">6:00pm</asp:ListItem>
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT Time FROM Timetable WHERE (@ColumnName = @Organization)">
-                        <SelectParameters>
-                            <asp:ControlParameter ControlID="DropDownList2" Name="ColumnName" PropertyName="SelectedValue" />
-                            <asp:ControlParameter ControlID="TextBox1" Name="Organization" PropertyName="Text" />
-                        </SelectParameters>
-                    </asp:SqlDataSource>
                     <br />
-                <asp:Button ID="Button6" runat="server" Text="Sign Up!" Width="225px" />
+                    <br />
+                    <br />
+                    <asp:Label ID="Label3" runat="server" ForeColor="Black" Text="Error! Your organization is not in this timeslot! Please refer to the timetable to confirm your organization's timeslot" Width="300px"></asp:Label>
+                    <br />
+                    <br />
+                    <br />
+                <asp:Button ID="Button6" runat="server" Text="Sign Up!" Width="225px" ForeColor="Black" OnClick="Button6_Click" />
                     <br />
                 </div>
-                </div>
-        </div>
-    </div>
-                </div>
+
             <div id="right">
-                <asp:Button ID="Button5" runat="server" Text="Update Particulars" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button5" runat="server" Text="Update Particulars" Width="225px" />
                 <br />
                 <br />
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" />
@@ -50,6 +59,7 @@
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" />
 
             </div>
+    </div>
                 </div>
         </div>
     </div>

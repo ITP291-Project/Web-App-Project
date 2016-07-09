@@ -19,6 +19,10 @@ namespace Web_App_Project
             {
                 Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
             }*/
+
+            //String organization = Session["Organization"].ToString();
+            String organization = "SPCA";
+            TextBox1.Text = organization;
         }
 
         protected void Button3_Click(object sender, EventArgs e)

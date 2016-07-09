@@ -13,6 +13,8 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label3.Visible = false;
+
             //String organization = Session["Organization"].ToString();
             String organization = "Pioneer Generation";
             TextBox1.Text = organization;
@@ -42,6 +44,35 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
                 DropDownList1.DataBind();
 
                 myConnection.Close();
+            }
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            {
+                //String username = Session["username"].ToString();
+                String username = "stupid@idiot.com";
+                String organization = TextBox1.Text;
+                String day = DropDownList2.Text;
+                String time = DropDownList1.Text;
+
+                    string query = "INSERT INTO EventSignUp (Id, Username, Organization, Day, Time)";
+                    query += "VALUES (@Id, @Username, @Organization, @Day, @Time)";
+                    //query += "WHERE (SELECT * FROM Timetable WHERE " + day + "='" + organization + "' AND Time='" + time + "')";
+                    int i = 1;
+
+                    SqlCommand myCommand = new SqlCommand(query, myConnection);
+
+                    myCommand.Parameters.AddWithValue("@Id", i++);
+                    myCommand.Parameters.AddWithValue("@Username", username);
+                    myCommand.Parameters.AddWithValue("@Organization", organization);
+                    myCommand.Parameters.AddWithValue("@Day", day);
+                    myCommand.Parameters.AddWithValue("@Time", time);
+
+                    myConnection.Open();
+                    myCommand.ExecuteNonQuery();
+                    myConnection.Close();
             }
         }
     }
