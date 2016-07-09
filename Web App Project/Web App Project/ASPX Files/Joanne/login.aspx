@@ -2,13 +2,15 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <head>
-        <!--<script src='https://www.google.com/recaptcha/api.js?onload=reCaptchaCallback&render=explicit'></script>>-->
+        
+        <!--**--><script src='https://www.google/recaptcha/api.js'> </script>
     </head>
     <div class="container">
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50">
             <div class="registrationform">
-                <form role="form " action="" method="POST">
-                    <!--onsubmit="check_if_capcha_is_filled"-->
+                <form role="form" action="" method="POST">
+                   
+                    <!-- add into form above? ^ onsubmit="check_if_capcha_is_filled"-->
                     <h1 class="text-left">Log in to your Dashboard!</h1>
 
                     <!-- asking for email input-->
@@ -29,8 +31,13 @@
                         <br />
                         
                         </div>
-                        <!-- data-callback="capcha_filled" data-expired-callback="capcha_expired"-->
-                        <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV" required="required"></div>
+                    <!--captcha-->
+                    <!--<div class="g-recaptcha" data-sitekey="6LeYqiQTAAAAAAwOrxXM2XeMrUVQbgfF1lmuoAQ8"></div>-->
+
+                        <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
+                        <!-- add into above div? ^ data-callback="capcha_filled" data-expired-callback="capcha_expired"-->
+
+                </form>
 
                     </div>
 
@@ -42,10 +49,8 @@
                         <br />
                     </div>
 
-                </form>
             </div>
         </div>
-    </div>
 
     <!-- double check what is this-->
     <!--modal-->
@@ -68,9 +73,9 @@
                                     <div class="panel-body">
                                         <fieldset>
                                             <div class="form-group">
-                                                <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="email">
+                                                <input class="form-control input-lg" name="email" type="text"/>
                                             </div>
-                                            <input class="btn btn-lg btn-danger btn-block" value="Send My Password" type="submit">
+                                            <input class="btn btn-lg btn-danger btn-block" value="Send My Password" type="submit"/>
                                         </fieldset>
                                     </div>
                                     <div class="clearfix">

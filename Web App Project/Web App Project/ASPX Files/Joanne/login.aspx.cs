@@ -22,7 +22,19 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
 
         protected void Button1_Click(object sender, EventArgs e)
-        {
+        {   
+            //debugging
+
+            Page.Validate();
+            if (Page.IsValid)
+            {
+                Label1.Text = "All Good";
+            }
+            else
+            {
+                Label1.Text = "Incorrect";
+            }
+
             //if not postback, means that it is loaded accurately rather than using the button to make the page postback
             if (!IsPostBack)
             {
