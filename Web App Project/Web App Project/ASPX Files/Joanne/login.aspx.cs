@@ -24,7 +24,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
         protected void Button1_Click(object sender, EventArgs e)
         {   
             //debugging
-
+            /*
             Page.Validate();
             if (Page.IsValid)
             {
@@ -34,9 +34,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
             {
                 Label1.Text = "Incorrect";
             }
+            */
 
             //if not postback, means that it is loaded accurately rather than using the button to make the page postback
-            if (!IsPostBack)
+            if (IsPostBack)
             {
                 using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
                 {
@@ -44,13 +45,14 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String inputemail = TextBox1.Text;
                     String inputpassword = TextBox2.Text;
 
+
                     //Hash
                     string hash = Hasher.Hash(inputpassword);
 
                     //Verify
                     //var result = SecurePasswordHasher.Verify("mypassword", hash);
 
-                    string query = "SELECT [Email], [Password], [Privilege] FROM [Accounts] WHERE [Email]='" + inputemail + "' AND [Password]='" + inputpassword + "'";
+                    string query = "SELECT [Email], [Password], [Privilege] FROM [Accounts] WHERE [Email]='" + inputemail /*+ "' AND [Password]='" + inputpassword*/ + "'";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
                     myConnection.Open();
@@ -67,9 +69,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     if (reader.Read())
                     {
                         dbEmail = reader["Email"].ToString(); //read db email
-                        dbPassword = reader["Password"].ToString(); //read db password
+                        dbPassword = reader["Password"].ToString(); //read db password                
                         dbPrivilege = reader["Privilege"].ToString(); //read db privilege
-                        //dbOrganization = reader["Organization"].ToString(); //read db organisation
+                        //dbOrganization = reader["Organization"].ToString(); //read db 
+                        dbOrganization = "SPCA";
                     }
 
                     //Do these print the correct values?
@@ -86,11 +89,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //if validated, means its a valid user. 
                     if (dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword))
                     {
+                        Label1.Text = "ok";
                         //Is this line being executed?
-                        System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
-                        Session["Privilege"] = dbPrivilege; //make that particular privilege the session
-                        Session["username"] = dbEmail; //make that particular email uid as the session
-                        Session["Organization"] = dbOrganization;
+                        //System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
+                        //Session["Privilege"] = dbPrivilege; //make that particular privilege the session
+                        //Session["username"] = dbEmail; //make that particular email uid as the session
+                        //Session["Organization"] = dbOrganization;
 
                         //if privilege is boss, redirect to boss page 
                         if (dbPrivilege.Equals("boss"))
@@ -113,6 +117,20 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                     else
                     {
+                        if (!dbEmail.Equals(inputemail))
+                        {
+                            Label1.Text = "Email does not exist.";
+                        }
+
+                        else if (!dbPassword.Equals(inputpassword))
+                        {
+                            Label1.Text = "Your password is wrong" + dbPassword.ToString() + inputpassword;
+                        }
+
+                        else if (!(dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword)))
+                        {
+                            Label1.Text = "Inputs are wrong";
+                        }
                         //We already know what dbPrivilege contains, but let's add this else block anyway
                         //error message - to tell user wrong password/user (email)
                         System.Diagnostics.Debug.WriteLine("User is unknown");

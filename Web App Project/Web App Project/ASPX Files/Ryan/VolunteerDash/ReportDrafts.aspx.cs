@@ -151,5 +151,3 @@ namespace Web_App_Project.Ryan.Volunteer
             }
         }
     }
-    }
-}

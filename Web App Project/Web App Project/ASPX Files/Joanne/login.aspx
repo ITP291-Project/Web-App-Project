@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <head>
         
-        <!--**--><script src='https://www.google/recaptcha/api.js'> </script>
+        <!--<script src='https://www.google/recaptcha/api.js'> </script>-->
     </head>
     <div class="container">
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50">
