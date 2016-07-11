@@ -22,7 +22,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
 
         protected void Button1_Click(object sender, EventArgs e)
-        {   
+        {
             //debugging
             /*
             Page.Validate();
@@ -60,10 +60,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     SqlDataReader reader = myCommand.ExecuteReader();
 
 
-                    String dbEmail="";
-                    String dbPassword="";
-                    String dbPrivilege="";
-                    String dbOrganization="";
+                    String dbEmail = "";
+                    String dbPassword = "";
+                    String dbPrivilege = "";
+                    String dbOrganization = "";
 
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
@@ -111,33 +111,17 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             //Is this line being executed?
                             System.Diagnostics.Debug.WriteLine("User is volunteer");
 
-                            Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                            //Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                            Response.Redirect("updateParticulars.aspx");
                         }
                     }
 
-                    else if (!dbEmail.Equals(inputemail) && !dbPassword.Equals(inputpassword))
+                    else
                     {
-                        if (!dbEmail.Equals(inputemail))
-                        {
-                            Label1.Text = "Email does not exist.";
-                        }
+                           Label1.Text = "Email and/or password is wrong";
 
-                        else if (!dbPassword.Equals(inputpassword))
-                        {
-                            Label1.Text = "Your password is wrong" + dbPassword.ToString() + inputpassword;
-                        }
-
-                        else if (!(dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword)))
-                        {
-                            Label1.Text = "Inputs are wrong";
-                        }
-                        //We already know what dbPrivilege contains, but let's add this else block anyway
-                        //error message - to tell user wrong password/user (email)
-                        System.Diagnostics.Debug.WriteLine("User is unknown");
+                        myConnection.Close();
                     }
-
-                    myConnection.Close();
-                }
 
                 }
 
@@ -162,3 +146,4 @@ namespace Web_App_Project.ASPX_Files.Joanne
             */
         }
     }
+}
