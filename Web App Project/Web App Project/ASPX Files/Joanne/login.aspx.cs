@@ -60,10 +60,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     SqlDataReader reader = myCommand.ExecuteReader();
 
 
-                    String dbEmail = null;
-                    String dbPassword = null;
-                    String dbPrivilege = null;
-                    String dbOrganization = null;
+                    String dbEmail="";
+                    String dbPassword="";
+                    String dbPrivilege="";
+                    String dbOrganization="";
 
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
@@ -91,10 +91,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     {
                         Label1.Text = "ok";
                         //Is this line being executed?
-                        //System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
-                        //Session["Privilege"] = dbPrivilege; //make that particular privilege the session
-                        //Session["username"] = dbEmail; //make that particular email uid as the session
-                        //Session["Organization"] = dbOrganization;
+                        System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
+                        Session["Privilege"] = dbPrivilege; //make that particular privilege the session
+                        Session["username"] = dbEmail; //make that particular email uid as the session
+                        Session["Organization"] = dbOrganization;
 
                         //if privilege is boss, redirect to boss page 
                         if (dbPrivilege.Equals("boss"))
@@ -115,7 +115,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         }
                     }
 
-                    else
+                    else if (!dbEmail.Equals(inputemail) && !dbPassword.Equals(inputpassword))
                     {
                         if (!dbEmail.Equals(inputemail))
                         {
