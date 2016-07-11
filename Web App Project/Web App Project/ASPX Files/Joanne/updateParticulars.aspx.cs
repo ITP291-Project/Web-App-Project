@@ -14,14 +14,14 @@ namespace Web_App_Project.ASPX_Files.Joanne
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //System.Diagnostics.Debug.WriteLine("Username is " + Session["username"]);
+            System.Diagnostics.Debug.WriteLine("Username is " + Session["username"]);
 
-            //if (Session["username"] == null)
-            //{
-            //    System.Diagnostics.Debug.WriteLine("Username is null");
+            if (Session["username"] == null)
+            {
+                System.Diagnostics.Debug.WriteLine("Username is null");
 
-            //    Response.Redirect("/ASPX Files/Joanne/login.aspx");
-            //}
+                Response.Redirect("/ASPX Files/Joanne/login.aspx");
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

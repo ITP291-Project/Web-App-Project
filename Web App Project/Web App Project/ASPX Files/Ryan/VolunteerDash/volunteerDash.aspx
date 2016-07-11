@@ -14,6 +14,7 @@
 &nbsp;<br />
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" Width="650px">
                     <Columns>
+                        <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" ReadOnly="True" />
                         <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
                         <asp:BoundField DataField="Monday" HeaderText="Monday" SortExpression="Monday" />
                         <asp:BoundField DataField="Tuesdau" HeaderText="Tuesdau" SortExpression="Tuesdau" />
@@ -22,7 +23,7 @@
                         <asp:BoundField DataField="Friday" HeaderText="Friday" SortExpression="Friday" />
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Timetable] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Timetable] ([Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday]) VALUES (@Id, @Time, @Monday, @Tuesdau, @Wednesday, @Thursday, @Friday)" SelectCommand="SELECT [Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday] FROM [Timetable] WHERE (([Monday] = @Monday) AND ([Tuesdau] = @Tuesdau) AND ([Wednesday] = @Wednesday) AND ([Thursday] = @Thursday) AND ([Friday] = @Friday))" UpdateCommand="UPDATE [Timetable] SET [Time] = @Time, [Monday] = @Monday, [Tuesdau] = @Tuesdau, [Wednesday] = @Wednesday, [Thursday] = @Thursday, [Friday] = @Friday WHERE [Id] = @Id">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Timetable] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Timetable] ([Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday]) VALUES (@Id, @Time, @Monday, @Tuesdau, @Wednesday, @Thursday, @Friday)" SelectCommand="SELECT [Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday] FROM [Timetable]" UpdateCommand="UPDATE [Timetable] SET [Time] = @Time, [Monday] = @Monday, [Tuesdau] = @Tuesdau, [Wednesday] = @Wednesday, [Thursday] = @Thursday, [Friday] = @Friday WHERE [Id] = @Id">
                     <DeleteParameters>
                         <asp:Parameter Name="Id" Type="Int32" />
                     </DeleteParameters>
@@ -35,13 +36,6 @@
                         <asp:Parameter Name="Thursday" Type="String" />
                         <asp:Parameter Name="Friday" Type="String" />
                     </InsertParameters>
-                    <SelectParameters>
-                        <asp:ControlParameter ControlID="TextBox1" Name="Monday" PropertyName="Text" Type="String" />
-                        <asp:ControlParameter ControlID="TextBox1" Name="Tuesdau" PropertyName="Text" Type="String" />
-                        <asp:ControlParameter ControlID="TextBox1" Name="Wednesday" PropertyName="Text" Type="String" />
-                        <asp:ControlParameter ControlID="TextBox1" Name="Thursday" PropertyName="Text" Type="String" />
-                        <asp:ControlParameter ControlID="TextBox1" Name="Friday" PropertyName="Text" Type="String" />
-                    </SelectParameters>
                     <UpdateParameters>
                         <asp:Parameter DbType="Time" Name="Time" />
                         <asp:Parameter Name="Monday" Type="String" />
@@ -54,7 +48,7 @@
                 </asp:SqlDataSource>
                 </div>
             <div id="right">
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button5" runat="server" Text="Update Particulars" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button5" runat="server" Text="Update Particulars" Width="225px" OnClick="Button5_Click" />
                 <br />
                 <br />
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" />

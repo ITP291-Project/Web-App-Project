@@ -32,8 +32,12 @@ namespace Web_App_Project
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            String display = "Hello World!";
-            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + display + "');", true);
+            Response.Redirect("Organization.aspx");
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/ASPX Files/Joanne/updateParticulars.aspx");
         }
     }
 }

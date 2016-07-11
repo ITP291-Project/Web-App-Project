@@ -52,7 +52,7 @@
                     <li><a class="page-scroll" href="#services">Services</a> </li>
                     <li><a class="page-scroll" href="#intro">About Us</a> </li>
                     <li><a class="page-scroll" href="#contact">Join Us</a> </li>
-                    <li><a class="page-scroll" href="ASPX Files/Joanne/login.aspx">Login</a> </li>
+                    <li><a class="page-scroll" href="ASPX Files/Joanne/login.aspx">Login</a></li>
                 </ul>
             </div>
         </div>

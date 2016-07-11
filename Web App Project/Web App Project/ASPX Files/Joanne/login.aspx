@@ -19,7 +19,10 @@
                         <!-- <input type="email" class="form-control" id="email" name="email" placeholder="email" required> -->
                         <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="350px" TextMode="Email" required="required"></asp:TextBox>
                         <!--placing icon using a span element-->
-                        <span class="icon fa fa-envelope-o fa-fw"></span>
+                        <span class="icon fa fa-envelope-o fa-fw">
+                        <br />
+                        </span>
+                        <asp:Label ID="Label1" runat="server"></asp:Label>
                     </div>
 
                     <div class="form-group">
@@ -45,7 +48,6 @@
                         <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" />
                         <a href="enterEmail.aspx" data-target="#pwdModal" data-toggle="modal" style="color: white">Forget password?</a>
                         <br />
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                         <br />
                     </div>
 
