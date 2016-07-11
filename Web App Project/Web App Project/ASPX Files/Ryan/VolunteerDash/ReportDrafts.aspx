@@ -5,13 +5,18 @@
             <div id="content">
                 <div id="left">
                     Testing text
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CaseNo" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CaseNo" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" OnSelectedIndexChanged="OnSelectedIndexChanged" OnRowDataBound="GridView1_RowDataBound">
                         <Columns>
                             <asp:BoundField DataField="CaseNo" HeaderText="Case Number" ReadOnly="True" SortExpression="CaseNo" />
                             <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
                             <asp:BoundField DataField="Duration" HeaderText="Duration of Visit" SortExpression="Duration" />
                             <asp:BoundField DataField="TypeofVolunteer" HeaderText="Type of Volunteer" SortExpression="TypeofVolunteer" />
                             <asp:BoundField DataField="AdditionalFeedback" HeaderText="Additional Feedback" SortExpression="AdditionalFeedback" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton Text="Select" ID="lnkSelect" runat="server" CommandName="Select" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Report] WHERE [CaseNo] = @CaseNo" InsertCommand="INSERT INTO [Report] ([CaseNo], [Date], [Duration], [TypeofVolunteer], [AdditionalFeedback], [IsDraft]) VALUES (@CaseNo, @Date, @Duration, @TypeofVolunteer, @AdditionalFeedback, @IsDraft)" ProviderName="<%$ ConnectionStrings:localdbConnectionString1.ProviderName %>" SelectCommand="SELECT [CaseNo], [Date], [Duration], [TypeofVolunteer], [Photo], [AdditionalFeedback], [IsDraft] FROM [Report] WHERE [IsDraft] = 'true'" UpdateCommand="UPDATE [Report] SET [Date] = @Date, [Duration] = @Duration, [TypeofVolunteer] = @TypeofVolunteer, [AdditionalFeedback] = @AdditionalFeedback, [IsDraft] = @IsDraft WHERE [CaseNo] = @CaseNo">
@@ -35,6 +40,49 @@
                             <asp:Parameter Name="CaseNo" Type="String" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
+                    <br />
+                    <asp:Label ID="Label1" runat="server" ForeColor="Black" Text="Case Number"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label2" runat="server" ForeColor="Black" Text="Date"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <asp:Button ID="Button4" runat="server" ForeColor="Black" OnClick="Button4_Click" Text="Show Calendar" />
+                    <br />
+                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Width="330px">
+                        <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
+                        <DayStyle BackColor="#CCCCCC" />
+                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
+                        <OtherMonthDayStyle ForeColor="#999999" />
+                        <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+                        <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
+                        <TodayDayStyle BackColor="#999999" ForeColor="White" />
+                    </asp:Calendar>
+                    <br />
+                    <br />
+                    <br />
+                    <asp:Label ID="Label3" runat="server" Text="Duration of Visit"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox3" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label4" runat="server" Text="Organization"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox4" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label5" runat="server" Text="Additional Feedback"></asp:Label>
+&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox5" runat="server" Height="100px" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Submit" Width="225px" />
+&nbsp;
+                    <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Update Draft" Width="255px" />
                 </div>
             <div id="right">
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" />

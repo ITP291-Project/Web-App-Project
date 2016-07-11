@@ -45,7 +45,7 @@
                     <br />
                     Photo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:FileUpload ID="FileUpload1" runat="server" ForeColor="Black" Width="223px" />
-                    &nbsp;<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    &nbsp;<asp:Label ID="Label1" runat="server" Text="No File Selected"></asp:Label>
                     <br />
                     <br />
                     Additional Feedback<br />
