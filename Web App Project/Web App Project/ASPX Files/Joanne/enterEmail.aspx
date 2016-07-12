@@ -1,25 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="enterEmail.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Joanne.enterEmail" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <head>
-        <title>
-            Enter your email
+        <title>Enter your email
         </title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
 
     <body>
         <div class="align-center">
-        <h2>Sent a link to your email to reset your password.</h2>
-        <p>
-            <asp:Label ID="Label1" runat="server" style="font-size: 20px; color: white" Text="Enter email: "></asp:Label>
-&nbsp;
-            <asp:TextBox ID="TextBox1" runat="server" Width="250px" style="color: black" type="email" required="required"></asp:TextBox>
-&nbsp;</p>
-         
+            <h2>Sent a link to your email to reset your password.</h2>
+            <p>
+                <asp:Label ID="Label1" runat="server" Style="font-size: 20px; color: white" Text="Enter email: "></asp:Label>
+                &nbsp;
+            <asp:TextBox ID="TextBox1" runat="server" Width="250px" Style="color: black" type="email"></asp:TextBox>
+                <br />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox1"
+                    CssClass="text-danger" ErrorMessage="The email field is required." />
+                &nbsp;
+            </p>
+
         </div>
         <p>
-            <asp:Button ID="Button1" runat="server" style="color: black; margin-left: 690px" Text="Email Link!" Width="85px" OnClick="Button1_On" />
-         </p>
+            <asp:Button ID="Button1" runat="server" Style="color: black; margin-left: 690px" Text="Email Link!" Width="85px" OnClick="Button1_On" />
+        </p>
     </body>
 </asp:Content>
 

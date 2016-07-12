@@ -17,7 +17,9 @@
                     <div class="form-group">
                         <label for="email"></label>
                         <!-- <input type="email" class="form-control" id="email" name="email" placeholder="email" required> -->
-                        <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="350px" TextMode="Email" required="required"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="350px" TextMode="Email"></asp:TextBox>
+                        <br /><asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox1"
+                    CssClass="text-danger" ErrorMessage="The email field is required." />
                         <!--placing icon using a span element-->
                         <span class="icon fa fa-envelope-o fa-fw">
                         <br />
@@ -28,7 +30,8 @@
                     <div class="form-group">
                         <label for="password"></label>
                         <!-- <input type="password" class="form-control" id="password" name="password" placeholder="password" required> -->
-                        <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Width="350px" TextMode="Password" required="required"></asp:TextBox>
+                        <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Width="350px" TextMode="Password"></asp:TextBox>
+                        <br /><asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox2" CssClass="text-danger" ErrorMessage="The password field is required." />
                         <span class="icon fa fa-key fa-fw"></span>
                         <br />
                         <br />

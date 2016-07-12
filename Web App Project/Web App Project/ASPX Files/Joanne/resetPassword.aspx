@@ -19,7 +19,8 @@
         </p>
   
         <p>
-            <asp:TextBox ID="TextBox2" runat="server" Width="500px" style="color: black; margin-left: 13px" type="password" required="required"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" Width="500px" style="color: black; margin-left: 13px" type="password"></asp:TextBox>
+            <br /><asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox2" CssClass="text-danger" ErrorMessage="The password field is required." />
         </p>
         <p>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2"
@@ -31,7 +32,8 @@
             <asp:Label ID="Label3" runat="server" Text="Confirm Password"></asp:Label>
         </p>
         <p>
-            <asp:TextBox ID="TextBox3" runat="server" Width="500px" style="color: black" type="password" required="required"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" Width="500px" style="color: black" type="password"></asp:TextBox>
+            <br /><asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox3" CssClass="text-danger" ErrorMessage="The password field is required." />
         </p>
         <p>
             <asp:CompareValidator runat="server" id="cmpPassword" controltovalidate="TextBox2" controltocompare="TextBox3" operator="Equal" type="String" errormessage="Both Passwords must be the same" />
