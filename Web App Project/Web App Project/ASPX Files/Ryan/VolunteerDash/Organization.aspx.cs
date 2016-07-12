@@ -35,24 +35,6 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
             Response.Redirect("ReportSubmission.aspx");
         }
 
-        protected void OrganizationCheck (object sender, EventArgs e)
-        {
-            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
-            {
-                string username = Session["username"].ToString();
-                string query = "SELECT Organization FROM Accounts WHERE Email='" + username + "'";
-
-                myConnection.Open();
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
-                SqlDataReader myReader = myCommand.ExecuteReader();
-                while (myReader.Read())
-                {
-                    string dbOrgan  
-                }
-
-            }
-        }
-
         protected void Button4_Click(object sender, EventArgs e)
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
