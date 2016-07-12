@@ -4,17 +4,21 @@
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
             <div id="content">
                 <div id="left">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CaseNo" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." Width="650px">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CaseNo" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." Width="650px" OnSelectedIndexChanged="OnSelectedIndexChanged" OnRowDataBound="GridView1_RowDataBound">
                         <Columns>
                             <asp:BoundField DataField="CaseNo" HeaderText="CaseNo" ReadOnly="True" SortExpression="CaseNo" />
                             <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
                             <asp:BoundField DataField="Duration" HeaderText="Duration" SortExpression="Duration" />
-                            <asp:BoundField DataField="TypeofVolunteer" HeaderText="TypeofVolunteer" SortExpression="TypeofVolunteer" />
-                            <asp:BoundField DataField="Photo" HeaderText="Photo" SortExpression="Photo" />
+                            <asp:BoundField DataField="TypeofVolunteer" HeaderText="Organization" SortExpression="TypeofVolunteer" />
                             <asp:BoundField DataField="AdditionalFeedback" HeaderText="AdditionalFeedback" SortExpression="AdditionalFeedback" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton Text="Select" ID="lnkSelect" runat="server" CommandName="Select" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Report] WHERE [CaseNo] = @CaseNo" InsertCommand="INSERT INTO [Report] ([CaseNo], [Date], [Duration], [TypeofVolunteer], [Photo], [AdditionalFeedback]) VALUES (@CaseNo, @Date, @Duration, @TypeofVolunteer, @Photo, @AdditionalFeedback)" ProviderName="<%$ ConnectionStrings:localdbConnectionString1.ProviderName %>" SelectCommand="SELECT [CaseNo], [Date], [Duration], [TypeofVolunteer], [Photo], [AdditionalFeedback] FROM [Report] WHERE [IsDraft] = 'false'" UpdateCommand="UPDATE [Report] SET [Date] = @Date, [Duration] = @Duration, [TypeofVolunteer] = @TypeofVolunteer, [Photo] = @Photo, [AdditionalFeedback] = @AdditionalFeedback WHERE [CaseNo] = @CaseNo">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Report] WHERE [CaseNo] = @CaseNo" InsertCommand="INSERT INTO [Report] ([CaseNo], [Date], [Duration], [TypeofVolunteer], [Photo], [AdditionalFeedback]) VALUES (@CaseNo, @Date, @Duration, @TypeofVolunteer, @Photo, @AdditionalFeedback)" SelectCommand="SELECT [CaseNo], [Date], [Duration], [TypeofVolunteer], [Photo], [AdditionalFeedback] FROM [Report] WHERE [IsDraft] = 'false'" UpdateCommand="UPDATE [Report] SET [Date] = @Date, [Duration] = @Duration, [TypeofVolunteer] = @TypeofVolunteer, [Photo] = @Photo, [AdditionalFeedback] = @AdditionalFeedback WHERE [CaseNo] = @CaseNo">
                         <DeleteParameters>
                             <asp:Parameter Name="CaseNo" Type="String" />
                         </DeleteParameters>
@@ -35,6 +39,35 @@
                             <asp:Parameter Name="CaseNo" Type="String" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
+                    <br />
+                    <asp:Label ID="Label1" runat="server" ForeColor="Black" Text="Case Number"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox1" runat="server" Enabled="False" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label2" runat="server" Text="Date"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox2" runat="server" Enabled="False" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label3" runat="server" Text="Duration"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox3" runat="server" Enabled="False" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label4" runat="server" Text="Organization"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox4" runat="server" Enabled="False" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label5" runat="server" Text="Additional Feedback"></asp:Label>
+&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox5" runat="server" Enabled="False" ForeColor="Black" Height="100px" TextMode="MultiLine" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label6" runat="server" ForeColor="Black" Text="Photo"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Image ID="Image1" runat="server" />
                 </div>
             <div id="right">
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" />
