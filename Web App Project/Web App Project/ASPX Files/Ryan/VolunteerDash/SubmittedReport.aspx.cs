@@ -50,7 +50,8 @@ namespace Web_App_Project.Ryan.Volunteer
 
                 myConnection.Open();
 
-                string Scmd = "SELECT id, imagem where id = 2";
+                string caseno = row.Cells[0].Text;
+                string Scmd = "SELECT Photo FROM Report WHERE CaseNo='" + caseno + "'";
                 SqlCommand cmd = new SqlCommand(Scmd, myConnection);
 
                 SqlDataReader reader = cmd.ExecuteReader();
