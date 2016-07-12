@@ -64,10 +64,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String dbPassword = "";
                     String dbPrivilege = "";
                     String dbOrganization = "";
+                    String dbMobile = "";
 
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
                     {
+                        dbMobile = reader["TelNo"].ToString(); //read mobile
                         dbEmail = reader["Email"].ToString(); //read db email
                         dbPassword = reader["Password"].ToString(); //read db password                
                         dbPrivilege = reader["Privilege"].ToString(); //read db privilege
@@ -96,6 +98,19 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         Session["username"] = dbEmail; //make that particular email uid as the session
                         Session["Organization"] = dbOrganization;
 
+                        String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+
+                        /*
+                            String randomNo = "";
+                            String 2FAinput = textBox.Text;
+                            if (2FAinput.Equals(randomNo)) {
+                            Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+                            }
+                            else 
+                               {
+                                    MessageBox.Show("Error");
+                               }
+                         */
                         //if privilege is boss, redirect to boss page 
                         if (dbPrivilege.Equals("boss"))
                         {
