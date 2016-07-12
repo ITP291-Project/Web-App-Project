@@ -35,49 +35,77 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
             Response.Redirect("ReportSubmission.aspx");
         }
 
+        protected void OrganizationCheck (object sender, EventArgs e)
+        {
+            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            {
+                string username = Session["username"].ToString();
+                string query = "SELECT Organization FROM Accounts WHERE Email='" + username + "'";
+
+                myConnection.Open();
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlDataReader myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    string dbOrgan  
+                }
+
+            }
+        }
+
         protected void Button4_Click(object sender, EventArgs e)
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
-                string organization;
+                string inputorganization;
+                string dbOrganization = Session["Organization"].ToString();
                 string username = Session["username"].ToString();
 
                 if (RadioButton1.Checked)
                 {
-                    organization = "Pioneer Generation";
+                    inputorganization = "Pioneer Generation";
                 }
                 else if (RadioButton2.Checked)
                 {
-                    organization = "Salvation Army";
+                    inputorganization = "Salvation Army";
                 }
                 else if (RadioButton3.Checked)
                 {
-                    organization = "Ren Ci";
+                    inputorganization = "Ren Ci";
                 }
                 else if (RadioButton4.Checked)
                 {
-                    organization = "SPCA";
+                    inputorganization = "SPCA";
                 }
                 else if (RadioButton5.Checked)
                 {
-                    organization = "Touch Home Care";
+                    inputorganization = "Touch Home Care";
                 }
                 else if (RadioButton6.Checked)
                 {
-                    organization = "Red Cross Society";
+                    inputorganization = "Red Cross Society";
                 }
                 else
                 {
-                    organization = null;
+                    inputorganization = null;
                     Response.Redirect("Organization.aspx");
                 }
 
-                string query = "UPDATE Accounts SET Organization='" + organization + "' WHERE Email='" + username + "'";
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                if (inputorganization.Equals(dbOrganization))
+                {
+                    string query = "UPDATE Accounts SET Organization='" + inputorganization + "' WHERE Email='" + username + "'";
+                    SqlCommand myCommand = new SqlCommand(query, myConnection);
 
-                myCommand.ExecuteNonQuery();
+                    myCommand.ExecuteNonQuery();
 
-                Label1.Visible = true;
+                    Label1.Text = "Changes updated!";
+                    Label1.Visible = true;
+                }
+                else
+                {
+                    Label1.Text = "You are already enrolled for this organization!";
+                    Label1.Visible = true;
+                }
             }
         }
     }

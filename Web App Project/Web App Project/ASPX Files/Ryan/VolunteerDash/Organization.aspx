@@ -5,7 +5,7 @@
             <div id="content">
                 <div id="left">
             
-                    <asp:Label ID="Label2" runat="server" Text="Changes updated!"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Result Text Here"></asp:Label>
                     <br />
                     <br />
             
