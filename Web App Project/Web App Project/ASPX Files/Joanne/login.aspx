@@ -68,22 +68,28 @@
 
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <ajaxToolkit:ModalPopupExtender runat="server" ID="modal" TargetControlID="Button1" BackgroundCssClass="background" PopupControlID="panel"></ajaxToolkit:ModalPopupExtender>
-                <asp:Button runat="server" Text="open" ID="button" OnClick="button_Click" Style="height: 26px" />
 
                 <%--<asp:LinkButton ID="lnkDummy" runat="server"></asp:LinkButton>--%>
                 <%-- Button to LOGIN --%>
                 <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" />
                 <%-- POPUP BOX --%>
                 <asp:Panel ID="panel" runat="server" CssClass="popup">
-                    <asp:Label runat="server" Text="Enter your code:" ID="label1a"></asp:Label>
-                    <asp:TextBox runat="server" ID="textbox20" Style="color: black"></asp:TextBox>
-                    <br />
-                    <asp:Label runat="server" Visible="false" ID="label1b" style="color: black">Wrong Code</asp:Label>
-                    <br />
-                    <br />
-                    <%-- Button to SUBMIT code --%>
-                    <asp:Button runat="server" Text="Submit" ID="submit" OnClick="submit_click" />
+                     <asp:UpdatePanel ID="UpdatePanel" runat="server">
+                         <ContentTemplate>
+                        <asp:Label runat="server" Text="Enter your code:" ID="label1a"></asp:Label>
+                        <asp:TextBox runat="server" ID="textbox20" Style="color: black"></asp:TextBox>
+                        <br />
+                        <asp:Label runat="server" Visible="false" ID="label1b" style="color: black">Wrong Code</asp:Label>
+                        <br />
+                        <br />
+                        <%-- Button to SUBMIT code --%>
+                        <asp:Button runat="server" Text="Submit" ID="submit" OnClick="submit_click" CausesValidation="false"/>
+                        <asp:Button runat="server" Text="Resend Code" ID="resend" OnClick="Resend_Click" />
+                    <%--<asp:Button runat="server" Text="open" ID="button" OnClick="submit_click" Style="height: 26px" />--%>
+                             </ContentTemplate>
+                         </asp:UpdatePanel>
                 </asp:Panel>
+
             </div>
             
             <div class="form-group text-left" >

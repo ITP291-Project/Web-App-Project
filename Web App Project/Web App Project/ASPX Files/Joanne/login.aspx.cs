@@ -90,7 +90,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             Session["username"] = dbEmail; //make that particular email uid as the session
                             Session["Organization"] = dbOrganization;
 
-                            //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
 
 
                             //if privilege is boss, redirect to boss page 
@@ -137,6 +136,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
             String randomNo = "1234";
             String OTPinput = textbox20.Text;
 
+            //if (OTPinput.Equals(randomNo))
+            //{
+            //    label1b.Text = "test";
+            //}
+            //this works
+
             if (OTPinput.Equals(randomNo))
             {
                 modal.Hide();
@@ -144,20 +149,28 @@ namespace Web_App_Project.ASPX_Files.Joanne
             else if (!OTPinput.Equals(randomNo))
             {
                 label1b.Visible = true;
-
-                //remain on page
-                //another button to press to resend OTP code
             }
+                //    //remain on page
+                //    //another button to press to resend OTP code
 
-            //Response.Redirect("/index.aspx");
-            //Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
-        }
 
+
+            }
+        //Response.Redirect("/index.aspx");
+        //Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
         protected void button_Click(object sender, EventArgs e)
         {
             modal.Show();
         }
 
+
+        protected void Resend_Click(object sender, EventArgs e)
+        {
+            //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+            String url = "www.google.com";
+            string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
+            ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
+        }
         /*
 //added in
 Boolean allowSubmit = false;
