@@ -48,7 +48,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
 
                     //Hash
-                    string hash = Hasher.Hash(inputpassword);
+                    //string hash = Hasher.Hash(inputpassword);
 
                     //Verify
                     //var result = SecurePasswordHasher.Verify("mypassword", hash);
