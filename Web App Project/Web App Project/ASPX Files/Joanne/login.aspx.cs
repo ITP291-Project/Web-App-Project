@@ -23,6 +23,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             //debugging
             /*
             Page.Validate();
@@ -69,7 +70,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
                     {
-                        dbMobile = reader["TelNo"].ToString(); //read mobile
+                        //dbMobile = reader["TelNo"].ToString(); //read mobile
                         dbEmail = reader["Email"].ToString(); //read db email
                         dbPassword = reader["Password"].ToString(); //read db password                
                         dbPrivilege = reader["Privilege"].ToString(); //read db privilege
@@ -91,14 +92,13 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //if validated, means its a valid user. 
                     if (dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword))
                     {
-                        Label1.Text = "ok";
                         //Is this line being executed?
                         System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
                         Session["Privilege"] = dbPrivilege; //make that particular privilege the session
                         Session["username"] = dbEmail; //make that particular email uid as the session
                         Session["Organization"] = dbOrganization;
 
-                        String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+                        //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
 
                         /*
                             String randomNo = "";
@@ -116,7 +116,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         {
                             //Is this line being executed?
                             System.Diagnostics.Debug.WriteLine("User is boss");
-
+                            //modal.Show();
                             Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
                         }
 
@@ -132,32 +132,44 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                     else
                     {
-                           Label1.Text = "Email and/or password is wrong";
+                        Label1.Text = "Email and/or password is wrong";
 
                         myConnection.Close();
                     }
 
                 }
-
-
             }
-            /*
-            //added in
-            Boolean allowSubmit = false;
-
-            public void capcha_filled()
-            {
-                allowSubmit = true;
-            }
-
-            public Boolean check_if_capcha_is_filled(Boolean e)
-            {
-                if (allowSubmit) { }
-                    return true;
-                //e.preventDefault();
-                //alert('Fill in the capcha!');
-            }
-            */
         }
-    }
+
+        protected void buton_Click(object sender, EventArgs e)
+        {
+            modal.Show();
+        }
+
+        protected void testing(object sender,EventArgs e)
+        {
+            modal.Hide();
+            //Response.Redirect("/index.aspx");
+            Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+        }
+        /*
+//added in
+Boolean allowSubmit = false;
+
+public void capcha_filled()
+{
+allowSubmit = true;
 }
+
+public Boolean check_if_capcha_is_filled(Boolean e)
+{
+if (allowSubmit) { }
+return true;
+//e.preventDefault();
+//alert('Fill in the capcha!');
+}
+*/
+    }
+
+        
+    }
