@@ -66,7 +66,7 @@
         <p>
             <asp:Label ID="Label5" runat="server" Text="Label">Birthdate:</asp:Label>
             &nbsp;&nbsp;&nbsp;<asp:Button ID="Button2" runat="server" Text="Select Date" OnClick="Button2_Click"/>
-            <asp:TextBox ID="bDateInput" runat="server" ForeColor="Black"></asp:TextBox>
+            <asp:TextBox ID="bDateInput" runat="server" ForeColor="Black" Enabled="false"></asp:TextBox>
 &nbsp;<asp:Calendar ID="birthDate" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" OnSelectionChanged="birthDate_SelectionChanged" Width="330px">
                         <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
                         <DayStyle BackColor="#CCCCCC" />
@@ -130,10 +130,8 @@
         <p>
             <asp:Label ID="Label11" runat="server" Text="Label">Mailing Address:</asp:Label>
             &nbsp;
-            <asp:TextBox ID="addr1" runat="server" ForeColor="Black"></asp:TextBox>
+            <asp:TextBox ID="addr" runat="server" ForeColor="Black"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="addr2" runat="server" ForeColor="Black"></asp:TextBox>
-        </p>
         <p>
             <asp:Label ID="Label12" runat="server" Text="Label">Salutation:</asp:Label>
             &nbsp;
@@ -146,6 +144,11 @@
                 <asp:ListItem Value="Mrs">Mrs.</asp:ListItem>
                 <asp:ListItem Value="Dr">Dr.</asp:ListItem>
             </asp:DropDownList>
+        </p>
+             <p>
+                 <asp:Label ID="Label13" runat="server" Text="Language:"></asp:Label>
+        &nbsp;&nbsp;
+                 <asp:TextBox ID="lang" runat="server" ForeColor="Black"></asp:TextBox>
         </p>
              <p>
                  <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click"/>

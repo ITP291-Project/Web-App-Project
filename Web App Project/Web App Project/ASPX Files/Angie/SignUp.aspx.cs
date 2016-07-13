@@ -25,33 +25,44 @@ namespace Web_App_Project.ASPX_Files.Angie
                 string lName = lastName.Text;
                 string gender = RadioButtonList1.SelectedValue;
                 string nric = nricInput.Text;
-                string bDate = bDateInput.Text;
+                string BirthDate = bDateInput.Text;
                 string email = emailInput.Text;
-                string telNo = telephone.Text;
-                string pw = password.Text;
+                int telNo = Convert.ToInt32(telephone.Text);
+                telNo = int.Parse(telephone.Text);
+                string inputpassword = password.Text;
                 string occupation = job.Text;
-                string address1 = addr1.Text;
-                string address2 = addr2.Text;
+                string address = addr.Text;
                 string salutn = DropDownList1.SelectedItem.Text;
+                string privilege = "volunteer";
+                string approved = "pending";
+                string language = lang.Text;
+                int points = 0;
+                String organization = " ";
+                string pointsId = "1";
 
 
-                string query = "INSERT INTO Accounts (fName + ' ' + lName name, gender, nric, bDate, email, telNo, pw, occupation, addr1 + ' ' + addr2, salutn)";
-                query += "VALUES (@FName, @LName, @Gender, @NRIC, @Birthdate, @Email, @TelNo, @Password, @Occupation, @Address, @Salutation)";
+                string query = "INSERT INTO Accounts (FName, Lname, Password, Email, TelNo, NRIC, Address, Occupation, Language, Gender, Privilege, Salutation, BirthDate, Approved, Organization, Points, pointsId)";
+                query += "VALUES (@FName, @LName, @Password, @Email, @TelNo, @NRIC, @Address, @Occupation, @Language, @Gender, @Privilege, @Salutation, @BirthDate, @Approved, @Organization, @Points, @pointsId)";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
 
                 myCommand.Parameters.AddWithValue("@FName", fName);
                 myCommand.Parameters.AddWithValue("@LName", lName);
-                myCommand.Parameters.AddWithValue("@Gender", gender);
-                myCommand.Parameters.AddWithValue("@NRIC", nric);
-                myCommand.Parameters.AddWithValue("@Birthdate", bDate);
-                myCommand.Parameters.AddWithValue("@Email", email);
+                myCommand.Parameters.AddWithValue("@Password", password.Text);
+                myCommand.Parameters.AddWithValue("Email", email);
                 myCommand.Parameters.AddWithValue("@TelNo", telNo);
-                myCommand.Parameters.AddWithValue("@Password", pw);
+                myCommand.Parameters.AddWithValue("@NRIC", nric);
+                myCommand.Parameters.AddWithValue("@Address", address);
                 myCommand.Parameters.AddWithValue("@Occupation", occupation);
-                myCommand.Parameters.AddWithValue("@Address", addr1);
-                myCommand.Parameters.AddWithValue("@Address", addr2);
+                myCommand.Parameters.AddWithValue("@Language", language);
+                myCommand.Parameters.AddWithValue("@Gender", gender);
+                myCommand.Parameters.AddWithValue("@Privilege", privilege);
                 myCommand.Parameters.AddWithValue("@Salutation", salutn);
+                myCommand.Parameters.AddWithValue("@BirthDate", BirthDate);
+                myCommand.Parameters.AddWithValue("@Approved", approved);
+                myCommand.Parameters.AddWithValue("@Organization", organization);
+                myCommand.Parameters.AddWithValue("@Points", points);
+                myCommand.Parameters.AddWithValue("@pointsId", pointsId);
 
                 myConnection.Open();
                 myCommand.ExecuteNonQuery();

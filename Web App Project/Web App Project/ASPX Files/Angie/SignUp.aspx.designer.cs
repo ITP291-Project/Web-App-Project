@@ -265,22 +265,13 @@ namespace Web_App_Project.ASPX_Files.Angie {
         protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// addr1 control.
+        /// addr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addr1;
-        
-        /// <summary>
-        /// addr2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addr2;
+        protected global::System.Web.UI.WebControls.TextBox addr;
         
         /// <summary>
         /// Label12 control.
@@ -299,6 +290,24 @@ namespace Web_App_Project.ASPX_Files.Angie {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        
+        /// <summary>
+        /// Label13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label13;
+        
+        /// <summary>
+        /// lang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox lang;
         
         /// <summary>
         /// Button1 control.
