@@ -35,7 +35,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String OTPinput = textbox20.Text;
 
                     //Hash
-                    string hash = Hasher.Hash(inputpassword);
+                    //string hash = Hasher.Hash(inputpassword);
 
                     //Verify
                     //var result = SecurePasswordHasher.Verify("mypassword", hash);
