@@ -126,6 +126,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     else
                     {
                         Label1.Text = "Email and/or password is wrong";
+                        modal.Hide();
                     }
                 }
             }
@@ -136,34 +137,25 @@ namespace Web_App_Project.ASPX_Files.Joanne
             String randomNo = "1234";
             String OTPinput = textbox20.Text;
 
-            //if (OTPinput.Equals(randomNo))
-            //{
-            //    label1b.Text = "test";
-            //}
-            //this works
-
             if (OTPinput.Equals(randomNo))
             {
                 modal.Hide();
+                Button1_Click(sender, e);
             }
             else if (!OTPinput.Equals(randomNo))
             {
                 label1b.Visible = true;
+                //remain on page
             }
-                //    //remain on page
-                //    //another button to press to resend OTP code
+                   
+       }
 
-
-
-            }
-        //Response.Redirect("/index.aspx");
-        //Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
         protected void button_Click(object sender, EventArgs e)
         {
             modal.Show();
         }
 
-
+        //to resend otp: just invoke the url again
         protected void Resend_Click(object sender, EventArgs e)
         {
             //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";

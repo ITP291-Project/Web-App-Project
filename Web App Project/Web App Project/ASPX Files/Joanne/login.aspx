@@ -87,7 +87,7 @@
                         <asp:Button runat="server" Text="Resend Code" ID="resend" OnClick="Resend_Click" />
                     <%--<asp:Button runat="server" Text="open" ID="button" OnClick="submit_click" Style="height: 26px" />--%>
                              </ContentTemplate>
-                         </asp:UpdatePanel>
+                     </asp:UpdatePanel>
                 </asp:Panel>
 
             </div>
