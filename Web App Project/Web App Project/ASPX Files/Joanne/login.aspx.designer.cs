@@ -58,13 +58,22 @@ namespace Web_App_Project.ASPX_Files.Joanne {
         protected global::AjaxControlToolkit.ModalPopupExtender modal;
         
         /// <summary>
-        /// buton control.
+        /// button control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button buton;
+        protected global::System.Web.UI.WebControls.Button button;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
         /// panel control.
@@ -94,6 +103,15 @@ namespace Web_App_Project.ASPX_Files.Joanne {
         protected global::System.Web.UI.WebControls.TextBox textbox20;
         
         /// <summary>
+        /// label1b control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label1b;
+        
+        /// <summary>
         /// submit control.
         /// </summary>
         /// <remarks>
@@ -101,23 +119,5 @@ namespace Web_App_Project.ASPX_Files.Joanne {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submit;
-        
-        /// <summary>
-        /// l control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button l;
-        
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

@@ -23,20 +23,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
-            //debugging
-            /*
-            Page.Validate();
-            if (Page.IsValid)
-            {
-                Label1.Text = "All Good";
-            }
-            else
-            {
-                Label1.Text = "Incorrect";
-            }
-            */
-
             //if not postback, means that it is loaded accurately rather than using the button to make the page postback
             if (IsPostBack)
             {
@@ -45,7 +31,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //get email input and password input store into variables
                     String inputemail = TextBox1.Text;
                     String inputpassword = TextBox2.Text;
-
+                    String randomNo = "1234";
+                    String OTPinput = textbox20.Text;
 
                     //Hash
                     string hash = Hasher.Hash(inputpassword);
@@ -53,7 +40,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //Verify
                     //var result = SecurePasswordHasher.Verify("mypassword", hash);
 
-                    string query = "SELECT [Email], [Password], [Privilege] FROM [Accounts] WHERE [Email]='" + inputemail /*+ "' AND [Password]='" + inputpassword*/ + "'";
+                    string query = "SELECT [Email], [Password], [Privilege] FROM [Accounts] WHERE [Email]='" + inputemail + "'";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
                     myConnection.Open();
@@ -92,66 +79,85 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //if validated, means its a valid user. 
                     if (dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword))
                     {
-                        //Is this line being executed?
-                        System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
-                        Session["Privilege"] = dbPrivilege; //make that particular privilege the session
-                        Session["username"] = dbEmail; //make that particular email uid as the session
-                        Session["Organization"] = dbOrganization;
+                        //modal.Show(); - AJAX has no validation
 
-                        //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+                        if (OTPinput.Equals(randomNo))
+                        {
 
-                        /*
-                            String randomNo = "";
-                            String 2FAinput = textBox.Text;
-                            if (2FAinput.Equals(randomNo)) {
-                            Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+                            //Is this line being executed?
+                            System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
+                            Session["Privilege"] = dbPrivilege; //make that particular privilege the session
+                            Session["username"] = dbEmail; //make that particular email uid as the session
+                            Session["Organization"] = dbOrganization;
+
+                            //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+
+
+                            //if privilege is boss, redirect to boss page 
+                            if (dbPrivilege.Equals("boss"))
+                            {
+                                //Is this line being executed?
+                                System.Diagnostics.Debug.WriteLine("User is boss");
+                                //modal.Show();
+                                Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
                             }
-                            else 
-                               {
-                                    MessageBox.Show("Error");
-                               }
-                         */
-                        //if privilege is boss, redirect to boss page 
-                        if (dbPrivilege.Equals("boss"))
-                        {
-                            //Is this line being executed?
-                            System.Diagnostics.Debug.WriteLine("User is boss");
-                            //modal.Show();
-                            Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
-                        }
 
-                        //if privilege is boss, redirect to volunteer page 
-                        else if (dbPrivilege.Equals("volunteer"))
-                        {
-                            //Is this line being executed?
-                            System.Diagnostics.Debug.WriteLine("User is volunteer");
+                            //if privilege is boss, redirect to volunteer page 
+                            else if (dbPrivilege.Equals("volunteer"))
+                            {
+                                //Is this line being executed?
+                                System.Diagnostics.Debug.WriteLine("User is volunteer");
 
-                            Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                            }
+
+                            else
+                            {
+                                Label1.Text = "Email and/or password is wrong";
+
+                                myConnection.Close();
+                            }
+                         
                         }
+                        //else
+                        //{
+                        //    label1b.Text = "Wrong code";
+                        //}
                     }
-
                     else
                     {
                         Label1.Text = "Email and/or password is wrong";
-
-                        myConnection.Close();
                     }
-
                 }
             }
         }
 
-        protected void buton_Click(object sender, EventArgs e)
+        protected void submit_click(object sender, EventArgs e)
+        {
+            String randomNo = "1234";
+            String OTPinput = textbox20.Text;
+
+            if (OTPinput.Equals(randomNo))
+            {
+                modal.Hide();
+            }
+            else if (!OTPinput.Equals(randomNo))
+            {
+                label1b.Visible = true;
+
+                //remain on page
+                //another button to press to resend OTP code
+            }
+
+            //Response.Redirect("/index.aspx");
+            //Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+        }
+
+        protected void button_Click(object sender, EventArgs e)
         {
             modal.Show();
         }
 
-        protected void testing(object sender,EventArgs e)
-        {
-            modal.Hide();
-            //Response.Redirect("/index.aspx");
-            Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
-        }
         /*
 //added in
 Boolean allowSubmit = false;
@@ -171,5 +177,5 @@ return true;
 */
     }
 
-        
-    }
+
+}
