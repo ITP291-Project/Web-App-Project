@@ -46,9 +46,32 @@ namespace Web_App_Project.Ryan.Volunteer
                 {
                     int length = FileUpload1.PostedFile.ContentLength;
                     byte[] pic = new byte[length];
-
-
                     FileUpload1.PostedFile.InputStream.Read(pic, 0, length);
+
+                    //Get the Input File Name and Extension
+                    string fileName = Path.GetFileNameWithoutExtension(FileUpload1.PostedFile.FileName);
+                    string fileExtension = Path.GetExtension(FileUpload1.PostedFile.FileName);
+
+                    //Build the File Path for the original (input) and the decrypted (output) file
+                    string input = Server.MapPath("~/Files/") + fileName + fileExtension;
+                    string output = Server.MapPath("~/Files/") + fileName + "_dec" + fileExtension;
+
+                    //Save the Input File, Decrypt it and save the decrypted file in output path.
+                    FileUpload1.SaveAs(input);
+                    this.Decrypt(input, output);
+
+                    //Download the Decrypted File.
+                    Response.Clear();
+                    Response.ContentType = FileUpload1.PostedFile.ContentType;
+                    Response.AppendHeader("Content-Disposition", "attachment; filename=" + Path.GetFileName(output));
+                    Response.WriteFile(output);
+                    Response.Flush();
+
+                    //Delete the original (input) and the decrypted (output) file.
+                    File.Delete(input);
+                    File.Delete(output);
+
+                    Response.End();
 
                     string query = "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, Photo, AdditionalFeedback, IsDraft, Status)";
                     query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @Photo, @AdditionalFeedback, @IsDraft, @Status)";
