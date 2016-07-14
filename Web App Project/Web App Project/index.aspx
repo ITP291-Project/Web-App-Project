@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse navbar-menubuilder">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="page-scroll" href="#hme">Home</a> </li>
-                    <li><a class="page-scroll" href="#services">Services</a> </li>
+                    <li><a class="page-scroll" href="#services">Overview</a> </li>
                     <li><a class="page-scroll" href="#intro">About Us</a> </li>
                     <li><a class="page-scroll" href="#contact">Join Us</a> </li>
                     <li><a class="page-scroll" href="ASPX Files/Joanne/login.aspx">Login</a></li>
@@ -226,11 +226,11 @@
       <div class="col-md-4 col-sm-6 services"> <span class="icon icon-genius"></span>
         <div class="services-content">
           <h5>Contact Info</h5>
-            <ul style="box-sizing: border-box; margin: 0px 0px 1.625rem; font-variant: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; border: 0px; padding: 0px; vertical-align: baseline; list-style: none; color: rgb(102, 102, 102); font-family: Lora, georgia, serif; font-size: 18px; font-style: italic; font-weight: 500; letter-spacing: 0.16px; line-height: 28px; background-color: rgb(255, 255, 255);">
-                <li style="box-sizing: border-box; border: 0px; margin: 0px 0px 0px 2.5rem; padding: 0px; vertical-align: baseline; line-height: 1.625; list-style-type: disc;"><strong style="box-sizing: border-box; font-weight: bold; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline;">Business Name:</strong>&nbsp;Joanne Volunteering Pte Ltd</li>
-                <li style="box-sizing: border-box; border: 0px; margin: 0px 0px 0px 2.5rem; padding: 0px; vertical-align: baseline; line-height: 1.625; list-style-type: disc;"><strong style="box-sizing: border-box; font-weight: bold; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline;">Business Address:</strong>&nbsp;153 Upper Serangoon Avenue, Singapore</li>
-                <li style="box-sizing: border-box; border: 0px; margin: 0px 0px 0px 2.5rem; padding: 0px; vertical-align: baseline; line-height: 1.625; list-style-type: disc;"><strong style="box-sizing: border-box; font-weight: bold; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline;">Email:</strong>&nbsp;Joanne@JVolunteering.com</li>
-                <li style="box-sizing: border-box; border: 0px; margin: 0px 0px 0px 2.5rem; padding: 0px; vertical-align: baseline; line-height: 1.625; list-style-type: disc;"><strong style="box-sizing: border-box; font-weight: bold; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline;">Tel:</strong>&nbsp;555-777-9999</li>
+            <ul>
+                <li><strong>Business Name:</strong>&nbsp;Joanne Volunteering Pte Ltd</li>
+                <li><strong>Business Address:</strong>&nbsp;153 Upper Serangoon Avenue, Singapore</li>
+                <li><strong>Email:</strong>&nbsp;Joanne@JVolunteering.com</li>
+                <li><strong>Tel:</strong>&nbsp;555-777-9999</li>
             </ul>
           <p> &nbsp;</p>
         </div>
@@ -506,7 +506,7 @@
                 </div>
       <!-- team member 1 -->
       <div class="col-md-4 col-sm-8">
-        <div class="person"> <img src="img/team-1.png" alt="" class="img-responsive">
+        <div class="person"> <img src="img/joanne.png" alt="" class="img-responsive">
           <div class="person-content">
             <h4>Joanne Lim</h4>
             <h5 class="role">The CEO</h5>
@@ -524,7 +524,7 @@
       <!-- team member 1 --> 
       <!-- team member 2 -->
       <div class="col-md-4 col-sm-8">
-        <div class="person"> <img src="img/team-2.png" alt="" class="img-responsive">
+        <div class="person"> <img src="img/angie.jpeg" alt="" class="img-responsive">
           <div class="person-content">
             <h4>Angie Chu</h4>
             <h5 class="role">Creative Director</h5>
@@ -542,7 +542,7 @@
       <!-- team member 2 --> 
       <!-- team member 3 -->
       <div class="col-md-4 col-sm-8">
-        <div class="person"> <img src="img/team-3.png" alt="" class="img-responsive">
+        <div class="person"> <img src="img/ryan.jpeg" alt="" class="img-responsive">
           <div class="person-content">
             <h4>Ryan Chew</h4>
             <h5 class="role">IT Support</h5>
@@ -559,7 +559,7 @@
       </div>
       <!-- team member 1 --> 
         <div class="col-md-4 col-sm-8">
-        <div class="person"> <img src="img/team-3.png" alt="" class="img-responsive">
+        <div class="person"> <img src="img/seri.jpeg" alt="" class="img-responsive">
           <div class="person-content">
             <h4>Seri</h4>
             <h5 class="role">Marketing Director</h5>
