@@ -33,7 +33,8 @@ namespace Web_App_Project.ASPX_Files.Angie
                 string email = emailInput.Text;
                 int telNo = Convert.ToInt32(telephone.Text);
                 telNo = int.Parse(telephone.Text);
-                string inputpassword = SimpleHash.ComputeHash(password.Text, "SHA512", salt);
+                string inputpassword = password.Text;
+                String passwordHash = SimpleHash.ComputeHash(inputpassword, "SHA512", salt);
                 string occupation = job.Text;
                 string address = addr.Text;
                 string salutn = DropDownList1.SelectedItem.Text;
@@ -52,7 +53,7 @@ namespace Web_App_Project.ASPX_Files.Angie
 
                 myCommand.Parameters.AddWithValue("@FName", fName);
                 myCommand.Parameters.AddWithValue("@LName", lName);
-                myCommand.Parameters.AddWithValue("@Password", password.Text);
+                myCommand.Parameters.AddWithValue("@Password", passwordHash);
                 myCommand.Parameters.AddWithValue("Email", email);
                 myCommand.Parameters.AddWithValue("@TelNo", telNo);
                 myCommand.Parameters.AddWithValue("@NRIC", nric);

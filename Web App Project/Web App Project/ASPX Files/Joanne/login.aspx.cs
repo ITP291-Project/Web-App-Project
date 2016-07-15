@@ -34,12 +34,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String randomNo = "1234";
                     String OTPinput = textbox20.Text;
 
-                    //Hash
-                    //string hash = Hasher.Hash(inputpassword);
-
-                    //Verify
-                    //var result = SecurePasswordHasher.Verify("mypassword", hash);
-
                     string query = "SELECT [Email], [Password], [Privilege] FROM [Accounts] WHERE [Email]='" + inputemail + "'";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
@@ -72,7 +66,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     System.Diagnostics.Debug.WriteLine("dbOrganization is " + dbOrganization);
 
                     System.Diagnostics.Debug.WriteLine("");
-
+                    
+                    //Replace the if else with the hash check method!
 
                     //check if the email they input is the same as the email in db
                     //check if the password they input is the same as the password in db                    
