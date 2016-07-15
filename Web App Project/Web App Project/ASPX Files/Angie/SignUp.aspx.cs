@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Security;
+using System.Security.Policy;
+using System.Security.Cryptography;
+using Web_App_Project.ASPX_Files.Joanne;
 
 namespace Web_App_Project.ASPX_Files.Angie
 {
@@ -19,7 +23,7 @@ namespace Web_App_Project.ASPX_Files.Angie
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
-
+                Byte[] salt = new byte[8];
 
                 string fName = firstName.Text;
                 string lName = lastName.Text;
@@ -29,7 +33,7 @@ namespace Web_App_Project.ASPX_Files.Angie
                 string email = emailInput.Text;
                 int telNo = Convert.ToInt32(telephone.Text);
                 telNo = int.Parse(telephone.Text);
-                string inputpassword = password.Text;
+                string inputpassword = SimpleHash.ComputeHash(password.Text, "SHA512", salt);
                 string occupation = job.Text;
                 string address = addr.Text;
                 string salutn = DropDownList1.SelectedItem.Text;

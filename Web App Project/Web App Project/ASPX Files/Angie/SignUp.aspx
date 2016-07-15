@@ -92,8 +92,9 @@
             <asp:RequiredFieldValidator id="passwordReq"
               runat="server"
               ControlToValidate="password"
-              ErrorMessage="Password is required!"
-              SetFocusOnError="True" Display="Dynamic" />
+              ErrorMessage="Password must contain: Minimum 8 and Maximum 10 characters atleast 1 UpperCase Alphabet, 1 LowerCase Alphabet, 1 Number and 1 Special Character!"
+              SetFocusOnError="True" Display="Dynamic" 
+              ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,30}"/>
         </p>
         <p>
             <asp:Label ID="Label8" runat="server" Text="Label">Re-type Password:</asp:Label>
