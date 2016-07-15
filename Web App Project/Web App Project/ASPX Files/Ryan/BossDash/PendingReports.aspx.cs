@@ -80,7 +80,7 @@ namespace Web_App_Project.Ryan
                 if (reader.HasRows)
                 {
                     Label1.Text = reader[0].ToString();
-                    byte[] imagem = (byte[])(reader[1]);
+                    byte[] imagem = (byte[])(reader[0]);
                     string base64String = Convert.ToBase64String(imagem);
 
                     MemoryStream ms = new MemoryStream(imagem);

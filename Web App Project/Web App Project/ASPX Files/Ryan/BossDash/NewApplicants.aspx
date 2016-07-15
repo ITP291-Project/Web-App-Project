@@ -19,6 +19,11 @@
                             <asp:BoundField DataField="Privilege" HeaderText="Privilege" SortExpression="Privilege" />
                             <asp:BoundField DataField="Birthdate" HeaderText="Birthdate" SortExpression="Birthdate" />
                             <asp:BoundField DataField="Approved" HeaderText="Approved" SortExpression="Approved" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton Text="Select" ID="lnkSelect" runat="server" CommandName="Select" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Accounts] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Accounts] ([Id], [FName], [Lname], [Password], [Email], [TelNo], [NRIC], [Address], [Occupation], [Language], [Gender], [Privilege], [Salutation], [Birthdate], [Approved]) VALUES (@Id, @FName, @Lname, @Password, @Email, @TelNo, @NRIC, @Address, @Occupation, @Language, @Gender, @Privilege, @Salutation, @Birthdate, @Approved)" SelectCommand="SELECT [Id], [FName] + ' ' + [Lname] [Name], [Password], [Email], [TelNo], [NRIC], [Address], [Occupation], [Language], [Gender], [Privilege], [Salutation], [Birthdate], [Approved] FROM [Accounts] WHERE [Approved]='Pending'" UpdateCommand="UPDATE [Accounts] SET [FName] = @FName, [Lname] = @Lname, [Password] = @Password, [Email] = @Email, [TelNo] = @TelNo, [NRIC] = @NRIC, [Address] = @Address, [Occupation] = @Occupation, [Language] = @Language, [Gender] = @Gender, [Privilege] = @Privilege, [Salutation] = @Salutation, [Birthdate] = @Birthdate, [Approved] = @Approved WHERE [Id] = @Id">
@@ -60,6 +65,66 @@
                             <asp:Parameter Name="Id" Type="Int32" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label2" runat="server" ForeColor="Black" Text="ID"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label3" runat="server" ForeColor="Black" Text="Salutation"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label4" runat="server" ForeColor="Black" Text="Name"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox3" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label5" runat="server" ForeColor="Black" Text="Email"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox4" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label6" runat="server" ForeColor="Black" Text="Contact Number"></asp:Label>
+&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox5" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label7" runat="server" ForeColor="Black" Text="Gender"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox6" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label8" runat="server" ForeColor="Black" Text="NRIC"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox7" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label9" runat="server" ForeColor="Black" Text="Address"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox8" runat="server" ForeColor="Black" Height="100px" TextMode="MultiLine" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label10" runat="server" ForeColor="Black" Text="Occupation"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox9" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label11" runat="server" ForeColor="Black" Text="Language"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox10" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label12" runat="server" ForeColor="Black" Text="Birth Date"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox11" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Button ID="Button6" runat="server" Text="Approve" Width="255px" />
+&nbsp;&nbsp;
+                    <asp:Button ID="Button7" runat="server" Text="Reject" Width="255px" />
                 </div>
             <div id="right">
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" Text="Approved Reports" ForeColor="Black" Height="110px" OnClick="Button1_Click" />
