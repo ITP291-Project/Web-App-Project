@@ -4,7 +4,7 @@
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
             <div id="content">
                 <div id="left">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" OnSelectedIndexChanged="OnSelectedIndexChanged" OnRowDataBound="GridView1_RowDataBound">
                         <Columns>
                             <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
                             <asp:BoundField DataField="Salutation" HeaderText="Salutation" SortExpression="Salutation" />
@@ -122,9 +122,9 @@
                     <asp:TextBox ID="TextBox11" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Button ID="Button6" runat="server" Text="Approve" Width="255px" />
+                    <asp:Button ID="Button6" runat="server" Text="Approve" Width="255px" OnClick="Button6_Click" />
 &nbsp;&nbsp;
-                    <asp:Button ID="Button7" runat="server" Text="Reject" Width="255px" />
+                    <asp:Button ID="Button7" runat="server" Text="Reject" Width="255px" OnClick="Button7_Click" />
                 </div>
             <div id="right">
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" Text="Approved Reports" ForeColor="Black" Height="110px" OnClick="Button1_Click" />
