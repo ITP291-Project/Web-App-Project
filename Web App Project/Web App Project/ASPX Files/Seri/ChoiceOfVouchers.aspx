@@ -1,113 +1,44 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ChoiceOfVouchers.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Seri.ChoiceOfVouchers" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
-   
-    <p>
-        <asp:Button ID="Button6" runat="server" Height="50px" OnClick="Button6_Click" Text="BACK" Width="115px" BackColor="#333333" BorderColor="Black" BorderStyle="Ridge" Font-Bold="True" Font-Size="X-Large" />
-        <br />
-    </p>
-    <br />
-    <asp:Panel ID="Panel13" runat="server" BackColor="Black" BorderColor="Aqua" BorderStyle="Dashed" Font-Bold="True" Font-Italic="True" Font-Names="Arial Black" Font-Size="X-Large" ForeColor="White">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Retail Therapy</asp:Panel>
-&nbsp;&nbsp;
-    <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Panel ID="Panel1" runat="server" BackColor="Black" BorderColor="Yellow" BorderStyle="Ridge" BorderWidth="20px" Height="266px" style="margin-right: 0px" Width="417px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Image ID="Image1" runat="server" Height="64px" ImageAlign="Middle" ImageUrl="~/ASPX Files/Seri/Images/courts.jpg" Width="227px" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        &nbsp;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" BackColor="#CCCC00" BorderColor="#999999" BorderStyle="Dashed" Font-Bold="True" ForeColor="Black" Height="43px" OnClick="Button1_Click" style="margin-bottom: 11px" Text="GetThisVoucher" Width="239px" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </asp:Panel>
-    <asp:Panel ID="Panel10" runat="server" BackColor="Black" BorderColor="#CC6699" BorderStyle="Ridge" BorderWidth="20px" Height="266px" style="margin-right: 0px" Width="417px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Image ID="Image14" runat="server" Height="64px" ImageAlign="Middle" ImageUrl="~/ASPX Files/Seri/Images/mall.jpg" Width="227px" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        &nbsp;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button3" runat="server" BackColor="#CC3399" BorderColor="#999999" BorderStyle="Dashed" Font-Bold="True" ForeColor="Black" Height="43px" OnClick="Button1_Click" style="margin-bottom: 11px" Text="GetThisVoucher" Width="239px" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </asp:Panel>
-    <asp:Panel ID="Panel11" runat="server" BackColor="Black" BorderColor="#0000CC" BorderStyle="Ridge" BorderWidth="20px" Height="266px" style="margin-right: 0px" Width="417px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Image ID="Image15" runat="server" Height="64px" ImageAlign="Middle" ImageUrl="~/ASPX Files/Seri/Images/metro.jpg" Width="227px" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        &nbsp;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button4" runat="server" BackColor="#3366FF" BorderColor="#999999" BorderStyle="Dashed" Font-Bold="True" ForeColor="Black" Height="43px" OnClick="Button1_Click" style="margin-bottom: 11px" Text="GetThisVoucher" Width="239px" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </asp:Panel>
-    <asp:Panel ID="Panel12" runat="server" BackColor="Black" BorderColor="#993300" BorderStyle="Ridge" BorderWidth="20px" Height="266px" style="margin-right: 0px" Width="417px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Image ID="Image12" runat="server" Height="64px" ImageAlign="Middle" ImageUrl="~/ASPX Files/Seri/Images/robinson.png" Width="227px" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        &nbsp;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button5" runat="server" BackColor="#663300" BorderColor="#999999" BorderStyle="Dashed" Font-Bold="True" ForeColor="Black" Height="43px" OnClick="Button1_Click" style="margin-bottom: 11px" Text="GetThisVoucher" Width="239px" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </asp:Panel>
-    <p>
-        <hr />
-        <p>
-        <asp:Panel ID="Panel14" runat="server" BackColor="Black" BorderColor="#FF33CC" BorderStyle="Dashed" BorderWidth="15px" Height="444px">
-            <asp:Button ID="Button7" runat="server" Text="Button" OnClick="Button7_Click" />
-    </asp:Panel>
-    <p>
-        <p>
-        <p>
-        <p>
-            <p>
-                <p align="left">
-                </p>
-            </p>
-        </p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
+
+<asp:Content ID="ChoiceHead" ContentPlaceHolderID="head" runat="server">
+    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
 </asp:Content>
 
 
-
-
-
-
+<asp:Content ID="ChoiceBody" ContentPlaceHolderID="body" runat="server">
+    <div class="jumbotron hiddenJumbo" style="height:200px">
+        <h1 runat="server" id="WelcomeHeading">Select a Voucher</h1>
+        <div id="CurrentCart" class="CurrentCart" runat="server">
+            <h4 class="CartHeading" id="CurrentItems" runat="server">Items in Cart: 0</h4>
+            <h4 class="CartHeading" id="CurrentCost" runat="server">Total Cart Cost: 0 Points</h4>
+            <h4 class="CartHeading" id="CurrentBalance" runat="server">Current Balance: 0 Points</h4>
+        </div>
+    </div>
+    <div class="align-center">
+        <asp:DataList CssClass="VoucherList" ID="VouchersDataList" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="3" RepeatDirection="Horizontal">
+                        <ItemTemplate>
+                            <div class="VoucherDisplay">
+                                <h2 runat="server"><%#Eval("voucherName") %></h2>
+                                <h4 runat="server"><%#Eval("pointsRequired","Cost: {0} Points") %></h4>
+                                <img id="VoucherImage" runat="server" src='<% #Bind("voucherPic","Images/{0}") %>' class="Center" style="background-color:transparent" />
+                                <asp:Button CssClass="Dashbtn btn-skin" ID="TermsBtn" runat="server" Text="View Terms" ForeColor="Black" Height="50px" Width="150px" OnClick="TermsBtn_Click"  CommandArgument='<% #Eval("voucherId") %>'/>
+                                <asp:Button CssClass="Dashbtn btn-skin" ID="AddBtn" runat="server" Text="Add To Cart" ForeColor="Black" Height="50px" Width="150px" OnClick="AddToCart"  CommandArgument='<% #Eval("voucherId") %>'/>
+                            </div>
+                        </ItemTemplate>
+        </asp:DataList>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT * FROM [VoucherTypes]">
+        </asp:SqlDataSource>
+    </div>
+    <div class="align-center" style="margin: 20px;">
+        <asp:Button CssClass="Dashbtn btn-skin" ID="ReturnBtn" runat="server" Text="Return to Rewards" ForeColor="Black" Height="80px" Width="240px" OnClick="ReturnRewards"/>
+        <asp:Button CssClass="Dashbtn btn-skin" ID="CheckoutBtn" runat="server" Text="Checkout" ForeColor="Black" Height="80px" Width="240px" OnClick="GotoCheckout"/>
+    </div>
+</asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
-
-<footer class="footerDash">
+ <footer class="footer">
   <div class="footer-top section-tb">
-
+    <div class="container">
       <div class="row">
         <div class="footer-col col-md-4">
           <h5>Our Office Location</h5>
@@ -147,5 +78,6 @@
         </div>
       </div>
     </div>
+  </div>
 </footer>
 </asp:Content>

@@ -1,63 +1,30 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Rewards.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Seri.Rewards" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
-    <p>
-        <br />
-&nbsp;
-    </p>
-    <p>
-        &nbsp;</p>
-    <p>
-        &nbsp;</p>
-    <p align="center">
-        </p>
-    <asp:Panel ID="Panel3" runat="server" BackColor="Black" BorderColor="#66FF33" BorderStyle="Ridge" BorderWidth="10px" Height="82px" Width="1273px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button5" runat="server" BackColor="#006666" Height="58px" OnClick="Button5_Click" Text="Redemption Categories" Width="261px" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button4" runat="server" BackColor="#006666" Height="60px" OnClick="Button3_Click" Text="How To Redeem Your Rewards" Width="291px" />
-    </asp:Panel>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <p>
-    </p>
-    <asp:Panel ID="Panel1" runat="server" BackColor="Black" BorderColor="#CC0000" Height="183px">
-        <asp:Panel ID="Panel2" runat="server" BackColor="#660033" BorderColor="#FF66FF" BorderStyle="Dotted" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="183px" HorizontalAlign="Center" style="margin-left: 309px" Width="724px">
-            You Have<br />
-            <br />
-            1000 POINTS</asp:Panel>
-    </asp:Panel>
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>
-    </p>
-    <p align="center">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" BackColor="#006666" BorderColor="#FF66FF" BorderStyle="Dotted" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="White" Height="160px" OnClick="Button1_Click" Text="ChoiceOfVouchers" Width="327px" BorderWidth="15px" />
-        <asp:Button ID="Button2" runat="server" BackColor="#006666" BorderColor="#FF66FF" BorderStyle="Dotted" Font-Bold="True" Font-Names="Arial Black" Font-Size="Large" ForeColor="White" Height="160px" OnClick="Button1_Click" Text="CashOut" Width="327px" BorderWidth="15px" />
-    </p>
-    <p>
-        &nbsp;</p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p align="center">
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
+
+
+
+<asp:Content ID="RewardsHead" ContentPlaceHolderID="head" runat="server">
+    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
 </asp:Content>
+
+
+<asp:Content ID="RewardsBody" ContentPlaceHolderID="body" runat="server">
+    <div class="jumbotron hiddenJumbo" >
+        <h1 runat="server" id="WelcomeHeading">Welcome, Please Login</h1>
+        <h3 runat="server" id="UsersPoints"/>
+    </div>
+    <div class="UsePoints Center">
+        <h2 class="align-center">Claim your Points!</h2>
+        <img src="Images/ChoicesImage.png" class="Center" style="background-color:transparent" />
+        <asp:Button CssClass="Dashbtn btn-skin" style="float:left" ID="ClaimBtn" runat="server" Text="Claim Vouchers" ForeColor="Black" Height="109px" Width="300px" OnClick="ShowChooseVouchers" />
+        <asp:Button CssClass="Dashbtn btn-skin" style="float:right" ID="WithdrawBtn" runat="server" Text="Withdraw to Paypal" ForeColor="Black" Height="109px" Width="300px" OnClick="ShowPaypalWithdraw" />
+    </div>
+    
+</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
-
-<footer class="footerDash">
+ <footer class="footer">
   <div class="footer-top section-tb">
-
+    <div class="container">
       <div class="row">
         <div class="footer-col col-md-4">
           <h5>Our Office Location</h5>
@@ -97,5 +64,6 @@
         </div>
       </div>
     </div>
+  </div>
 </footer>
 </asp:Content>

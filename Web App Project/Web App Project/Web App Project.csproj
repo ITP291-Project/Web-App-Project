@@ -120,19 +120,29 @@
     <Content Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx" />
     <Content Include="ASPX Files\Ryan\VolunteerDash\Organization.aspx" />
     <Content Include="ASPX Files\Ryan\VolunteerDash\SignUp.aspx" />
+    <Content Include="ASPX Files\Seri\Checkout.aspx" />
     <Content Include="ASPX Files\Seri\ChoiceOfVouchers.aspx" />
-    <Content Include="ASPX Files\Seri\CourtsGetVoucher.aspx" />
-    <Content Include="ASPX Files\Seri\HowToRedeemYourRewards.aspx" />
+    <Content Include="ASPX Files\Seri\DisplayVoucher.aspx" />
     <Content Include="ASPX Files\Seri\Images\BookstoresBackPic.jpg" />
+    <Content Include="ASPX Files\Seri\Images\BookStoreVoucher.png" />
+    <Content Include="ASPX Files\Seri\Images\ChoicesImage.png" />
     <Content Include="ASPX Files\Seri\Images\courts.jpg" />
+    <Content Include="ASPX Files\Seri\Images\CourtsVoucher.png" />
     <Content Include="ASPX Files\Seri\Images\famousAmos.jpg" />
+    <Content Include="ASPX Files\Seri\Images\FamousAmosVoucher.png" />
+    <Content Include="ASPX Files\Seri\Images\FEOMallVoucher.png" />
     <Content Include="ASPX Files\Seri\Images\ISetan.jpg" />
+    <Content Include="ASPX Files\Seri\Images\ISetanVoucher.png" />
     <Content Include="ASPX Files\Seri\Images\Kinouniya Book Stores.jpg" />
     <Content Include="ASPX Files\Seri\Images\mall.jpg" />
     <Content Include="ASPX Files\Seri\Images\metro.jpg" />
+    <Content Include="ASPX Files\Seri\Images\MetroVoucher.png" />
+    <Content Include="ASPX Files\Seri\Images\PayPalLogo.png" />
     <Content Include="ASPX Files\Seri\Images\robinson.png" />
-    <Content Include="ASPX Files\Seri\RedemptionCategories.aspx" />
+    <Content Include="ASPX Files\Seri\PayPalLogin.aspx" />
+    <Content Include="ASPX Files\Seri\Purchases.aspx" />
     <Content Include="ASPX Files\Seri\Rewards.aspx" />
+    <Content Include="ASPX Files\Seri\RewardsStyle.css" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -396,6 +406,14 @@
     <Compile Include="ASPX Files\Ryan\VolunteerDash\SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ASPX Files\Seri\AccountManager.cs" />
+    <Compile Include="ASPX Files\Seri\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Seri\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ASPX Files\Seri\ChoiceOfVouchers.aspx.cs">
       <DependentUpon>ChoiceOfVouchers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -403,26 +421,27 @@
     <Compile Include="ASPX Files\Seri\ChoiceOfVouchers.aspx.designer.cs">
       <DependentUpon>ChoiceOfVouchers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Seri\CourtsGetVoucher.aspx.cs">
-      <DependentUpon>CourtsGetVoucher.aspx</DependentUpon>
+    <Compile Include="ASPX Files\Seri\DisplayVoucher.aspx.cs">
+      <DependentUpon>DisplayVoucher.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Seri\CourtsGetVoucher.aspx.designer.cs">
-      <DependentUpon>CourtsGetVoucher.aspx</DependentUpon>
+    <Compile Include="ASPX Files\Seri\DisplayVoucher.aspx.designer.cs">
+      <DependentUpon>DisplayVoucher.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Seri\HowToRedeemYourRewards.aspx.cs">
-      <DependentUpon>HowToRedeemYourRewards.aspx</DependentUpon>
+    <Compile Include="ASPX Files\Seri\PayPalLogin.aspx.cs">
+      <DependentUpon>PayPalLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Seri\HowToRedeemYourRewards.aspx.designer.cs">
-      <DependentUpon>HowToRedeemYourRewards.aspx</DependentUpon>
+    <Compile Include="ASPX Files\Seri\PayPalLogin.aspx.designer.cs">
+      <DependentUpon>PayPalLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Seri\RedemptionCategories.aspx.cs">
-      <DependentUpon>RedemptionCategories.aspx</DependentUpon>
+    <Compile Include="ASPX Files\Seri\PurchaseManager.cs" />
+    <Compile Include="ASPX Files\Seri\Purchases.aspx.cs">
+      <DependentUpon>Purchases.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Seri\RedemptionCategories.aspx.designer.cs">
-      <DependentUpon>RedemptionCategories.aspx</DependentUpon>
+    <Compile Include="ASPX Files\Seri\Purchases.aspx.designer.cs">
+      <DependentUpon>Purchases.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPX Files\Seri\Rewards.aspx.cs">
       <DependentUpon>Rewards.aspx</DependentUpon>
@@ -431,6 +450,7 @@
     <Compile Include="ASPX Files\Seri\Rewards.aspx.designer.cs">
       <DependentUpon>Rewards.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ASPX Files\Seri\SessionCart.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -506,6 +526,11 @@
   <ItemGroup>
     <Folder Include="bin\roslyn\" />
     <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ASPX Files\Seri\ChoiceOfVouchers.aspx.resx">
+      <DependentUpon>ChoiceOfVouchers.aspx.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
