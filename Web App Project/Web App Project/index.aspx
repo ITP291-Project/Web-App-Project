@@ -37,30 +37,30 @@
 
 <body id="hme">
     <form id="form1" runat="server">
-    <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="#">Voices of Singapore</a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
-                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
-                        class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse navbar-menubuilder">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a class="page-scroll" href="#hme">Home</a> </li>
-                    <li><a class="page-scroll" href="#services">Overview</a> </li>
-                    <li><a class="page-scroll" href="#intro">About Us</a> </li>
-                    <li><a class="page-scroll" href="#contact">Join Us</a> </li>
-                    <li><a class="page-scroll" href="ASPX Files/Joanne/login.aspx">Login</a></li>
-                </ul>
+        <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <a class="navbar-brand" href="#">Voices of Singapore</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-menubuilder">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="#hme">Home</a> </li>
+                        <li><a class="page-scroll" href="#services">Overview</a> </li>
+                        <li><a class="page-scroll" href="#intro">About Us</a> </li>
+                        <li><a class="page-scroll" href="#contact">Join Us</a> </li>
+                        <li><a class="page-scroll" href="ASPX Files/Joanne/login.aspx">Login</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Login -->
-    <!-- Start Carousel Main Slider -->
-    <section class="carousel carousel-fade slide home-slider" id="fullslider" data-ride="carousel"
-        data-interval="4500" data-pause="false"> 
+        <!-- Login -->
+        <!-- Start Carousel Main Slider -->
+        <section class="carousel carousel-fade slide home-slider" id="fullslider" data-ride="carousel"
+            data-interval="4500" data-pause="false"> 
     <!-- Carousel-Indicators -->
 	<ol class="carousel-indicators"> 
 		<li data-target="#fullslider" data-slide-to="0" class="active"></li>
@@ -199,10 +199,10 @@
 	<a class="left carousel-control animated fadeInLeft" href="#fullslider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
 	<a class="right carousel-control animated fadeInRight" href="#fullslider" data-slide="next"><i class="fa fa-chevron-right"></i></a>	
     </section>
-    <!--  End Carousel Main Slider  -->
+        <!--  End Carousel Main Slider  -->
 
-    <!-- services section -->
-    <section id="services" class="services service-section">
+        <!-- services section -->
+        <section id="services" class="services service-section">
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-6 services"> <span class="icon icon-strategy"></span>
@@ -238,157 +238,165 @@
     </div>
   </div>
 </section>
-    <!-- services section -->
+        <!-- services section -->
 
-    <!-- about section -->
-    <section id="intro" class="section intro no-padding">
+        <!-- about section -->
+        <section id="intro" class="section intro no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
     </div>
   </div>
 </section>
-    <!-- about section -->
-    <!-- Work -->
-    <!-- works -->
-    <div id="work" class="works">
-        <div class="row">
-            <div class="col-sm-5 wowload fadeInLeft">
-                <div class="spacer1">
-                    <h2>
-                        Who are we?</h2>
-                    <ul>
-                        <li><i class="fa fa-check"></i>We are the Voices of Singapore organisation, working with a few volunteer organisations.</li>
-                        <li><i class="fa fa-check"></i>Make volunteering a happier thing to do</li>
-                        <li><i class="fa fa-check"></i>Changing people's lives for the better</li>
-                        <li><i class="fa fa-check"></i>One-stop place for all-round volunteering services</li>
-                        <li><i class="fa fa-check"></i>A platform for convenient report submission</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-7 wowload fadeInRight">
-                <div id="carousel-works" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="img/slider/image1.jpg" class="img-responsive"><a href="#" class="view"><i
-                                class="fa fa-external-link"></i> View</a></div>
-                        <div class="item">
-                            <img src="img/slider/image2.jpg" class="img-responsive"><a href="#" class="view"><i
-                                class="fa fa-external-link"></i> View</a></div>
-                        <div class="item">
-                            <img src="img/slider/image3.jpg" class="img-responsive"><a href="#" class="view"><i
-                                class="fa fa-external-link"></i> View</a></div>
+        <!-- about section -->
+        <!-- Work -->
+        <!-- works -->
+        <div id="work" class="works">
+            <div class="row">
+                <div class="col-sm-5 wowload fadeInLeft">
+                    <div class="spacer1">
+                        <h2>Who are we?</h2>
+                        <ul>
+                            <li><i class="fa fa-check"></i>We are the Voices of Singapore organisation, working with a few volunteer organisations.</li>
+                            <li><i class="fa fa-check"></i>Make volunteering a happier thing to do</li>
+                            <li><i class="fa fa-check"></i>Changing people's lives for the better</li>
+                            <li><i class="fa fa-check"></i>One-stop place for all-round volunteering services</li>
+                            <li><i class="fa fa-check"></i>A platform for convenient report submission</li>
+                        </ul>
                     </div>
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-works" role="button" data-slide="prev">
-                        <i class="fa fa-3x fa-angle-left"></i></a><a class="right carousel-control" href="#carousel-works"
-                            role="button" data-slide="next"><i class="fa fa-3x fa-angle-right"></i></a>
+                </div>
+                <div class="col-sm-7 wowload fadeInRight">
+                    <div id="carousel-works" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="img/slider/image1.jpg" class="img-responsive"><a href="#" class="view"><i
+                                    class="fa fa-external-link"></i> View</a>
+                            </div>
+                            <div class="item">
+                                <img src="img/slider/image2.jpg" class="img-responsive"><a href="#" class="view"><i
+                                    class="fa fa-external-link"></i> View</a>
+                            </div>
+                            <div class="item">
+                                <img src="img/slider/image3.jpg" class="img-responsive"><a href="#" class="view"><i
+                                    class="fa fa-external-link"></i> View</a>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-works" role="button" data-slide="prev">
+                            <i class="fa fa-3x fa-angle-left"></i></a><a class="right carousel-control" href="#carousel-works"
+                                role="button" data-slide="next"><i class="fa fa-3x fa-angle-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- works -->
-    <div id="review" class="section" data-section="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 section-heading text-center padding-bottom70">
-                    <h2>
-                        Our Partners
-                    </h2>
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h3>
-                               Our partners are non-profit organisations and they require
+        <!-- works -->
+        <div id="review" class="section" data-section="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-heading text-center padding-bottom70">
+                        <h2>Our Partners
+                        </h2>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <h3>Our partners are non-profit organisations and they require
                                helping hands from us to make the world a better place. 
-                            </h3>
+                                </h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="box">
-                        <div class="icon colored-1">
-                            <span><img src="img/PGA.jpg" /></span>
-                        </div>
-                        <!--<h3> Pioneer Generation Ambassador
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="icon colored-1">
+                                <span>
+                                    <img src="img/PGA.jpg" /></span>
+                            </div>
+                            <!--<h3> Pioneer Generation Ambassador
                         </h3>-->
-                        <p>
-                           Join us, as an Ambassador to help the Pioneers 
+                            <p>
+                                Join us, as an Ambassador to help the Pioneers 
                            understand the Pioneer Generation Package!
-                        </p>
+                            </p>
 
-                    </div>
-                    <div class="box ">
-                        <div class="icon colored-4">
-                            <span><img src="img/SPCA.jpg"></img></span>
                         </div>
-                        <!--<h3>
+                        <div class="box ">
+                            <div class="icon colored-4">
+                                <span>
+                                    <img src="img/SPCA.jpg"></img></span>
+                            </div>
+                            <!--<h3>
                             SPCA
                         </h3>-->
-                        <p>
-                           We rely on a community of passionate volunteers, committed to helping us advocate the animal welfare cause.
+                            <p>
+                                We rely on a community of passionate volunteers, committed to helping us advocate the animal welfare cause.
                            If you have a passion for animals and would like to help in a tangible way, we want you! 
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box ">
-                        <div class="icon colored-2">
-                            <span><img src="img/Salvation.jpg"></img><br /></span>
+                            </p>
                         </div>
-                        <!--<h3>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box ">
+                            <div class="icon colored-2">
+                                <span>
+                                    <img src="img/Salvation.jpg"></img><br />
+                                </span>
+                            </div>
+                            <!--<h3>
                             The Salvation Army
                         </h3>-->
-                        <p>
-                           At The Salvation Army, volunteers play an active role in caring and enriching the lives of the children, 
+                            <p>
+                                At The Salvation Army, volunteers play an active role in caring and enriching the lives of the children, 
                            youths, elderly and families we serve. You can support an existing programme, or initiate a project to bless our beneficiaries!
-                        </p>
-                    </div>
-                    <div class="box ">
-                        <div class="icon colored-5">
-                            <span><!--<img src="img/TOUCH.png"></img>--></span>
+                            </p>
                         </div>
-                        <!--<h3>
+                        <div class="box ">
+                            <div class="icon colored-5">
+                                <span>
+                                    <!--<img src="img/TOUCH.png"></img>-->
+                                </span>
+                            </div>
+                            <!--<h3>
                             TOUCH Home Care
                        </h3>-->
-                        <p>
-                           TOUCH Home Care (THC) is the first home care agency in Singapore to provide integrated and 
+                            <p>
+                                TOUCH Home Care (THC) is the first home care agency in Singapore to provide integrated and 
                            holistic home-based services that support the frail and homebound elderly and their caregivers. 
                            At THC, our goal is to help the frail elderly enjoy greater independence and better quality of life at home.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box ">
-                        <div class="icon colored-3">
-                            <span><img src="img/RenCi.jpg"></img></span>
+                            </p>
                         </div>
-                        <!--<h3>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box ">
+                            <div class="icon colored-3">
+                                <span>
+                                    <img src="img/RenCi.jpg"></img></span>
+                            </div>
+                            <!--<h3>
                             Ren Ci
                         </h3>-->
-                        <p>
-                           If you are looking for a volunteer opportunity to serve and care for the elderly, Ren Ci offers 
+                            <p>
+                                If you are looking for a volunteer opportunity to serve and care for the elderly, Ren Ci offers 
                            you the platform to complement our delivery of holistic care and experience the feeling of 
                            touching the lives of the seniors through a warm smile, a listening ear or simply ever-ready hands to help.
-                        </p>
-                    </div>
-                    <div class="box ">
-                        <div class="icon colored-6">
-                            <span><img src="img/RedCross.png"></img></span>
+                            </p>
                         </div>
-                        <!--<h3>Singapore Red Cross</h3>-->
-                        <p>
-                           Volunteering is more than helping to improve and impact the lives of the needy. 
+                        <div class="box ">
+                            <div class="icon colored-6">
+                                <span>
+                                    <img src="img/RedCross.png"></img></span>
+                            </div>
+                            <!--<h3>Singapore Red Cross</h3>-->
+                            <p>
+                                Volunteering is more than helping to improve and impact the lives of the needy. 
                            It is also about bringing some much needed cheer and relief to them. 
                            It is through the time and care of ordinary and altruistic people like you that we can do extraordinary things!
-                        </p>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- work section -->
-    <section id="works" class="works section no-padding">
+        <!-- work section -->
+        <section id="works" class="works section no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
       <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="img/rcvol.jpg" class="work-box"> <img src="img/rcvol.jpg" alt="Red Cross Singapore">
@@ -490,9 +498,9 @@
     </div>
   </div>
 </section>
-    <!-- work section -->
-    <!-- our team section -->
-    <section id="teams" class="section teams">
+        <!-- work section -->
+        <!-- our team section -->
+        <section id="teams" class="section teams">
   <div class="container">
     <div class="row"> 
     <div class="col-md-12 section-heading text-center padding-bottom70">
@@ -577,9 +585,9 @@
     </div>
   </div>
 </section>
-    <!-- our team section -->
-    <!-- Testimonials section -->
-    <section id="testimonials" class="section testimonials no-padding">
+        <!-- our team section -->
+        <!-- Testimonials section -->
+        <section id="testimonials" class="section testimonials no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
       <div class="flexslider">
@@ -621,100 +629,102 @@
     </div>
   </div>
 </section>
-    <!-- Testimonials section -->
-    <!-- Get a quote section -->
-    <section id="contacts" class="section quote">
+        <!-- Testimonials section -->
+        <!-- Get a quote section -->
+        <section id="contacts" class="section quote">
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
       <h3>Ready to start volunteering?</h3>
       <a href="#contact" class="btn btn-large btn-border">Sign me up!</a> </div>
   </div>
 </section>
-    <!-- Get a quote section -->
-    <div class="content-last">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <!-- Heading and para -->
-                    <div class="block-heading-two">
-                        <h3>
-                            <span>Why volunteer with us?</span></h3>
-                    </div>
-                    <p>
-                        We provide you with a wide range of organizations to volunteer with in an easy to sign up portal
+        <!-- Get a quote section -->
+        <div class="content-last">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- Heading and para -->
+                        <div class="block-heading-two">
+                            <h3>
+                                <span>Why volunteer with us?</span></h3>
+                        </div>
+                        <p>
+                            We provide you with a wide range of organizations to volunteer with in an easy to sign up portal
                         so you won't have to spend extra time to fill up forms each time you want to volunteer for an organization.
                         <br>
-                        <br>
-                        We will submit the forms on your behalf based on the information provided to us on your profile.</p>
-                    <p>
-                        Once your application has been approved, you can jump straight in to sign up for volunteer slots.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="block-heading-two">
-                        <h3>
-                            <span>Our Features</span></h3>
+                            <br>
+                            We will submit the forms on your behalf based on the information provided to us on your profile.
+                        </p>
+                        <p>
+                            Once your application has been approved, you can jump straight in to sign up for volunteer slots.
+                        </p>
                     </div>
-                    <!-- Accordion starts -->
-                    <div class="panel-group" id="accordion-alt3">
-                        <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
-                        <div class="panel">
-                            <!-- Panel heading -->
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3"><i class="fa fa-angle-right"></i>Centralized Portal</a>
-                                </h4>
+                    <div class="col-md-4">
+                        <div class="block-heading-two">
+                            <h3>
+                                <span>Our Features</span></h3>
+                        </div>
+                        <!-- Accordion starts -->
+                        <div class="panel-group" id="accordion-alt3">
+                            <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
+                            <div class="panel">
+                                <!-- Panel heading -->
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3"><i class="fa fa-angle-right"></i>Centralized Portal</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne-alt3" class="panel-collapse collapse">
+                                    <!-- Panel body -->
+                                    <div class="panel-body">
+                                        Everything a volunteer would need is all located within a volunteer's area from signing up for events to applying for leave!
+                                    </div>
+                                </div>
                             </div>
-                            <div id="collapseOne-alt3" class="panel-collapse collapse">
-                                <!-- Panel body -->
-                                <div class="panel-body">
-                                    Everything a volunteer would need is all located within a volunteer's area from signing up for events to applying for leave!
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3"><i class="fa fa-angle-right"></i>Rewards</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo-alt3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Even though we believe that volunteering is through someone's heart, we also recognize the effort put in by our volunteers and we offer rewards for them.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3"><i class="fa fa-angle-right"></i>User Friendly UI</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree-alt3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        The user interface was designed with simplicity and user friendlyness in mind.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3"><i class="fa fa-angle-right"></i>System Improvements</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour-alt3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        The User Interface is being updated regularly to make the volunteer experience more friendly
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3"><i class="fa fa-angle-right"></i>Rewards</a>
-                                </h4>
-                            </div>
-                            <div id="collapseTwo-alt3" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    Even though we believe that volunteering is through someone's heart, we also recognize the effort put in by our volunteers and we offer rewards for them.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3"><i class="fa fa-angle-right"></i>User Friendly UI</a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree-alt3" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    The user interface was designed with simplicity and user friendlyness in mind.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3"><i class="fa fa-angle-right"></i>System Improvements</a>
-                                </h4>
-                            </div>
-                            <div id="collapseFour-alt3" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                  The User Interface is being updated regularly to make the volunteer experience more friendly
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Accordion ends -->
                     </div>
-                    <!-- Accordion ends -->
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Section: contact -->
-    <section id="contact" class="home-section text-center">
+        <!-- Section: contact -->
+        <section id="contact" class="home-section text-center">
 		<div class="heading-contact">
 			<div class="container">
 			<div class="row">
@@ -859,9 +869,9 @@
 
 		</div>
 	</section>
-    <!-- /Section: contact -->
-    <!-- Footer section -->
-    <footer class="footer">
+        <!-- /Section: contact -->
+        <!-- Footer section -->
+        <footer class="footer">
   <div class="footer-top section-tb">
     <div class="container">
       <div class="row">
@@ -906,26 +916,26 @@
     </div>
   </div>
 </footer>
-  <!-- footer top --> 
-  
-    <!-- Footer section -->
-    <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/jquery.easing.min.js" type="text/javascript"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/wow.js" type="text/javascript"></script>
-    <script src="js/retina.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/main.js"></script>
-    <script type="text/javascript">
-        //WOW Scroll Spy
-        var wow = new WOW({
-            //disabled for mobile
-            mobile: false
-        });
-        wow.init();
-    </script>
+        <!-- footer top -->
+
+        <!-- Footer section -->
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/jquery.easing.min.js" type="text/javascript"></script>
+        <script src="js/jquery.flexslider-min.js"></script>
+        <script src="js/jquery.fancybox.pack.js"></script>
+        <script src="js/wow.js" type="text/javascript"></script>
+        <script src="js/retina.min.js"></script>
+        <script src="js/modernizr.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript">
+            //WOW Scroll Spy
+            var wow = new WOW({
+                //disabled for mobile
+                mobile: false
+            });
+            wow.init();
+        </script>
     </form>
 </body>
 </html>

@@ -9,6 +9,9 @@ using System.Security;
 using System.Security.Policy;
 using System.Security.Cryptography;
 using Web_App_Project.ASPX_Files.Joanne;
+using Web_App_Project.ASPX_Files.Angie;
+using System.Net;
+using System.IO;
 
 namespace Web_App_Project.ASPX_Files.Angie
 {
@@ -73,6 +76,17 @@ namespace Web_App_Project.ASPX_Files.Angie
                 myCommand.ExecuteNonQuery();
                 myConnection.Close();
             }
+
+            string EncodedResponse = Request.Form["g-Recaptcha-Response"];
+            bool IsCaptchaValid = (ReCaptchaClass.Validate(EncodedResponse) == "True" ? true : false);
+            string validateMsg = "";
+            if (IsCaptchaValid)
+            {
+                validateMsg = "Verified!";
+            }
+
+            else
+                validateMsg = "Please try again.";
         }
 
         protected void Button2_Click(object sender, EventArgs e)
