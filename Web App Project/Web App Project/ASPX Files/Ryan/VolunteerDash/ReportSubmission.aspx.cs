@@ -25,6 +25,7 @@ namespace Web_App_Project.Ryan.Volunteer
                 Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
             }
 
+            TextBox6.Text = Session["username"].ToString();
             Calendar1.Visible = false;
             Label1.Visible = false;
         }
