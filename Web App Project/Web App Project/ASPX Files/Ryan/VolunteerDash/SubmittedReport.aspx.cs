@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.IO;
+using System.Net;
 
 namespace Web_App_Project.Ryan.Volunteer
 {
@@ -20,6 +21,20 @@ namespace Web_App_Project.Ryan.Volunteer
             else if (Session["Privilege"].ToString() == "boss")
             {
                 Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+            }
+        }
+
+        private void Download(string fileName, string ftpServerIP, string ftpUserID, string ftpPassword, string outputName)
+        {
+            using (WebClient request = new WebClient())
+            {
+                request.Credentials = new NetworkCredential(ftpUserID, ftpPassword);
+                byte[] fileData = request.DownloadData(string.Format(ftpServerIP, fileName));
+
+                using (FileStream file = File.Create(Server.MapPath(outputName)))
+                {
+                    file.Write(fileData, 0, fileData.Length);
+                }
             }
         }
 
@@ -50,24 +65,10 @@ namespace Web_App_Project.Ryan.Volunteer
 
                 myConnection.Open();
 
-                string caseno = row.Cells[0].Text;
-                string Scmd = "SELECT Photo FROM Report WHERE CaseNo='" + caseno + "'";
-                SqlCommand cmd = new SqlCommand(Scmd, myConnection);
+                string caseNo = row.Cells[0].Text;
 
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                reader.Read();
-
-                if (reader.HasRows)
-                {
-                    Label1.Text = reader[0].ToString();
-                    byte[] imagem = (byte[])(reader[1]);
-                    string base64String = Convert.ToBase64String(imagem);
-
-                    MemoryStream ms = new MemoryStream(imagem);
-
-                    Image1.ImageUrl = String.Format("data:image/jpg;base64,{0}", base64String);
-                }
+                Download("/images/myimage.jpg", "ftp://demonius.dlinkddns.com/" + caseNo + ".jpg", "Administrator", "password", "/tempimage.jpg");
+                Image1.ImageUrl = "/tempimage.jpg";
             }
         }
     }

@@ -9,7 +9,7 @@
                             <asp:BoundField DataField="CaseNo" HeaderText="CaseNo" ReadOnly="True" SortExpression="CaseNo" />
                             <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
                             <asp:BoundField DataField="Duration" HeaderText="Duration" SortExpression="Duration" />
-                            <asp:BoundField DataField="TypeofVolunteer" HeaderText="Organization" SortExpression="TypeofVolunteer" />
+                            <asp:BoundField DataField="TypeofVolunteer" HeaderText="TypeofVolunteer" SortExpression="TypeofVolunteer" />
                             <asp:BoundField DataField="AdditionalFeedback" HeaderText="AdditionalFeedback" SortExpression="AdditionalFeedback" />
                             <asp:TemplateField>
                                 <ItemTemplate>
@@ -18,7 +18,7 @@
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Report] WHERE [CaseNo] = @CaseNo" InsertCommand="INSERT INTO [Report] ([CaseNo], [Date], [Duration], [TypeofVolunteer], [Photo], [AdditionalFeedback]) VALUES (@CaseNo, @Date, @Duration, @TypeofVolunteer, @Photo, @AdditionalFeedback)" SelectCommand="SELECT [CaseNo], [Date], [Duration], [TypeofVolunteer], [Photo], [AdditionalFeedback] FROM [Report] WHERE [IsDraft] = 'false'" UpdateCommand="UPDATE [Report] SET [Date] = @Date, [Duration] = @Duration, [TypeofVolunteer] = @TypeofVolunteer, [Photo] = @Photo, [AdditionalFeedback] = @AdditionalFeedback WHERE [CaseNo] = @CaseNo">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Report] WHERE [CaseNo] = @CaseNo" InsertCommand="INSERT INTO [Report] ([CaseNo], [Date], [Duration], [TypeofVolunteer], [Photo], [AdditionalFeedback]) VALUES (@CaseNo, @Date, @Duration, @TypeofVolunteer, @Photo, @AdditionalFeedback)" SelectCommand="SELECT [CaseNo], [Date], [Duration], [TypeofVolunteer], [AdditionalFeedback] FROM [Report] WHERE [IsDraft] = 'false'" UpdateCommand="UPDATE [Report] SET [Date] = @Date, [Duration] = @Duration, [TypeofVolunteer] = @TypeofVolunteer, [Photo] = @Photo, [AdditionalFeedback] = @AdditionalFeedback WHERE [CaseNo] = @CaseNo">
                         <DeleteParameters>
                             <asp:Parameter Name="CaseNo" Type="String" />
                         </DeleteParameters>
