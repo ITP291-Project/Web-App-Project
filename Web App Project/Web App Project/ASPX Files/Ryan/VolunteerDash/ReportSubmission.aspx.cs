@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net;
+using System.IO;
+using System.Text;
 
 namespace Web_App_Project.Ryan.Volunteer
 {
@@ -26,6 +29,61 @@ namespace Web_App_Project.Ryan.Volunteer
             Label1.Visible = false;
         }
 
+        protected void FTPUpload()
+        {
+            //Store username so that user folder will be created and/or written to
+            string username = Session["username"].ToString();
+            string caseNo = TextBox1.Text;
+
+            //FTP Server URL.
+            string ftp = "ftp://demonius.dlinkddns.com/";
+
+            //FTP Folder name. Leave blank if you want to upload to root folder.
+            //string ftpFolder = username + "/";
+            string ftpFolder = "";
+
+            byte[] fileBytes = null;
+
+            //Read the FileName and convert it to Byte array.
+            string fileName = Path.GetFileName(FileUpload1.FileName);
+            using (StreamReader fileStream = new StreamReader(FileUpload1.PostedFile.InputStream))
+            {
+                fileBytes = Encoding.UTF8.GetBytes(fileStream.ReadToEnd());
+                fileStream.Close();
+            }
+
+            try
+            {
+                //Create FTP Request.
+                //FtpWebRequest request = (FtpWebRequest)WebRequest.Create(ftp + ftpFolder + fileName);
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://demonius.dlinkddns.com/" + caseNo + ".jpg");
+                request.Method = WebRequestMethods.Ftp.UploadFile;
+
+                //Enter FTP Server credentials.
+                request.RenameTo = caseNo + ".jpg";
+                request.Credentials = new NetworkCredential("Administrator", "password");
+                request.ContentLength = fileBytes.Length;
+                request.UsePassive = true;
+                request.UseBinary = true;
+                request.ServicePoint.ConnectionLimit = fileBytes.Length;
+                request.EnableSsl = false;
+
+                using (Stream requestStream = request.GetRequestStream())
+                {
+                    requestStream.Write(fileBytes, 0, fileBytes.Length);
+                    requestStream.Close();
+                }
+
+                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+
+                response.Close();
+            }
+            catch (WebException ex)
+            {
+                throw new Exception((ex.Response as FtpWebResponse).StatusDescription);
+            }
+        }
+
         protected void Button6_Click(object sender, EventArgs e)
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
@@ -33,25 +91,15 @@ namespace Web_App_Project.Ryan.Volunteer
 
                 string caseNo = TextBox1.Text;
                 string date = TextBox2.Text;
-                string duration = TextBox3.Text;
+                string duration = DropDownList2.Text;
                 string type = DropDownList1.Text;
                 string feedback = TextBox5.Text;
+                string username = Session["username"].ToString();
 
-                if (!FileUpload1.HasFile)
-                {
-                    Label1.Visible = true;
-                    Label1.Text = "Please Select Image File";    //checking if file uploader has no file selected
-                }
-                else
-                {
-                    int length = FileUpload1.PostedFile.ContentLength;
-                    byte[] pic = new byte[length];
-                    FileUpload1.PostedFile.InputStream.Read(pic, 0, length);
+                FTPUpload();
 
-                    
-
-                    string query = "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, Photo, AdditionalFeedback, IsDraft, Status)";
-                    query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @Photo, @AdditionalFeedback, @IsDraft, @Status)";
+                    string query = "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, AdditionalFeedback, IsDraft, Status, Username)";
+                    query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @AdditionalFeedback, @IsDraft, @Status, @Username)";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
 
@@ -59,14 +107,13 @@ namespace Web_App_Project.Ryan.Volunteer
                     myCommand.Parameters.AddWithValue("@Date", date);
                     myCommand.Parameters.AddWithValue("@Duration", duration);
                     myCommand.Parameters.AddWithValue("@TypeOfVolunteer", type);
-                    myCommand.Parameters.AddWithValue("@Photo", pic);
                     myCommand.Parameters.AddWithValue("@AdditionalFeedBack", feedback);
                     myCommand.Parameters.AddWithValue("@IsDraft", "false");
                     myCommand.Parameters.AddWithValue("@Status", "pending");
+                myCommand.Parameters.AddWithValue("@Username", username);
                     myConnection.Open();
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
-                }
             }
         }
 

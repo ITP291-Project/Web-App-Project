@@ -192,3 +192,5 @@ C:\Users\btobf\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\
 C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\AjaxControlToolkit.dll
 C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web_App_Project.ASPX_Files.Seri.ChoiceOfVouchers.resources
 C:\Users\Seri\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csproj.GenerateResource.Cache
+C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web_App_Project.ASPX_Files.Seri.ChoiceOfVouchers.resources
+C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csproj.GenerateResource.Cache
