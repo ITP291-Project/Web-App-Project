@@ -30,10 +30,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
             else
             {
                 using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
-                {   
+                {
                     //please undo this (below - session) as now it is hardcoded. 
                     //string userid = Session["username"].ToString();
-                    string userid = "kplim96@yahoo.com.sg";
+                    string userid = "euniceannablle@gmail.com";
 
                     String pwd = TextBox3.Text;
 

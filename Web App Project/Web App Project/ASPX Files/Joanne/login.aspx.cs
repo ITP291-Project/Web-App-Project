@@ -13,6 +13,7 @@ using System.Text;
 
 namespace Web_App_Project.ASPX_Files.Joanne
 {
+
     public partial class login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -20,6 +21,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
         }
 
+        Boolean ans = false;
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -66,7 +68,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     System.Diagnostics.Debug.WriteLine("dbOrganization is " + dbOrganization);
 
                     System.Diagnostics.Debug.WriteLine("");
-                    
+
                     //Replace the if else with the hash check method!
 
                     //check if the email they input is the same as the email in db
@@ -74,10 +76,15 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //if validated, means its a valid user. 
                     if (dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword))
                     {
+                        ans = true;
                         //modal.Show(); - AJAX has no validation
 
                         if (OTPinput.Equals(randomNo))
                         {
+                            modal.Hide();
+                            //String url = "www.google.com";
+                            //string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
+                            //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
 
                             //Is this line being executed?
                             System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
@@ -111,7 +118,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                                 myConnection.Close();
                             }
-                         
+
                         }
                         //else
                         //{
@@ -121,7 +128,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     else
                     {
                         Label1.Text = "Email and/or password is wrong";
-                        modal.Hide();
+                        label1b.Visible = true;
+                        //modal.Hide();
                     }
                 }
             }
@@ -132,50 +140,44 @@ namespace Web_App_Project.ASPX_Files.Joanne
             String randomNo = "1234";
             String OTPinput = textbox20.Text;
 
+            //if (OTPinput.Equals(randomNo) && ans == true)
             if (OTPinput.Equals(randomNo))
             {
+                //-if (ans == true)
+                //-{
                 modal.Hide();
                 Button1_Click(sender, e);
+                String url = "www.google.com";
+                //string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
+                //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
+                System.Diagnostics.Process.Start(url);
+                //-}
+                //else if (ans == false)
+                //{
+                //}
             }
             else if (!OTPinput.Equals(randomNo))
             {
+                Label1.Text = "Email and/or password is wrong";
                 label1b.Visible = true;
                 //remain on page
             }
-                   
-       }
-
-        protected void button_Click(object sender, EventArgs e)
-        {
-            modal.Show();
         }
 
-        //to resend otp: just invoke the url again
         protected void Resend_Click(object sender, EventArgs e)
         {
             //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
             String url = "www.google.com";
-            string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
-            ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
+            //string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
+            //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
+            System.Diagnostics.Process.Start(url);
         }
-        /*
-//added in
-Boolean allowSubmit = false;
 
-public void capcha_filled()
-{
-allowSubmit = true;
-}
-
-public Boolean check_if_capcha_is_filled(Boolean e)
-{
-if (allowSubmit) { }
-return true;
-//e.preventDefault();
-//alert('Fill in the capcha!');
-}
-*/
     }
 
-
+    //to resend otp: just invoke the url again
+    //protected void button_Click(object sender, EventArgs e)
+    //{
+    //    modal.Show();
+    //}
 }
