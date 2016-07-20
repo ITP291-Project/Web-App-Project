@@ -30,9 +30,11 @@ namespace Web_App_Project.ASPX_Files.Joanne
             {
                 using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
                 {
+                    Byte[] salt = new byte[8];
                     //get email input and password input store into variables
                     String inputemail = TextBox1.Text;
                     String inputpassword = TextBox2.Text;
+                    String passwordHash = SimpleHash.ComputeHash(inputpassword, "SHA512", salt);
                     String randomNo = "1234";
                     String OTPinput = textbox20.Text;
 
@@ -70,14 +72,16 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     System.Diagnostics.Debug.WriteLine("");
 
                     //Replace the if else with the hash check method!
+                    bool hashresult = SimpleHash.VerifyHash(inputpassword, "SHA512", dbPassword);
 
                     //check if the email they input is the same as the email in db
                     //check if the password they input is the same as the password in db                    
                     //if validated, means its a valid user. 
-                    if (dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword))
+
+                    if (dbEmail.Equals(inputemail) && hashresult == true)
                     {
                         ans = true;
-                        //modal.Show(); - AJAX has no validation
+                        modal.Show(); //- AJAX has no validation
 
                         if (OTPinput.Equals(randomNo))
                         {
@@ -114,6 +118,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                             else
                             {
+                                modal.Hide();
                                 Label1.Text = "Email and/or password is wrong";
 
                                 myConnection.Close();
@@ -127,9 +132,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     }
                     else
                     {
+                        modal.Hide();
                         Label1.Text = "Email and/or password is wrong";
                         label1b.Visible = true;
-                        //modal.Hide();
+                        
                     }
                 }
             }

@@ -196,32 +196,5 @@ C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\D
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csproj.GenerateResource.Cache
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web_App_Project.ASPX_Files.Seri.ChoiceOfVouchers.resources
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csproj.GenerateResource.Cache
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\BouncyCastle.Crypto.dll
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Auth.dll
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Auth.PlatformServices.dll
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Core.dll
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.dll
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Gmail.v1.dll
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.PlatformServices.dll
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\log4net.dll
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Newtonsoft.Json.dll
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Zlib.Portable.dll
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\BouncyCastle.Crypto.pdb
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.pdb
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Auth.pdb
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Auth.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Auth.PlatformServices.pdb
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Auth.PlatformServices.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Core.pdb
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Core.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Gmail.v1.pdb
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Gmail.v1.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.PlatformServices.pdb
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.PlatformServices.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\log4net.xml
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Newtonsoft.Json.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Zlib.Portable.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\ASPX Files\Joanne\client_secret.json
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\AE.Net.Mail.dll
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\AE.Net.Mail.pdb

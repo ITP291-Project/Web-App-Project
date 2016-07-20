@@ -32,7 +32,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 //pls undo after session working^
 
                 //hardcode
-               string userid = "euniceannabelle@gmail.com";
+               string userid = "euniceL@gmail.com";
 
                 //When they press SAVE
                 //Retrieve data from text box input to update the database information

@@ -33,16 +33,18 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 {
                     //please undo this (below - session) as now it is hardcoded. 
                     //string userid = Session["username"].ToString();
-                    string userid = "euniceannablle@gmail.com";
+                    string userid = "euniceL@gmail.com";
 
+                    Byte[] salt = new byte[8];
                     String pwd = TextBox3.Text;
+                    String pwdHash = SimpleHash.ComputeHash(pwd, "SHA512", salt);
 
                     myConnection.Open();
 
                     string query = "UPDATE Accounts SET Password=@Password WHERE email='" + userid + "'";
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
 
-                    myCommand.Parameters.AddWithValue("@Password", pwd);
+                    myCommand.Parameters.AddWithValue("@Password", pwdHash);
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
 

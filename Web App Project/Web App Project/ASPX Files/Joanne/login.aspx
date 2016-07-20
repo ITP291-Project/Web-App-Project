@@ -67,11 +67,13 @@
                 </form>
 
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                <ajaxToolkit:ModalPopupExtender runat="server" ID="modal" TargetControlID="Button1" BackgroundCssClass="background" PopupControlID="panel" CancelControlID="Button2"></ajaxToolkit:ModalPopupExtender>
-
+                <div id="testing">
+                <ajaxToolkit:ModalPopupExtender runat="server" ID="modal" TargetControlID="btnPopup" BackgroundCssClass="background" PopupControlID="panel" CancelControlID="Button2"></ajaxToolkit:ModalPopupExtender>
+                       </div>
                 <%--<asp:LinkButton ID="lnkDummy" runat="server"></asp:LinkButton>--%>
                 <%-- Button to LOGIN --%>
-                <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" />
+               <asp:Button ID="btnPopup" runat="server" Text="PopUp" style = "display:none" />
+                 <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" />
                 <%-- POPUP BOX --%>
                 <asp:Panel ID="panel" runat="server" CssClass="popup">
                      <asp:UpdatePanel ID="UpdatePanel" runat="server">

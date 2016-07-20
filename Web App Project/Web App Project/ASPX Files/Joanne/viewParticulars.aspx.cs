@@ -25,11 +25,11 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
-                //string userid = Session["username"].ToString();
-                string userid = "someone@gmail.com";
+                string userid = Session["username"].ToString();
+                //string userid = "someone@gmail.com";
 
-                //string query = "SELECT * FROM [Accounts] WHERE [Email] = '" + userid + "'";
-                string query = "SELECT [FName] FROM [Accounts] WHERE [Email] = 'someone@gmail.com'";
+                string query = "SELECT [FName] FROM [Accounts] WHERE [Email] = '" + userid + "'";
+                //string query = "SELECT [FName] FROM [Accounts] WHERE [Email] = 'someone@gmail.com'";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
                 myConnection.Open();
@@ -37,10 +37,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 SqlDataReader reader = myCommand.ExecuteReader();
                
                 //problem with lname
-                String lname = reader["Lname"].ToString();
+                //String lname = reader["LName"].ToString();
                 if (reader.Read())
                 {
-                    Label2.Text = reader["FName"].ToString() + " " + lname;
+                   //Label2.Text = reader["FName"].ToString() + " " + lname;
+
+                    Label2.Text = reader["FName"].ToString();
                     Label4.Text = reader["Birthdate"].ToString();
                     Label6.Text = reader["Email"].ToString();
                     Label8.Text = reader["Address"].ToString();
