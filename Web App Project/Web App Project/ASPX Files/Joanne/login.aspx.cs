@@ -80,8 +80,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                     if (dbEmail.Equals(inputemail) && hashresult == true)
                     {
-                        //String url = "www.google.com";
-                        //System.Diagnostics.Process.Start(url);
+                        String url = "www.google.com";
+                        System.Diagnostics.Process.Start(url);
 
                         ans = true;
                         modal.Show(); //- AJAX has no validation

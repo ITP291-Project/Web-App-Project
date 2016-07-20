@@ -28,7 +28,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 string userid = Session["username"].ToString();
                 //string userid = "someone@gmail.com";
 
-                string query = "SELECT [FName] FROM [Accounts] WHERE [Email] = '" + userid + "'";
+                string query = "SELECT * FROM [Accounts] WHERE [Email] = '" + userid + "'";
                 //string query = "SELECT [FName] FROM [Accounts] WHERE [Email] = 'someone@gmail.com'";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
@@ -37,12 +37,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 SqlDataReader reader = myCommand.ExecuteReader();
                
                 //problem with lname
-                //String lname = reader["LName"].ToString();
+                //String lname = ;
                 if (reader.Read())
                 {
                    //Label2.Text = reader["FName"].ToString() + " " + lname;
 
-                    Label2.Text = reader["FName"].ToString();
+                    Label2.Text = reader["FName"].ToString() + " " + reader["LName"].ToString();
                     Label4.Text = reader["Birthdate"].ToString();
                     Label6.Text = reader["Email"].ToString();
                     Label8.Text = reader["Address"].ToString();
