@@ -14,14 +14,14 @@ namespace Web_App_Project.ASPX_Files.Joanne
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //System.Diagnostics.Debug.WriteLine("Username is " + Session["username"]);
+            System.Diagnostics.Debug.WriteLine("Username is " + Session["username"]);
 
-            //if (Session["username"] == null)
-            //{
-            //    System.Diagnostics.Debug.WriteLine("Username is null");
+            if (Session["username"] == null)
+            {
+                System.Diagnostics.Debug.WriteLine("Username is null");
 
-            //    Response.Redirect("/ASPX Files/Joanne/login.aspx");
-            //}
+                Response.Redirect("/ASPX Files/Joanne/login.aspx");
+            }
 
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
@@ -40,9 +40,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 //String lname = ;
                 if (reader.Read())
                 {
-                   //Label2.Text = reader["FName"].ToString() + " " + lname;
 
-                    Label2.Text = reader["FName"].ToString() + " " + reader["LName"].ToString();
+                    Label2.Text = reader["FName"].ToString() + " " + reader["Lname"].ToString();
                     Label4.Text = reader["Birthdate"].ToString();
                     Label6.Text = reader["Email"].ToString();
                     Label8.Text = reader["Address"].ToString();

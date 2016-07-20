@@ -90,8 +90,8 @@
                         <br />
                              <%-- Button to SUBMIT code --%>
                              <div style="color: black">
-                                 <asp:Button runat="server" Text="Submit" ID="submit" OnClick="submit_click" CausesValidation="false" />
-                                 <asp:Button runat="server" Text="Resend Code" ID="resend" OnClick="Resend_Click" CausesValidation="false"/>
+                                 <asp:Button runat="server" Text="Submit" ID="submit" BorderColor="Black" ForeColor="Black" OnClick="submit_click" CausesValidation="false"/>
+                                 <asp:Button runat="server" Text="Resend Code" ID="resend" BorderColor="Black" ForeColor="Black" OnClick="Resend_Click" CausesValidation="false"/>
                              </div>
                              <%--<asp:Button runat="server" Text="open" ID="button" OnClick="submit_click" Style="height: 26px" />--%>
                              </ContentTemplate>

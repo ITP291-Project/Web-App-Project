@@ -12,59 +12,59 @@
             <p>&nbsp;</p>
             <p>
                 <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" SelectCommand="SELECT FName + ' ' + Lname AS Name, Email, Address, TelNo, Occupation, Language FROM Accounts"></asp:SqlDataSource>
-                <div style="text-align: left">
+                <div style="text-align: left; color: white">
                 <asp:Label ID="Label1" Font-Size="20px" runat="server" Text="Name"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
-                <asp:Label ID="Label2" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label2" Font-Size="20px" runat="server" style="color: white" Text="Label"></asp:Label>
             </p>
 
             <p>
                 <div style="text-align: left">
-                &nbsp;<asp:Label ID="Label3" Font-Size="20px" runat="server" Text="Date of Birth"></asp:Label>
+                &nbsp;<asp:Label ID="Label3" Font-Size="20px" runat="server" style="color: white" Text="Date of Birth"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
-            <asp:Label ID="Label4" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label4" Font-Size="20px" runat="server" style="color: white" Text="Label"></asp:Label>
             </p>
 
             <p>
                 <div style="text-align: left">
-                <asp:Label ID="Label5" Font-Size="20px" runat="server" Text="Email Address"></asp:Label>
+                <asp:Label ID="Label5" Font-Size="20px" runat="server" style="color: white" Text="Email Address"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
-            <asp:Label ID="Label6" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label6" Font-Size="20px" runat="server" style="color: white" Text="Label"></asp:Label>
             </p>
 
             <p>
                 <div style="text-align: left">
-                <asp:Label ID="Label7" Font-Size="20px" runat="server" Text="Mailing Address"></asp:Label>
+                <asp:Label ID="Label7" Font-Size="20px" runat="server" style="color: white" Text="Mailing Address"></asp:Label>
                 &nbsp;&nbsp;&nbsp;
                 </div>
-            <asp:Label ID="Label8" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label8" Font-Size="20px" runat="server" style="color: white" Text="Label"></asp:Label>
             </p>
 
             <p>
                 <div style="text-align: left">
-                <asp:Label ID="Label9" Font-Size="20px" runat="server" Text="Contact Number"></asp:Label>
+                <asp:Label ID="Label9" Font-Size="20px" runat="server" style="color: white" Text="Contact Number"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
-            <asp:Label ID="Label10" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label10" Font-Size="20px" runat="server" style="color: white" Text="Label"></asp:Label>
             </p>
 
             <p>
-                <div style="text-align: left">
+                <div style="text-align: left; color: white">
                 <asp:Label ID="Label13" Font-Size="20px" runat="server" Text="Occupation"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
-            <asp:Label ID="Label11" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label11" Font-Size="20px" runat="server" style="color: white" Text="Label"></asp:Label>
             </p>
 
             <p>
                 <div style="text-align: left">
-                <asp:Label ID="Label14" Font-Size="20px" runat="server" Text="Dialects Spoken"></asp:Label>
+                <asp:Label ID="Label14" Font-Size="20px" runat="server" style="color: white" Text="Dialects Spoken"></asp:Label>
                 &nbsp;&nbsp;&nbsp; 
                 </div>
-            <asp:Label ID="Label12" Font-Size="20px" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label12" Font-Size="20px" runat="server" style="color: white" Text="Label"></asp:Label>
             </p>
 
             <p>
