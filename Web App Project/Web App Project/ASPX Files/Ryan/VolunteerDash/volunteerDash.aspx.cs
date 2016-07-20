@@ -37,7 +37,7 @@ namespace Web_App_Project
 
         protected void Button5_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/ASPX Files/Joanne/updateParticulars.aspx");
+            Response.Redirect("/ASPX Files/Joanne/viewParticulars.aspx");
         }
     }
 }
