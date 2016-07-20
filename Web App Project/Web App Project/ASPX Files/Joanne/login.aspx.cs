@@ -152,13 +152,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
             {
                 //-if (ans == true)
                 //-{
-                //login.ModalPopupExtender.TargetControlID = "Button1";
+                modal.TargetControlID = "Button1";
                 modal.Hide();
-                //Resend_Click(sender, e);
                 Button1_Click(sender, e);
-                //string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
-                //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
-
+                
             }
             else if (!OTPinput.Equals(randomNo))
             {
