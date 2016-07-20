@@ -80,6 +80,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                     if (dbEmail.Equals(inputemail) && hashresult == true)
                     {
+                        //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+
                         String url = "www.google.com";
                         System.Diagnostics.Process.Start(url);
 
