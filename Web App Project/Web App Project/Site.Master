@@ -56,10 +56,10 @@
             </div>
             <div class="collapse navbar-collapse navbar-menubuilder">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="page-scroll" href="#hme">Home</a> </li>
-                    <li><a class="page-scroll" href="#services">Overview</a> </li>
-                    <li><a class="page-scroll" href="#intro">About Us</a> </li>
-                    <li><a class="page-scroll" href="#contact">Join Us</a> </li>
+                    <li><a class="page-scroll" href="/index.aspx#hme">Home</a> </li>
+                    <li><a class="page-scroll" href="/index.aspx#services">Overview</a> </li>
+                    <li><a class="page-scroll" href="/index.aspx#intro">About Us</a> </li>
+                    <li><a class="page-scroll" href="/index.aspx#contact">Join Us</a> </li>
                     <li><asp:Label ID="Label1" runat="server" ForeColor="Black" Text=""></asp:Label></li>
                     <li>
                         <!-- <li class="active"><a class="active" href="login.aspx">Login</a> </li> -->
