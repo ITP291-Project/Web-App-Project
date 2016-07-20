@@ -22,19 +22,10 @@ namespace Web_App_Project.Ryan.Volunteer
             {
                 Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
             }
-        }
 
-        private void Download(string fileName, string ftpServerIP, string ftpUserID, string ftpPassword, string outputName)
-        {
-            using (WebClient request = new WebClient())
+            if (TextBox1.Text.Equals(""))
             {
-                request.Credentials = new NetworkCredential(ftpUserID, ftpPassword);
-                byte[] fileData = request.DownloadData(string.Format(ftpServerIP, fileName));
-
-                using (FileStream file = File.Create(Server.MapPath(outputName)))
-                {
-                    file.Write(fileData, 0, fileData.Length);
-                }
+                Button4.Enabled = false;
             }
         }
 
@@ -62,14 +53,13 @@ namespace Web_App_Project.Ryan.Volunteer
                 TextBox3.Text = row.Cells[2].Text;
                 TextBox4.Text = row.Cells[3].Text;
                 TextBox5.Text = row.Cells[4].Text;
-
-                myConnection.Open();
-
-                string caseNo = row.Cells[0].Text;
-
-                Download("/images/myimage.jpg", "ftp://demonius.dlinkddns.com/" + caseNo + ".jpg", "Administrator", "password", "/tempimage.jpg");
-                Image1.ImageUrl = "/tempimage.jpg";
             }
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            string caseNo = TextBox1.Text;
+            Response.Redirect("ftp://FTP:ftp@demonius.dlinkddns.com/" + caseNo + ".jpg");
         }
     }
 }
