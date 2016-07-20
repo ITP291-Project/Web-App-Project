@@ -67,12 +67,12 @@
                 </form>
 
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                <div id="testing">
+
                 <ajaxToolkit:ModalPopupExtender runat="server" ID="modal" TargetControlID="btnPopup" BackgroundCssClass="background" PopupControlID="panel" CancelControlID="Button2"></ajaxToolkit:ModalPopupExtender>
-                       </div>
+                
                 <%--<asp:LinkButton ID="lnkDummy" runat="server"></asp:LinkButton>--%>
                 <%-- Button to LOGIN --%>
-               <asp:Button ID="btnPopup" runat="server" Text="PopUp" style = "display:none" />
+               <asp:Button ID="btnPopup" runat="server" Text="PopUp" style = "display: none"/>
                  <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" />
                 <%-- POPUP BOX --%>
                 <asp:Panel ID="panel" runat="server" CssClass="popup">
@@ -91,7 +91,7 @@
                              <%-- Button to SUBMIT code --%>
                              <div style="color: black">
                                  <asp:Button runat="server" Text="Submit" ID="submit" OnClick="submit_click" CausesValidation="false" />
-                                 <asp:Button runat="server" Text="Resend Code" ID="resend" OnClick="Resend_Click" />
+                                 <asp:Button runat="server" Text="Resend Code" ID="resend" OnClick="Resend_Click" CausesValidation="false"/>
                              </div>
                              <%--<asp:Button runat="server" Text="open" ID="button" OnClick="submit_click" Style="height: 26px" />--%>
                              </ContentTemplate>
