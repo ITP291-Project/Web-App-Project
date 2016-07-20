@@ -19,11 +19,16 @@
                     CssClass="text-danger" ErrorMessage="The email field is required." />
                 &nbsp;
             </p>
+            <p style="align-content:center; color: white">
+            <asp:Label ID="Label2" runat="server"></asp:Label>
+            </p>
 
         </div>
         <p>
-            <asp:Button ID="Button1" runat="server" Style="color: black; margin-left: 690px" Text="Email Link!" Width="85px" OnClick="Button1_On" />
+            <asp:Button ID="Button1" runat="server" Style="color: black; margin-left: 650px" Text="Email Link!" Width="85px" OnClick="Button1_On" />
         </p>
+        <p style="margin-left: 500px">
+            &nbsp;</p>
     </body>
 </asp:Content>
 

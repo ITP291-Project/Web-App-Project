@@ -11,7 +11,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
     public class AES
     {
         //Clear text is the param. The method will return 
-        private string Encrypt(string clearText)
+        public static string Encrypt(string clearText)
         {
             string EncryptionKey = "MAKV2SPBNI99212";
             string cipherText;
@@ -35,7 +35,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
             return cipherText;
         }
 
-        private string Decrypt(string cipherText)
+        public static string Decrypt(string cipherText)
         {
             string EncryptionKey = "MAKV2SPBNI99212";
             string plainText;
