@@ -122,10 +122,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             }
 
                         }
-                        //else
-                        //{
-                        //    label1b.Text = "Wrong code";
-                        //}
+
                     }
                     else
                     {
@@ -144,7 +141,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
 
-                Byte[] salt = new byte[8];
                 //get email input and password input store into variables
                 String inputemail = TextBox1.Text;
                 String OTPinput = textbox20.Text;
@@ -248,18 +244,30 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
         protected void Resend_Click(object sender, EventArgs e)
         {
-            //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: _______. Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
-            String url = "www.google.com";
-            //string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
-            //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
+            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            {
+
+                //get email input and password input store into variables
+                String inputemail = TextBox1.Text;
+
+                string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
+
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                myConnection.Open();
+                myCommand.CommandType = CommandType.Text;
+                SqlDataReader reader = myCommand.ExecuteReader();
+
+                String dbMobile = "";
+           
+                if (reader.Read())
+                {
+                    dbMobile = reader["TelNo"].ToString();
+                }
+            
+            String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
             System.Diagnostics.Process.Start(url);
+        }
         }
 
     }
-
-    //to resend otp: just invoke the url again
-    //protected void button_Click(object sender, EventArgs e)
-    //{
-    //    modal.Show();
-    //}
-}
+ }
