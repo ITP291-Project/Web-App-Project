@@ -87,6 +87,8 @@ namespace Web_App_Project.ASPX_Files.Angie
 
             else
                 validateMsg = "Please try again.";
+
+            Response.Redirect("/ASPX_Files/Joanne/login.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e)
