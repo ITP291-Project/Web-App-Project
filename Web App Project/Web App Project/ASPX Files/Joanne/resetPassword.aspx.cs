@@ -33,7 +33,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 {
                     //please undo this (below - session) as now it is hardcoded. 
                     //string userid = Session["username"].ToString();
-                    string userid = "euniceL@gmail.com";
+                    string userid = "mae.th@gmail.com";
 
                     Byte[] salt = new byte[8];
                     String pwd = TextBox3.Text;
