@@ -225,3 +225,5 @@ C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\ASPX Files\Joanne\client_secret.json
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\AE.Net.Mail.dll
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\AE.Net.Mail.pdb
+C:\Users\btobf\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web_App_Project.ASPX_Files.Seri.ChoiceOfVouchers.resources
+C:\Users\btobf\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csproj.GenerateResource.Cache
