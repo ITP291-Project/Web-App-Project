@@ -30,7 +30,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
             {
                 using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
                 {
-                    string[] saAllowedCharacters = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+                    string[] saAllowedCharacters = {"1" , "2", "3", "4", "5", "6", "7", "8", "9", "0" };
 
                     Byte[] salt = new byte[8];
                     //get email input and password input store into variables
@@ -42,18 +42,24 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String OTPinput = textbox20.Text;
 
                     string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
+                    string query1 = "INSERT INTO Accounts VALUES(" + "@randomNo)" + "WHERE [Email] = '" + inputemail + "'";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
+                    SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
                     myConnection.Open();
                     myCommand.CommandType = CommandType.Text;
+                    myCommand1.CommandType = CommandType.Text;
                     SqlDataReader reader = myCommand.ExecuteReader();
+                    SqlDataReader reader1 = myCommand1.ExecuteReader();
 
+                    myCommand1.Parameters.AddWithValue("@randomNo", randomNo);
 
                     String dbEmail = "";
                     String dbPassword = "";
                     String dbPrivilege = "";
                     String dbOrganization = "";
                     String dbMobile = "";
+                    String dbRandomNo = "";
 
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
@@ -64,16 +70,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         dbPrivilege = reader["Privilege"].ToString(); //read db privilege
                         dbOrganization = reader["Organization"].ToString(); //read db 
                         dbOrganization = "SPCA";
+                        dbRandomNo = reader["randomNo"].ToString();
                     }
 
-                    //Do these print the correct values?
-                    System.Diagnostics.Debug.WriteLine("dbEmail is " + dbEmail);
-                    System.Diagnostics.Debug.WriteLine("dbPassword is " + dbPassword);
-                    System.Diagnostics.Debug.WriteLine("dbPrivilege is " + dbPrivilege);
-                    System.Diagnostics.Debug.WriteLine("dbOrganization is " + dbOrganization);
-
-                    System.Diagnostics.Debug.WriteLine("");
-
+     
                     //Replace the if else with the hash check method!
                     bool hashresult = SimpleHash.VerifyHash(inputpassword, "SHA512", dbPassword);
 
@@ -82,7 +82,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //if validated, means its a valid user. 
 
                     if (dbEmail.Equals(inputemail) && hashresult == true)
-                    { 
+                    {
                         String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
 
                         //String url = "www.google.com";
@@ -91,17 +91,9 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         ans = true;
                         modal.Show(); //- AJAX has no validation
 
-                        if (OTPinput.Equals(randomNo))
+                        if (OTPinput.Equals(dbRandomNo))
                         {
                             modal.Hide();
-                          
-                            //Is this line being executed?
-                            System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
-                            Session["Privilege"] = dbPrivilege; //make that particular privilege the session
-                            Session["username"] = dbEmail; //make that particular email uid as the session
-                            Session["Organization"] = dbOrganization;
-
-
 
                             //if privilege is boss, redirect to boss page 
                             if (dbPrivilege.Equals("boss"))
@@ -141,7 +133,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         modal.Hide();
                         Label1.Text = "Email and/or password is wrong";
                         //label1b.Visible = true;
-                        
+
                     }
                 }
             }
@@ -152,12 +144,9 @@ namespace Web_App_Project.ASPX_Files.Joanne
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
 
-                string[] saAllowedCharacters = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
                 Byte[] salt = new byte[8];
                 //get email input and password input store into variables
                 String inputemail = TextBox1.Text;
-                //String randomNo = "1234";
-                String randomNo = GenerateRandomOTP(8, saAllowedCharacters);
                 String OTPinput = textbox20.Text;
 
                 string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
@@ -172,6 +161,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 String dbPassword = "";
                 String dbPrivilege = "";
                 String dbMobile = "";
+                String dbRandomNo = "";
 
                 if (reader.Read())
                 {
@@ -179,16 +169,17 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     dbEmail = reader["Email"].ToString(); //read db email
                     dbPassword = reader["Password"].ToString(); //read db password                
                     dbPrivilege = reader["Privilege"].ToString(); //read db privilege
+                    dbRandomNo = reader["randomNo"].ToString();
+
                 }
 
 
                 //if (OTPinput.Equals(randomNo) && ans == true)
-                if (OTPinput.Equals(randomNo))
-            {
-                //-if (ans == true)
-                //-{
-                //login.ModalPopupExtender.TargetControlID = "Button1";
-                modal.Hide();
+                if (OTPinput.Equals(dbRandomNo))
+                {
+                    //-if (ans == true)
+                    //-{
+                    modal.Hide();
                     if (dbPrivilege.Equals("boss"))
                     {
                         //Is this line being executed?
@@ -219,12 +210,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
 
                 }
-            else if (!OTPinput.Equals(randomNo))
-            {
-                Label1.Text = "Email and/or password is wrong";
-                label1b.Visible = true;
-                //remain on page
-            }
+                else if (!OTPinput.Equals(dbRandomNo))
+                {
+                    Label1.Text = "Email and/or password is wrong";
+                    label1b.Visible = true;
+                    //remain on page
+                }
             }
         }
 
