@@ -26,12 +26,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
             //    // Generate a new 12-character password with 1 non-alphanumeric character.
             string password = System.Web.Security.Membership.GeneratePassword(24, 0);
 
-            //    string query = "INSERT INTO Accounts (randomNumber)";
-            //    query += "VALUES (@randomNumber)" + "WHERE userid=;
+            //    string query = "INSERT INTO Accounts (@randomEmailString)";
+            //    query += "VALUES (@randomEmailString)" + "WHERE userid=;
 
             //    SqlCommand myCommand = new SqlCommand(query, myConnection);
 
-            //    myCommand.Parameters.AddWithValue("@randomNumber", password);
+            //    myCommand.Parameters.AddWithValue("@randomEmailString", password);
 
 
             //    myConnection.Open();
