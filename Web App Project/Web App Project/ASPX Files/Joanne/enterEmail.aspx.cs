@@ -6,10 +6,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-using Google.Apis.Gmail.v1;
-using Google.Apis.Gmail.v1.Data;
+//using Google.Apis.Gmail.v1;
+//using Google.Apis.Gmail.v1.Data;
 using System.IO;
 using System.Net.Mail;
+using System.Web.UI.HtmlControls;
 
 namespace Web_App_Project.ASPX_Files.Joanne
 {
@@ -93,12 +94,16 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 }
                 else if (inputEmail==dbEmail)
                 {
-                    Message email = new Message();
-                    GmailService service = new GmailService();
+                    //Message email = new Message();
+                    //GmailService service = new GmailService();
                     //Label2.Text = "Email exists";
                     //SendMessage(service, "limruoqijoanne54@gmail.com", email);
-                    Response.Redirect("emailSent.aspx");
+                    //Response.Redirect("emailSent.aspx");
 
+
+
+                    Response.AppendHeader("Refresh", "5;url=VerifyEmailReset.aspx");
+                    Label3.Text = "Email sent. You will now be redirected to verfiy code in 5 seconds";
                 }
 
             }

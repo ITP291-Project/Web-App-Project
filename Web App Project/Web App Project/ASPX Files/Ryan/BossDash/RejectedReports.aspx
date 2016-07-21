@@ -68,7 +68,6 @@
                     <br />
                     <asp:Label ID="Label6" runat="server" ForeColor="Black" Text="Photo"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Image ID="Image1" runat="server" />
                     <br />
                     <br />
                     <asp:Button ID="Button6" runat="server" ForeColor="Black" OnClick="Button6_Click" Text="Approve" Width="223px" />

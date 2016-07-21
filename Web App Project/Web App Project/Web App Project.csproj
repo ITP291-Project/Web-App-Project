@@ -119,6 +119,7 @@
     <Content Include="ASPX Files\Joanne\TestHash.aspx" />
     <Content Include="ASPX Files\Joanne\updatedText.aspx" />
     <Content Include="ASPX Files\Joanne\updateParticulars.aspx" />
+    <Content Include="ASPX Files\Joanne\VerifyEmailReset.aspx" />
     <Content Include="ASPX Files\Joanne\viewParticulars.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\bossDash.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx" />
@@ -374,6 +375,13 @@
     </Compile>
     <Compile Include="ASPX Files\Joanne\updateParticulars.aspx.designer.cs">
       <DependentUpon>updateParticulars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX Files\Joanne\VerifyEmailReset.aspx.cs">
+      <DependentUpon>VerifyEmailReset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Joanne\VerifyEmailReset.aspx.designer.cs">
+      <DependentUpon>VerifyEmailReset.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPX Files\Joanne\viewParticulars.aspx.cs">
       <DependentUpon>viewParticulars.aspx</DependentUpon>

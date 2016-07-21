@@ -27,8 +27,12 @@
         <p>
             <asp:Button ID="Button1" runat="server" Style="color: black; margin-left: 650px" Text="Email Link!" Width="85px" OnClick="Button1_On" />
         </p>
+        <p>
+            <asp:Label ID="Label3" runat="server"  style="color: white; margin-left: 500px"></asp:Label>
+        </p>
         <p style="margin-left: 500px">
-            &nbsp;</p>
+            &nbsp;
+        </p>
     </body>
 </asp:Content>
 

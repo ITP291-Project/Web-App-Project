@@ -67,27 +67,6 @@ namespace Web_App_Project.ASPX_Files.Ryan.BossDash
                 TextBox3.Text = row.Cells[2].Text;
                 TextBox4.Text = row.Cells[3].Text;
                 TextBox5.Text = row.Cells[4].Text;
-
-                myConnection.Open();
-
-                string caseno = row.Cells[0].Text;
-                string Scmd = "SELECT Photo FROM Report WHERE CaseNo='" + caseno + "'";
-                SqlCommand cmd = new SqlCommand(Scmd, myConnection);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                reader.Read();
-
-                if (reader.HasRows)
-                {
-                    Label1.Text = reader[0].ToString();
-                    byte[] imagem = (byte[])(reader[1]);
-                    string base64String = Convert.ToBase64String(imagem);
-
-                    MemoryStream ms = new MemoryStream(imagem);
-
-                    Image1.ImageUrl = String.Format("data:image/jpg;base64,{0}", base64String);
-                }
             }
         }
 

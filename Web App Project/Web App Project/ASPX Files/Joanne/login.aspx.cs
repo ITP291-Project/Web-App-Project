@@ -30,13 +30,18 @@ namespace Web_App_Project.ASPX_Files.Joanne
             {
                 using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
                 {
+                    string[] saAllowedCharacters = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+
+                    Byte[] salt = new byte[8];
                     //get email input and password input store into variables
                     String inputemail = TextBox1.Text;
                     String inputpassword = TextBox2.Text;
-                    String randomNo = "1234";
+                    String passwordHash = SimpleHash.ComputeHash(inputpassword, "SHA512", salt);
+                    //String randomNo = "1234";
+                    String randomNo = GenerateRandomOTP(8, saAllowedCharacters);
                     String OTPinput = textbox20.Text;
 
-                    string query = "SELECT [Email], [Password], [Privilege] FROM [Accounts] WHERE [Email]='" + inputemail + "'";
+                    string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
                     myConnection.Open();
@@ -53,11 +58,11 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
                     {
-                        //dbMobile = reader["TelNo"].ToString(); //read mobile
+                        dbMobile = reader["TelNo"].ToString(); //read mobile
                         dbEmail = reader["Email"].ToString(); //read db email
                         dbPassword = reader["Password"].ToString(); //read db password                
                         dbPrivilege = reader["Privilege"].ToString(); //read db privilege
-                        //dbOrganization = reader["Organization"].ToString(); //read db 
+                        dbOrganization = reader["Organization"].ToString(); //read db 
                         dbOrganization = "SPCA";
                     }
 
@@ -70,22 +75,26 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     System.Diagnostics.Debug.WriteLine("");
 
                     //Replace the if else with the hash check method!
+                    bool hashresult = SimpleHash.VerifyHash(inputpassword, "SHA512", dbPassword);
 
                     //check if the email they input is the same as the email in db
                     //check if the password they input is the same as the password in db                    
                     //if validated, means its a valid user. 
-                    if (dbEmail.Equals(inputemail) && dbPassword.Equals(inputpassword))
-                    {
+
+                    if (dbEmail.Equals(inputemail) && hashresult == true)
+                    { 
+                        String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+
+                        //String url = "www.google.com";
+                        System.Diagnostics.Process.Start(url);
+
                         ans = true;
-                        //modal.Show(); - AJAX has no validation
+                        modal.Show(); //- AJAX has no validation
 
                         if (OTPinput.Equals(randomNo))
                         {
                             modal.Hide();
-                            //String url = "www.google.com";
-                            //string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
-                            //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
-
+                          
                             //Is this line being executed?
                             System.Diagnostics.Debug.WriteLine("Valid User"); //print out valid user
                             Session["Privilege"] = dbPrivilege; //make that particular privilege the session
@@ -114,6 +123,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                             else
                             {
+                                modal.Hide();
                                 Label1.Text = "Email and/or password is wrong";
 
                                 myConnection.Close();
@@ -127,9 +137,11 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     }
                     else
                     {
+                        modal.TargetControlID = "Button1";
+                        modal.Hide();
                         Label1.Text = "Email and/or password is wrong";
-                        label1b.Visible = true;
-                        //modal.Hide();
+                        //label1b.Visible = true;
+                        
                     }
                 }
             }
@@ -137,31 +149,110 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
         protected void submit_click(object sender, EventArgs e)
         {
-            String randomNo = "1234";
-            String OTPinput = textbox20.Text;
+            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            {
 
-            //if (OTPinput.Equals(randomNo) && ans == true)
-            if (OTPinput.Equals(randomNo))
+                string[] saAllowedCharacters = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+                Byte[] salt = new byte[8];
+                //get email input and password input store into variables
+                String inputemail = TextBox1.Text;
+                //String randomNo = "1234";
+                String randomNo = GenerateRandomOTP(8, saAllowedCharacters);
+                String OTPinput = textbox20.Text;
+
+                string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
+
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                myConnection.Open();
+                myCommand.CommandType = CommandType.Text;
+                SqlDataReader reader = myCommand.ExecuteReader();
+
+
+                String dbEmail = "";
+                String dbPassword = "";
+                String dbPrivilege = "";
+                String dbMobile = "";
+
+                if (reader.Read())
+                {
+                    dbMobile = reader["TelNo"].ToString(); //read mobile
+                    dbEmail = reader["Email"].ToString(); //read db email
+                    dbPassword = reader["Password"].ToString(); //read db password                
+                    dbPrivilege = reader["Privilege"].ToString(); //read db privilege
+                }
+
+
+                //if (OTPinput.Equals(randomNo) && ans == true)
+                if (OTPinput.Equals(randomNo))
             {
                 //-if (ans == true)
                 //-{
+                //login.ModalPopupExtender.TargetControlID = "Button1";
                 modal.Hide();
-                Button1_Click(sender, e);
-                String url = "www.google.com";
-                //string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
-                //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
-                System.Diagnostics.Process.Start(url);
-                //-}
-                //else if (ans == false)
-                //{
-                //}
-            }
+                    if (dbPrivilege.Equals("boss"))
+                    {
+                        //Is this line being executed?
+                        System.Diagnostics.Debug.WriteLine("User is boss");
+                        //modal.Show();
+                        Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+                    }
+
+                    //if privilege is boss, redirect to volunteer page 
+                    else if (dbPrivilege.Equals("volunteer"))
+                    {
+                        //Is this line being executed?
+                        System.Diagnostics.Debug.WriteLine("User is volunteer");
+
+                        Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                    }
+
+                    else
+                    {
+                        modal.Hide();
+                        Label1.Text = "Email and/or password is wrong";
+
+                        myConnection.Close();
+                    }
+                    //Resend_Click(sender, e);
+                    //Button1_Click(sender, e);
+                    //string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
+
+                }
             else if (!OTPinput.Equals(randomNo))
             {
                 Label1.Text = "Email and/or password is wrong";
                 label1b.Visible = true;
                 //remain on page
             }
+            }
+        }
+
+
+        private string GenerateRandomOTP(int iOTPLength, string[] saAllowedCharacters)
+
+        {
+
+            string sOTP = String.Empty;
+
+            string sTempChars = String.Empty;
+
+            Random rand = new Random();
+
+            for (int i = 0; i < iOTPLength; i++)
+
+            {
+
+                int p = rand.Next(0, saAllowedCharacters.Length);
+
+                sTempChars = saAllowedCharacters[rand.Next(0, saAllowedCharacters.Length)];
+
+                sOTP += sTempChars;
+
+            }
+
+            return sOTP;
+
         }
 
         protected void Resend_Click(object sender, EventArgs e)

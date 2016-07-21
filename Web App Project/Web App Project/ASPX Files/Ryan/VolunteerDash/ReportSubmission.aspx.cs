@@ -33,7 +33,7 @@ namespace Web_App_Project.Ryan.Volunteer
         protected void FTPUpload()
         {
             //Store username so that user folder will be created and/or written to
-            string username = Session["username"].ToString();
+            //string username = Session["username"].ToString();
             string caseNo = TextBox1.Text;
 
             //FTP Server URL.
@@ -68,6 +68,7 @@ namespace Web_App_Project.Ryan.Volunteer
                 request.UseBinary = true;
                 request.ServicePoint.ConnectionLimit = fileBytes.Length;
                 request.EnableSsl = false;
+                // Still need to Enable SSL
 
                 using (Stream requestStream = request.GetRequestStream())
                 {
