@@ -52,8 +52,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     myCommand1.CommandType = CommandType.Text;
                     SqlDataReader reader = myCommand.ExecuteReader();
                     
-                    //SqlDataReader reader1 = myCommand1.ExecuteReader();
-
                     String dbEmail = "";
                     String dbPassword = "";
                     String dbPrivilege = "";
@@ -89,9 +87,9 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                     if (dbEmail.Equals(inputemail) && hashresult == true)
                     {
-                        String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+                        //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
 
-                        //String url = "www.google.com";
+                        String url = "www.google.com";
                         System.Diagnostics.Process.Start(url);
 
                         ans = true;
@@ -262,7 +260,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     dbRandomNo = reader["randomNo"].ToString();
                 }
 
-                String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + dbRandomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+                //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + dbRandomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+                String url = "www.google.com";
                 System.Diagnostics.Process.Start(url);
             }
         }

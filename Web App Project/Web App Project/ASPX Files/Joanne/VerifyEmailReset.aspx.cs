@@ -21,8 +21,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
             //verify if input is equals to random generated number sent to person's email
 
             String codeInput = TextBox1.Text;
-            string userid = Session["username"].ToString();
-
+            //string userid = Session["username"].ToString();
+            String userid = "mae.th@gmail.com";
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 string query = "SELECT * FROM [Accounts] WHERE [Email]='" + userid + "'";
@@ -44,7 +44,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 }
                 else
                 {
-                    Label2.Text = "Wrong code";
+                    Label3.Text = "Wrong code";
                 }
             }
 

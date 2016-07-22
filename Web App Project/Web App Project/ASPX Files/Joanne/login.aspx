@@ -13,11 +13,12 @@
         }
 
         .popup {
-            background-color: white;
+            background-color: lightblue;
             color: black;
             opacity: 1;
             width: 300px;
-            height: 150px;
+            height: 200px;
+            justify-content: center;
         }
     </style>
     <head>
@@ -75,29 +76,31 @@
                 <asp:Button ID="btnPopup" runat="server" Text="PopUp" Style="display: none" />
                 <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" />
                 <%-- POPUP BOX --%>
-                <asp:Panel ID="panel" runat="server" CssClass="popup">
-                    <asp:UpdatePanel ID="UpdatePanel" runat="server">
-                        <ContentTemplate>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                    <asp:Panel ID="panel" runat="server" CssClass="popup">
+                        <asp:UpdatePanel ID="UpdatePanel" runat="server">
+                            <ContentTemplate>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                              <div style="position: absolute; margin-bottom: 240px; margin-left: 250px;">
-                                 <asp:Button ID="Button2" runat="server" Height="20px" Text="Button" Width="10px" /></div>
-                            &nbsp;<br />
-                            <asp:Label runat="server" Text="Enter your code:" ID="label1a"></asp:Label>
-                            <br />
-                            <asp:TextBox runat="server" ID="textbox20" Style="color: black"></asp:TextBox>
-                            <br />
-                            <asp:Label runat="server" Visible="false" ID="label1b" Style="color: black">Wrong Code</asp:Label>
-                            <br />
-                            <br />
-                            <%-- Button to SUBMIT code --%>
-                            <div style="color: black">
-                                <asp:Button runat="server" Text="Submit" ID="submit" BorderColor="Black" ForeColor="Black" OnClick="submit_click" CausesValidation="false" />
-                                <asp:Button runat="server" Text="Resend Code" ID="resend" BorderColor="Black" ForeColor="Black" OnClick="Resend_Click" CausesValidation="false" />
-                            </div>
-                            <%--<asp:Button runat="server" Text="open" ID="button" OnClick="submit_click" Style="height: 26px" />--%>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-                </asp:Panel>
+                                 <asp:Button ID="Button2" runat="server" Height="20px" Text="Button" Width="10px" />
+                                </div>
+                                &nbsp;<br />
+                                <asp:Label runat="server" Text="Enter your code:" style="align-content: center" ID="label1a"></asp:Label>
+                                <br />
+                                <asp:TextBox runat="server" ID="textbox20" Style="color: black; align-content:center"></asp:TextBox>
+                                <br />
+                                <asp:Label runat="server" Visible="false" ID="label1b" Style="color: black; align-content:center">Wrong Code</asp:Label>
+                                <br />
+                                <br />
+                                <%-- Button to SUBMIT code --%>
+                                <div style="color: black">
+                                    <asp:Button runat="server" Text="Submit" ID="submit" BorderColor="Black" ForeColor="Black" style="align-content: center" OnClick="submit_click" CausesValidation="false" />
+                                    <asp:Button runat="server" Text="Resend Code" ID="resend" BorderColor="Black" ForeColor="Black" style="align-content: center" OnClick="Resend_Click" CausesValidation="false" />
+                                </div>
+                                <%--<asp:Button runat="server" Text="open" ID="button" OnClick="submit_click" Style="height: 26px" />--%>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </asp:Panel>
 
             </div>
 
