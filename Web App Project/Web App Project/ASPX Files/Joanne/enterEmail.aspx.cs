@@ -74,12 +74,16 @@ namespace Web_App_Project.ASPX_Files.Joanne
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 String inputEmail = TextBox1.Text;
+                // Generate a new 12-character password with 1 non-alphanumeric character.
+                String code = System.Web.Security.Membership.GeneratePassword(24, 0);
+
 
                 string query = "SELECT [Email] FROM [Accounts] WHERE [Email]='" + inputEmail + "'";
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
                 myConnection.Open();
                 myCommand.CommandType = CommandType.Text;
                 SqlDataReader reader = myCommand.ExecuteReader();
+
 
                 String dbEmail = "";
 
@@ -92,21 +96,32 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 {
                     Label2.Text = "Email does not exist";
                 }
-                else if (inputEmail==dbEmail)
+                else if (inputEmail == dbEmail)
                 {
+                    Label2.Text = "";
+                    Response.AppendHeader("Refresh", "5;url=VerifyEmailReset.aspx");
+                    Label3.Text = "Email sent. You will now be redirected to verfiy code in 5 seconds";
+
                     //Message email = new Message();
                     //GmailService service = new GmailService();
                     //Label2.Text = "Email exists";
                     //SendMessage(service, "limruoqijoanne54@gmail.com", email);
                     //Response.Redirect("emailSent.aspx");
 
-
-
-                    Response.AppendHeader("Refresh", "5;url=VerifyEmailReset.aspx");
-                    Label3.Text = "Email sent. You will now be redirected to verfiy code in 5 seconds";
+                    string query1 = "UPDATE Accounts SET randomEmailString=@randomEmailString WHERE email='" + inputEmail + "'";
+                    SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
+                    myCommand1.CommandType = CommandType.Text;
+                    myCommand1.Parameters.AddWithValue("@randomEmailString", code);
+                    
                 }
 
             }
+        }
+
+        public static string GeneratePassword(int length, int numberOfNonAlphanumericCharacters)
+        {
+            String s = "";
+            return s;
         }
     }
 }

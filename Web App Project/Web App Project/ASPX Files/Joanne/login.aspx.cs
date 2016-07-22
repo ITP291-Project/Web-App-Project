@@ -43,6 +43,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                     string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
                     string query1 = "INSERT INTO Accounts VALUES(" + "@randomNo)" + "WHERE [Email] = '" + inputemail + "'";
+                    //isit update instead of insert??
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
                     SqlCommand myCommand1 = new SqlCommand(query1, myConnection);

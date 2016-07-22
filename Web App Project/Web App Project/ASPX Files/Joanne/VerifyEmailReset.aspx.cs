@@ -18,36 +18,36 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
-            //{
-                //verify if input is equals to random generated number sent to person's email
+            //verify if input is equals to random generated number sent to person's email
 
-            String pwdInput = TextBox1.Text;
-            //    // Generate a new 12-character password with 1 non-alphanumeric character.
-            string password = System.Web.Security.Membership.GeneratePassword(24, 0);
+            String codeInput = TextBox1.Text;
+            string userid = Session["username"].ToString();
 
-            //    string query = "INSERT INTO Accounts (@randomEmailString)";
-            //    query += "VALUES (@randomEmailString)" + "WHERE userid=;
+            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            {
+                string query = "SELECT * FROM [Accounts] WHERE [Email]='" + userid + "'";
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                myConnection.Open();
+                myCommand.CommandType = CommandType.Text;
+                SqlDataReader reader = myCommand.ExecuteReader();
 
-            //    SqlCommand myCommand = new SqlCommand(query, myConnection);
+                String dbCode = "";
+                if (reader.Read())
+                {
+                    dbCode = reader["randomEmailString"].ToString();
+                }
 
-            //    myCommand.Parameters.AddWithValue("@randomEmailString", password);
+                if (dbCode.Equals(codeInput))
+                {
+                    Response.AppendHeader("Refresh", "5;url=VerifyEmailReset.aspx");
+                    Label3.Text = "Your email has been verified. You will be redirected to reset password page in 5 seconds.";
+                }
+                else
+                {
+                    Label2.Text = "Wrong code";
+                }
+            }
 
-
-            //    myConnection.Open();
-            //    myCommand.ExecuteNonQuery();
-            //    myConnection.Close();
-
-
-            //    //print out the password and replace label3 to test :)
-            Label3.Text = password;
-            //}
-        }
-
-        public static string GeneratePassword(int length, int numberOfNonAlphanumericCharacters)
-        {
-            String s = "";
-            return s;
         }
     }
 }
