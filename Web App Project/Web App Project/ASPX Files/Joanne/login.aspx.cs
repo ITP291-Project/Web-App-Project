@@ -38,12 +38,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String inputpassword = TextBox2.Text;
                     String passwordHash = SimpleHash.ComputeHash(inputpassword, "SHA512", salt);
                     //String randomNo = "1234";
-                    String randomNo = GenerateRandomOTP(8, saAllowedCharacters);
+                    String randomNo = GenerateRandomOTP(6, saAllowedCharacters);
                     String OTPinput = textbox20.Text;
 
                     string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
-                    string query1 = "INSERT INTO Accounts VALUES(" + "@randomNo)" + "WHERE [Email] = '" + inputemail + "'";
-                    //isit update instead of insert??
+                    //string query1 = "INSERT INTO Accounts VALUES(" + "@randomNo)" + "WHERE [Email] = '" + inputemail + "'";
+                    string query1 = "UPDATE [Accounts] SET [randomNo] = @randomNo where [Email] = @inputemail";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
                     SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
@@ -51,9 +51,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     myCommand.CommandType = CommandType.Text;
                     myCommand1.CommandType = CommandType.Text;
                     SqlDataReader reader = myCommand.ExecuteReader();
-                    SqlDataReader reader1 = myCommand1.ExecuteReader();
-
-                    myCommand1.Parameters.AddWithValue("@randomNo", randomNo);
+                    
+                    //SqlDataReader reader1 = myCommand1.ExecuteReader();
 
                     String dbEmail = "";
                     String dbPassword = "";
@@ -74,6 +73,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         dbRandomNo = reader["randomNo"].ToString();
                     }
 
+                    myConnection.Close();
+                    myConnection.Open();
+
+                    myCommand1.Parameters.AddWithValue("@randomNo", randomNo);
+                    myCommand1.Parameters.AddWithValue("@inputemail", inputemail);
+                    myCommand1.ExecuteNonQuery();
 
                     //Replace the if else with the hash check method!
                     bool hashresult = SimpleHash.VerifyHash(inputpassword, "SHA512", dbPassword);
