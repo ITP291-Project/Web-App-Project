@@ -6,18 +6,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <style type="text/css">
         .background {
-            background-color:grey;
-            opacity:0.8;
-            filter:alpha(opacity=80);
+            background-color: grey;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
             z-index: 1000;
         }
 
         .popup {
-            background-color:white;
-            color:black;
-            opacity:1;
-            width:300px;
-            height:150px;
+            background-color: white;
+            color: black;
+            opacity: 1;
+            width: 300px;
+            height: 150px;
         }
     </style>
     <head>
@@ -69,39 +69,40 @@
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
                 <ajaxToolkit:ModalPopupExtender runat="server" ID="modal" TargetControlID="btnPopup" BackgroundCssClass="background" PopupControlID="panel" CancelControlID="Button2"></ajaxToolkit:ModalPopupExtender>
-                
+
                 <%--<asp:LinkButton ID="lnkDummy" runat="server"></asp:LinkButton>--%>
                 <%-- Button to LOGIN --%>
-               <asp:Button ID="btnPopup" runat="server" Text="PopUp" style = "display: none"/>
-                 <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" />
+                <asp:Button ID="btnPopup" runat="server" Text="PopUp" Style="display: none" />
+                <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" />
                 <%-- POPUP BOX --%>
                 <asp:Panel ID="panel" runat="server" CssClass="popup">
-                     <asp:UpdatePanel ID="UpdatePanel" runat="server">
-                         <ContentTemplate>
-                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                             <div style="position:absolute; margin-bottom: 240px; margin-left:250px;"><asp:Button ID="Button2" runat="server" Height="20px" Text="Button" Width="10px" /></div>
-                             &nbsp;<br />
-                        <asp:Label runat="server" Text="Enter your code:" ID="label1a"></asp:Label>
-                             <br />
-                        <asp:TextBox runat="server" ID="textbox20" Style="color: black"></asp:TextBox>
-                        <br />
-                        <asp:Label runat="server" Visible="false" ID="label1b" style="color: black">Wrong Code</asp:Label>
-                        <br />
-                        <br />
-                             <%-- Button to SUBMIT code --%>
-                             <div style="color: black">
-                                 <asp:Button runat="server" Text="Submit" ID="submit" BorderColor="Black" ForeColor="Black" OnClick="submit_click" CausesValidation="false"/>
-                                 <asp:Button runat="server" Text="Resend Code" ID="resend" BorderColor="Black" ForeColor="Black" OnClick="Resend_Click" CausesValidation="false"/>
-                             </div>
-                             <%--<asp:Button runat="server" Text="open" ID="button" OnClick="submit_click" Style="height: 26px" />--%>
-                             </ContentTemplate>
-                     </asp:UpdatePanel>
+                    <asp:UpdatePanel ID="UpdatePanel" runat="server">
+                        <ContentTemplate>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                             <div style="position: absolute; margin-bottom: 240px; margin-left: 250px;">
+                                 <asp:Button ID="Button2" runat="server" Height="20px" Text="Button" Width="10px" /></div>
+                            &nbsp;<br />
+                            <asp:Label runat="server" Text="Enter your code:" ID="label1a"></asp:Label>
+                            <br />
+                            <asp:TextBox runat="server" ID="textbox20" Style="color: black"></asp:TextBox>
+                            <br />
+                            <asp:Label runat="server" Visible="false" ID="label1b" Style="color: black">Wrong Code</asp:Label>
+                            <br />
+                            <br />
+                            <%-- Button to SUBMIT code --%>
+                            <div style="color: black">
+                                <asp:Button runat="server" Text="Submit" ID="submit" BorderColor="Black" ForeColor="Black" OnClick="submit_click" CausesValidation="false" />
+                                <asp:Button runat="server" Text="Resend Code" ID="resend" BorderColor="Black" ForeColor="Black" OnClick="Resend_Click" CausesValidation="false" />
+                            </div>
+                            <%--<asp:Button runat="server" Text="open" ID="button" OnClick="submit_click" Style="height: 26px" />--%>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                 </asp:Panel>
 
             </div>
-            
-            <div class="form-group text-left" >
-               
+
+            <div class="form-group text-left">
+
                 <a href="enterEmail.aspx" data-target="#pwdModal" data-toggle="modal" style="color: white">Forget password?</a>
                 <br />
                 <br />

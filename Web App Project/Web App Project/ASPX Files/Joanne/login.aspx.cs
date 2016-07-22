@@ -30,7 +30,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
             {
                 using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
                 {
-                    string[] saAllowedCharacters = {"1" , "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+                    string[] saAllowedCharacters = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
 
                     Byte[] salt = new byte[8];
                     //get email input and password input store into variables
@@ -73,7 +73,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         dbRandomNo = reader["randomNo"].ToString();
                     }
 
-     
+
                     //Replace the if else with the hash check method!
                     bool hashresult = SimpleHash.VerifyHash(inputpassword, "SHA512", dbPassword);
 
@@ -215,31 +215,22 @@ namespace Web_App_Project.ASPX_Files.Joanne
             }
         }
 
-
+        //generate otp code method
         private string GenerateRandomOTP(int iOTPLength, string[] saAllowedCharacters)
 
         {
-
             string sOTP = String.Empty;
-
             string sTempChars = String.Empty;
-
             Random rand = new Random();
 
             for (int i = 0; i < iOTPLength; i++)
-
             {
-
                 int p = rand.Next(0, saAllowedCharacters.Length);
-
                 sTempChars = saAllowedCharacters[rand.Next(0, saAllowedCharacters.Length)];
-
                 sOTP += sTempChars;
-
             }
 
             return sOTP;
-
         }
 
         protected void Resend_Click(object sender, EventArgs e)
@@ -258,16 +249,17 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 SqlDataReader reader = myCommand.ExecuteReader();
 
                 String dbMobile = "";
-           
+                String dbRandomNo = "";
                 if (reader.Read())
                 {
                     dbMobile = reader["TelNo"].ToString();
+                    dbRandomNo = reader["randomNo"].ToString();
                 }
-            
-            String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
-            System.Diagnostics.Process.Start(url);
-        }
+
+                String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + dbRandomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+                System.Diagnostics.Process.Start(url);
+            }
         }
 
     }
- }
+}

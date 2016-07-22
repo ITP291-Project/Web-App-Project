@@ -20,7 +20,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
         {
             //using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             //{
-            //    //verify if input is equals to random generated number sent to person's email
+                //verify if input is equals to random generated number sent to person's email
 
             String pwdInput = TextBox1.Text;
             //    // Generate a new 12-character password with 1 non-alphanumeric character.
