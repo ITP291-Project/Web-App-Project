@@ -13,14 +13,14 @@ namespace Web_App_Project.Ryan
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
+            /*if (Session["username"] == null)
             {
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
             }
             else if (Session["Privilege"].ToString() == "volunteer")
             {
                 Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
-            }
+            }*/
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -41,11 +41,6 @@ namespace Web_App_Project.Ryan
         protected void Button5_Click(object sender, EventArgs e)
         {
             Response.Redirect("Roster.aspx");
-        }
-
-        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            e.Row.Cells[4].Visible = false;
         }
 
         protected void OnRowDataBound(object sender, System.Web.UI.WebControls.GridViewRowEventArgs e)

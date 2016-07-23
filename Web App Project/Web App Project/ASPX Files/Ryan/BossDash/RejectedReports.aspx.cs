@@ -43,10 +43,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.BossDash
             Response.Redirect("Roster.aspx");
         }
 
-        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            e.Row.Cells[4].Visible = false;
-        }
+        
 
         protected void OnRowDataBound(object sender, System.Web.UI.WebControls.GridViewRowEventArgs e)
         {

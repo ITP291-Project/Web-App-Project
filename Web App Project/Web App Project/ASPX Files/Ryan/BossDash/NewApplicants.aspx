@@ -122,9 +122,9 @@
                     <asp:TextBox ID="TextBox11" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Button ID="Button6" runat="server" Text="Approve" Width="255px" OnClick="Button6_Click" />
+                    <asp:Button ID="Button6" runat="server" Text="Approve" Width="255px" OnClick="Button6_Click" ForeColor="Black" />
 &nbsp;&nbsp;
-                    <asp:Button ID="Button7" runat="server" Text="Reject" Width="255px" OnClick="Button7_Click" />
+                    <asp:Button ID="Button7" runat="server" Text="Reject" Width="255px" OnClick="Button7_Click" ForeColor="Black" />
                 </div>
             <div id="right">
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" Text="Approved Reports" ForeColor="Black" Height="110px" OnClick="Button1_Click" />

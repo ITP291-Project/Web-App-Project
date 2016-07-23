@@ -11,7 +11,6 @@
                             <asp:BoundField DataField="Duration" HeaderText="Duration" SortExpression="Duration" />
                             <asp:BoundField DataField="TypeofVolunteer" HeaderText="TypeofVolunteer" SortExpression="TypeofVolunteer" />
                             <asp:BoundField DataField="AdditionalFeedback" HeaderText="AdditionalFeedback" SortExpression="AdditionalFeedback" />
-                            <asp:BoundField DataField="IsDraft" HeaderText="IsDraft" SortExpression="IsDraft" />
                             <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
                             <asp:TemplateField>
                                 <ItemTemplate>
@@ -70,7 +69,7 @@
                     <br />
                     <asp:Label ID="Label6" runat="server" ForeColor="Black" Text="Photo"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="Download Photo" Width="255px" />
+                    <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="Download Photo" Width="255px" ForeColor="Black" />
                     <br />
                     <br />
                     <asp:Button ID="Button6" runat="server" ForeColor="Black" OnClick="Button6_Click" Text="Approve" Width="223px" />
