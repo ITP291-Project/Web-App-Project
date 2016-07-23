@@ -5,13 +5,13 @@
             <div id="content">
                 <div id="left">
                     Testing text
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CaseNo" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" OnSelectedIndexChanged="OnSelectedIndexChanged" OnRowDataBound="GridView1_RowDataBound">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CaseNo" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" OnSelectedIndexChanged="OnSelectedIndexChanged">
                         <Columns>
-                            <asp:BoundField DataField="CaseNo" HeaderText="Case Number" ReadOnly="True" SortExpression="CaseNo" />
+                            <asp:BoundField DataField="CaseNo" HeaderText="CaseNo" ReadOnly="True" SortExpression="CaseNo" />
                             <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
-                            <asp:BoundField DataField="Duration" HeaderText="Duration of Visit" SortExpression="Duration" />
-                            <asp:BoundField DataField="TypeofVolunteer" HeaderText="Type of Volunteer" SortExpression="TypeofVolunteer" />
-                            <asp:BoundField DataField="AdditionalFeedback" HeaderText="Additional Feedback" SortExpression="AdditionalFeedback" />
+                            <asp:BoundField DataField="Duration" HeaderText="Duration" SortExpression="Duration" />
+                            <asp:BoundField DataField="TypeofVolunteer" HeaderText="TypeofVolunteer" SortExpression="TypeofVolunteer" />
+                            <asp:BoundField DataField="AdditionalFeedback" HeaderText="AdditionalFeedback" SortExpression="AdditionalFeedback" />
                             <asp:TemplateField>
                                 <ItemTemplate>
                                     <asp:LinkButton Text="Select" ID="lnkSelect" runat="server" CommandName="Select" />
@@ -19,7 +19,7 @@
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Report] WHERE [CaseNo] = @CaseNo" InsertCommand="INSERT INTO [Report] ([CaseNo], [Date], [Duration], [TypeofVolunteer], [AdditionalFeedback], [IsDraft]) VALUES (@CaseNo, @Date, @Duration, @TypeofVolunteer, @AdditionalFeedback, @IsDraft)" ProviderName="<%$ ConnectionStrings:localdbConnectionString1.ProviderName %>" SelectCommand="SELECT [CaseNo], [Date], [Duration], [TypeofVolunteer], [Photo], [AdditionalFeedback], [IsDraft] FROM [Report] WHERE [IsDraft] = 'true'" UpdateCommand="UPDATE [Report] SET [Date] = @Date, [Duration] = @Duration, [TypeofVolunteer] = @TypeofVolunteer, [AdditionalFeedback] = @AdditionalFeedback, [IsDraft] = @IsDraft WHERE [CaseNo] = @CaseNo">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Report] WHERE [CaseNo] = @CaseNo" InsertCommand="INSERT INTO [Report] ([CaseNo], [Date], [Duration], [TypeofVolunteer], [AdditionalFeedback], [IsDraft]) VALUES (@CaseNo, @Date, @Duration, @TypeofVolunteer, @AdditionalFeedback, @IsDraft)" SelectCommand="SELECT [CaseNo], [Date], [Duration], [TypeofVolunteer], [AdditionalFeedback], [IsDraft] FROM [Report] WHERE [IsDraft] = 'true'" UpdateCommand="UPDATE [Report] SET [Date] = @Date, [Duration] = @Duration, [TypeofVolunteer] = @TypeofVolunteer, [AdditionalFeedback] = @AdditionalFeedback, [IsDraft] = @IsDraft WHERE [CaseNo] = @CaseNo">
                         <DeleteParameters>
                             <asp:Parameter Name="CaseNo" Type="String" />
                         </DeleteParameters>
@@ -80,9 +80,9 @@
                     <asp:TextBox ID="TextBox5" runat="server" Height="100px" Width="255px"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Submit" Width="225px" />
+                    <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Submit" Width="225px" ForeColor="Black" />
 &nbsp;
-                    <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Update Draft" Width="255px" />
+                    <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Update Draft" Width="255px" ForeColor="Black" />
                 </div>
             <div id="right">
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" />

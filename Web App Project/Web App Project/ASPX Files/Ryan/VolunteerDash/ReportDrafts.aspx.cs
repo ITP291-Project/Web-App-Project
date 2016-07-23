@@ -26,14 +26,6 @@ namespace Web_App_Project.Ryan.Volunteer
             Calendar1.Visible = false;
         }
 
-        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            e.Row.Cells[1].Visible = false;
-            e.Row.Cells[2].Visible = false;
-            e.Row.Cells[3].Visible = false;
-            e.Row.Cells[4].Visible = false;
-        }
-
         protected void OnRowDataBound(object sender, System.Web.UI.WebControls.GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
