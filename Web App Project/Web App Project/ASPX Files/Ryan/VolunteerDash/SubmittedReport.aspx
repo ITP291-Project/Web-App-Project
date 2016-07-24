@@ -70,13 +70,16 @@
                     <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Download Photo" Width="255px" />
                 </div>
             <div id="right">
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button5" runat="server" Text="View Particulars" Width="225px" ForeColor="Black" OnClick="Button5_Click" />
                 <br />
                 <br />
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button2" runat="server" ForeColor="Black" Text="Choose Organization" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" OnClick="Button1_Click" />
                 <br />
                 <br />
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button2" runat="server" ForeColor="Black" Text="Choose Organization" Width="225px" OnClick="Button2_Click" />
+                <br />
+                <br />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" OnClick="Button3_Click" />
 
             </div>
                 </div>

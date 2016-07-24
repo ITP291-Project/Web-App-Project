@@ -90,5 +90,15 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
                 }
             }
         }
+
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/ASPX Files/Joanne/viewParticulars.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/ASPX Files/Seri/Rewards.aspx");
+        }
     }
 }

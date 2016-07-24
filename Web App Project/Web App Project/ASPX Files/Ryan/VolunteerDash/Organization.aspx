@@ -29,7 +29,10 @@
             
                 </div>
             <div id="right">
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button9" runat="server" Text="View Particulars" Width="225px" OnClick="Button9_Click" />
+                <br />
+                <br />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" OnClick="Button1_Click" />
                 <br />
                 <br />
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button2" runat="server" ForeColor="Black" Text="Timetable" Width="225px" OnClick="Button2_Click" />

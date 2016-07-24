@@ -13,47 +13,30 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["username"] == null)
+            {
+                Response.Redirect("/ASPX Files/Joanne/login.aspx");
+            }
+            else if (Session["Privilege"].ToString() == "boss")
+            {
+                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+            }
+
             Label3.Visible = false;
 
-            //String organization = Session["Organization"].ToString();
-            String organization = "Pioneer Generation";
+            String organization = Session["Organization"].ToString();
+            //String organization = "Pioneer Generation";
             TextBox1.Text = organization;
-        }
-
-        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
-            {
-                DataTable timeslot = new DataTable();
-                String selectedday = DropDownList2.Text;
-                String organization = Session["Organization"].ToString();
-
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT [Time] FROM [Timetable] WHERE " + selectedday + "='" + organization + "'", myConnection);
-                adapter.Fill(timeslot);
-
-                String query = "SELECT [Time] FROM [Timetable] WHERE " + selectedday + "='" + organization + "'";
-
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
-
-                myConnection.Open();
-                myCommand.ExecuteNonQuery();
-
-                DropDownList1.DataSource = timeslot;
-                DropDownList1.DataTextField = "Time";
-                DropDownList1.DataValueField = "Time";
-                DropDownList1.DataBind();
-
-                myConnection.Close();
-            }
         }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
-                //String username = Session["username"].ToString();
-                String username = "stupid@idiot.com";
+                String username = Session["username"].ToString();
+                //String username = "stupid@idiot.com";
                 String organization = TextBox1.Text;
+                String dbOrganization = Session["Organization"].ToString();
                 String day = DropDownList2.Text;
                 String time = DropDownList1.Text;
 
@@ -74,6 +57,26 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
             }
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/ASPX Files/Joanne/viewParticulars.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/ASPX Files/Seri/Rewards.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Organization.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ReportSubmission.aspx");
         }
     }
 }

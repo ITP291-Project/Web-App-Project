@@ -61,5 +61,25 @@ namespace Web_App_Project.Ryan.Volunteer
             string caseNo = TextBox1.Text;
             Response.Redirect("ftp://FTP:ftp@demonius.dlinkddns.com/" + caseNo + ".jpg");
         }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/ASPX Files/Joanne/viewParticulars.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/ASPX Files/Seri/Rewards.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Organization.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ReportSubmission.aspx");
+        }
     }
 }

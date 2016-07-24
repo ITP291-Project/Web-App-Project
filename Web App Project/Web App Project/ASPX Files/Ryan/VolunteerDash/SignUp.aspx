@@ -11,7 +11,7 @@
                     <br />
                     <asp:Label ID="Label2" runat="server" Text="Day" ForeColor="Black"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                    <asp:DropDownList ID="DropDownList2" runat="server" Width="255px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
+                    <asp:DropDownList ID="DropDownList2" runat="server" Width="255px">
                         <asp:ListItem>Monday</asp:ListItem>
                         <asp:ListItem>Tuesday</asp:ListItem>
                         <asp:ListItem>Wednesday</asp:ListItem>
@@ -47,16 +47,16 @@
                 </div>
 
             <div id="right">
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button5" runat="server" Text="Update Particulars" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button5" runat="server" Text="View Particulars" Width="225px" OnClick="Button5_Click" />
                 <br />
                 <br />
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" OnClick="Button1_Click" />
                 <br />
                 <br />
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button2" runat="server" ForeColor="Black" Text="Choose Organization" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button2" runat="server" ForeColor="Black" Text="Choose Organization" Width="225px" OnClick="Button2_Click" />
                 <br />
                 <br />
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" OnClick="Button3_Click" />
 
             </div>
     </div>
