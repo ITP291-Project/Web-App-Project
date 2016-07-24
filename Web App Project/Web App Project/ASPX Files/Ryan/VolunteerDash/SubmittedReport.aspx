@@ -67,7 +67,7 @@
                     <br />
                     <asp:Label ID="Label6" runat="server" ForeColor="Black" Text="Photo"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Download Photo" Width="255px" />
+                    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Download Photo" Width="255px" ForeColor="Black" />
                 </div>
             <div id="right">
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button5" runat="server" Text="View Particulars" Width="225px" ForeColor="Black" OnClick="Button5_Click" />

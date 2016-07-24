@@ -14,7 +14,6 @@
 &nbsp;<br />
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" Width="650px">
                     <Columns>
-                        <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" ReadOnly="True" />
                         <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
                         <asp:BoundField DataField="Monday" HeaderText="Monday" SortExpression="Monday" />
                         <asp:BoundField DataField="Tuesdau" HeaderText="Tuesdau" SortExpression="Tuesdau" />

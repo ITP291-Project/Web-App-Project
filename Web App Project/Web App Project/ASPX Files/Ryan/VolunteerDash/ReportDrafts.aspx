@@ -77,7 +77,7 @@
                     <br />
                     <asp:Label ID="Label5" runat="server" Text="Additional Feedback"></asp:Label>
 &nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox5" runat="server" Height="100px" Width="255px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox5" runat="server" Height="100px" Width="255px" ForeColor="Black"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Submit" Width="225px" ForeColor="Black" />
@@ -85,7 +85,7 @@
                     <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Update Draft" Width="255px" ForeColor="Black" />
                 </div>
             <div id="right">
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button9" runat="server" Text="View Particulars" Width="225px" OnClick="Button9_Click" />
+                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button9" runat="server" Text="View Particulars" Width="225px" OnClick="Button9_Click" ForeColor="Black" />
                 <br />
                 <br />
                 <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" OnClick="Button1_Click" />
