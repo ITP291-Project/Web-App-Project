@@ -10,7 +10,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
 {
     public class AES
     {
-        //Clear text is the param. The method will return 
+        //Clear text is the param. The method will return cipher text.
         public static string Encrypt(string clearText)
         {
             string EncryptionKey = "MAKV2SPBNI99212";

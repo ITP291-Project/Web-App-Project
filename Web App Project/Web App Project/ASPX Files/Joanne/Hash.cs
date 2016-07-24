@@ -13,13 +13,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
         /// This class generates and compares hashes using MD5, SHA1, SHA256, SHA384, 
         /// and SHA512 hashing algorithms. Before computing a hash, it appends a
         /// randomly generated salt to the plain text, and stores this salt appended
-        /// to the result. To verify another plain text value against the given hash,
-        /// this class will retrieve the salt value from the hash string and use it
-        /// when computing a new hash of the plain text. Appending a salt value to
-        /// the hash may not be the most efficient approach, so when using hashes in
-        /// a real-life application, you may choose to store them separately. You may
-        /// also opt to keep results as byte arrays instead of converting them into
-        /// base64-encoded strings.
+        /// to the result.
 
         public static string ComputeHash(string plainText,
                                          string hashAlgorithm,
@@ -61,9 +55,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
             for (int i = 0; i < saltBytes.Length; i++)
                 plainTextWithSaltBytes[plainTextBytes.Length + i] = saltBytes[i];
 
-            // Because we support multiple hashing algorithms, we must define
-            // hash object as a common (abstract) base class. We will specify the
-            // actual hashing algorithm class later during object creation.
+            // Because there is multiple hashing algorithms, we must define
+            // hash object as a common (abstract) base class.
             HashAlgorithm hash;
 
             // Make sure hashing algorithm name is specified.
@@ -179,83 +172,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
             // If the computed hash matches the specified hash,
             // the plain text value must be correct.
             return (hashValue == expectedHashString);
-        }
-    }
-
-    /// <summary>
-    /// Illustrates the use of the SimpleHash class.
-    /// </summary>
-    public class SimpleHashTest
-    {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main(string[] args)
-        {
-            string password = "myP@5sw0rd";  // original password
-            string wrongPassword = "password";    // wrong password
-
-            string passwordHashMD5 =
-                   SimpleHash.ComputeHash(password, "MD5", null);
-            string passwordHashSha1 =
-                   SimpleHash.ComputeHash(password, "SHA1", null);
-            string passwordHashSha256 =
-                   SimpleHash.ComputeHash(password, "SHA256", null);
-            string passwordHashSha384 =
-                   SimpleHash.ComputeHash(password, "SHA384", null);
-            string passwordHashSha512 =
-                   SimpleHash.ComputeHash(password, "SHA512", null);
-
-            Console.WriteLine("COMPUTING HASH VALUES\r\n");
-            Console.WriteLine("MD5   : {0}", passwordHashMD5);
-            Console.WriteLine("SHA1  : {0}", passwordHashSha1);
-            Console.WriteLine("SHA256: {0}", passwordHashSha256);
-            Console.WriteLine("SHA384: {0}", passwordHashSha384);
-            Console.WriteLine("SHA512: {0}", passwordHashSha512);
-            Console.WriteLine("");
-
-            Console.WriteLine("COMPARING PASSWORD HASHES\r\n");
-            Console.WriteLine("MD5    (good): {0}",
-                                SimpleHash.VerifyHash(
-                                password, "MD5",
-                                passwordHashMD5).ToString());
-            Console.WriteLine("MD5    (bad) : {0}",
-                                SimpleHash.VerifyHash(
-                                wrongPassword, "MD5",
-                                passwordHashMD5).ToString());
-            Console.WriteLine("SHA1   (good): {0}",
-                                SimpleHash.VerifyHash(
-                                password, "SHA1",
-                                passwordHashSha1).ToString());
-            Console.WriteLine("SHA1   (bad) : {0}",
-                                SimpleHash.VerifyHash(
-                                wrongPassword, "SHA1",
-                                passwordHashSha1).ToString());
-            Console.WriteLine("SHA256 (good): {0}",
-                                SimpleHash.VerifyHash(
-                                password, "SHA256",
-                                passwordHashSha256).ToString());
-            Console.WriteLine("SHA256 (bad) : {0}",
-                                SimpleHash.VerifyHash(
-                                wrongPassword, "SHA256",
-                                passwordHashSha256).ToString());
-            Console.WriteLine("SHA384 (good): {0}",
-                                SimpleHash.VerifyHash(
-                                password, "SHA384",
-                                passwordHashSha384).ToString());
-            Console.WriteLine("SHA384 (bad) : {0}",
-                                SimpleHash.VerifyHash(
-                                wrongPassword, "SHA384",
-                                passwordHashSha384).ToString());
-            Console.WriteLine("SHA512 (good): {0}",
-                                SimpleHash.VerifyHash(
-                                password, "SHA512",
-                                passwordHashSha512).ToString());
-            Console.WriteLine("SHA512 (bad) : {0}",
-                                SimpleHash.VerifyHash(
-                                wrongPassword, "SHA512",
-                                passwordHashSha512).ToString());
         }
     }
 }
