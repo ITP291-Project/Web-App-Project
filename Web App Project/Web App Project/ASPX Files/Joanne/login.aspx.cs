@@ -30,6 +30,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
             {
                 using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
                 {
+
                     string[] saAllowedCharacters = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
 
                     Byte[] salt = new byte[8];
@@ -37,19 +38,18 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String inputemail = TextBox1.Text;
                     String inputpassword = TextBox2.Text;
                     String passwordHash = SimpleHash.ComputeHash(inputpassword, "SHA512", salt);
-                    //String randomNo = "1234";
-                    String randomNo = GenerateRandomOTP(6, saAllowedCharacters);
+                    String randomNo = "1234";
+                    //String randomNo = GenerateRandomOTP(6, saAllowedCharacters);
                     String OTPinput = textbox20.Text;
 
                     string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
-                    //string query1 = "INSERT INTO Accounts VALUES(" + "@randomNo)" + "WHERE [Email] = '" + inputemail + "'";
                     string query1 = "UPDATE [Accounts] SET [randomNo] = @randomNo where [Email] = @inputemail";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
-                    SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
+                    //SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
                     myConnection.Open();
                     myCommand.CommandType = CommandType.Text;
-                    myCommand1.CommandType = CommandType.Text;
+                    //myCommand1.CommandType = CommandType.Text;
                     SqlDataReader reader = myCommand.ExecuteReader();
                     
                     String dbEmail = "";
@@ -74,12 +74,16 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     myConnection.Close();
                     myConnection.Open();
 
-                    myCommand1.Parameters.AddWithValue("@randomNo", randomNo);
-                    myCommand1.Parameters.AddWithValue("@inputemail", inputemail);
-                    myCommand1.ExecuteNonQuery();
+                    //myCommand1.Parameters.AddWithValue("@randomNo", randomNo);
+                    //myCommand1.Parameters.AddWithValue("@inputemail", inputemail);
+                    //myCommand1.ExecuteNonQuery();
 
                     //Replace the if else with the hash check method!
                     bool hashresult = SimpleHash.VerifyHash(inputpassword, "SHA512", dbPassword);
+
+
+                    Session["username"] = dbEmail;
+                    Session["Organisation"] = dbOrganization;
 
                     //check if the email they input is the same as the email in db
                     //check if the password they input is the same as the password in db                    
