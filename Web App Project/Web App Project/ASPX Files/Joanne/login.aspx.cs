@@ -84,6 +84,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                     Session["username"] = dbEmail;
                     Session["Organisation"] = dbOrganization;
+                    Session["Privilege"] = dbPrivilege;
 
                     //check if the email they input is the same as the email in db
                     //check if the password they input is the same as the password in db                    
