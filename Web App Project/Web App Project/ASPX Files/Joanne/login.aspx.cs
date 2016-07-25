@@ -80,7 +80,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //Replace the if else with the hash check method!
                     bool hashresult = SimpleHash.VerifyHash(inputpassword, "SHA512", dbPassword);
 
-
                     Session["username"] = dbEmail;
                     Session["Organization"] = dbOrganization;
                     Session["Privilege"] = dbPrivilege;
