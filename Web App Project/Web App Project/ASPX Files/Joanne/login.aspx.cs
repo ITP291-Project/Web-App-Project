@@ -9,9 +9,6 @@ using System.Data.SqlClient;
 using System.Web.Security;
 using System.Security.Cryptography;
 using System.Text;
-using System.Drawing;
-using System.Drawing.Imaging;
-using SRVTextToImage;
 
 namespace Web_App_Project.ASPX_Files.Joanne
 {
