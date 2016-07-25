@@ -42,6 +42,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
 
                 string query = "SELECT [Email] FROM [Accounts] WHERE [Email] = '" + inputEmail + "'";
+                string query1 = "UPDATE [Accounts] SET randomEmailString = @code WHERE Email = @email";
 
                 myConnection.Open();
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
@@ -58,15 +59,15 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                 //string query1 = "UPDATE [Accounts] SET [randomEmailString] = @randomEmailString WHERE [Email] = @email";
 
-                //myConnection.Open();
-                //SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
-                //myCommand1.CommandType = CommandType.Text;
+                myConnection.Open();
+                SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
+                myCommand1.CommandType = CommandType.Text;
                 //SqlDataReader reader1 = myCommand1.ExecuteReader();
 
-                //myCommand1.Parameters.AddWithValue("@email", inputEmail);
-                //myCommand1.Parameters.AddWithValue("@randomEmailString", code);
+                myCommand1.Parameters.AddWithValue("@email", inputEmail);
+                myCommand1.Parameters.AddWithValue("@code", code);
                 //myCommand1.ExecuteNonQuery();
-                //myConnection.Close();
+                myConnection.Close();
 
                 //if email input not equals to db email - email does not exist
                 if (inputEmail != dbEmail)
@@ -81,21 +82,21 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     Response.AppendHeader("Refresh", "5;url=VerifyEmailReset.aspx");
                     Label3.Text = "Email sent. Please check your email. You will now be redirected to verfiy code in 5 seconds";
 
-                    MailMessage mail = new MailMessage();
+                    //MailMessage mail = new MailMessage();
+                    //SmtpClient client = new SmtpClient();
+                    //client.Port = 587;
+                    //client.Host = "smtp.gmail.com";
+                    //client.EnableSsl = true;
+                    //client.Timeout = 10000;
+                    //client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    //client.UseDefaultCredentials = false;
+                    //client.Credentials = new System.Net.NetworkCredential("user@gmail.com", "password");
+                    //mail.From = new MailAddress("joannelimpotato@gmail.com");
+                    //mail.To.Add(new MailAddress(inputEmail));
+                    //mail.Subject = "testing";
+                    //mail.Body = "test";
+                    //client.Send(mail);
 
-                    SmtpClient client = new SmtpClient();
-                    client.Port = 587;
-                    client.Host = "smtp.gmail.com";
-                    client.EnableSsl = true;
-                    client.Timeout = 10000;
-                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    client.UseDefaultCredentials = false;
-                    client.Credentials = new System.Net.NetworkCredential("user@gmail.com", "password");
-                    mail.From = new MailAddress("joannelimpotato@gmail.com");
-                    mail.To.Add(new MailAddress(inputEmail));
-                    mail.Subject = "testing";
-                    mail.Body = "test";
-                    client.Send(mail);
                     //mail.BodyEncoding = UTF8Encoding.UTF8;
                     //mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
 
