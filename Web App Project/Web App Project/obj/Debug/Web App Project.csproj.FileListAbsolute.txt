@@ -250,3 +250,5 @@ C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\G
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.PlatformServices.xml
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\log4net.xml
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Zlib.Portable.xml
+C:\Users\btobf\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web_App_Project.ASPX_Files.Seri.ChoiceOfVouchers.resources
+C:\Users\btobf\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csproj.GenerateResource.Cache
