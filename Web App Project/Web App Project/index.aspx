@@ -635,7 +635,9 @@
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
       <h3>Ready to start volunteering?</h3>
-      <a href="#contact" class="btn btn-large btn-border">Sign me up!</a> </div>
+        <asp:Button ID="Button1" runat="server" Text="Sign me up!" OnClick="Button1_Click1" class="btn btn-large btn-border" ForeColor="Blue"/>
+        <br />
+&nbsp;</div>
   </div>
 </section>
         <!-- Get a quote section -->
@@ -742,132 +744,7 @@
 			</div>
 			</div>
 		</div>
-		<div class="container">
-
-    <div class="row">
-        <div class="col-lg-8 col-md-offset-2">
-            <div class="form-wrapper marginbot-50">
-                <form id="contact-form">
-                <div class="row">
-                      
-                        
-                        <div class="form-group">
-                           <p align="left">First Name</p>
-                            <label for="name">
-                                First Name</label>
-                            <input type="text" class="form-control" id="fName" placeholder="First Name" required="required" />
-                            <p align="left">
-                                &nbsp;Last Name</p>
-                            <label for="name">
-                                Last Name</label>
-                            <input type="text" class="form-control" id="lName" placeholder="Last Name" required="required" />
-                        </div>
-                         
-                        
-                         <div class="form-group">
-                            <p align="left">Gender</p>
-                            <label for="gender">Gender</label>
-                                 <input type="radio" name="gender" value="female" required="required"/> Female 
-                                 <input type="radio" name="gender" value="male" required="required"/> Male
-                        </div>
-
-                         <div class="form-group">
-                             <p align="left">NRIC</p>
-                            <label for="nric">
-                                NRIC</label>
-                            <input type="text" class="form-control" id="nric" placeholder="NRIC" required="required" />
-                        </div>
-                    
-                         <div class="form-group">
-                             <p align="left">Birthdate (DD-MM-YYYY)</p>
-                            <label for="bDay">
-                                DD</label>
-                            <input type="text" class="form-control" id="bday" placeholder="DD" required="required" />
-
-                             <label for="bMonth">
-                                MM</label>
-                            <input type="text" class="form-control" id="bmonth" placeholder="MM" required="required" />
-
-                             <label for="bYear">
-                                YYYY</label>
-                            <input type="text" class="form-control" id="byear" placeholder="YYYY" required="required" />
-                        </div>
-                            
-                       
-
-                        <div class="form-group">
-                            <p align="left">E-Mail Address</p>
-                            <label for="email">
-                                Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email" required="required" />
-                        </div>
-
-                         <div class="form-group">
-                           <p align="left">Password</p>
-                            <label for="name">
-                                Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password" required="required" />
-                        </div>
-                        <p algin="left">(Passwords must contain 8-30 characters)</p>
-
-                         <div class="form-group">
-                           <p align="left">Re-Enter Password</p>
-                            <label for="name">
-                                Re-Enter Password</label>
-                            <input type="password" class="form-control" id="repassword" placeholder="Password" required="required" />
-                        </div>
-
-                        <div class="form-group">
-                            <p align="left">Occupation</p>
-                            <label for="occupation">
-                                Occupation</label>
-                            <input type="text" class="form-control" id="occupation" placeholder="Occupation" required="required" />
-                        </div>
-                        
-                        <div class="form-group">
-                            <p align="left">Mailing Address</p>
-                            <label for="addr1">
-                                Mailing Address 1</label>
-                            <input type="text" class="form-control" id="mailAddr1" placeholder="Mailing Address 1" required="required" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="addr2">
-                                Mailing Address 2</label>
-                            <input type="text" class="form-control" id="mailAddr2" placeholder="Mailing Address 2" required="required" />
-                        </div>
-
-                        <div class="form-group">
-                            <p align="left">Salutation</p>
-                            <label for="subject">
-                                Subject</label>
-                            <select id="subject" name="subject" class="form-control" required="required">
-                                <option value="na" selected="">Salutation</option>
-                                <option value="Mr">Mr.</option>
-                                <option value="Ms">Ms.</option>
-                                <option value="Miss">Miss.</option>
-                                <option value="Mdm">Mdm.</option>
-                                <option value="Mrs">Mrs.</option>
-                                <option value="Dr">Dr.</option>
-                            </select>
-                        </div>
-         
-
-                        <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV" style="text-align: center;"></div>
-       
-           
-                        <!-- <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">Sign Up!</button> -->
-                        <asp:Button ID="Button1" runat="server" Text="Sign Up!" Width="100%" OnClick="Button1_Click" /> 
-       
-                </div>
-                </form>
-				
-            </div>
-        </div>
-
-    </div>	
-
-		</div>
+		
 	</section>
         <!-- /Section: contact -->
         <!-- Footer section -->
