@@ -38,18 +38,18 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String inputemail = TextBox1.Text;
                     String inputpassword = TextBox2.Text;
                     String passwordHash = SimpleHash.ComputeHash(inputpassword, "SHA512", salt);
-                    String randomNo = "1234";
-                    //String randomNo = GenerateRandomOTP(6, saAllowedCharacters);
+                   //String randomNo = "1234";
+                    String randomNo = GenerateRandomOTP(6, saAllowedCharacters);
                     String OTPinput = textbox20.Text;
 
                     string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
                     string query1 = "UPDATE [Accounts] SET [randomNo] = @randomNo where [Email] = @inputemail";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
-                    //SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
+                    SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
                     myConnection.Open();
                     myCommand.CommandType = CommandType.Text;
-                    //myCommand1.CommandType = CommandType.Text;
+                    myCommand1.CommandType = CommandType.Text;
                     SqlDataReader reader = myCommand.ExecuteReader();
                     
                     String dbEmail = "";
@@ -74,9 +74,9 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     myConnection.Close();
                     myConnection.Open();
 
-                    //myCommand1.Parameters.AddWithValue("@randomNo", randomNo);
-                    //myCommand1.Parameters.AddWithValue("@inputemail", inputemail);
-                    //myCommand1.ExecuteNonQuery();
+                    myCommand1.Parameters.AddWithValue("@randomNo", randomNo);
+                    myCommand1.Parameters.AddWithValue("@inputemail", inputemail);
+                    myCommand1.ExecuteNonQuery();
 
                     //Replace the if else with the hash check method!
                     bool hashresult = SimpleHash.VerifyHash(inputpassword, "SHA512", dbPassword);
@@ -92,9 +92,9 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                     if (dbEmail.Equals(inputemail) && hashresult == true)
                     {
-                        //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+                        String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
 
-                        String url = "www.google.com";
+                        //String url = "www.google.com";
                         System.Diagnostics.Process.Start(url);
 
                         ans = true;
@@ -230,6 +230,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
         {
             string sOTP = String.Empty;
             string sTempChars = String.Empty;
+            DateTime time = DateTime.Now;
             Random rand = new Random();
 
             for (int i = 0; i < iOTPLength; i++)
@@ -265,8 +266,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     dbRandomNo = reader["randomNo"].ToString();
                 }
 
-                //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + dbRandomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
-                String url = "www.google.com";
+                String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + dbRandomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+                //String url = "www.google.com";
                 System.Diagnostics.Process.Start(url);
             }
         }
