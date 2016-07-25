@@ -62,8 +62,8 @@
                     <!--captcha-->
                     <!--<div class="g-recaptcha" data-sitekey="6LeYqiQTAAAAAAwOrxXM2XeMrUVQbgfF1lmuoAQ8"></div>-->
 
-                    <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
-                    <!-- add into above div? ^ data-callback="capcha_filled" data-expired-callback="capcha_expired"-->
+<%--                    <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
+                    <!-- add into above div? ^ data-callback="capcha_filled" data-expired-callback="capcha_expired"-->--%>
 
                 </form>
 

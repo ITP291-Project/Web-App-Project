@@ -117,6 +117,9 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SRVTextToImage">
+      <HintPath>D:\SRVTextToImage.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -147,6 +150,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ASPX Files\Angie\SignUp.aspx" />
+    <Content Include="ASPX Files\Joanne\captcha.aspx" />
     <Content Include="ASPX Files\Joanne\emailSent.aspx" />
     <Content Include="ASPX Files\Joanne\enterEmail.aspx" />
     <Content Include="ASPX Files\Joanne\login.aspx" />
@@ -357,6 +361,14 @@
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPX Files\Joanne\Account.cs" />
+    <Compile Include="ASPX Files\Joanne\captcha.aspx.cs">
+      <DependentUpon>captcha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX Files\Joanne\captcha.aspx.designer.cs">
+      <DependentUpon>captcha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX Files\Joanne\CaptchaRandomImage.cs" />
     <Compile Include="ASPX Files\Joanne\emailSent.aspx.cs">
       <DependentUpon>emailSent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
