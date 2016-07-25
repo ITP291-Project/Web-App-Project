@@ -35,8 +35,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String inputemail = TextBox1.Text;
                     String inputpassword = TextBox2.Text;
                     String passwordHash = SimpleHash.ComputeHash(inputpassword, "SHA512", salt);
-                    String randomNo = "1234";
-                    //String randomNo = GenerateRandomOTP(6, saAllowedCharacters);
+                    //String randomNo = "1234";
+                    String randomNo = GenerateRandomOTP(6, saAllowedCharacters);
                     String OTPinput = textbox20.Text;
 
                     string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
@@ -55,6 +55,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String dbOrganization = "";
                     String dbMobile = "";
                     String dbRandomNo = "";
+                    String dbApproved = "";
 
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
@@ -66,6 +67,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         dbOrganization = reader["Organization"].ToString(); //read db 
                         dbOrganization = "SPCA";
                         dbRandomNo = reader["randomNo"].ToString();
+                        dbApproved = reader["Approved"].ToString();
                     }
 
                     myConnection.Close();
@@ -87,7 +89,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //check if the password they input is the same as the password in db                    
                     //if validated, means its a valid user. 
 
-                    if (dbEmail.Equals(inputemail) && hashresult == true)
+                    if (dbEmail.Equals(inputemail) && hashresult == true && dbApproved.Equals("approved"))
                     {
                         //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
 
@@ -122,7 +124,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             {
                                 modal.Hide();
                                 Label1.Text = "Email and/or password is wrong";
-
                                 myConnection.Close();
                             }
 
@@ -131,11 +132,17 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     }
                     else
                     {
-                        modal.TargetControlID = "Button1";
-                        modal.Hide();
-                        Label1.Text = "Email and/or password is wrong";
-                        //label1b.Visible = true;
-
+                        if (dbApproved.Equals("pending"))
+                        {
+                            Label1.Text = "Your account has not been approved";
+                        }
+                        else if (dbApproved.Equals("approved"))
+                        {
+                            modal.TargetControlID = "Button1";
+                            modal.Hide();
+                            Label1.Text = "Email and/or password is wrong";
+                            //label1b.Visible = true;
+                        }
                     }
                 }
             }
