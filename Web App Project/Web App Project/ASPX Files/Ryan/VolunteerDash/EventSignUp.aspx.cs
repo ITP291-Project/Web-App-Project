@@ -40,22 +40,23 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
                 String day = DropDownList2.Text;
                 String time = DropDownList1.Text;
 
-                    string query = "INSERT INTO EventSignUp (Id, Username, Organization, Day, Time)";
-                    query += "VALUES (@Id, @Username, @Organization, @Day, @Time)";
-                    //query += "WHERE (SELECT * FROM Timetable WHERE " + day + "='" + organization + "' AND Time='" + time + "')";
-                    int i = 1;
+                string query = "INSERT INTO EventSignUp (Id, Username, Organization, Day, Time)";
+                query += "VALUES (@Id, @Username, @Organization, @Day, @Time)";
+                query += "INNER JOIN Timetable ON EventSignUp.Id = Timetable.Id";
+                query += "WHERE (SELECT * FROM Timetable WHERE " + day + "='" + organization + "' AND Time='" + time + "')";
+                int i = 1;
 
-                    SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
 
-                    myCommand.Parameters.AddWithValue("@Id", i++);
-                    myCommand.Parameters.AddWithValue("@Username", username);
-                    myCommand.Parameters.AddWithValue("@Organization", organization);
-                    myCommand.Parameters.AddWithValue("@Day", day);
-                    myCommand.Parameters.AddWithValue("@Time", time);
+                myCommand.Parameters.AddWithValue("@Id", i++);
+                myCommand.Parameters.AddWithValue("@Username", username);
+                myCommand.Parameters.AddWithValue("@Organization", organization);
+                myCommand.Parameters.AddWithValue("@Day", day);
+                myCommand.Parameters.AddWithValue("@Time", time);
 
-                    myConnection.Open();
-                    myCommand.ExecuteNonQuery();
-                    myConnection.Close();
+                myConnection.Open();
+                myCommand.ExecuteNonQuery();
+                myConnection.Close();
             }
         }
 
