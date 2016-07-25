@@ -9,7 +9,9 @@ using System.Data.SqlClient;
 using System.Web.Security;
 using System.Security.Cryptography;
 using System.Text;
-
+using System.Drawing;
+using System.Drawing.Imaging;
+using SRVTextToImage;
 
 namespace Web_App_Project.ASPX_Files.Joanne
 {
@@ -18,10 +20,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
-
-        Boolean ans = false;
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -83,7 +83,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
 
                     Session["username"] = dbEmail;
-                    Session["Organisation"] = dbOrganization;
+                    Session["Organization"] = dbOrganization;
                     Session["Privilege"] = dbPrivilege;
 
                     //check if the email they input is the same as the email in db
@@ -97,7 +97,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         //String url = "www.google.com";
                         System.Diagnostics.Process.Start(url);
 
-                        ans = true;
                         modal.Show(); //- AJAX has no validation
 
                         if (OTPinput.Equals(dbRandomNo))
@@ -209,11 +208,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                         myConnection.Close();
                     }
-                    //Resend_Click(sender, e);
-                    //Button1_Click(sender, e);
-                    //string s = "window.open('" + url + "', 'popup_window', 'width=300,height=100,left=100,top=100,resizable=yes');";
-                    //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
-
                 }
                 else if (!OTPinput.Equals(dbRandomNo))
                 {
@@ -230,7 +224,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
         {
             string sOTP = String.Empty;
             string sTempChars = String.Empty;
-            DateTime time = DateTime.Now;
+            //DateTime time = DateTime.Now;
             Random rand = new Random();
 
             for (int i = 0; i < iOTPLength; i++)
