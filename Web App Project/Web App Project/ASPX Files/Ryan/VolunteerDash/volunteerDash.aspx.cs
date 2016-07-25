@@ -42,5 +42,10 @@ namespace Web_App_Project
         {
             Response.Redirect("/ASPX Files/Seri/Rewards.aspx");
         }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EventSignUp.aspx");
+        }
     }
 }

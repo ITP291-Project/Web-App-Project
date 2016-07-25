@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Ryan.VolunteerDash.SignUp" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EventSignUp.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Ryan.VolunteerDash.SignUp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <div class="containerDash">
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">

@@ -10,7 +10,7 @@
                     <asp:TextBox ID="TextBox1" runat="server" Enabled="False" ForeColor="Black" Width="255px"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Button ID="Button4" runat="server" Text="Sign Up for Events" ForeColor="Black" />
+                    <asp:Button ID="Button4" runat="server" Text="Sign Up for Events" ForeColor="Black" OnClick="Button4_Click" />
 &nbsp;<br />
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" Width="650px">
                     <Columns>

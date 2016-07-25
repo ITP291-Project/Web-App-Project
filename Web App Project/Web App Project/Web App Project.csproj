@@ -160,7 +160,7 @@
     <Content Include="ASPX Files\Ryan\BossDash\bossDash.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx" />
     <Content Include="ASPX Files\Ryan\VolunteerDash\Organization.aspx" />
-    <Content Include="ASPX Files\Ryan\VolunteerDash\SignUp.aspx" />
+    <Content Include="ASPX Files\Ryan\VolunteerDash\EventSignUp.aspx" />
     <Content Include="ASPX Files\Seri\Checkout.aspx" />
     <Content Include="ASPX Files\Seri\ChoiceOfVouchers.aspx" />
     <Content Include="ASPX Files\Seri\DisplayVoucher.aspx" />
@@ -451,12 +451,12 @@
     <Compile Include="ASPX Files\Ryan\VolunteerDash\Organization.aspx.designer.cs">
       <DependentUpon>Organization.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\SignUp.aspx.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
+    <Compile Include="ASPX Files\Ryan\VolunteerDash\EventSignUp.aspx.cs">
+      <DependentUpon>EventSignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\SignUp.aspx.designer.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
+    <Compile Include="ASPX Files\Ryan\VolunteerDash\EventSignUp.aspx.designer.cs">
+      <DependentUpon>EventSignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPX Files\Seri\AccountManager.cs" />
     <Compile Include="ASPX Files\Seri\Checkout.aspx.cs">
