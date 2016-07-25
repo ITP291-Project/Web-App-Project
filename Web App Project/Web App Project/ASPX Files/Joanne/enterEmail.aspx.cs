@@ -19,6 +19,10 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+using System.Net.Mail;
+using System.Text;
+
+
 namespace Web_App_Project.ASPX_Files.Joanne
 {
     public partial class enterEmail : System.Web.UI.Page
@@ -52,28 +56,48 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 }
                 myConnection.Close();
 
-                string query1 = "UPDATE [Accounts] SET [randomEmailString] = @randomEmailString WHERE [Email] = @email";
+                //string query1 = "UPDATE [Accounts] SET [randomEmailString] = @randomEmailString WHERE [Email] = @email";
 
-                myConnection.Open();
-                SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
-                myCommand1.CommandType = CommandType.Text;
-                SqlDataReader reader1 = myCommand1.ExecuteReader();
+                //myConnection.Open();
+                //SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
+                //myCommand1.CommandType = CommandType.Text;
+                //SqlDataReader reader1 = myCommand1.ExecuteReader();
 
-                myCommand1.Parameters.AddWithValue("@email", inputEmail);
-                myCommand1.Parameters.AddWithValue("@randomEmailString", code);
-                myCommand1.ExecuteNonQuery();
-                myConnection.Close();
+                //myCommand1.Parameters.AddWithValue("@email", inputEmail);
+                //myCommand1.Parameters.AddWithValue("@randomEmailString", code);
+                //myCommand1.ExecuteNonQuery();
+                //myConnection.Close();
 
+                //if email input not equals to db email - email does not exist
                 if (inputEmail != dbEmail)
                 {
                     Label2.Text = "Email does not exist";
                 }
+                //if email input equals to db email, then email exists, and send an email to that email.
                 else if (inputEmail == dbEmail)
                 {
                     Label2.Text = "";
                     //Label2.Text = code;
                     Response.AppendHeader("Refresh", "5;url=VerifyEmailReset.aspx");
-                    Label3.Text = "Email sent. You will now be redirected to verfiy code in 5 seconds";
+                    Label3.Text = "Email sent. Please check your email. You will now be redirected to verfiy code in 5 seconds";
+
+                    MailMessage mail = new MailMessage();
+
+                    SmtpClient client = new SmtpClient();
+                    client.Port = 587;
+                    client.Host = "smtp.gmail.com";
+                    client.EnableSsl = true;
+                    client.Timeout = 10000;
+                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    client.UseDefaultCredentials = false;
+                    client.Credentials = new System.Net.NetworkCredential("user@gmail.com", "password");
+                    mail.From = new MailAddress("joannelimpotato@gmail.com");
+                    mail.To.Add(new MailAddress(inputEmail));
+                    mail.Subject = "testing";
+                    mail.Body = "test";
+                    client.Send(mail);
+                    //mail.BodyEncoding = UTF8Encoding.UTF8;
+                    //mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
 
 
                     //Message email = new Message();
