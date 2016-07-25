@@ -75,6 +75,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     Response.AppendHeader("Refresh", "5;url=VerifyEmailReset.aspx");
                     Label3.Text = "Email sent. You will now be redirected to verfiy code in 5 seconds";
 
+
                     //Message email = new Message();
                     //GmailService service = new GmailService();
                     //Label2.Text = "Email exists";
