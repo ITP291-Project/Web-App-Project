@@ -15,7 +15,7 @@
                     <asp:Button ID="Button4" runat="server" Text="Sign Up for Events" ForeColor="Black" OnClick="Button4_Click" />
                     &nbsp;<br />
 
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" Width="650px">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="White" Width="650px">
                         <Columns>
                             <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
                             <asp:BoundField DataField="Monday" HeaderText="Monday" SortExpression="Monday" />
