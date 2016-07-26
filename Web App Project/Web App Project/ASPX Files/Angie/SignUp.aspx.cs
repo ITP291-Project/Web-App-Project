@@ -48,11 +48,15 @@ namespace Web_App_Project.ASPX_Files.Angie
                 String organization = " ";
                 string pointsId = "1";
 
+                String dbEmail = "";
 
-                string query = "INSERT INTO Accounts (FName, Lname, Password, Email, TelNo, NRIC, Address, Occupation, Language, Gender, Privilege, Salutation, BirthDate, Approved, Organization, Points, pointsId)";
+
+                string query = "IF NOT EXISTS (SELECT * FROM Accounts WHERE Email = '" + emailInput.Text + "')";
+                query += "INSERT INTO Accounts (FName, Lname, Password, Email, TelNo, NRIC, Address, Occupation, Language, Gender, Privilege, Salutation, BirthDate, Approved, Organization, Points, pointsId)";
                 query += "VALUES (@FName, @LName, @Password, @Email, @TelNo, @NRIC, @Address, @Occupation, @Language, @Gender, @Privilege, @Salutation, @BirthDate, @Approved, @Organization, @Points, @pointsId)";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlDataReader reader = myCommand.ExecuteReader();
 
                 myCommand.Parameters.AddWithValue("@FName", fName);
                 myCommand.Parameters.AddWithValue("@LName", lName);
@@ -75,23 +79,39 @@ namespace Web_App_Project.ASPX_Files.Angie
                 myConnection.Open();
                 myCommand.ExecuteNonQuery();
                 myConnection.Close();
+
+                if (reader.Read())
+                {
+                    dbEmail = reader["Email"].ToString();
+                }
+
+
+                if (dbEmail.Equals(email))
+                {
+                    Response.Write("You have signed up successfully!");
+                }
+
+                else
+                {
+                    Response.Write("Username already exists. Please use another email to sign up.");
+                }
+
+                string EncodedResponse = Request.Form["g-Recaptcha-Response"];
+                bool IsCaptchaValid = (ReCaptchaClass.Validate(EncodedResponse) == "True" ? true : false);
+                string validateMsg = "";
+                if (IsCaptchaValid)
+                {
+                    validateMsg = "Verified!";
+                }
+
+                else
+                {
+                    validateMsg = "Please try again.";
+                }
+
+
+                Response.Redirect("index.aspx");
             }
-
-            string EncodedResponse = Request.Form["g-Recaptcha-Response"];
-            bool IsCaptchaValid = (ReCaptchaClass.Validate(EncodedResponse) == "True" ? true : false);
-            string validateMsg = "";
-            if (IsCaptchaValid)
-            {
-                validateMsg = "Verified!";
-            }
-
-            else
-            {
-                validateMsg = "Please try again.";
-            }
-
-
-            Response.Redirect("/ASPX_Files/Joanne/login.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e)
