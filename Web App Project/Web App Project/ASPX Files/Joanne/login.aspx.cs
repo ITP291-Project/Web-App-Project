@@ -14,17 +14,19 @@ namespace Web_App_Project.ASPX_Files.Joanne
 {
 
     public partial class login : System.Web.UI.Page
+
     {
+        bool isCaptchaValid = false;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
-            {
-                Response.Redirect("/ASPX Files/Joanne/login.aspx");
-            }
-            else if (Session["Privilege"].ToString() == "boss")
-            {
-                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
-            }
+            //if (Session["username"] == null)
+            //{
+            //    Response.Redirect("/ASPX Files/Joanne/login.aspx");
+            //}
+            //else if (Session["Privilege"].ToString() == "boss")
+            //{
+            //    Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+            //}
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -91,11 +93,30 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     Session["Organization"] = dbOrganization;
                     Session["Privilege"] = dbPrivilege;
 
+                    //C A P T C H A V A L I D A T I O N
+                    
+                    if (Session["CaptchaText"] != null && Session["CaptchaText"].ToString() == TextBox21.Text)
+                    {
+                        isCaptchaValid = true;
+                    }
+
+                    if (isCaptchaValid)
+                    {
+                        //messageText.Text = "Successful";
+                    }
+
+                    else
+                    {
+                        isCaptchaValid = false;
+                       //messageText.Text = "Unsuccessful";
+                    }
+
+
                     //check if the email they input is the same as the email in db
                     //check if the password they input is the same as the password in db                    
                     //if validated, means its a valid user. 
 
-                    if (dbEmail.Equals(inputemail) && hashresult == true && dbApproved.Equals("approved"))
+                    if (dbEmail.Equals(inputemail) && hashresult == true && dbApproved.Equals("approved") && isCaptchaValid==true)
                     {
                         //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
 
@@ -130,6 +151,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             {
                                 modal.Hide();
                                 Label1.Text = "Email and/or password is wrong";
+                                isCaptchaValid = false;
                                 myConnection.Close();
                             }
 
@@ -138,6 +160,26 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     }
                     else
                     {
+                        //C A P T C H A V A L I D A T I O N
+                        isCaptchaValid = false;
+                        if (Session["CaptchaText"] != null && Session["CaptchaText"].ToString() == TextBox21.Text)
+                        {
+                            isCaptchaValid = true;
+                        }
+
+                        if (isCaptchaValid)
+                        {
+                            isCaptchaValid = true;
+                            //messageText.Text = "Successful";
+                        }
+
+                        else
+                        {
+                            isCaptchaValid = false;
+                            //messageText.Text = "Unsuccessful";
+                        }
+
+
                         if (dbApproved.Equals("pending"))
                         {
                             Label1.Text = "Your account has not been approved";
@@ -147,6 +189,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             modal.TargetControlID = "Button1";
                             modal.Hide();
                             Label1.Text = "Email and/or password is wrong";
+                            isCaptchaValid = false;
                             //label1b.Visible = true;
                         }
                     }
@@ -215,7 +258,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     {
                         modal.Hide();
                         Label1.Text = "Email and/or password is wrong";
-
+                        isCaptchaValid = false;
                         myConnection.Close();
                     }
                 }
@@ -223,6 +266,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 {
                     Label1.Text = "Email and/or password is wrong";
                     label1b.Visible = true;
+                    isCaptchaValid = false;
                     //remain on page
                 }
             }
@@ -255,12 +299,14 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 //get email input and password input store into variables
                 String inputemail = TextBox1.Text;
 
-                string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
+                //string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
+                string query = "SELECT * FROM [Accounts] WHERE [Email]= @inputemail";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
                 myConnection.Open();
                 myCommand.CommandType = CommandType.Text;
                 SqlDataReader reader = myCommand.ExecuteReader();
+                myCommand.Parameters.AddWithValue("@inputemail", inputemail);
 
                 String dbMobile = "";
                 String dbRandomNo = "";
@@ -275,6 +321,5 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 System.Diagnostics.Process.Start(url);
             }
         }
-
     }
 }

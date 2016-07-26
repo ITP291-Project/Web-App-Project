@@ -89,13 +89,6 @@ C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Web App Project.dll.config
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Web App Project.dll
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Web App Project.pdb
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.Web.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.ApplicationInsights.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csprojResolveAssemblyReference.cache
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.dll
 C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.pdb
 C:\Users\btobf_000\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\App_Data\localdb.mdf
@@ -279,3 +272,4 @@ C:\Users\btobf\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\
 C:\Users\btobf\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\log4net.xml
 C:\Users\btobf\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Newtonsoft.Json.xml
 C:\Users\btobf\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Zlib.Portable.xml
+C:\Users\Joanne\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csprojResolveAssemblyReference.cache
