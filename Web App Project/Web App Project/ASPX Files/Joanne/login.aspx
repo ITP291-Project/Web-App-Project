@@ -75,7 +75,8 @@
 
                 <asp:TextBox ID="TextBox21" runat="server" ForeColor="Black" Width="350px"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ControlToValidate ="TextBox21" CssClass="text-danger" ErrorMessage="Please fill in the captcha input." />
-                <asp:Label ID="Label2" runat="server" style="" Text="Label"></asp:Label>
+                <br />
+                <asp:Label ID="Label11" runat="server"></asp:Label>
                 <br />
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 

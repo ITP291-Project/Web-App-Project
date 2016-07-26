@@ -156,7 +156,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                                 if (!Session["CaptchaText"].ToString().Equals(TextBox21.Text))
                                 {
                                     Label1.Text = "";
+                                    Label11.Text = "Captcha entered is wrong.";
                                 }
+                                else
+                                    Label1.Text = "Email and/or password is wrong";
                             }
 
                         }
@@ -192,8 +195,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         {
                             modal.TargetControlID = "Button1";
                             modal.Hide();
-                            Label1.Text = "Email and/or password is wrong";
-                            isCaptchaValid = false;
+                            //Label1.Text = "Email and/or password is wrong";
+                            //isCaptchaValid = false;
                             //label1b.Visible = true;
                         }
                     }
