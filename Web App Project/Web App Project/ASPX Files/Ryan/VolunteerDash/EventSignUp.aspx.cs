@@ -13,6 +13,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*
             if (Session["username"] == null)
             {
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
@@ -27,6 +28,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
             String organization = Session["Organization"].ToString();
             //String organization = "Pioneer Generation";
             TextBox1.Text = organization;
+            */
         }
 
         protected void Button6_Click(object sender, EventArgs e)
@@ -42,8 +44,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
 
                 string query = "INSERT INTO EventSignUp (Id, Username, Organization, Day, Time)";
                 query += "VALUES (@Id, @Username, @Organization, @Day, @Time)";
-                query += "INNER JOIN Timetable ON EventSignUp.Id = Timetable.Id";
-                query += "WHERE (SELECT * FROM Timetable WHERE " + day + "='" + organization + "' AND Time='" + time + "')";
+                //query += "WHERE (SELECT * FROM Timetable WHERE " + day + "='" + organization + "' AND Time='" + time + "')";
                 int i = 1;
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
