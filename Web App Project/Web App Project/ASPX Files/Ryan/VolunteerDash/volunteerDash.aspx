@@ -2,66 +2,70 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <div class="containerDash">
+
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50 padding-bottom50">
             <div id="content">
                 <div id="left">
+                    <div class="form-wrapper">
                     <asp:Label ID="Label1" runat="server" Text="Your prefered Organization is"></asp:Label>
-&nbsp;
+                    &nbsp;
                     <asp:TextBox ID="TextBox1" runat="server" Enabled="False" ForeColor="Black" Width="255px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Button ID="Button4" runat="server" Text="Sign Up for Events" ForeColor="Black" OnClick="Button4_Click" />
-&nbsp;<br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" Width="650px">
-                    <Columns>
-                        <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
-                        <asp:BoundField DataField="Monday" HeaderText="Monday" SortExpression="Monday" />
-                        <asp:BoundField DataField="Tuesdau" HeaderText="Tuesdau" SortExpression="Tuesdau" />
-                        <asp:BoundField DataField="Wednesday" HeaderText="Wednesday" SortExpression="Wednesday" />
-                        <asp:BoundField DataField="Thursday" HeaderText="Thursday" SortExpression="Thursday" />
-                        <asp:BoundField DataField="Friday" HeaderText="Friday" SortExpression="Friday" />
-                    </Columns>
-                </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Timetable] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Timetable] ([Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday]) VALUES (@Id, @Time, @Monday, @Tuesdau, @Wednesday, @Thursday, @Friday)" SelectCommand="SELECT [Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday] FROM [Timetable]" UpdateCommand="UPDATE [Timetable] SET [Time] = @Time, [Monday] = @Monday, [Tuesdau] = @Tuesdau, [Wednesday] = @Wednesday, [Thursday] = @Thursday, [Friday] = @Friday WHERE [Id] = @Id">
-                    <DeleteParameters>
-                        <asp:Parameter Name="Id" Type="Int32" />
-                    </DeleteParameters>
-                    <InsertParameters>
-                        <asp:Parameter Name="Id" Type="Int32" />
-                        <asp:Parameter DbType="Time" Name="Time" />
-                        <asp:Parameter Name="Monday" Type="String" />
-                        <asp:Parameter Name="Tuesdau" Type="String" />
-                        <asp:Parameter Name="Wednesday" Type="String" />
-                        <asp:Parameter Name="Thursday" Type="String" />
-                        <asp:Parameter Name="Friday" Type="String" />
-                    </InsertParameters>
-                    <UpdateParameters>
-                        <asp:Parameter DbType="Time" Name="Time" />
-                        <asp:Parameter Name="Monday" Type="String" />
-                        <asp:Parameter Name="Tuesdau" Type="String" />
-                        <asp:Parameter Name="Wednesday" Type="String" />
-                        <asp:Parameter Name="Thursday" Type="String" />
-                        <asp:Parameter Name="Friday" Type="String" />
-                        <asp:Parameter Name="Id" Type="Int32" />
-                    </UpdateParameters>
-                </asp:SqlDataSource>
-                </div>
-            <div id="right">
-                <br />
-                <br />
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button5" runat="server" Text="View Particulars" Width="225px" OnClick="Button5_Click" />
-                <br />
-                <br />
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" OnClick="Button1_Click" />
-                <br />
-                <br />
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button2" runat="server" ForeColor="Black" Text="Choose Organization" Width="225px" OnClick="Button2_Click" />
-                <br />
-                <br />
-                <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" OnClick="Button3_Click" />
+                    &nbsp;<br />
 
-            </div>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" Width="650px">
+                        <Columns>
+                            <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
+                            <asp:BoundField DataField="Monday" HeaderText="Monday" SortExpression="Monday" />
+                            <asp:BoundField DataField="Tuesdau" HeaderText="Tuesdau" SortExpression="Tuesdau" />
+                            <asp:BoundField DataField="Wednesday" HeaderText="Wednesday" SortExpression="Wednesday" />
+                            <asp:BoundField DataField="Thursday" HeaderText="Thursday" SortExpression="Thursday" />
+                            <asp:BoundField DataField="Friday" HeaderText="Friday" SortExpression="Friday" />
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:localdbConnectionString1 %>" DeleteCommand="DELETE FROM [Timetable] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Timetable] ([Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday]) VALUES (@Id, @Time, @Monday, @Tuesdau, @Wednesday, @Thursday, @Friday)" SelectCommand="SELECT [Id], [Time], [Monday], [Tuesdau], [Wednesday], [Thursday], [Friday] FROM [Timetable]" UpdateCommand="UPDATE [Timetable] SET [Time] = @Time, [Monday] = @Monday, [Tuesdau] = @Tuesdau, [Wednesday] = @Wednesday, [Thursday] = @Thursday, [Friday] = @Friday WHERE [Id] = @Id">
+                        <DeleteParameters>
+                            <asp:Parameter Name="Id" Type="Int32" />
+                        </DeleteParameters>
+                        <InsertParameters>
+                            <asp:Parameter Name="Id" Type="Int32" />
+                            <asp:Parameter DbType="Time" Name="Time" />
+                            <asp:Parameter Name="Monday" Type="String" />
+                            <asp:Parameter Name="Tuesdau" Type="String" />
+                            <asp:Parameter Name="Wednesday" Type="String" />
+                            <asp:Parameter Name="Thursday" Type="String" />
+                            <asp:Parameter Name="Friday" Type="String" />
+                        </InsertParameters>
+                        <UpdateParameters>
+                            <asp:Parameter DbType="Time" Name="Time" />
+                            <asp:Parameter Name="Monday" Type="String" />
+                            <asp:Parameter Name="Tuesdau" Type="String" />
+                            <asp:Parameter Name="Wednesday" Type="String" />
+                            <asp:Parameter Name="Thursday" Type="String" />
+                            <asp:Parameter Name="Friday" Type="String" />
+                            <asp:Parameter Name="Id" Type="Int32" />
+                        </UpdateParameters>
+                    </asp:SqlDataSource>
                 </div>
+                <div id="right">
+                    <br />
+                    <br />
+                    <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button5" runat="server" Text="View Particulars" Width="225px" OnClick="Button5_Click" />
+                    <br />
+                    <br />
+                    <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button1" runat="server" ForeColor="Black" Text="Rewards" Width="225px" OnClick="Button1_Click" />
+                    <br />
+                    <br />
+                    <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button2" runat="server" ForeColor="Black" Text="Choose Organization" Width="225px" OnClick="Button2_Click" />
+                    <br />
+                    <br />
+                    <asp:Button CssClass="Dashbtn btn-skin btn-block" ID="Button3" runat="server" ForeColor="Black" Text="Write New Report" Width="225px" OnClick="Button3_Click" />
+
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </asp:Content>
