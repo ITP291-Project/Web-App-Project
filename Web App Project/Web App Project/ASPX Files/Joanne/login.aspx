@@ -46,6 +46,7 @@
                             <br />
                         </span>
                         <asp:Label ID="Label1" runat="server"></asp:Label>
+
                     </div>
 
                     <div class="form-group">
@@ -59,6 +60,11 @@
                         <br />
 
                     </div>
+
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/ASPX Files/Joanne/captcha.aspx" />
+                    <br />
+                    <asp:Label ID="Label10" runat="server" Text="Enter the Captcha that you see in the above image."></asp:Label>
+                    <br />
                     <!--captcha-->
                     <!--<div class="g-recaptcha" data-sitekey="6LeYqiQTAAAAAAwOrxXM2XeMrUVQbgfF1lmuoAQ8"></div>-->
 
@@ -67,6 +73,11 @@
 
                 </form>
 
+                <asp:TextBox ID="TextBox21" runat="server" ForeColor="Black" Width="350px"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate ="TextBox21" CssClass="text-danger" ErrorMessage="Please fill in the captcha input." />
+                <br />
+                <asp:Label ID="Label11" runat="server"></asp:Label>
+                <br />
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
                 <ajaxToolkit:ModalPopupExtender runat="server" ID="modal" TargetControlID="btnPopup" BackgroundCssClass="background" PopupControlID="panel" CancelControlID="Button2"></ajaxToolkit:ModalPopupExtender>

@@ -32,8 +32,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
                 {
                     //please undo this (below - session) as now it is hardcoded. 
-                    //string userid = Session["username"].ToString();
-                    string userid = "mae.th@gmail.com";
+                    string userid = Session["emailinput"].ToString();
 
                     Byte[] salt = new byte[8];
                     String pwd = TextBox3.Text;

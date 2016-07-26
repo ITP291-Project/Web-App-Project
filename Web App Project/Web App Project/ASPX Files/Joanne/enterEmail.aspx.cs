@@ -37,6 +37,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 String inputEmail = TextBox1.Text;
+                Session["emailinput"] = inputEmail;
+
                 // Generate a new 12-character password with 1 non-alphanumeric character.
                 String code = System.Web.Security.Membership.GeneratePassword(24, 0);
 
@@ -44,8 +46,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 string query = "SELECT [Email] FROM [Accounts] WHERE [Email] = '" + inputEmail + "'";
                 string query1 = "UPDATE [Accounts] SET randomEmailString = @code WHERE Email = @email";
 
-                myConnection.Open();
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
+                myConnection.Open();
                 myCommand.CommandType = CommandType.Text;
                 SqlDataReader reader = myCommand.ExecuteReader();
 
@@ -56,18 +58,18 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     dbEmail = reader["Email"].ToString(); //read db email
                 }
                 myConnection.Close();
-
+                SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
+                
                 //string query1 = "UPDATE [Accounts] SET [randomEmailString] = @randomEmailString WHERE [Email] = @email";
 
                 myConnection.Open();
-                SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
-                myCommand1.CommandType = CommandType.Text;
                 //SqlDataReader reader1 = myCommand1.ExecuteReader();
 
                 myCommand1.Parameters.AddWithValue("@email", inputEmail);
                 myCommand1.Parameters.AddWithValue("@code", code);
-                //myCommand1.ExecuteNonQuery();
-                myConnection.Close();
+                myCommand1.CommandType = CommandType.Text;
+                System.Diagnostics.Debug.WriteLine(myCommand1);
+                myCommand1.ExecuteNonQuery();
 
                 //if email input not equals to db email - email does not exist
                 if (inputEmail != dbEmail)
@@ -81,6 +83,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //Label2.Text = code;
                     Response.AppendHeader("Refresh", "5;url=VerifyEmailReset.aspx");
                     Label3.Text = "Email sent. Please check your email. You will now be redirected to verfiy code in 5 seconds";
+                    myConnection.Close();
 
                     //MailMessage mail = new MailMessage();
                     //SmtpClient client = new SmtpClient();

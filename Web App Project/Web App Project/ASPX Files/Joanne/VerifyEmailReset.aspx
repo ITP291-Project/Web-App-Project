@@ -13,7 +13,7 @@
         <asp:Button ID="Button1" runat="server" style="color:black; border-color: black" Text="Verify" OnClick="Button1_Click" />
         <br />
         <br />
-        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label3" runat="server" style="color:white" Text="Label"></asp:Label>
     </div>
 </asp:Content>
 
