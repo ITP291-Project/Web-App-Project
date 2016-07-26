@@ -21,8 +21,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
             //verify if input is equals to random generated number sent to person's email
 
             String codeInput = TextBox1.Text;
-            //string userid = Session["username"].ToString();
-            String userid = "mae.th@gmail.com";
+            string userid = Session["emailinput"].ToString();
+            //String userid = "mae.th@gmail.com";
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 string query = "SELECT * FROM [Accounts] WHERE [Email]='" + userid + "'";
@@ -39,13 +39,14 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                 if (dbCode.Equals(codeInput))
                 {
-                    Response.AppendHeader("Refresh", "5;url=VerifyEmailReset.aspx");
+                    Response.AppendHeader("Refresh", "5;url=resetPassword.aspx");
                     Label3.Text = "Your email has been verified. You will be redirected to reset password page in 5 seconds.";
                 }
                 else
                 {
                     Label3.Text = "Wrong code";
                 }
+                myConnection.Close();
             }
 
         }

@@ -37,6 +37,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 String inputEmail = TextBox1.Text;
+                Session["emailinput"] = inputEmail;
+
                 // Generate a new 12-character password with 1 non-alphanumeric character.
                 String code = System.Web.Security.Membership.GeneratePassword(24, 0);
 
