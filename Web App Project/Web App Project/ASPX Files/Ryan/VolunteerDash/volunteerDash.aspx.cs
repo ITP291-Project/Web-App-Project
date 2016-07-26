@@ -11,7 +11,7 @@ namespace Web_App_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           /* if (Session["username"] == null)
+           if (Session["username"] == null)
             {
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
             }
@@ -20,8 +20,7 @@ namespace Web_App_Project
                 Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
             }
 
-            //TextBox1.Text = Session["Organization"].ToString();
-            */
+            TextBox1.Text = Session["Organization"].ToString();
         }
 
         protected void Button3_Click(object sender, EventArgs e)

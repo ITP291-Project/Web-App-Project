@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Drawing.Imaging;
-using SRVTextToImage;
+//using SRVTextToImage;
 
 namespace Web_App_Project.ASPX_Files.Joanne
 {
@@ -49,7 +49,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
         
         protected void Captcha_Click(object sender, EventArgs e)
         {
-            CaptchaRandomImage CI = new CaptchaRandomImage();
+            /*CaptchaRandomImage CI = new CaptchaRandomImage();
             string captchaText = CI.GetRandomString(5);
 
             Session["CaptchaText"] = captchaText;
@@ -58,7 +58,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
             this.Response.Clear();
             this.Response.ContentType = "image/jpeg";
             CI.Image.Save(this.Response.OutputStream, ImageFormat.Jpeg);
-            CI.Dispose();
+            CI.Dispose();*/
 
         }
 
