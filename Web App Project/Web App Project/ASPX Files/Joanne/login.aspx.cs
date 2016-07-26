@@ -150,9 +150,13 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             else
                             {
                                 modal.Hide();
-                                Label1.Text = "Email and/or password is wrong";
                                 isCaptchaValid = false;
                                 myConnection.Close();
+
+                                if (!Session["CaptchaText"].ToString().Equals(TextBox21.Text))
+                                {
+                                    Label1.Text = "";
+                                }
                             }
 
                         }
@@ -179,7 +183,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             //messageText.Text = "Unsuccessful";
                         }
 
-
+                        // S T A T U S V A L I D A T I O N
                         if (dbApproved.Equals("pending"))
                         {
                             Label1.Text = "Your account has not been approved";
