@@ -45,10 +45,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 string query1 = "UPDATE [Accounts] SET randomEmailString = @code WHERE Email = @email";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
-                SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
                 myConnection.Open();
                 myCommand.CommandType = CommandType.Text;
-                myCommand1.CommandType = CommandType.Text;
                 SqlDataReader reader = myCommand.ExecuteReader();
 
                 String dbEmail = "";
@@ -58,7 +56,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     dbEmail = reader["Email"].ToString(); //read db email
                 }
                 myConnection.Close();
-
+                SqlCommand myCommand1 = new SqlCommand(query1, myConnection);
+                
                 //string query1 = "UPDATE [Accounts] SET [randomEmailString] = @randomEmailString WHERE [Email] = @email";
 
                 myConnection.Open();
@@ -66,6 +65,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                 myCommand1.Parameters.AddWithValue("@email", inputEmail);
                 myCommand1.Parameters.AddWithValue("@code", code);
+                myCommand1.CommandType = CommandType.Text;
+                System.Diagnostics.Debug.WriteLine(myCommand1);
                 myCommand1.ExecuteNonQuery();
 
                 //if email input not equals to db email - email does not exist
