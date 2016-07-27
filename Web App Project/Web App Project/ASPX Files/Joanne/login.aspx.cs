@@ -48,7 +48,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String randomNo = GenerateRandomOTP(6, saAllowedCharacters);
                     String OTPinput = textbox20.Text;
 
-                    string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
+                    //string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
+                    string query = "SELECT * FROM [Accounts] WHERE [Email]= @email";
                     string query1 = "UPDATE [Accounts] SET [randomNo] = @randomNo where [Email] = @inputemail";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
@@ -56,8 +57,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     myConnection.Open();
                     myCommand.CommandType = CommandType.Text;
                     myCommand1.CommandType = CommandType.Text;
+                    myCommand.Parameters.AddWithValue("@email", inputemail);
+
                     SqlDataReader reader = myCommand.ExecuteReader();
-                    
+
                     String dbEmail = "";
                     String dbPassword = "";
                     String dbPrivilege = "";
@@ -65,6 +68,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String dbMobile = "";
                     String dbRandomNo = "";
                     String dbApproved = "";
+
 
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
@@ -94,7 +98,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     Session["Privilege"] = dbPrivilege;
 
                     //C A P T C H A V A L I D A T I O N
-                    
+
                     if (Session["CaptchaText"] != null && Session["CaptchaText"].ToString() == TextBox21.Text)
                     {
                         isCaptchaValid = true;
@@ -108,7 +112,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     else
                     {
                         isCaptchaValid = false;
-                       //messageText.Text = "Unsuccessful";
+                        //messageText.Text = "Unsuccessful";
                     }
 
 
@@ -116,7 +120,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //check if the password they input is the same as the password in db                    
                     //if validated, means its a valid user. 
 
-                    if (dbEmail.Equals(inputemail) && hashresult == true && dbApproved.Equals("approved") && isCaptchaValid==true)
+                    if (dbEmail.Equals(inputemail) && hashresult == true && dbApproved.Equals("approved") && isCaptchaValid == true)
                     {
                         //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
 
@@ -150,16 +154,17 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             else
                             {
                                 modal.Hide();
+                                Label1.Text = "Email and/or password is wrong";
                                 isCaptchaValid = false;
                                 myConnection.Close();
 
-                                if (!Session["CaptchaText"].ToString().Equals(TextBox21.Text))
-                                {
-                                    Label1.Text = "";
-                                    Label11.Text = "Captcha entered is wrong.";
-                                }
-                                else
-                                    Label1.Text = "Email and/or password is wrong";
+                                //if (!Session["CaptchaText"].ToString().Equals(TextBox21.Text))
+                                //{
+                                //    Label1.Text = "";
+                                //    Label11.Text = "Captcha entered is wrong.";
+                                //}
+                                //else
+                                //    Label1.Text = "Email and/or password is wrong";
                             }
 
                         }
@@ -184,6 +189,14 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         {
                             isCaptchaValid = false;
                             //messageText.Text = "Unsuccessful";
+                            Label1.Text = "";
+                            Label11.Text = "Captcha entered is wrong.";
+                        }
+
+                        if (!dbEmail.Equals(inputemail) && hashresult == false)
+                        {
+                            Label1.Text = "Email and/or password is wrong";
+
                         }
 
                         // S T A T U S V A L I D A T I O N
