@@ -57,20 +57,20 @@
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox2" CssClass="text-danger" ErrorMessage="The password field is required." />
                         <span class="icon fa fa-key fa-fw"></span>
                         <br />
-                        <br />
-
                     </div>
 
+                    <%--C A P T C H A I M A G E --%>
+                    <asp:Label ID="Label10" runat="server" Text="Enter the Captcha that you see in the image below."></asp:Label>
+                    <br />
                     <asp:Image ID="Image1" runat="server" ImageUrl="~/ASPX Files/Joanne/captcha.aspx" />
                     <br />
-                    <asp:Label ID="Label10" runat="server" Text="Enter the Captcha that you see in the above image."></asp:Label>
-                    <br />
+                    
                     <!--captcha-->
                     <!--<div class="g-recaptcha" data-sitekey="6LeYqiQTAAAAAAwOrxXM2XeMrUVQbgfF1lmuoAQ8"></div>-->
 
 <%--                    <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
                     <!-- add into above div? ^ data-callback="capcha_filled" data-expired-callback="capcha_expired"-->--%>
-
+                    <br />
                 </form>
 
                 <asp:TextBox ID="TextBox21" runat="server" ForeColor="Black" Width="350px"></asp:TextBox>

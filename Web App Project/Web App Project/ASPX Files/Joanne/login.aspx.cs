@@ -90,7 +90,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     myCommand1.Parameters.AddWithValue("@inputemail", inputemail);
                     myCommand1.ExecuteNonQuery();
 
-                    //Replace the if else with the hash check method!
                     bool hashresult = SimpleHash.VerifyHash(inputpassword, "SHA512", dbPassword);
 
                     Session["username"] = dbEmail;
@@ -103,17 +102,21 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     {
                         isCaptchaValid = true;
                     }
-
-                    if (isCaptchaValid)
-                    {
-                        //messageText.Text = "Successful";
-                    }
-
                     else
                     {
                         isCaptchaValid = false;
-                        //messageText.Text = "Unsuccessful";
                     }
+
+                    //if (isCaptchaValid)
+                    //{
+                    //    //messageText.Text = "Successful";
+                    //}
+
+                    //else
+                    //{
+                    //    isCaptchaValid = false;
+                    //    //messageText.Text = "Unsuccessful";
+                    //}
 
 
                     //check if the email they input is the same as the email in db
@@ -155,16 +158,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             {
                                 modal.Hide();
                                 Label1.Text = "Email and/or password is wrong";
-                                isCaptchaValid = false;
+                                //isCaptchaValid = false;
                                 myConnection.Close();
-
-                                //if (!Session["CaptchaText"].ToString().Equals(TextBox21.Text))
-                                //{
-                                //    Label1.Text = "";
-                                //    Label11.Text = "Captcha entered is wrong.";
-                                //}
-                                //else
-                                //    Label1.Text = "Email and/or password is wrong";
                             }
 
                         }
@@ -172,32 +167,47 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     }
                     else
                     {
+                        //Response.Redirect("login.aspx");
+                        Response.AppendHeader("Refresh", "2;url=login.aspx");
+
+                        if (!dbEmail.Equals(inputemail) || hashresult == false)
+                        {
+                            Label1.Text = "Email and/or password is wrong.";
+                        }
+
                         //C A P T C H A V A L I D A T I O N
                         isCaptchaValid = false;
                         if (Session["CaptchaText"] != null && Session["CaptchaText"].ToString() == TextBox21.Text)
                         {
                             isCaptchaValid = true;
                         }
-
-                        if (isCaptchaValid)
+                        else if ((!dbEmail.Equals(inputemail) || hashresult == false) && isCaptchaValid == false)
                         {
-                            isCaptchaValid = true;
-                            //messageText.Text = "Successful";
+                            Label1.Text = "Email and/or password is wrong.";
+                            Label11.Text = "Captcha entered is wrong.";
                         }
 
                         else
                         {
                             isCaptchaValid = false;
-                            //messageText.Text = "Unsuccessful";
                             Label1.Text = "";
                             Label11.Text = "Captcha entered is wrong.";
                         }
 
-                        if (!dbEmail.Equals(inputemail) && hashresult == false)
-                        {
-                            Label1.Text = "Email and/or password is wrong";
+                        //if (isCaptchaValid)
+                        //{
+                        //    isCaptchaValid = true;
+                        //    //messageText.Text = "Successful";
+                        //}
 
-                        }
+                        //else
+                        //{
+                        //    isCaptchaValid = false;
+                        //    //messageText.Text = "Unsuccessful";
+                           
+                        //}
+
+                        
 
                         // S T A T U S V A L I D A T I O N
                         if (dbApproved.Equals("pending"))
@@ -278,7 +288,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     {
                         modal.Hide();
                         Label1.Text = "Email and/or password is wrong";
-                        isCaptchaValid = false;
+                        //isCaptchaValid = false;
                         myConnection.Close();
                     }
                 }
@@ -286,7 +296,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 {
                     Label1.Text = "Email and/or password is wrong";
                     label1b.Visible = true;
-                    isCaptchaValid = false;
+                    //isCaptchaValid = false;
                     //remain on page
                 }
             }
