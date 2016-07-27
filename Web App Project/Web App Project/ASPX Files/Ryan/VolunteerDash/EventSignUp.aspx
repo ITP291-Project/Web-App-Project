@@ -6,7 +6,7 @@
                 <div id="left">
                     <asp:Label ID="Label4" runat="server" ForeColor="Black" Text="Your Prefered Organization"></asp:Label>
                     &nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox1" runat="server" Enabled="False" Width="255px" ForeColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" ReadOnly="True" Width="255px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label ID="Label2" runat="server" Text="Day" ForeColor="Black"></asp:Label>

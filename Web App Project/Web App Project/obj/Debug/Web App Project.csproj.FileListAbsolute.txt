@@ -14,12 +14,6 @@ C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\r
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Web App Project.dll.config
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Web App Project.dll
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Web App Project.pdb
-C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.Web.xml
-C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.ApplicationInsights.xml
-C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csprojResolveAssemblyReference.cache
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.dll
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.pdb
