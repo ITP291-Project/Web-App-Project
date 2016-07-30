@@ -32,7 +32,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
         }
 
-        protected void Button1_On(object sender, EventArgs e)
+        protected void Button1_OnClick(object sender, EventArgs e)
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
