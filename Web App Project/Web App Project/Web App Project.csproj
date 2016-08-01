@@ -118,7 +118,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="SRVTextToImage">
-      <HintPath>D:\SRVTextToImage.dll</HintPath>
+      <HintPath>..\..\..\..\..\Dropbox\NSFW Autistic Peeps\Year2Sem1\ITP291\SRVTextToImage.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />

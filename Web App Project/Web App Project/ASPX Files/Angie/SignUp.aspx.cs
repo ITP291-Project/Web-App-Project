@@ -56,6 +56,7 @@ namespace Web_App_Project.ASPX_Files.Angie
                 query += "VALUES (@FName, @LName, @Password, @Email, @TelNo, @NRIC, @Address, @Occupation, @Language, @Gender, @Privilege, @Salutation, @BirthDate, @Approved, @Organization, @Points, @pointsId)";
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
+                myConnection.Open();
                 SqlDataReader reader = myCommand.ExecuteReader();
 
                 myCommand.Parameters.AddWithValue("@FName", fName);
@@ -76,7 +77,6 @@ namespace Web_App_Project.ASPX_Files.Angie
                 myCommand.Parameters.AddWithValue("@Points", points);
                 myCommand.Parameters.AddWithValue("@pointsId", pointsId);
 
-                myConnection.Open();
                 myCommand.ExecuteNonQuery();
                 myConnection.Close();
 
