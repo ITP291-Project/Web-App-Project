@@ -1,50 +1,54 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="updateParticulars.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Joanne.updateParticulars" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <head>
         <title>Update your particulars</title>
-            <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
 
     <body>
         <div class="container">
             <div class="content">
-        <h1 style="margin-left: 400px">Update Particulars</h1>
-            <p style="margin-left: 360px">
-                <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                <h1 style="margin-left: 300px; font-family: Georgia">Update Particulars</h1>
+
+                    <p style="margin-left: 360px">
+                        <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                 <asp:Label ID="Label2" runat="server" Text="Last Name"></asp:Label>
-            </p>
-            <p style="margin-left: 360px">
-                <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="170px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+                    <p style="margin-left: 360px">
+                        <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="170px"></asp:TextBox>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="TextBox2" runat="server" ForeColor="Black" Width="170px"></asp:TextBox>
-            </p>
-            <p style="margin-left: 360px">
-                <asp:Label ID="Label3" runat="server" Text="Email Address"></asp:Label>
-            </p>
-            <p style="margin-left: 360px">
-                <asp:TextBox ID="TextBox3" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
-            </p>
-            <p style="margin-left: 360px">Mailing Address</p>
-            <p style="margin-left: 360px">
-                <asp:TextBox ID="TextBox4" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
-            </p>
-            <p style="margin-left: 360px">
-                <asp:Label ID="Label4" runat="server" Text="Contact Number"></asp:Label>
-            </p>
-            <p style="margin-left: 360px">
-                <asp:TextBox ID="TextBox5" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
-            </p>
-            <p style="margin-left: 360px">
-                <asp:Label ID="Label5" runat="server" Text="Languages/Dialects Spoken"></asp:Label>
-            </p>
-            <p style="margin-left: 360px">
-                <asp:TextBox ID="TextBox6" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
-            </p>
-            <p style="margin-left: 360px">
-                    <asp:Button ID="Button1" runat="server" style="color: black" Text="Save" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" Width="89px" />
-            </p>
-        </div>
+                    </p>
+                    <p style="margin-left: 360px">
+                        <asp:Label ID="Label3" runat="server" Text="Email Address"></asp:Label>
+                    </p>
+                    <p style="margin-left: 360px">
+                        <asp:TextBox ID="TextBox3" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
+                    </p>
+                    <p style="margin-left: 360px">Mailing Address</p>
+                    <p style="margin-left: 360px">
+                        <asp:TextBox ID="TextBox4" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
+                    </p>
+                    <p style="margin-left: 360px">
+                        <asp:Label ID="Label4" runat="server" Text="Contact Number"></asp:Label>
+                    </p>
+                    <p style="margin-left: 360px">
+                        <asp:TextBox ID="TextBox5" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
+                    </p>
+                    <p style="margin-left: 360px">
+                        <asp:Label ID="Label5" runat="server" Text="Languages/Dialects Spoken"></asp:Label>
+                    </p>
+                    <p style="margin-left: 360px">
+                        <asp:TextBox ID="TextBox6" runat="server" ForeColor="Black" Width="433px"></asp:TextBox>
+                    </p>
+                <p style="margin-left: 360px">
+                    <asp:Button ID="Button1" runat="server" Style="color: black" Text="Save" OnClick="Button1_Click" BorderColor="Black" ForeColor="Black" Width="89px" />
+                </p>
+
+
+            </div>
         </div>
 
 
