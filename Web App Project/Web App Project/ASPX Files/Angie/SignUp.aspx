@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Angie.SignUp" %>
+<%@ Register Assembly="GoogleReCaptcha" Namespace="GoogleReCaptcha" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
 
@@ -44,6 +45,10 @@
             .textbox:focus {
                 background-color: #E7E8E7;
                 outline: 0;
+            }
+
+            .ddlistcolor {
+                color: black;
             }
     </style>
 
@@ -228,7 +233,11 @@
                 </p>
 
                 <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV" style="text-align: center;"></div>
+                <cc1:GoogleReCaptcha ID="ctrlGoogleReCaptcha" runat="server" PublicKey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV" PrivateKey="6LfDciITAAAAACzqw5RmfWvVuKkThWwNX2DVLEi1" />
 
+                <p>
+                    <asp:Label ID="lblStatus" runat="server" Text="Label"></asp:Label>
+                </p>
                 <p>
                     <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
                 </p>

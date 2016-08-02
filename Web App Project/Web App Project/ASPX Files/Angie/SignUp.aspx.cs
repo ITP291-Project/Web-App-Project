@@ -79,41 +79,20 @@ namespace Web_App_Project.ASPX_Files.Angie
                 myCommand.Parameters.AddWithValue("@Points", points);
                 myCommand.Parameters.AddWithValue("@pointsId", pointsId);
 
-                myCommand.ExecuteNonQuery();
+                
                 //myConnection.Close();
 
-               /* if (reader.Read())
+                if (ctrlGoogleReCaptcha.Validate())
                 {
-                    dbEmail = reader["Email"].ToString();
+                    //submit form success
+                    lblStatus.Text = "Success";
+                    myCommand.ExecuteNonQuery();
                 }
-
-
-                if (dbEmail.Equals(email))
-                {
-                    Response.Write("You have signed up successfully!");
-                }
-
                 else
                 {
-                    Response.Write("Username already exists. Please use another email to sign up.");
+                    //captcha challenge failed
+                    lblStatus.Text = "Captcha Failed!! Please try again!!";
                 }
-
-                string EncodedResponse = Request.Form["g-Recaptcha-Response"];
-                bool IsCaptchaValid = (ReCaptchaClass.Validate(EncodedResponse) == "True" ? true : false);
-                string validateMsg = "";
-                if (IsCaptchaValid)
-                {
-                    validateMsg = "Verified!";
-                }
-
-                else
-                {
-                    validateMsg = "Please try again.";
-                }
-
-
-                Response.Redirect("index.aspx");
-                */
             }
             
         }
