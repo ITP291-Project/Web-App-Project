@@ -79,11 +79,11 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         smtp.Port = 587;
                         smtp.EnableSsl = true;
                         smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
-                        smtp.Credentials = new NetworkCredential("limruoqijoanne54@gmail.com", "Basketball12345");
+                        smtp.Credentials = new NetworkCredential("joanne855902@gmail.com", "testing855902");
                         smtp.Timeout = 20000;
                     }
 
-                    smtp.Send("limruoqijoanne54@gmail.com", inputEmail, "Please Verify Your Email", "Please copy this code to verify your email." + code);
+                    smtp.Send("joanne855902@gmail.com", inputEmail, "Please Verify Your Email", "Please copy this code to verify your email." + code);
                     //format - From, To, Subject, Body
 
                     //smtp.Send("limruoqijoanne54@gmail.com", "152225K@mymail.nyp.edu.sg", "Testing", code);

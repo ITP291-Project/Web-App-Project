@@ -117,8 +117,9 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SRVTextToImage">
-      <HintPath>..\..\..\..\..\Dropbox\NSFW Autistic Peeps\Year2Sem1\ITP291\SRVTextToImage.dll</HintPath>
+    <Reference Include="SRVTextToImage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\SRVTextToImage.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
@@ -346,6 +347,7 @@
     <Content Include="obj\Debug\WebApplication3.dll" />
     <Content Include="obj\Debug\WebApplication3.pdb" />
     <Content Include="ASPX Files\Ryan\VolunteerDash\volunteerDash.aspx" />
+    <Content Include="SRVTextToImage.dll" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
