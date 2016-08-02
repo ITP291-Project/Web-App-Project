@@ -24,7 +24,8 @@ namespace Web_App_Project.ASPX_Files.Angie
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
+            SqlConnection myConnection;
+            using (myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 Byte[] salt = new byte[8];
 
@@ -50,15 +51,16 @@ namespace Web_App_Project.ASPX_Files.Angie
 
                 String dbEmail = "";
 
-
-                string query = "IF NOT EXISTS (SELECT * FROM Accounts WHERE Email = '" + emailInput.Text + "')";
-                query += "INSERT INTO Accounts (FName, Lname, Password, Email, TelNo, NRIC, Address, Occupation, Language, Gender, Privilege, Salutation, BirthDate, Approved, Organization, Points, pointsId)";
-                query += "VALUES (@FName, @LName, @Password, @Email, @TelNo, @NRIC, @Address, @Occupation, @Language, @Gender, @Privilege, @Salutation, @BirthDate, @Approved, @Organization, @Points, @pointsId)";
-
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
                 myConnection.Open();
-                SqlDataReader reader = myCommand.ExecuteReader();
+                SqlDataReader reader = null;
+                /* string query = "IF NOT EXISTS (SELECT * FROM Accounts WHERE Email = '" + emailInput.Text + "')"; */
+                string query = "INSERT INTO Accounts (FName, Lname, Password, Email, TelNo, NRIC, Address, Occupation, Language, Gender, Privilege, Salutation, BirthDate, Approved, Organization, Points, pointsId)";
+                query += " VALUES (@FName, @LName, @Password, @Email, @TelNo, @NRIC, @Address, @Occupation, @Language, @Gender, @Privilege, @Salutation, @BirthDate, @Approved, @Organization, @Points, @pointsId)";
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+              
+                //reader = myCommand.ExecuteReader();
 
+                //myCommand.Parameters.Clear();
                 myCommand.Parameters.AddWithValue("@FName", fName);
                 myCommand.Parameters.AddWithValue("@LName", lName);
                 myCommand.Parameters.AddWithValue("@Password", passwordHash);
@@ -78,9 +80,9 @@ namespace Web_App_Project.ASPX_Files.Angie
                 myCommand.Parameters.AddWithValue("@pointsId", pointsId);
 
                 myCommand.ExecuteNonQuery();
-                myConnection.Close();
+                //myConnection.Close();
 
-                if (reader.Read())
+               /* if (reader.Read())
                 {
                     dbEmail = reader["Email"].ToString();
                 }
@@ -111,7 +113,9 @@ namespace Web_App_Project.ASPX_Files.Angie
 
 
                 Response.Redirect("index.aspx");
+                */
             }
+            
         }
 
         protected void Button2_Click(object sender, EventArgs e)
