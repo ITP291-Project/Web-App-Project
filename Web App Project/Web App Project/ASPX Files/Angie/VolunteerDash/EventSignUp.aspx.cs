@@ -13,20 +13,19 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
             if (Session["username"] == null)
             {
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
             }
             else if (Session["Privilege"].ToString() == "boss")
             {
-                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
-            }*/
+                Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+            }
 
             Label3.Visible = false;
 
-            //String organization = Session["Organization"].ToString();
-            String organization = "Pioneer Generation";
+            String organization = Session["Organization"].ToString();
+            //String organization = "Pioneer Generation";
             TextBox1.Text = organization;
         }
 
@@ -34,10 +33,10 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
-                //String username = Session["username"].ToString();
-                String username = "stupid@idiot.com";
+                String username = Session["username"].ToString();
+                //String username = "stupid@idiot.com";
                 String organization = TextBox1.Text;
-                //String dbOrganization = Session["Organization"].ToString();
+                String dbOrganization = Session["Organization"].ToString();
                 String day = DropDownList2.Text;
                 String time = DropDownList1.Text;
 

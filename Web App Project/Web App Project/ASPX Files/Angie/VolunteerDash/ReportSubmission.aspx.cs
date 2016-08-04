@@ -23,11 +23,10 @@ namespace Web_App_Project.Ryan.Volunteer
             }
             else if (Session["Privilege"].ToString() == "boss")
             {
-                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
             }
 
-            //TextBox6.Text = Session["username"].ToString();
-            TextBox6.Text = "stupid@stupid.com";
+            TextBox6.Text = Session["username"].ToString();
             Calendar1.Visible = false;
             Label1.Visible = false;
         }
@@ -36,19 +35,43 @@ namespace Web_App_Project.Ryan.Volunteer
         {
             string caseNo = TextBox1.Text;
 
-            if (FileUpload1.HasFile)
+            if (IsPostBack)
             {
-                string filePath = FileUpload1.PostedFile.FileName;
-                string sourceFilePath = @"C:\testfile.jpg";
-                string webAddress = "http://demonius.dlinkddns.com/ReportPictures/";
-                string destinationFilePath = webAddress + caseNo +".jpg";
+                Boolean fileOK = false;
+                String path = "C:/Web Apps/ReportPictures/";
+                if (FileUpload1.HasFile)
+                {
+                    String fileExtension = System.IO.Path.GetExtension(FileUpload1.FileName).ToLower();
+                    String[] allowedExtensions = { ".gif", ".png", ".jpeg", ".jpg" };
+                    for (int i = 0; i < allowedExtensions.Length; i++)
+                    {
+                        if (fileExtension == allowedExtensions[i])
+                        {
+                            fileOK = true;
+                        }
+                    }
+                }
 
-                WebClient webClient = new WebClient();
-                webClient.UseDefaultCredentials = true;
-                webClient.UploadFile(destinationFilePath, "PUT", filePath);
-                webClient.UseDefaultCredentials = true;
-                webClient.Credentials = CredentialCache.DefaultCredentials;
-                webClient.Dispose();
+                if (fileOK)
+                {
+                    try
+                    {
+                        String fileExtension = System.IO.Path.GetExtension(FileUpload1.FileName).ToLower();
+                        FileUpload1.PostedFile.SaveAs(path + caseNo + fileExtension);
+                        Label1.Text = "File uploaded!";
+                        Label1.Visible = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        Label1.Text = "File could not be uploaded.";
+                        Label1.Visible = true;
+                    }
+                }
+                else
+                {
+                    Label1.Text = "Cannot accept files of this type.";
+                    Label1.Visible = true;
+                }
             }
         }
 
@@ -118,11 +141,10 @@ namespace Web_App_Project.Ryan.Volunteer
                 string duration = DropDownList2.Text;
                 string type = DropDownList1.Text;
                 string feedback = TextBox5.Text;
-                //string username = Session["username"].ToString();
-                string username = "stupid@stupid.com";
+                string username = Session["username"].ToString();
 
-                FTPUpload();
-                //HTTPUpload();
+                //FTPUpload();
+                HTTPUpload();
 
                     string query = "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, AdditionalFeedback, IsDraft, Status, Username)";
                     query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @AdditionalFeedback, @IsDraft, @Status, @Username)";

@@ -20,7 +20,7 @@ namespace Web_App_Project.Ryan.Volunteer
             }
             else if (Session["Privilege"].ToString() == "boss")
             {
-                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
             }
 
             if (TextBox1.Text.Equals(""))
@@ -59,7 +59,8 @@ namespace Web_App_Project.Ryan.Volunteer
         protected void Button4_Click(object sender, EventArgs e)
         {
             string caseNo = TextBox1.Text;
-            Response.Redirect("ftp://FTP:ftp@demonius.dlinkddns.com/" + caseNo + ".jpg");
+            //Response.Redirect("ftp://FTP:ftp@demonius.dlinkddns.com/" + caseNo + ".jpg");
+            Response.Redirect("http://demonius.dlinkddns.com/ReportPictures/" + caseNo + ".jpg");
         }
 
         protected void Button5_Click(object sender, EventArgs e)

@@ -20,7 +20,7 @@ namespace Web_App_Project.Ryan.Volunteer
             }
             else if (Session["Privilege"].ToString() == "boss")
             {
-                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
             }
 
             Calendar1.Visible = false;
