@@ -322,3 +322,4 @@ C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\
 C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.dll
 C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.pdb
 C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\GoogleReCaptcha.dll

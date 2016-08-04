@@ -23,7 +23,7 @@ namespace Web_App_Project
             {
                 System.Diagnostics.Debug.WriteLine("Privilege is volunteer");
 
-                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                Response.Redirect("/ASPX Files/Angie/VolunteerDash/volunteerDash.aspx");
             }
         }
 

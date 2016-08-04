@@ -77,7 +77,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="GoogleReCaptcha">
-      <HintPath>..\..\..\..\..\Downloads\GoogleReCaptcha_Binary\GoogleReCaptcha.dll</HintPath>
+      <HintPath>..\..\..\..\..\Dropbox\NSFW Autistic Peeps\Year2Sem1\ITP291\GoogleReCaptcha.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
@@ -168,8 +168,8 @@
     <Content Include="ASPX Files\Joanne\viewParticulars.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\bossDash.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx" />
-    <Content Include="ASPX Files\Ryan\VolunteerDash\EventSignUp.aspx" />
-    <Content Include="ASPX Files\Ryan\VolunteerDash\Organization.aspx" />
+    <Content Include="ASPX Files\Angie\VolunteerDash\EventSignUp.aspx" />
+    <Content Include="ASPX Files\Angie\VolunteerDash\Organization.aspx" />
     <Content Include="ASPX Files\Seri\Checkout.aspx" />
     <Content Include="ASPX Files\Seri\ChoiceOfVouchers.aspx" />
     <Content Include="ASPX Files\Seri\DisplayVoucher.aspx" />
@@ -317,9 +317,9 @@
     <Content Include="ASPX Files\Ryan\BossDash\PendingReports.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\ReportsApproved.aspx" />
     <Content Include="ASPX Files\Ryan\BossDash\Roster.aspx" />
-    <Content Include="ASPX Files\Ryan\VolunteerDash\ReportDrafts.aspx" />
-    <Content Include="ASPX Files\Ryan\VolunteerDash\ReportSubmission.aspx" />
-    <Content Include="ASPX Files\Ryan\VolunteerDash\SubmittedReport.aspx" />
+    <Content Include="ASPX Files\Angie\VolunteerDash\ReportDrafts.aspx" />
+    <Content Include="ASPX Files\Angie\VolunteerDash\ReportSubmission.aspx" />
+    <Content Include="ASPX Files\Angie\VolunteerDash\SubmittedReport.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -349,7 +349,7 @@
     <Content Include="obj\Debug\WebApplication3.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\WebApplication3.dll" />
     <Content Include="obj\Debug\WebApplication3.pdb" />
-    <Content Include="ASPX Files\Ryan\VolunteerDash\volunteerDash.aspx" />
+    <Content Include="ASPX Files\Angie\VolunteerDash\volunteerDash.aspx" />
     <Content Include="SRVTextToImage.dll" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -466,19 +466,19 @@
     <Compile Include="ASPX Files\Ryan\BossDash\RejectedReports.aspx.designer.cs">
       <DependentUpon>RejectedReports.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\AES.cs" />
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\EventSignUp.aspx.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\AES.cs" />
+    <Compile Include="ASPX Files\Angie\VolunteerDash\EventSignUp.aspx.cs">
       <DependentUpon>EventSignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\EventSignUp.aspx.designer.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\EventSignUp.aspx.designer.cs">
       <DependentUpon>EventSignUp.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\Organization.aspx.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\Organization.aspx.cs">
       <DependentUpon>Organization.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\Organization.aspx.designer.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\Organization.aspx.designer.cs">
       <DependentUpon>Organization.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPX Files\Seri\AccountManager.cs" />
@@ -562,25 +562,25 @@
     <Compile Include="ASPX Files\Ryan\BossDash\Roster.aspx.designer.cs">
       <DependentUpon>Roster.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\ReportDrafts.aspx.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\ReportDrafts.aspx.cs">
       <DependentUpon>ReportDrafts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\ReportDrafts.aspx.designer.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\ReportDrafts.aspx.designer.cs">
       <DependentUpon>ReportDrafts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\ReportSubmission.aspx.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\ReportSubmission.aspx.cs">
       <DependentUpon>ReportSubmission.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\ReportSubmission.aspx.designer.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\ReportSubmission.aspx.designer.cs">
       <DependentUpon>ReportSubmission.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\SubmittedReport.aspx.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\SubmittedReport.aspx.cs">
       <DependentUpon>SubmittedReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\SubmittedReport.aspx.designer.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\SubmittedReport.aspx.designer.cs">
       <DependentUpon>SubmittedReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
@@ -590,11 +590,11 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\volunteerDash.aspx.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\volunteerDash.aspx.cs">
       <DependentUpon>volunteerDash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ASPX Files\Ryan\VolunteerDash\volunteerDash.aspx.designer.cs">
+    <Compile Include="ASPX Files\Angie\VolunteerDash\volunteerDash.aspx.designer.cs">
       <DependentUpon>volunteerDash.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

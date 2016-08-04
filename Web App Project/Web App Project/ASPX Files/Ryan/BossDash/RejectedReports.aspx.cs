@@ -19,7 +19,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.BossDash
             }
             else if (Session["Privilege"].ToString() == "volunteer")
             {
-                Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                Response.Redirect("/ASPX Files/Angie/VolunteerDash/volunteerDash.aspx");
             }
         }
 

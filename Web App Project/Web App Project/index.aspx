@@ -208,19 +208,19 @@
       <div class="col-md-4 col-sm-6 services"> <span class="icon icon-strategy"></span>
         <div class="services-content">
           <h5>What are we?</h5>
-          <p> We are a volunteering group dedicated to helping elderly people be noticed in our fast paced society today.</p>
+          <p style="color: black"> We are a volunteering group dedicated to helping elderly people be noticed in our fast paced society today.</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 services"> <span class="icon icon-briefcase"></span>
         <div class="services-content">
           <h5>How do we do it?</h5>
-          <p> We have a group of volunteers that will visit old folks to help bring them up to speed on the current affairs happening today.</p>
+          <p style="color: black"> We have a group of volunteers that will visit old folks to help bring them up to speed on the current affairs happening today.</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 services"> <span class="icon icon-tools"></span>
         <div class="services-content">
           <h5>Getting started</h5>
-          <p> It&#39;s simple! Just click sign up to apply to be a volunteer today!</p>
+          <p style="color: black"> It&#39;s simple! Just click sign up to apply to be a volunteer today!</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 services"> <span class="icon icon-genius"></span>
@@ -313,7 +313,7 @@
                             </div>
                             <!--<h3> Pioneer Generation Ambassador
                         </h3>-->
-                            <p>
+                            <p style="color: black">
                                 Join us, as an Ambassador to help the Pioneers 
                            understand the Pioneer Generation Package!
                             </p>
@@ -327,7 +327,7 @@
                             <!--<h3>
                             SPCA
                         </h3>-->
-                            <p>
+                            <p style="color: black">
                                 We rely on a community of passionate volunteers, committed to helping us advocate the animal welfare cause.
                            If you have a passion for animals and would like to help in a tangible way, we want you! 
                             </p>
@@ -343,7 +343,7 @@
                             <!--<h3>
                             The Salvation Army
                         </h3>-->
-                            <p>
+                            <p style="color: black">
                                 At The Salvation Army, volunteers play an active role in caring and enriching the lives of the children, 
                            youths, elderly and families we serve. You can support an existing programme, or initiate a project to bless our beneficiaries!
                             </p>
@@ -357,7 +357,7 @@
                             <!--<h3>
                             TOUCH Home Care
                        </h3>-->
-                            <p>
+                            <p style="color: black">
                                 TOUCH Home Care (THC) is the first home care agency in Singapore to provide integrated and 
                            holistic home-based services that support the frail and homebound elderly and their caregivers. 
                            At THC, our goal is to help the frail elderly enjoy greater independence and better quality of life at home.
@@ -373,7 +373,7 @@
                             <!--<h3>
                             Ren Ci
                         </h3>-->
-                            <p>
+                            <p style="color: black">
                                 If you are looking for a volunteer opportunity to serve and care for the elderly, Ren Ci offers 
                            you the platform to complement our delivery of holistic care and experience the feeling of 
                            touching the lives of the seniors through a warm smile, a listening ear or simply ever-ready hands to help.
@@ -385,7 +385,7 @@
                                     <img src="img/RedCross.png"></img></span>
                             </div>
                             <!--<h3>Singapore Red Cross</h3>-->
-                            <p>
+                            <p style="color: black">
                                 Volunteering is more than helping to improve and impact the lives of the needy. 
                            It is also about bringing some much needed cheer and relief to them. 
                            It is through the time and care of ordinary and altruistic people like you that we can do extraordinary things!
@@ -521,11 +521,6 @@
             <p>She built the foundation of the company and is now helping volunteers in certain projects</p>
           </div>
           <ul class="social-icons clearfix">
-            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-            <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
           </ul>
         </div>
       </div>
@@ -539,11 +534,6 @@
             <p>She made all the graphics that you see on this website. Pretty right? We thought so too.</p>
           </div>
           <ul class="social-icons clearfix">
-            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-dribbble"></span></a></li>
           </ul>
         </div>
       </div>
@@ -556,13 +546,6 @@
             <h5 class="role">IT Support</h5>
             <p>Supports the day to day running of the IT infrastructure of the company.</p>
           </div>
-          <ul class="social-icons clearfix">
-            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-dribbble"></span></a></li>
-          </ul>
         </div>
       </div>
       <!-- team member 1 --> 
@@ -574,11 +557,6 @@
             <p>Helps put the spotlight on our company</p>
           </div>
           <ul class="social-icons clearfix">
-            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-dribbble"></span></a></li>
           </ul>
         </div>
       </div>
@@ -650,14 +628,14 @@
                             <h3>
                                 <span>Why volunteer with us?</span></h3>
                         </div>
-                        <p>
+                        <p style="color: black">
                             We provide you with a wide range of organizations to volunteer with in an easy to sign up portal
                         so you won't have to spend extra time to fill up forms each time you want to volunteer for an organization.
                         <br>
                             <br>
                             We will submit the forms on your behalf based on the information provided to us on your profile.
                         </p>
-                        <p>
+                        <p style="color: black">
                             Once your application has been approved, you can jump straight in to sign up for volunteer slots.
                         </p>
                     </div>
