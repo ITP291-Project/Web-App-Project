@@ -94,5 +94,11 @@ namespace Web_App_Project.ASPX_Files.Ryan.BossDash
                 myConnection.Close();
             }
         }
+
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+            string caseNo = TextBox1.Text;
+            Response.Redirect("http://demonius.dlinkddns.com/ReportPictures/" + caseNo + ".jpg");
+        }
     }
 }

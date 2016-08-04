@@ -13,14 +13,14 @@ namespace Web_App_Project.Ryan
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
+            /*if (Session["username"] == null)
             {
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
             }
             else if (Session["Privilege"].ToString() == "volunteer")
             {
                 Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
-            }
+            }*/
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -100,7 +100,8 @@ namespace Web_App_Project.Ryan
         protected void Button8_Click(object sender, EventArgs e)
         {
             string caseNo = TextBox1.Text;
-            Response.Redirect("ftp://FTP:ftp@demonius.dlinkddns.com/" + caseNo + ".jpg");
+            //Response.Redirect("ftp://FTP:ftp@demonius.dlinkddns.com/" + caseNo + ".jpg");
+            Response.Redirect("http://demonius.dlinkddns.com/ReportPictures/" + caseNo + ".jpg");
         }
     }
 }

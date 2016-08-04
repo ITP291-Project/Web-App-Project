@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Net;
 using System.IO;
 using System.Text;
+using System.Collections.Specialized;
 
 namespace Web_App_Project.Ryan.Volunteer
 {
@@ -16,18 +17,39 @@ namespace Web_App_Project.Ryan.Volunteer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
+            /*if (Session["username"] == null)
             {
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
             }
             else if (Session["Privilege"].ToString() == "boss")
             {
                 Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
-            }
+            }*/
 
-            TextBox6.Text = Session["username"].ToString();
+            //TextBox6.Text = Session["username"].ToString();
+            TextBox6.Text = "stupid@stupid.com";
             Calendar1.Visible = false;
             Label1.Visible = false;
+        }
+
+        protected void HTTPUpload()
+        {
+            string caseNo = TextBox1.Text;
+
+            if (FileUpload1.HasFile)
+            {
+                string filePath = FileUpload1.PostedFile.FileName;
+                string sourceFilePath = @"C:\testfile.jpg";
+                string webAddress = "http://demonius.dlinkddns.com/ReportPictures/";
+                string destinationFilePath = webAddress + caseNo +".jpg";
+
+                WebClient webClient = new WebClient();
+                webClient.UseDefaultCredentials = true;
+                webClient.UploadFile(destinationFilePath, "PUT", filePath);
+                webClient.UseDefaultCredentials = true;
+                webClient.Credentials = CredentialCache.DefaultCredentials;
+                webClient.Dispose();
+            }
         }
 
         protected void FTPUpload()
@@ -96,9 +118,11 @@ namespace Web_App_Project.Ryan.Volunteer
                 string duration = DropDownList2.Text;
                 string type = DropDownList1.Text;
                 string feedback = TextBox5.Text;
-                string username = Session["username"].ToString();
+                //string username = Session["username"].ToString();
+                string username = "stupid@stupid.com";
 
                 FTPUpload();
+                //HTTPUpload();
 
                     string query = "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, AdditionalFeedback, IsDraft, Status, Username)";
                     query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @AdditionalFeedback, @IsDraft, @Status, @Username)";

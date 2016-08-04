@@ -68,7 +68,8 @@ namespace Web_App_Project.Ryan
         protected void Button6_Click(object sender, EventArgs e)
         {
             string caseNo = TextBox1.Text;
-            Response.Redirect("ftp://FTP:ftp@demonius.dlinkddns.com/" + caseNo + ".jpg");
+            //Response.Redirect("ftp://FTP:ftp@demonius.dlinkddns.com/" + caseNo + ".jpg");
+            Response.Redirect("http://demonius.dlinkddns.com/ReportPictures/" + caseNo + ".jpg");
         }
     }
 }
