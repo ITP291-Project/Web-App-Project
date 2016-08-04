@@ -17,14 +17,14 @@ namespace Web_App_Project.Ryan.Volunteer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*if (Session["username"] == null)
+            if (Session["username"] == null)
             {
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
             }
             else if (Session["Privilege"].ToString() == "boss")
             {
                 Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
-            }*/
+            }
 
             //TextBox6.Text = Session["username"].ToString();
             TextBox6.Text = "stupid@stupid.com";
