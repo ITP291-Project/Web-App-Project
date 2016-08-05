@@ -160,7 +160,6 @@
     <Content Include="ASPX Files\Joanne\login.aspx" />
     <Content Include="ASPX Files\Joanne\resetPassword.aspx" />
     <Content Include="ASPX Files\Joanne\resetPasswordConfirmation.aspx" />
-    <Content Include="ASPX Files\Joanne\test1.aspx" />
     <Content Include="ASPX Files\Joanne\TestHash.aspx" />
     <Content Include="ASPX Files\Joanne\updatedText.aspx" />
     <Content Include="ASPX Files\Joanne\updateParticulars.aspx" />
@@ -409,13 +408,6 @@
     </Compile>
     <Compile Include="ASPX Files\Joanne\resetPasswordConfirmation.aspx.designer.cs">
       <DependentUpon>resetPasswordConfirmation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ASPX Files\Joanne\test1.aspx.cs">
-      <DependentUpon>test1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ASPX Files\Joanne\test1.aspx.designer.cs">
-      <DependentUpon>test1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPX Files\Joanne\TestHash.aspx.cs">
       <DependentUpon>TestHash.aspx</DependentUpon>
