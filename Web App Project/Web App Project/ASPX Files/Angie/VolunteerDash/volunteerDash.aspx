@@ -19,7 +19,7 @@
                         <Columns>
                             <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
                             <asp:BoundField DataField="Monday" HeaderText="Monday" SortExpression="Monday" />
-                            <asp:BoundField DataField="Tuesdau" HeaderText="Tuesdau" SortExpression="Tuesdau" />
+                            <asp:BoundField DataField="Tuesdau" HeaderText="Tuesdau" SortExpression="Tuesday" />
                             <asp:BoundField DataField="Wednesday" HeaderText="Wednesday" SortExpression="Wednesday" />
                             <asp:BoundField DataField="Thursday" HeaderText="Thursday" SortExpression="Thursday" />
                             <asp:BoundField DataField="Friday" HeaderText="Friday" SortExpression="Friday" />
