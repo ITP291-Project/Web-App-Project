@@ -281,7 +281,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         //Is this line being executed?
                         System.Diagnostics.Debug.WriteLine("User is volunteer");
 
-                        Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
+                        Response.Redirect("/ASPX Files/Angie/VolunteerDash/volunteerDash.aspx");
                     }
 
                     else
@@ -346,8 +346,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     dbRandomNo = reader["randomNo"].ToString();
                 }
 
-                String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + dbRandomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
-                //String url = "www.google.com";
+                //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + dbRandomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
+                String url = "www.google.com";
                 System.Diagnostics.Process.Start(url);
             }
         }
