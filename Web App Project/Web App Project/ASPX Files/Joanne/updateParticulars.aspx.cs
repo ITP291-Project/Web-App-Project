@@ -22,6 +22,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
             }
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -29,10 +30,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 string userid = Session["username"].ToString();
-                //pls undo after session working^
-
-                //hardcode
-               //string userid = "euniceL@gmail.com";
 
                 //When they press SAVE
                 //Retrieve data from text box input to update the database information
