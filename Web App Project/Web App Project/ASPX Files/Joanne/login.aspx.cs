@@ -27,6 +27,11 @@ namespace Web_App_Project.ASPX_Files.Joanne
             //{
             //    Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
             //}
+
+            if (Session["username"] == null)
+            {
+                Master.FindControl("logout").Visible = false;
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
