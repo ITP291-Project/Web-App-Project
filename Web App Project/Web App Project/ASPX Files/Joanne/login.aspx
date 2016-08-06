@@ -45,6 +45,9 @@
                         </span>
                         <asp:Label ID="Label1" runat="server"></asp:Label>
 
+                        <br />
+                        <asp:Label ID="Label12" runat="server" ForeColor="White" Text="Your account has been locked. Contact administrator to help you unlock your account." Visible="False"></asp:Label>
+
                     </div>
 
                     <div class="form-group">

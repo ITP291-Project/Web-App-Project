@@ -20,6 +20,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
         bool isCaptchaValid = false;
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label12.Visible = false;
+
             //if (Session["username"] == null)
             //{
             //    Response.Redirect("/ASPX Files/Joanne/login.aspx");
@@ -29,8 +31,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
             //    Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
             //}
 
-          //  Label13.Text = "Page created at: " +
-          //DateTime.Now.ToLongTimeString();
+            //  Label13.Text = "Page created at: " +
+            //DateTime.Now.ToLongTimeString();
 
             if (Session["username"] == null)
             {
@@ -138,7 +140,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //check if the email they input is the same as the email in db
                     //check if the password they input is the same as the password in db                    
                     //if validated, means its a valid user. 
-
+                    
                     if (dbEmail.Equals(inputemail) && hashresult == true && dbApproved.Equals("approved") && isCaptchaValid == true)
                     {
                         //String url = "http://172.20.128.62/SMSWebService/sms.asmx/sendMessage?MobileNo=" + dbMobile + "&Message=" + "Your OTP is: " + randomNo + ". Please enter within 2 minutes. Do not reply to this message." + "&SMSAccount=NSP10&SMSPassword=220867";
@@ -169,8 +171,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                                 Response.Redirect("/ASPX Files/Angie/VolunteerDash/volunteerDash.aspx");
                             }
-
-                            else
+                            else 
                             {
                                 modal.Hide();
                                 Label1.Text = "Email and/or password is wrong";
@@ -184,14 +185,21 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     else
                     {
                         //Response.Redirect("login.aspx");
-                        Response.AppendHeader("Refresh", "2;url=login.aspx");
-
+                        Response.AppendHeader("Refresh", "3;url=login.aspx");
+                        if (dbApproved.Equals("locked"))
+                        {
+                                Label12.Visible = true;
+                        }
                         if (!dbEmail.Equals(inputemail) || hashresult == false)
                         {
                             Label1.Text = "Email and/or password is wrong.";
                             //count++;
                         }
 
+                        //else if (dbPrivilege.Equals("locked"))
+                        //{
+                        //    Label1.Text = "Your account has been locked. Contact administrator to help you unlock your account.";
+                        //}
                         //C A P T C H A V A L I D A T I O N
                         isCaptchaValid = false;
                         if (Session["CaptchaText"] != null && Session["CaptchaText"].ToString() == TextBox21.Text)
@@ -221,10 +229,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         //{
                         //    isCaptchaValid = false;
                         //    //messageText.Text = "Unsuccessful";
-                           
+
                         //}
 
-                        
+
 
                         // S T A T U S V A L I D A T I O N
                         if (dbApproved.Equals("pending"))
@@ -240,6 +248,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             //label1b.Visible = true;
                         }
 
+                        else if (dbApproved.Equals("locked"))
+                        {
+                            Label12.Visible=true;
+                        }
                         //if (count>=5)
                         //{
                         //    TextBox2.Enabled = false;
