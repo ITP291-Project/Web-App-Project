@@ -29,6 +29,9 @@ namespace Web_App_Project.ASPX_Files.Joanne
             //    Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
             //}
 
+            Label13.Text = "Page created at: " +
+          DateTime.Now.ToLongTimeString();
+
             if (Session["username"] == null)
             {
                 Master.FindControl("logout").Visible = false;
@@ -380,6 +383,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 String url = "www.google.com";
                 System.Diagnostics.Process.Start(url);
             }
+        }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            Label12.Text = "Panel Refreshed at " + DateTime.Now.ToLongTimeString();
+
         }
     }
 }
