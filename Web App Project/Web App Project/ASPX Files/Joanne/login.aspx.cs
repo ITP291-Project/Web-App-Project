@@ -29,8 +29,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
             //    Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
             //}
 
-            Label13.Text = "Page created at: " +
-          DateTime.Now.ToLongTimeString();
+          //  Label13.Text = "Page created at: " +
+          //DateTime.Now.ToLongTimeString();
 
             if (Session["username"] == null)
             {
@@ -385,10 +385,10 @@ namespace Web_App_Project.ASPX_Files.Joanne
             }
         }
 
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-            Label12.Text = "Panel Refreshed at " + DateTime.Now.ToLongTimeString();
+        //protected void Timer1_Tick(object sender, EventArgs e)
+        //{
+        //    Label12.Text = "Panel Refreshed at " + DateTime.Now.ToLongTimeString();
 
-        }
+        //}
     }
 }

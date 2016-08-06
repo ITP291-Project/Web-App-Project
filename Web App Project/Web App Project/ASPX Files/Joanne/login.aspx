@@ -34,24 +34,8 @@
 
                     <!-- add into form above? ^ onsubmit="check_if_capcha_is_filled"-->
                     <h1 class="text-left">Log in to your Dashboard!</h1>
-                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                        <ContentTemplate>
-                            <asp:Timer ID="Timer1" runat="server" Interval="10000" OnTick="Timer1_Tick">
-                            </asp:Timer>
-                            <asp:Label ID="Label12" runat="server" Text="Panel Not Refreshed Yet"></asp:Label>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-
-                    <!-- asking for email input-->
                     <div class="form-group">
-                        <label for="email"></label>
-                        <!-- <input type="email" class="form-control" id="email" name="email" placeholder="email" required> -->
-                        <br />
-                        <asp:Label ID="Label13" runat="server" Text="Label"></asp:Label>
-                        <br />
-                        <br />
                         <asp:TextBox ID="TextBox1" runat="server" style="padding-left: 32px" ForeColor="Black" Width="350px" TextMode="Email" Height="25px"></asp:TextBox>
                         <br />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox1"
@@ -93,6 +77,7 @@
                 <br />
                 <asp:Label ID="Label11" runat="server"></asp:Label>
                 <br />
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
                 <ajaxToolkit:ModalPopupExtender runat="server" ID="modal" TargetControlID="btnPopup" BackgroundCssClass="background" PopupControlID="panel" CancelControlID="Button2"></ajaxToolkit:ModalPopupExtender>
 
