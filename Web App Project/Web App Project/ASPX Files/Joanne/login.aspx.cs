@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Web.Security;
 using System.Security.Cryptography;
 using System.Text;
+using System.Timers;
 
 namespace Web_App_Project.ASPX_Files.Joanne
 {
@@ -52,6 +53,13 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     //String randomNo = "1234";
                     String randomNo = GenerateRandomOTP(6, saAllowedCharacters);
                     String OTPinput = textbox20.Text;
+
+                    //T I M E R 
+                    //System.Timers.Timer Timer1 = new System.Timers.Timer(10000);
+                    //Timer1.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+                    //Timer1.Enabled = true;
+                    //Timer1.Start();
+
 
                     //string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
                     string query = "SELECT * FROM [Accounts] WHERE [Email]= @email";
@@ -306,6 +314,17 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 }
             }
         }
+
+
+
+        //private static void OnTimedEvent (object source, ElapsedEventArgs e)
+        //{
+        //    String url = "www.google.com";
+        //    System.Diagnostics.Process.Start(url);
+        //    //Console.WriteLine("The Elapsed Event was raised at {0}", e.SignalTime);
+        //}
+
+
 
         //generate otp code method
         private string GenerateRandomOTP(int iOTPLength, string[] saAllowedCharacters)
