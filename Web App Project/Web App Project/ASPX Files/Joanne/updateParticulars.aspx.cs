@@ -14,6 +14,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             System.Diagnostics.Debug.WriteLine("Username is " + Session["username"]);
 
             if (Session["username"] == null)
@@ -21,8 +22,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 System.Diagnostics.Debug.WriteLine("Username is null");
 
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
+                TextBox1.Text = "testing";
             }
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)

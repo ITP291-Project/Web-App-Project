@@ -14,7 +14,7 @@
                     <p style="margin-left: 360px">
                         <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                <asp:Label ID="Label2" runat="server" Text="Last Name"></asp:Label>
+                <asp:Label ID="Label2" runat="server" style="margin-left: -80px" Text="Last Name"></asp:Label>
                     </p>
                     <p style="margin-left: 360px">
                         <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="170px"></asp:TextBox>
