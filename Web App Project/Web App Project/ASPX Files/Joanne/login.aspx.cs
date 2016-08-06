@@ -81,7 +81,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String dbMobile = "";
                     String dbRandomNo = "";
                     String dbApproved = "";
-
+                    //int count = 5;
 
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
@@ -186,6 +186,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         if (!dbEmail.Equals(inputemail) || hashresult == false)
                         {
                             Label1.Text = "Email and/or password is wrong.";
+                            //count++;
                         }
 
                         //C A P T C H A V A L I D A T I O N
@@ -235,6 +236,11 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             //isCaptchaValid = false;
                             //label1b.Visible = true;
                         }
+
+                        //if (count>=5)
+                        //{
+                        //    TextBox2.Enabled = false;
+                        //}
                     }
                 }
             }
