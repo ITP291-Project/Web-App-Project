@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>E:\Ryan\Web Apps\Alpha Build 0.4</_PublishTargetUrl>
+    <_PublishTargetUrl>E:\Ryan\Web Apps\Beta Build 10</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
@@ -16,13 +16,34 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/06/2016 18:08:13</publishTime>
     </File>
     <File Include="App_Data/localdb.mdf">
-      <publishTime>07/23/2016 15:09:19</publishTime>
+      <publishTime>08/06/2016 22:22:37</publishTime>
     </File>
     <File Include="App_Data/localdb_log.ldf">
-      <publishTime>07/23/2016 15:09:19</publishTime>
+      <publishTime>08/06/2016 22:22:37</publishTime>
     </File>
     <File Include="ASPX Files/Angie/SignUp.aspx">
-      <publishTime>07/20/2016 17:41:36</publishTime>
+      <publishTime>08/06/2016 15:16:38</publishTime>
+    </File>
+    <File Include="ASPX Files/Angie/VolunteerDash/EventSignUp.aspx">
+      <publishTime>07/31/2016 17:16:40</publishTime>
+    </File>
+    <File Include="ASPX Files/Angie/VolunteerDash/Organization.aspx">
+      <publishTime>07/24/2016 19:06:48</publishTime>
+    </File>
+    <File Include="ASPX Files/Angie/VolunteerDash/ReportDrafts.aspx">
+      <publishTime>07/24/2016 20:58:50</publishTime>
+    </File>
+    <File Include="ASPX Files/Angie/VolunteerDash/ReportSubmission.aspx">
+      <publishTime>07/24/2016 18:58:37</publishTime>
+    </File>
+    <File Include="ASPX Files/Angie/VolunteerDash/SubmittedReport.aspx">
+      <publishTime>07/24/2016 21:04:42</publishTime>
+    </File>
+    <File Include="ASPX Files/Angie/VolunteerDash/volunteerDash.aspx">
+      <publishTime>08/05/2016 18:34:44</publishTime>
+    </File>
+    <File Include="ASPX Files/Joanne/captcha.aspx">
+      <publishTime>07/31/2016 17:16:40</publishTime>
     </File>
     <File Include="ASPX Files/Joanne/client_secret_223464701741-c89v3dtvru9j1m98j6ia7n49rji0db5a.apps.googleusercontent.com.json">
       <publishTime>07/23/2016 11:07:39</publishTime>
@@ -31,10 +52,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/06/2016 18:08:13</publishTime>
     </File>
     <File Include="ASPX Files/Joanne/enterEmail.aspx">
-      <publishTime>07/21/2016 16:45:03</publishTime>
+      <publishTime>07/31/2016 17:16:40</publishTime>
     </File>
     <File Include="ASPX Files/Joanne/login.aspx">
-      <publishTime>07/23/2016 11:07:39</publishTime>
+      <publishTime>08/06/2016 21:18:51</publishTime>
     </File>
     <File Include="ASPX Files/Joanne/resetPassword.aspx">
       <publishTime>07/12/2016 21:27:18</publishTime>
@@ -45,35 +66,38 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="ASPX Files/Joanne/TestHash.aspx">
       <publishTime>07/14/2016 16:59:53</publishTime>
     </File>
+    <File Include="ASPX Files/Joanne/testing2.aspx">
+      <publishTime>08/06/2016 15:16:38</publishTime>
+    </File>
     <File Include="ASPX Files/Joanne/updatedText.aspx">
-      <publishTime>07/06/2016 18:08:13</publishTime>
+      <publishTime>08/06/2016 21:08:10</publishTime>
     </File>
     <File Include="ASPX Files/Joanne/updateParticulars.aspx">
-      <publishTime>07/06/2016 18:08:13</publishTime>
+      <publishTime>08/06/2016 21:08:10</publishTime>
     </File>
     <File Include="ASPX Files/Joanne/VerifyEmailReset.aspx">
-      <publishTime>07/20/2016 23:41:45</publishTime>
+      <publishTime>08/02/2016 23:23:54</publishTime>
     </File>
     <File Include="ASPX Files/Joanne/viewParticulars.aspx">
-      <publishTime>07/20/2016 17:41:36</publishTime>
+      <publishTime>08/02/2016 23:23:54</publishTime>
     </File>
     <File Include="ASPX Files/Ryan/BossDash/bossDash.aspx">
       <publishTime>07/19/2016 17:57:18</publishTime>
     </File>
     <File Include="ASPX Files/Ryan/BossDash/NewApplicants.aspx">
-      <publishTime>07/23/2016 11:24:30</publishTime>
+      <publishTime>07/31/2016 17:16:40</publishTime>
     </File>
     <File Include="ASPX Files/Ryan/BossDash/PendingReports.aspx">
-      <publishTime>07/23/2016 11:27:21</publishTime>
+      <publishTime>07/31/2016 17:16:40</publishTime>
     </File>
     <File Include="ASPX Files/Ryan/BossDash/RejectedReports.aspx">
-      <publishTime>07/23/2016 11:31:08</publishTime>
+      <publishTime>08/04/2016 11:18:16</publishTime>
     </File>
     <File Include="ASPX Files/Ryan/BossDash/ReportsApproved.aspx">
-      <publishTime>07/23/2016 11:34:43</publishTime>
+      <publishTime>07/31/2016 17:16:40</publishTime>
     </File>
     <File Include="ASPX Files/Ryan/BossDash/Roster.aspx">
-      <publishTime>07/06/2016 18:08:13</publishTime>
+      <publishTime>07/31/2016 17:16:40</publishTime>
     </File>
     <File Include="ASPX Files/Ryan/VolunteerDash/Organization.aspx">
       <publishTime>07/12/2016 22:03:30</publishTime>
@@ -157,7 +181,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/19/2016 17:57:18</publishTime>
     </File>
     <File Include="ASPX Files/Seri/Rewards.aspx">
-      <publishTime>07/19/2016 17:57:18</publishTime>
+      <publishTime>08/06/2016 16:22:40</publishTime>
     </File>
     <File Include="ASPX Files/Seri/RewardsStyle.css">
       <publishTime>07/19/2016 17:57:18</publishTime>
@@ -166,13 +190,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/02/2016 23:01:50</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
-      <publishTime>07/06/2016 18:08:13</publishTime>
+      <publishTime>08/02/2016 16:43:22</publishTime>
     </File>
     <File Include="bin/App_Data/localdb.mdf">
-      <publishTime>07/23/2016 15:09:19</publishTime>
+      <publishTime>08/06/2016 22:22:37</publishTime>
     </File>
     <File Include="bin/App_Data/localdb_log.ldf">
-      <publishTime>07/23/2016 15:09:19</publishTime>
+      <publishTime>08/06/2016 22:22:37</publishTime>
     </File>
     <File Include="bin/ASPX Files/Joanne/client_secret_223464701741-c89v3dtvru9j1m98j6ia7n49rji0db5a.apps.googleusercontent.com.json">
       <publishTime>07/23/2016 11:07:39</publishTime>
@@ -218,6 +242,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/Google.Apis.PlatformServices.pdb">
       <publishTime>07/05/2016 09:02:18</publishTime>
+    </File>
+    <File Include="bin/GoogleReCaptcha.dll">
+      <publishTime>03/09/2015 01:16:56</publishTime>
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>11/23/2013 10:04:16</publishTime>
@@ -285,8 +312,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
       <publishTime>07/06/2016 18:08:13</publishTime>
     </File>
+    <File Include="bin/SRVTextToImage.dll">
+      <publishTime>08/02/2016 23:23:54</publishTime>
+    </File>
     <File Include="bin/Web App Project.dll">
-      <publishTime>07/23/2016 15:09:22</publishTime>
+      <publishTime>08/06/2016 22:36:51</publishTime>
     </File>
     <File Include="bin/Web App Project.pdb">
       <publishTime>07/23/2016 15:09:22</publishTime>
@@ -325,13 +355,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/06/2016 18:08:14</publishTime>
     </File>
     <File Include="css/main.css">
-      <publishTime>07/20/2016 17:41:36</publishTime>
+      <publishTime>08/02/2016 23:23:54</publishTime>
     </File>
     <File Include="css/responsive.css">
       <publishTime>07/06/2016 18:08:14</publishTime>
     </File>
     <File Include="css/the-big-picture.css">
-      <publishTime>07/06/2016 18:08:14</publishTime>
+      <publishTime>07/31/2016 17:16:40</publishTime>
     </File>
     <File Include="fonts/elegant-theme-line.eot">
       <publishTime>07/06/2016 18:08:14</publishTime>
@@ -598,7 +628,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/06/2016 18:08:14</publishTime>
     </File>
     <File Include="index.aspx">
-      <publishTime>07/20/2016 17:41:36</publishTime>
+      <publishTime>08/04/2016 12:50:29</publishTime>
     </File>
     <File Include="js/bootstrap.js">
       <publishTime>07/06/2016 18:08:14</publishTime>
@@ -634,13 +664,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>07/23/2016 11:07:39</publishTime>
+      <publishTime>07/24/2016 11:35:27</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>07/20/2016 17:51:05</publishTime>
+      <publishTime>08/05/2016 18:50:28</publishTime>
+    </File>
+    <File Include="SRVTextToImage.dll">
+      <publishTime>08/02/2016 23:23:54</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/23/2016 15:09:22</publishTime>
+      <publishTime>08/06/2016 22:27:55</publishTime>
     </File>
     <File Include="WebApplication3.csproj">
       <publishTime>07/06/2016 18:08:14</publishTime>
