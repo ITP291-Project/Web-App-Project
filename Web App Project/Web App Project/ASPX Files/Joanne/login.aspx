@@ -33,9 +33,8 @@
                 <form role="form" action="" method="POST">
 
                     <!-- add into form above? ^ onsubmit="check_if_capcha_is_filled"-->
-                    <h1 class="text-left">Log in to your Dashboard!<asp:ScriptManager ID="ScriptManager2" runat="server">
-                        </asp:ScriptManager>
-                    </h1>
+                    <h1 class="text-left">Log in to your Dashboard!</h1>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
@@ -94,7 +93,6 @@
                 <br />
                 <asp:Label ID="Label11" runat="server"></asp:Label>
                 <br />
-                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
                 <ajaxToolkit:ModalPopupExtender runat="server" ID="modal" TargetControlID="btnPopup" BackgroundCssClass="background" PopupControlID="panel" CancelControlID="Button2"></ajaxToolkit:ModalPopupExtender>
 
