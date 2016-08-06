@@ -1,13 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Rewards.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Seri.Rewards" %>
 
-
-
-<asp:Content ID="RewardsHead" ContentPlaceHolderID="head" runat="server">
-    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
-</asp:Content>
-
-
 <asp:Content ID="RewardsBody" ContentPlaceHolderID="body" runat="server">
+    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
     <div class="jumbotron hiddenJumbo" >
         <h1 runat="server" id="WelcomeHeading">Welcome, Please Login</h1>
         <h3 runat="server" id="UsersPoints"/>
