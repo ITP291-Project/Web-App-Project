@@ -19,9 +19,8 @@
             width: 200px;
             height: 150px;
             justify-content: center;
-            align-content:center;
+            align-content: center;
         }
-
     </style>
     <head>
 
@@ -36,12 +35,12 @@
                     <h1 class="text-left">Log in to your Dashboard!</h1>
 
                     <div class="form-group">
-                        <asp:TextBox ID="TextBox1" runat="server" style="padding-left: 32px" ForeColor="Black" Width="350px" TextMode="Email" Height="25px"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" Style="padding-left: 32px" ForeColor="Black" Width="350px" TextMode="Email" Height="25px"></asp:TextBox>
                         <br />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox1"
                             CssClass="text-danger" ErrorMessage="The email field is required." />
                         <!--placing icon using a span element-->
-                        <span style="color:black; font-size:18px" class="icon fa fa-envelope-o fa-fw">
+                        <span style="color: black; font-size: 18px" class="icon fa fa-envelope-o fa-fw">
                             <br />
                         </span>
                         <asp:Label ID="Label1" runat="server"></asp:Label>
@@ -51,10 +50,10 @@
                     <div class="form-group">
                         <label for="password"></label>
                         <!-- <input type="password" class="form-control" id="password" name="password" placeholder="password" required> -->
-                        <asp:TextBox ID="TextBox2" runat="server" style="padding-left: 32px" ForeColor="Black" Width="350px" TextMode="Password" Height="25px"></asp:TextBox>
+                        <asp:TextBox ID="TextBox2" runat="server" Style="padding-left: 32px" ForeColor="Black" Width="350px" TextMode="Password" Height="25px"></asp:TextBox>
                         <br />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox2" CssClass="text-danger" ErrorMessage="The password field is required." />
-                        <span style="color:black; font-size:18px" class="icon fa fa-key fa-fw"></span>
+                        <span style="color: black; font-size: 18px" class="icon fa fa-key fa-fw"></span>
                         <br />
                     </div>
 
@@ -63,17 +62,17 @@
                     <br />
                     <asp:Image ID="Image1" runat="server" ImageUrl="~/ASPX Files/Joanne/captcha.aspx" />
                     <br />
-                    
+
                     <!--captcha-->
                     <!--<div class="g-recaptcha" data-sitekey="6LeYqiQTAAAAAAwOrxXM2XeMrUVQbgfF1lmuoAQ8"></div>-->
 
-<%--                    <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
+                    <%--                    <div class="g-recaptcha" data-sitekey="6LfDciITAAAAADVnhLVRo-teYVKzy6JCRX2xfcwV"></div>
                     <!-- add into above div? ^ data-callback="capcha_filled" data-expired-callback="capcha_expired"-->--%>
                     <br />
                 </form>
 
                 <asp:TextBox ID="TextBox21" runat="server" ForeColor="Black" Width="100px"></asp:TextBox>
-                <asp:RequiredFieldValidator runat="server" ControlToValidate ="TextBox21" CssClass="text-danger" ErrorMessage="Please fill in the captcha input." />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox21" CssClass="text-danger" ErrorMessage="Please fill in the captcha input." />
                 <br />
                 <asp:Label ID="Label11" runat="server"></asp:Label>
                 <br />
@@ -88,30 +87,30 @@
                 <%-- POPUP BOX --%>
 
                 <asp:Panel ID="panel" runat="server" CssClass="popup">
-                    <asp:Button ID="Button2" runat="server" Height="20px" style="margin-left:170px" Text="Close" Width="30px" />
+                    <asp:Button ID="Button2" runat="server" Height="20px" Style="margin-left: 170px" Text="Close" Width="30px" />
 
                     <asp:UpdatePanel ID="UpdatePanel" runat="server">
                         <ContentTemplate>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                              <div style="position: absolute; margin-bottom: 240px; margin-left: 250px;">
-                                </div>
-                                &nbsp;<br />
-                                <asp:Label runat="server" Text="Enter your code:" style="align-content: center" ID="label1a"></asp:Label>
-                                <br />
-                                <asp:TextBox runat="server" ID="textbox20" Style="color: black; align-content:center"></asp:TextBox>
-                                <br />
-                                <asp:Label runat="server" Visible="false" ID="label1b" Style="color: black; align-content:center">Wrong Code</asp:Label>
-                                <br />
-                                <br />
-                                <%-- Button to SUBMIT code --%>
-                                <div style="color: black">
-                                    <asp:Button runat="server" Text="Submit" ID="submit" BorderColor="Black" ForeColor="Black" style="align-content: center" OnClick="submit_click" CausesValidation="false" />
-                                    <asp:Button runat="server" Text="Resend Code" ID="resend" BorderColor="Black" ForeColor="Black" style="align-content: center" OnClick="Resend_Click" CausesValidation="false" />
-                                </div>
-                                <%--<asp:Button runat="server" Text="open" ID="button" OnClick="submit_click" Style="height: 26px" />--%>
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
-                    </asp:Panel>
+                             </div>
+                            &nbsp;<br />
+                            <asp:Label runat="server" Text="Enter your code:" Style="align-content: center" ID="label1a"></asp:Label>
+                            <br />
+                            <asp:TextBox runat="server" ID="textbox20" Style="color: black; align-content: center"></asp:TextBox>
+                            <br />
+                            <asp:Label runat="server" Visible="false" ID="label1b" Style="color: black; align-content: center">Wrong Code</asp:Label>
+                            <br />
+                            <br />
+                            <%-- Button to SUBMIT code --%>
+                            <div style="color: black">
+                                <asp:Button runat="server" Text="Submit" ID="submit" BorderColor="Black" ForeColor="Black" Style="align-content: center" OnClick="submit_click" CausesValidation="false" />
+                                <asp:Button runat="server" Text="Resend Code" ID="resend" BorderColor="Black" ForeColor="Black" Style="align-content: center" OnClick="Resend_Click" CausesValidation="false" />
+                            </div>
+                            <%--<asp:Button runat="server" Text="open" ID="button" OnClick="submit_click" Style="height: 26px" />--%>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </asp:Panel>
 
             </div>
 

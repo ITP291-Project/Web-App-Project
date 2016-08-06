@@ -6,7 +6,7 @@
     </head>
     <body>
         <h2 style="margin-left: 100px">Your particulars have been updated!</h2>
-        <h4 style="margin-left: 100px">Click <a href="#">here</a> to return to your dashboard.&nbsp; </h4>
+        <h4 style="margin-left: 100px">Click <a href="login.aspx">here</a> to return to your dashboard.&nbsp; </h4>
     </body>
 </asp:Content>
 

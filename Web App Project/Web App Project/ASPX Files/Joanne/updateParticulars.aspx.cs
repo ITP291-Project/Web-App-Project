@@ -21,8 +21,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 System.Diagnostics.Debug.WriteLine("Username is null");
 
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
-                TextBox1.Text = "testing";
             }
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -83,8 +83,11 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 myCommand.ExecuteNonQuery();
                 myConnection.Close(); */
             }
+
             Response.Redirect("updatedText.aspx");
+
         }
+
     }
 }
 
