@@ -14,7 +14,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             System.Diagnostics.Debug.WriteLine("Username is " + Session["username"]);
 
             if (Session["username"] == null)
