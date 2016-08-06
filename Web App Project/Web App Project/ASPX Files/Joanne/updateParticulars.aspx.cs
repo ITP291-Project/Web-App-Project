@@ -14,6 +14,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             System.Diagnostics.Debug.WriteLine("Username is " + Session["username"]);
 
             if (Session["username"] == null)
@@ -21,6 +22,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 System.Diagnostics.Debug.WriteLine("Username is null");
 
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
+                TextBox1.Text = "testing";
             }
         }
 
@@ -29,10 +31,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
                 string userid = Session["username"].ToString();
-                //pls undo after session working^
-
-                //hardcode
-               //string userid = "euniceL@gmail.com";
 
                 //When they press SAVE
                 //Retrieve data from text box input to update the database information

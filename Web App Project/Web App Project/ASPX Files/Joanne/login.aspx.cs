@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Web.Security;
 using System.Security.Cryptography;
 using System.Text;
+using System.Timers;
 
 namespace Web_App_Project.ASPX_Files.Joanne
 {
@@ -27,6 +28,9 @@ namespace Web_App_Project.ASPX_Files.Joanne
             //{
             //    Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
             //}
+
+            Label13.Text = "Page created at: " +
+          DateTime.Now.ToLongTimeString();
 
             if (Session["username"] == null)
             {
@@ -53,6 +57,13 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String randomNo = GenerateRandomOTP(6, saAllowedCharacters);
                     String OTPinput = textbox20.Text;
 
+                    //T I M E R 
+                    //System.Timers.Timer Timer1 = new System.Timers.Timer(10000);
+                    //Timer1.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+                    //Timer1.Enabled = true;
+                    //Timer1.Start();
+
+
                     //string query = "SELECT * FROM [Accounts] WHERE [Email]='" + inputemail + "'";
                     string query = "SELECT * FROM [Accounts] WHERE [Email]= @email";
                     string query1 = "UPDATE [Accounts] SET [randomNo] = @randomNo where [Email] = @inputemail";
@@ -73,7 +84,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String dbMobile = "";
                     String dbRandomNo = "";
                     String dbApproved = "";
-
+                    //int count = 5;
 
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
@@ -178,6 +189,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         if (!dbEmail.Equals(inputemail) || hashresult == false)
                         {
                             Label1.Text = "Email and/or password is wrong.";
+                            //count++;
                         }
 
                         //C A P T C H A V A L I D A T I O N
@@ -227,6 +239,11 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             //isCaptchaValid = false;
                             //label1b.Visible = true;
                         }
+
+                        //if (count>=5)
+                        //{
+                        //    TextBox2.Enabled = false;
+                        //}
                     }
                 }
             }
@@ -307,6 +324,17 @@ namespace Web_App_Project.ASPX_Files.Joanne
             }
         }
 
+
+
+        //private static void OnTimedEvent (object source, ElapsedEventArgs e)
+        //{
+        //    String url = "www.google.com";
+        //    System.Diagnostics.Process.Start(url);
+        //    //Console.WriteLine("The Elapsed Event was raised at {0}", e.SignalTime);
+        //}
+
+
+
         //generate otp code method
         private string GenerateRandomOTP(int iOTPLength, string[] saAllowedCharacters)
 
@@ -355,6 +383,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                 String url = "www.google.com";
                 System.Diagnostics.Process.Start(url);
             }
+        }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            Label12.Text = "Panel Refreshed at " + DateTime.Now.ToLongTimeString();
+
         }
     }
 }
