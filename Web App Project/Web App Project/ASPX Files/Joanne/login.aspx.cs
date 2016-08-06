@@ -20,7 +20,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
         bool isCaptchaValid = false;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label12.Visible = false;
+            //Label12.Visible = false;
 
             //if (Session["username"] == null)
             //{
@@ -86,7 +86,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     String dbMobile = "";
                     String dbRandomNo = "";
                     String dbApproved = "";
-                    //int count = 5;
 
                     //read data from the db - put respective db data that we've retrieved into the variables to compare with input
                     if (reader.Read())
@@ -184,12 +183,13 @@ namespace Web_App_Project.ASPX_Files.Joanne
                     }
                     else
                     {
-                        //Response.Redirect("login.aspx");
                         Response.AppendHeader("Refresh", "3;url=login.aspx");
-                        if (dbApproved.Equals("locked"))
-                        {
-                                Label12.Visible = true;
-                        }
+                        //Response.Redirect("login.aspx");
+                        //if (dbApproved.Equals("locked"))
+                        //{
+                        //    Label12.Visible = true;
+                        //}
+
                         if (!dbEmail.Equals(inputemail) || hashresult == false)
                         {
                             Label1.Text = "Email and/or password is wrong.";
@@ -248,10 +248,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
                             //label1b.Visible = true;
                         }
 
-                        else if (dbApproved.Equals("locked"))
-                        {
-                            Label12.Visible=true;
-                        }
+                        //else if (dbApproved.Equals("locked"))
+                        //{
+                        //    Label12.Visible=true;
+                        //}
+
+
                         //if (count>=5)
                         //{
                         //    TextBox2.Enabled = false;
