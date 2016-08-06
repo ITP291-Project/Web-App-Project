@@ -112,6 +112,10 @@
             <div class="form-wrapper marginbot-50">
 
                 <p>
+                    <asp:Label ID="lblRecordStatus" runat="server" Text="Label" ForeColor="Red"></asp:Label>
+                </p>
+
+                <p>
                     <asp:Label ID="Label1" runat="server" Text="Label">First Name:</asp:Label>
                     <br />
                     <asp:TextBox ID="firstName" runat="server" ForeColor="Black" CssClass="textbox"></asp:TextBox>

@@ -295,7 +295,6 @@ C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\
 C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.dll
 C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.Gmail.v1.dll
 C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Google.Apis.PlatformServices.dll
-C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\GoogleReCaptcha.dll
 C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\log4net.dll
 C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\Newtonsoft.Json.dll
 C:\Users\Angie\Source\Repos\Web-App-Project\Web App Project\Web App Project\bin\SRVTextToImage.dll

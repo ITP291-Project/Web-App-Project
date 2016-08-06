@@ -48,13 +48,12 @@ namespace Web_App_Project.ASPX_Files.Angie
                 int points = 0;
                 String organization = " ";
                 string pointsId = "1";
-
-                String dbEmail = "";
+                
 
                 myConnection.Open();
-                SqlDataReader reader = null;
-                /* string query = "IF NOT EXISTS (SELECT * FROM Accounts WHERE Email = '" + emailInput.Text + "')"; */
-                string query = "INSERT INTO Accounts (FName, Lname, Password, Email, TelNo, NRIC, Address, Occupation, Language, Gender, Privilege, Salutation, BirthDate, Approved, Organization, Points, pointsId)";
+                //SqlDataReader reader = null;
+                string query = "IF NOT EXISTS (SELECT * FROM Accounts WHERE Email = @Email AND NRIC = @NRIC)";
+                query += "INSERT INTO Accounts (FName, Lname, Password, Email, TelNo, NRIC, Address, Occupation, Language, Gender, Privilege, Salutation, BirthDate, Approved, Organization, Points, pointsId)";
                 query += " VALUES (@FName, @LName, @Password, @Email, @TelNo, @NRIC, @Address, @Occupation, @Language, @Gender, @Privilege, @Salutation, @BirthDate, @Approved, @Organization, @Points, @pointsId)";
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
               
@@ -79,20 +78,30 @@ namespace Web_App_Project.ASPX_Files.Angie
                 myCommand.Parameters.AddWithValue("@Points", points);
                 myCommand.Parameters.AddWithValue("@pointsId", pointsId);
 
-                
+
                 //myConnection.Close();
 
                 if (ctrlGoogleReCaptcha.Validate())
                 {
                     //submit form success
                     lblStatus.Text = "Success";
-                    myCommand.ExecuteNonQuery();
+                    int a = myCommand.ExecuteNonQuery();
+
+                    if (a > 0) {
+                        lblRecordStatus.Text = "Sign up success! Please wait for approval before you logon.";
+                    }
+
+                    else
+                    {
+                        lblRecordStatus.Text = "Applicant already exists. Please check your email and nric.";
+                    }
                 }
-                else
+                else 
                 {
                     //captcha challenge failed
                     lblStatus.Text = "Captcha Failed!! Please try again!!";
                 }
+               
             }
             
         }
@@ -111,7 +120,7 @@ namespace Web_App_Project.ASPX_Files.Angie
 
         protected void birthDate_SelectionChanged(object sender, EventArgs e)
         {
-            string selecteddate = birthDate.SelectedDate.ToString();
+            string selecteddate = birthDate.SelectedDate.ToString("dd/MM/yyyy");
             bDateInput.Text = selecteddate;
         }
 

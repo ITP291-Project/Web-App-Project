@@ -357,7 +357,6 @@
     <Content Include="WebApplication3.csproj.user" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ASPX Files\Angie\ReCaptchaClass.cs" />
     <Compile Include="ASPX Files\Angie\SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
