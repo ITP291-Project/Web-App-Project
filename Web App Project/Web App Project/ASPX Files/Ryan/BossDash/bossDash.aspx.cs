@@ -11,6 +11,8 @@ namespace Web_App_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Everybody comment in the code visual studio is a stupid nigger
+
             System.Diagnostics.Debug.WriteLine("Username is " + Session["username"]);
 
             if (Session["username"] == null)
