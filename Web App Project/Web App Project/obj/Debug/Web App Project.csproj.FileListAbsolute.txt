@@ -326,3 +326,4 @@ C:\Users\Joanne\Desktop\latest update project\Web-App-Project\Web App Project\We
 C:\Users\Joanne\Desktop\latest update project\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csproj.GenerateResource.Cache
 C:\Users\Joanne\Desktop\latest update project\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.dll
 C:\Users\Joanne\Desktop\latest update project\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.pdb
+C:\Users\Ryan\Source\Repos\Web-App-Project\Web App Project\Web App Project\obj\Debug\Web App Project.csprojResolveAssemblyReference.cache
