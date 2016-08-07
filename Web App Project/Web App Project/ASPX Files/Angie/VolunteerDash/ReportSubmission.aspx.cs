@@ -60,11 +60,41 @@ namespace Web_App_Project.Ryan.Volunteer
                         FileUpload1.PostedFile.SaveAs(path + caseNo + fileExtension);
                         Label1.Text = "File uploaded!";
                         Label1.Visible = true;
+
+                        /*
+                          //Adding watermark to the image and saving it into the specified folder!!!!
+                          string path = "C:/Web Apps/ReportPictures/" + caseNo + ".jpg";
+                          Image image = Image.FromStream(FileUpload1.PostedFile.InputStream);
+                          int width = image.Width;
+                          int height = image.Height;
+                          Bitmap bmp = new Bitmap(width, height);
+                          Graphics graphics = Graphics.FromImage((Image)bmp);
+                          graphics.InterpolationMode = InterpolationMode.High;
+                          graphics.SmoothingMode = SmoothingMode.HighQuality;
+                          graphics.Clear(Color.Transparent);
+                          graphics.DrawImage(image, 0, 0, width, height);
+                          Font font = new Font("Arial", 8, FontStyle.Bold);
+                          SolidBrush brush = new SolidBrush(Color.FromArgb(100, 255, 222, 173));
+                          graphics.DrawString("Voices of Singapore", font, brush, 0.0F, 75.0F); // string, font style, brush used, x and y position for the string to be written
+                          Image newImage = (Image)bmp;
+                          newImage.Save(Server.MapPath("C:/Web Apps/ReportPictures/" + FileUpload1.PostedFile.FileName));
+                          graphics.Dispose();
+
+                          ClientScript.RegisterClientScriptBlock(csType, csName, "<script>alert('Image added successfully to the folder.')</script>");
+                      }
+                     */
+
+
                     }
                     catch (Exception ex)
                     {
                         Label1.Text = "File could not be uploaded.";
                         Label1.Visible = true;
+
+                        /*
+                         ClientScript.RegisterClientScriptBlock(csType, csName, "<script>alert('Some problem occured while adding the image!!! Please try again!!!')</script>");
+                         Response.Write(ex.Message);
+                         */
                     }
                 }
                 else
@@ -135,7 +165,7 @@ namespace Web_App_Project.Ryan.Volunteer
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
-         
+
                 string caseNo = TextBox1.Text;
                 string date = TextBox2.Text;
                 string duration = DropDownList2.Text;
