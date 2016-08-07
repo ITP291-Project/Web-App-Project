@@ -351,7 +351,7 @@
                         <div class="box ">
                             <div class="icon colored-5">
                                 <span>
-                                    <!--<img src="img/TOUCH.png"></img>-->
+                                    <img src="img/heart-touch.png" width="100px" height="100px"></img>
                                 </span>
                             </div>
                             <!--<h3>

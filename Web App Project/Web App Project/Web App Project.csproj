@@ -216,6 +216,7 @@
     <Content Include="img\fancybox_overlay.png" />
     <Content Include="img\fancybox_sprite%402x.png" />
     <Content Include="img\fancybox_sprite.png" />
+    <Content Include="img\heart-touch.png" />
     <Content Include="img\imac.png" />
     <Content Include="img\inspiration-geometry.png" />
     <Content Include="img\intro-img1.jpg" />
@@ -229,7 +230,6 @@
     <Content Include="img\slider\image1.jpg" />
     <Content Include="img\slider\image2.JPG" />
     <Content Include="img\slider\image3.jpg" />
-    <Content Include="img\TOUCH.png" />
     <Content Include="img\Salvation.jpg" />
     <Content Include="img\RenCi.jpg" />
     <Content Include="img\SPCA.jpg" />
@@ -265,6 +265,7 @@
     <Content Include="img\team-1.png" />
     <Content Include="img\team-2.png" />
     <Content Include="img\team-3.png" />
+    <Content Include="img\touch.jpg" />
     <Content Include="img\work-1.jpg" />
     <Content Include="img\work-10.jpg" />
     <Content Include="img\work-11.jpg" />
