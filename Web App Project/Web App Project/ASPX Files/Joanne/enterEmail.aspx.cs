@@ -23,12 +23,12 @@ namespace Web_App_Project.ASPX_Files.Joanne
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
+            /*if (Session["username"] == null)
             {
                 System.Diagnostics.Debug.WriteLine("Username is null");
 
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
-            }
+            }*/
         }
 
         protected void Button1_OnClick(object sender, EventArgs e)
