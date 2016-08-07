@@ -13,7 +13,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
+            /*if (Session["username"] == null)
             {
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
             }
@@ -27,7 +27,8 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
             String organization = Session["Organization"].ToString();
             //String organization = "Pioneer Generation";
             TextBox1.Text = organization;
-        }
+    */    
+    }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
