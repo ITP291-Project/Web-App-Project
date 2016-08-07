@@ -31,8 +31,6 @@ namespace Web_App_Project.ASPX_Files.Joanne
             //    Response.Redirect("/ASPX Files/Ryan/VolunteerDash/volunteerDash.aspx");
             //}
 
-            //  Label13.Text = "Page created at: " +
-            //DateTime.Now.ToLongTimeString();
 
             if (Session["username"] == null)
             {
@@ -200,6 +198,8 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         //{
                         //    Label1.Text = "Your account has been locked. Contact administrator to help you unlock your account.";
                         //}
+
+
                         //C A P T C H A V A L I D A T I O N
                         isCaptchaValid = false;
                         if (Session["CaptchaText"] != null && Session["CaptchaText"].ToString() == TextBox21.Text)
