@@ -44,7 +44,6 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
                 query += "INSERT INTO EventSignUp (Username, Organization, Day, Time)";
                 query += "VALUES (@Username, @Organization, @Day, @Time)";
                 //query += "WHERE (SELECT * FROM Timetable WHERE " + day + "='" + organization + "' AND Time='" + time + "')";
-                int i = 1;
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
 

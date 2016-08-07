@@ -38,11 +38,12 @@
                     <br />
                     <br />
                     <br />
-                    <asp:Label ID="lblError" runat="server" ForeColor="Black"  Width="300px"></asp:Label>
+                    <asp:Label ID="lblError" runat="server" Width="300px"></asp:Label>
                     <br />
                     <br />
                     <br />
                 <asp:Button ID="Button6" runat="server" Text="Sign Up!" Width="225px" ForeColor="Black" OnClick="Button6_Click" />
+                    <br />
                     <br />
                 </div>
 
@@ -62,7 +63,7 @@
     </div>
                 </div>
         </div>
-    </div>
+    
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
