@@ -8,6 +8,9 @@
                     <asp:Button ID="Button5" CssClass="Dashbtn btn-skin btn-block" runat="server" Text="Submitted" Width="225px" OnClick="Button5_Click" />
                     <br />
                     <br />
+                    <asp:Label ID="lblErrorMsg" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
                     <asp:Label ID="Label2" runat="server" ForeColor="Black" Text="Username"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="TextBox6" runat="server" ForeColor="Black" ReadOnly="True" Width="135px"></asp:TextBox>

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Angie.SignUp" %>
+
 <%@ Register Assembly="GoogleReCaptcha" Namespace="GoogleReCaptcha" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
@@ -47,13 +48,12 @@
                 outline: 0;
             }
 
-            .ddlistcolor {
-                color: black;
-            }
+        .ddlistcolor {
+            color: black;
+        }
     </style>
 
-    </style>
-    -->
+
     <head>
         <title>Join us today!</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" />

@@ -135,7 +135,7 @@ namespace Web_App_Project.Ryan.Volunteer
         {
             using (SqlConnection myConnection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["localdbConnectionString1"].ConnectionString))
             {
-
+         
                 string caseNo = TextBox1.Text;
                 string date = TextBox2.Text;
                 string duration = DropDownList2.Text;
@@ -145,23 +145,33 @@ namespace Web_App_Project.Ryan.Volunteer
 
                 //FTPUpload();
                 HTTPUpload();
+                string query = "IF NOT EXISTS (SELECT * FROM Report WHERE CaseNo = @CaseNo)";
+                query += "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, AdditionalFeedback, IsDraft, Status, Username)";
+                query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @AdditionalFeedback, @IsDraft, @Status, @Username)";
 
-                    string query = "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, AdditionalFeedback, IsDraft, Status, Username)";
-                    query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @AdditionalFeedback, @IsDraft, @Status, @Username)";
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
 
-                    SqlCommand myCommand = new SqlCommand(query, myConnection);
-
-                    myCommand.Parameters.AddWithValue("@CaseNo", caseNo);
-                    myCommand.Parameters.AddWithValue("@Date", date);
-                    myCommand.Parameters.AddWithValue("@Duration", duration);
-                    myCommand.Parameters.AddWithValue("@TypeOfVolunteer", type);
-                    myCommand.Parameters.AddWithValue("@AdditionalFeedBack", feedback);
-                    myCommand.Parameters.AddWithValue("@IsDraft", "false");
-                    myCommand.Parameters.AddWithValue("@Status", "pending");
+                myCommand.Parameters.AddWithValue("@CaseNo", caseNo);
+                myCommand.Parameters.AddWithValue("@Date", date);
+                myCommand.Parameters.AddWithValue("@Duration", duration);
+                myCommand.Parameters.AddWithValue("@TypeOfVolunteer", type);
+                myCommand.Parameters.AddWithValue("@AdditionalFeedBack", feedback);
+                myCommand.Parameters.AddWithValue("@IsDraft", "false");
+                myCommand.Parameters.AddWithValue("@Status", "pending");
                 myCommand.Parameters.AddWithValue("@Username", username);
-                    myConnection.Open();
-                    myCommand.ExecuteNonQuery();
-                    myConnection.Close();
+                myConnection.Open();
+                int a = myCommand.ExecuteNonQuery();
+
+                if (a > 0)
+                {
+                    lblErrorMsg.Text = "A report for this case number has been submitted before. Please check drafts.";
+                }
+
+                else
+                {
+                    lblErrorMsg.Text = "Report submitted successfully.";
+                }
+                myConnection.Close();
             }
         }
 

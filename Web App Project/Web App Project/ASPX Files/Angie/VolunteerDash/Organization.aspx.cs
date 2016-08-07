@@ -73,21 +73,26 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
                     Response.Redirect("Organization.aspx");
                 }
 
-                if (inputorganization.Equals(dbOrganization))
+                if (!inputorganization.Equals(dbOrganization))
                 {
+                    myConnection.Open();
                     string query = "UPDATE Accounts SET Organization='" + inputorganization + "' WHERE Email='" + username + "'";
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
 
                     myCommand.ExecuteNonQuery();
-
+                    myConnection.Close();
                     Label1.Text = "Changes updated!";
                     Label1.Visible = true;
+
+                    
                 }
                 else
                 {
                     Label1.Text = "You are already enrolled for this organization!";
                     Label1.Visible = true;
                 }
+
+
             }
         }
 

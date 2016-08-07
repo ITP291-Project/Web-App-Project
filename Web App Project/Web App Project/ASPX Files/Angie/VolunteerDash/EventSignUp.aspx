@@ -6,7 +6,7 @@
                 <div id="left">
                     <asp:Label ID="Label4" runat="server" ForeColor="Black" Text="Your Prefered Organization"></asp:Label>
                     &nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" ReadOnly="True" Width="255px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" ForeColor="Black" Width="255px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label ID="Label2" runat="server" Text="Day" ForeColor="Black"></asp:Label>
@@ -38,7 +38,7 @@
                     <br />
                     <br />
                     <br />
-                    <asp:Label ID="Label3" runat="server" ForeColor="Black" Text="Error! Your organization is not in this timeslot! Please refer to the timetable to confirm your organization's timeslot" Width="300px"></asp:Label>
+                    <asp:Label ID="lblError" runat="server" ForeColor="Black"  Width="300px"></asp:Label>
                     <br />
                     <br />
                     <br />

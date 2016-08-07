@@ -13,7 +13,7 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*if (Session["username"] == null)
+            if (Session["username"] == null)
             {
                 Response.Redirect("/ASPX Files/Joanne/login.aspx");
             }
@@ -22,12 +22,11 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
                 Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
             }
 
-            Label3.Visible = false;
+            lblError.Visible = false;
 
             String organization = Session["Organization"].ToString();
-            //String organization = "Pioneer Generation";
             TextBox1.Text = organization;
-    */    
+      
     }
 
         protected void Button6_Click(object sender, EventArgs e)
@@ -37,26 +36,38 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
                 String username = Session["username"].ToString();
                 //String username = "stupid@idiot.com";
                 String organization = TextBox1.Text;
-                String dbOrganization = Session["Organization"].ToString();
+                //String dbOrganization = Session["Organization"].ToString();
                 String day = DropDownList2.Text;
                 String time = DropDownList1.Text;
 
-                string query = "INSERT INTO EventSignUp (Username, Organization, Day, Time)";
+                string query = "IF EXISTS (SELECT * FROM Timetable WHERE Monday = @Organization OR Tuesdau = @Organization OR Wednesday = @Organization OR Thursday = @Organization OR Friday = @Organization AND Time = @Time)";
+                query += "INSERT INTO EventSignUp (Username, Organization, Day, Time)";
                 query += "VALUES (@Username, @Organization, @Day, @Time)";
                 //query += "WHERE (SELECT * FROM Timetable WHERE " + day + "='" + organization + "' AND Time='" + time + "')";
                 int i = 1;
 
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
 
-                //myCommand.Parameters.AddWithValue("@Id", i++);
+
                 myCommand.Parameters.AddWithValue("@Username", username);
                 myCommand.Parameters.AddWithValue("@Organization", organization);
                 myCommand.Parameters.AddWithValue("@Day", day);
                 myCommand.Parameters.AddWithValue("@Time", time);
 
                 myConnection.Open();
-                myCommand.ExecuteNonQuery();
-                myConnection.Close();
+                int a = myCommand.ExecuteNonQuery();
+
+                if (a > 0)
+                {
+                    lblError.Text = "Sign up success!";
+                   
+                }
+
+                else
+                {
+                    lblError.Text = "Error! Your organization is not in this timeslot! Please refer to the timetable to confirm your organization's timeslot.";
+                }
+                 //myConnection.Close();
             }
         }
 
