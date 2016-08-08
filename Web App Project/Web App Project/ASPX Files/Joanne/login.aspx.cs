@@ -93,7 +93,7 @@ namespace Web_App_Project.ASPX_Files.Joanne
                         dbPassword = reader["Password"].ToString(); //read db password                
                         dbPrivilege = reader["Privilege"].ToString(); //read db privilege
                         dbOrganization = reader["Organization"].ToString(); //read db 
-                        dbOrganization = "SPCA";
+                        //dbOrganization = "SPCA";
                         dbRandomNo = reader["randomNo"].ToString();
                         dbApproved = reader["Approved"].ToString();
                     }

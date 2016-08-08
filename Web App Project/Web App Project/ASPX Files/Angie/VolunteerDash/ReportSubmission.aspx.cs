@@ -192,7 +192,7 @@ namespace Web_App_Project.Ryan.Volunteer
                 myConnection.Open();
                 int a = myCommand.ExecuteNonQuery();
 
-                if (a > 0)
+                if (a > -1)
                 {
                     lblErrorMsg.Text = "A report for this case number has been submitted before. Please check drafts.";
                 }
@@ -226,21 +226,10 @@ namespace Web_App_Project.Ryan.Volunteer
                 string type = DropDownList1.Text;
                 string feedback = TextBox5.Text;
 
-                if (!FileUpload1.HasFile)
-                {
-                    Label1.Visible = true;
-                    Label1.Text = "Please Select Image File";    //checking if file uploader has no file selected
-                }
-                else
-                {
-                    int length = FileUpload1.PostedFile.ContentLength;
-                    byte[] pic = new byte[length];
+                HTTPUpload();
 
-
-                    FileUpload1.PostedFile.InputStream.Read(pic, 0, length);
-
-                    string query = "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, Photo, AdditionalFeedback, IsDraft)";
-                    query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @Photo, @AdditionalFeedback, @IsDraft)";
+                string query = "INSERT INTO Report (CaseNo, Date, Duration, TypeOfVolunteer, AdditionalFeedback, IsDraft)";
+                    query += "VALUES (@CaseNo, @Date, @Duration, @TypeOfVolunteer, @AdditionalFeedback, @IsDraft)";
 
                     SqlCommand myCommand = new SqlCommand(query, myConnection);
 
@@ -248,13 +237,11 @@ namespace Web_App_Project.Ryan.Volunteer
                     myCommand.Parameters.AddWithValue("@Date", date);
                     myCommand.Parameters.AddWithValue("@Duration", duration);
                     myCommand.Parameters.AddWithValue("@TypeOfVolunteer", type);
-                    myCommand.Parameters.AddWithValue("@Photo", pic);
                     myCommand.Parameters.AddWithValue("@AdditionalFeedBack", feedback);
                     myCommand.Parameters.AddWithValue("@IsDraft", "true");
                     myConnection.Open();
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
-                }
             }
         }
 
