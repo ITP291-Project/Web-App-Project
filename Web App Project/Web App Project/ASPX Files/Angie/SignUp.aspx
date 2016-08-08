@@ -150,7 +150,6 @@
                     <asp:Label ID="Label5" runat="server" Text="Label">Birthdate:</asp:Label>
                     <br />
                     <asp:TextBox ID="bDateInput" runat="server" ForeColor="Black" Enabled="false" CssClass="textbox"></asp:TextBox>
-                    <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="bDateInput" runat="server" />
                     <asp:Button ID="Button2" runat="server" Text="Select Date" OnClick="Button2_Click" />
                     <asp:Calendar ID="birthDate" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" OnSelectionChanged="birthDate_SelectionChanged" Width="330px">
                         <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />

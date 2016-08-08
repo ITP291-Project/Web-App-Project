@@ -59,7 +59,7 @@
                     <li><a class="page-scroll" href="/index.aspx">Home</a> </li>
                     <li><a class="page-scroll" href="/index.aspx#services">Overview</a> </li>
                     <li><a class="page-scroll" href="/index.aspx#intro">About Us</a> </li>
-                    <li><a class="page-scroll" href="/index.aspx#contact">Join Us</a> </li>
+                    <li><a class="page-scroll" href="/index.aspx#contacts">Join Us</a> </li>
                     <li id="logout" runat="server"><a class="page-scroll" href="/index.aspx">Logout</a></li>
                     <li><asp:Label ID="Label1" runat="server" ForeColor="Black" Text=""></asp:Label></li>
                     <li>
