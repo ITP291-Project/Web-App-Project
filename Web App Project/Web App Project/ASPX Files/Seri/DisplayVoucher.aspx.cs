@@ -13,6 +13,15 @@ namespace Web_App_Project.ASPX_Files.Seri
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["username"] == null)
+            {
+                Response.Redirect("/ASPX Files/Joanne/login.aspx");
+            }
+            else if (Session["Privilege"].ToString() == "boss")
+            {
+                Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+            }
+
             //get the posted voucher id
             var VoucherID = Request["VoucherID"];
             if(VoucherID != null)

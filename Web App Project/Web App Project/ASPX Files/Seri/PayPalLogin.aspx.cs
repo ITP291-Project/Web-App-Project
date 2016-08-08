@@ -16,7 +16,16 @@ namespace Web_App_Project.ASPX_Files.Seri
         protected void Page_Load(object sender, EventArgs e)
         {
             //set the current user (REMOVE THIS AFTER LOGIN PAGE WORKS)
-            Session["Username"] = "someone@gmail.com";
+            //Session["Username"] = "someone@gmail.com";
+
+            if (Session["username"] == null)
+            {
+                Response.Redirect("/ASPX Files/Joanne/login.aspx");
+            }
+            else if (Session["Privilege"].ToString() == "boss")
+            {
+                Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
+            }
 
 
             //create an account manager object

@@ -14,9 +14,18 @@ namespace Web_App_Project.ASPX_Files.Seri
         protected void Page_Load(object sender, EventArgs e)
         {
             //set the current user (REMOVE AFTER LOGIN PAGE IS FINISHED)
-            if (Session["Username"] == null)
+            /*if (Session["Username"] == null)
             {
                 Session["Username"] = "someone@gmail.com";
+            }*/
+
+            if (Session["username"] == null)
+            {
+                Response.Redirect("/ASPX Files/Joanne/login.aspx");
+            }
+            else if (Session["Privilege"].ToString() == "boss")
+            {
+                Response.Redirect("/ASPX Files/Ryan/BossDash/bossDash.aspx");
             }
 
             //create account manager object
