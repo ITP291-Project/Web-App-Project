@@ -20,6 +20,8 @@ namespace Web_App_Project.ASPX_Files.Angie
         protected void Page_Load(object sender, EventArgs e)
         {
             birthDate.Visible = false;
+            lblRecordStatus.Visible = false;
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -84,15 +86,18 @@ namespace Web_App_Project.ASPX_Files.Angie
                 if (ctrlGoogleReCaptcha.Validate())
                 {
                     //submit form success
+                    lblStatus.Visible = true;
                     lblStatus.Text = "Success";
                     int a = myCommand.ExecuteNonQuery();
 
                     if (a > 0) {
+                        lblRecordStatus.Visible = true;
                         lblRecordStatus.Text = "Sign up success! Please wait for approval before you logon.";
                     }
 
                     else
                     {
+                        lblRecordStatus.Visible = true;
                         lblRecordStatus.Text = "Applicant already exists. Please check your email and nric.";
                     }
                 }
