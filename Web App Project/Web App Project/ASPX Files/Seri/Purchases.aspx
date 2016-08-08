@@ -1,8 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Purchases.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Seri.Purchases" %>
-<asp:Content ID="PurchasesHead" ContentPlaceHolderID="head" runat="server">
-    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
-</asp:Content>
-
 
 <asp:Content ID="PurchasesBody" ContentPlaceHolderID="body" runat="server">
     <div class="jumbotron hiddenJumbo" style="height:150px">

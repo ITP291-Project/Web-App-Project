@@ -1,11 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ChoiceOfVouchers.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Seri.ChoiceOfVouchers" %>
 
-<asp:Content ID="ChoiceHead" ContentPlaceHolderID="head" runat="server">
-    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
-</asp:Content>
-
-
 <asp:Content ID="ChoiceBody" ContentPlaceHolderID="body" runat="server">
+    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
     <div class="jumbotron hiddenJumbo" style="height:200px">
         <h1 runat="server" id="WelcomeHeading">Select a Voucher</h1>
         <div id="CurrentCart" class="CurrentCart" runat="server">
