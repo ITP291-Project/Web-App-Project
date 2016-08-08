@@ -26,8 +26,8 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
 
             String organization = Session["Organization"].ToString();
             TextBox1.Text = organization;
-      
-    }
+
+        }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
@@ -58,12 +58,14 @@ namespace Web_App_Project.ASPX_Files.Ryan.VolunteerDash
 
                 if (a > 0)
                 {
+                    lblError.Visible = true;
                     lblError.Text = "Sign up success!";
                    
                 }
 
                 else
                 {
+                    lblError.Visible = true;
                     lblError.Text = "Error! Your organization is not in this timeslot! Please refer to the timetable to confirm your organization's timeslot.";
                 }
                  //myConnection.Close();

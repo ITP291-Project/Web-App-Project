@@ -126,7 +126,7 @@
                     <asp:Label ID="Label2" runat="server" Text="Label">Last Name:</asp:Label>
                     <br />
                     <asp:TextBox ID="lastName" runat="server" ForeColor="Black" CssClass="textbox"></asp:TextBox>
-                    <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="firstName" runat="server" />
+                    <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="lastName" runat="server" />
                 </p>
 
                 <p>
@@ -150,6 +150,7 @@
                     <asp:Label ID="Label5" runat="server" Text="Label">Birthdate:</asp:Label>
                     <br />
                     <asp:TextBox ID="bDateInput" runat="server" ForeColor="Black" Enabled="false" CssClass="textbox"></asp:TextBox>
+                    <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="bDateInput" runat="server" />
                     <asp:Button ID="Button2" runat="server" Text="Select Date" OnClick="Button2_Click" />
                     <asp:Calendar ID="birthDate" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" OnSelectionChanged="birthDate_SelectionChanged" Width="330px">
                         <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
@@ -220,7 +221,7 @@
                 <p>
                     <asp:Label ID="Label12" runat="server" Text="Label">Salutation:</asp:Label>
                     <br />
-                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:DropDownList ID="DropDownList1" runat="server" ForeColor="Black">
                         <asp:ListItem Selected="True" class="selection">Select Salutation</asp:ListItem>
                         <asp:ListItem Value="Mr" class="selection">Mr.</asp:ListItem>
                         <asp:ListItem Value="Ms" class="selection">Ms.</asp:ListItem>
