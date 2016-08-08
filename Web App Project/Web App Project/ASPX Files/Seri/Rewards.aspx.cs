@@ -14,7 +14,10 @@ namespace Web_App_Project.ASPX_Files.Seri
         protected void Page_Load(object sender, EventArgs e)
         {
             //set the current user (DELETE AFTER LOGIN PAGE IS FINISHED)
-            Session["Username"] = "someone@gmail.com";
+            if (Session["Username"] == null)
+            {
+                Session["Username"] = "someone@gmail.com";
+            }
 
             //check the current user information 
             var SessionUser = Session["Username"];
@@ -41,6 +44,12 @@ namespace Web_App_Project.ASPX_Files.Seri
         {
             //redirect to the paypal page
             Response.Redirect("PayPalLogin.aspx");
+        }
+
+        protected void ViewVoucherHistory(object sender, EventArgs e)
+        {
+            //redirect to the purchases page
+            Response.Redirect("Purchases.aspx");
         }
 
         protected void ShowChooseVouchers(object sender, EventArgs e)

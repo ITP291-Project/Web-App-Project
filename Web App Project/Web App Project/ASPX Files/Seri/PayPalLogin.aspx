@@ -1,11 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PayPalLogin.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Seri.PayPalLogin" %>
 
-<asp:Content ID="RewardsHead" ContentPlaceHolderID="head" runat="server">
-    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
-</asp:Content>
-
-
 <asp:Content ID="RewardsBody" ContentPlaceHolderID="body" runat="server">
+    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
     <div class="jumbotron hiddenJumbo">
         <h1 id="WelcomeHeading">PayPal Withdraw</h1>
     </div>

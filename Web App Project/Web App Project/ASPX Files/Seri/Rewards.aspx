@@ -9,8 +9,11 @@
     <div class="UsePoints Center">
         <h2 class="align-center">Claim your Points!</h2>
         <img src="Images/ChoicesImage.png" class="Center" style="background-color:transparent" />
-        <asp:Button CssClass="Dashbtn btn-skin" style="float:left" ID="ClaimBtn" runat="server" Text="Claim Vouchers" ForeColor="Black" Height="109px" Width="300px" OnClick="ShowChooseVouchers" />
-        <asp:Button CssClass="Dashbtn btn-skin" style="float:right" ID="WithdrawBtn" runat="server" Text="Withdraw to Paypal" ForeColor="Black" Height="109px" Width="300px" OnClick="ShowPaypalWithdraw" />
+        <asp:Button CssClass="Dashbtn btn-skin" style="float:left" ID="ClaimBtn" runat="server" Text="Claim Vouchers" ForeColor="Black" Height="100px" Width="300px" OnClick="ShowChooseVouchers" />
+        <asp:Button CssClass="Dashbtn btn-skin" style="float:right" ID="WithdrawBtn" runat="server" Text="Withdraw to Paypal" ForeColor="Black" Height="100px" Width="300px" OnClick="ShowPaypalWithdraw" />
+        <div style="text-align:center;">
+            <asp:Button CssClass="Dashbtn btn-skin" style="margin-top: 20px" ID="HistoryBtn" runat="server" Text="View Voucher History" ForeColor="Black" Height="100px" Width="300px" OnClick="ViewVoucherHistory" />
+        </div>
     </div>
     
 </asp:Content>

@@ -1,10 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="Web_App_Project.ASPX_Files.Seri.Checkout" %>
-<asp:Content ID="CheckoutHead" ContentPlaceHolderID="head" runat="server">
-    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
-</asp:Content>
-
 
 <asp:Content ID="CheckoutBody" ContentPlaceHolderID="body" runat="server">
+    <link href="RewardsStyle.css" rel="Stylesheet" type="text/css" />
     <div class="jumbotron hiddenJumbo" style="height:200px">
         <h1 runat="server" id="WelcomeHeading">Checkout</h1>
         <div class="CurrentCart" runat="server">
