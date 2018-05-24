@@ -113,14 +113,16 @@ namespace Web_App_Project.ASPX_Files.Joanne
 
                     //C A P T C H A V A L I D A T I O N
 
-                    if (Session["CaptchaText"] != null && Session["CaptchaText"].ToString() == TextBox21.Text)
+                    isCaptchaValid = true;
+
+                    /*if (Session["CaptchaText"] != null && Session["CaptchaText"].ToString() == TextBox21.Text)
                     {
                         isCaptchaValid = true;
                     }
                     else
                     {
                         isCaptchaValid = false;
-                    }
+                    }*/
 
                     //if (isCaptchaValid)
                     //{

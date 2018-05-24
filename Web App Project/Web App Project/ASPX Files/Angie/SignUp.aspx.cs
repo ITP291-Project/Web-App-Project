@@ -80,10 +80,24 @@ namespace Web_App_Project.ASPX_Files.Angie
                 myCommand.Parameters.AddWithValue("@Points", points);
                 myCommand.Parameters.AddWithValue("@pointsId", pointsId);
 
+                int a = myCommand.ExecuteNonQuery();
+
+                if (a > 0)
+                {
+                    lblRecordStatus.Visible = true;
+                    lblRecordStatus.Text = "Sign up success! Please wait for approval before you logon.";
+                }
+
+                else
+                {
+                    lblRecordStatus.Visible = true;
+                    lblRecordStatus.Text = "Applicant already exists. Please check your email and nric.";
+                }
+
 
                 //myConnection.Close();
 
-                if (ctrlGoogleReCaptcha.Validate())
+                /*if (ctrlGoogleReCaptcha.Validate())
                 {
                     //submit form success
                     lblStatus.Visible = true;
@@ -105,8 +119,8 @@ namespace Web_App_Project.ASPX_Files.Angie
                 {
                     //captcha challenge failed
                     lblStatus.Text = "Captcha Failed!! Please try again!!";
-                }
-               
+                }*/
+
             }
             
         }

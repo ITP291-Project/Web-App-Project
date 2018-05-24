@@ -316,7 +316,7 @@ namespace Web_App_Project.ASPX_Files.Angie {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GoogleReCaptcha.GoogleReCaptcha ctrlGoogleReCaptcha;
+        //protected global::GoogleReCaptcha.GoogleReCaptcha ctrlGoogleReCaptcha;
         
         /// <summary>
         /// lblStatus control.
